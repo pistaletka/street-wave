@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SectionHeader from "../../components/shared/SectionHeader";
 import PlaceholderImage from "../../components/shared/PlaceholderImage";
@@ -79,43 +80,58 @@ const clients = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* 1. Hero */}
-      <section className="relative flex min-h-[33vh] flex-col items-center justify-center px-6 pb-8 text-center overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/[0.03] via-transparent to-transparent" />
+      {/* 1. Hero + Team image */}
+      <section className="relative flex min-h-[50vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
+        <Image
+          src="/about-hero.png"
+          alt="Street Wave Custom"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex flex-col items-center">
           <p className="text-xs uppercase tracking-[0.35em] text-accent mb-6">
             О студии
           </p>
-          <h1 className="sw-display font-bold uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
+          <h1 className="sw-display font-bold uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight drop-shadow-lg">
             STREET WAVE
           </h1>
-          <p className="mt-6 max-w-[640px] sw-body text-muted whitespace-pre-line">
+          <p className="mt-6 max-w-[640px] sw-body text-white/70 whitespace-pre-line">
             {`Студия арт-кастомизации.\nРаботаем на стыке искусства, дизайна и ручного производства.`}
           </p>
-        </div>
-      </section>
-
-      {/* Team image — продолжение hero */}
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-7xl">
-          <PlaceholderImage aspectRatio="21/9" label="Команда Street Wave" />
         </div>
       </section>
 
       {/* 2. Фото слева / Текст справа */}
       <section className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 md:grid-cols-2 items-center">
-            <PlaceholderImage aspectRatio="4/5" label="Street Wave Studio" />
-            <div>
-              <p className="sw-body text-text-secondary">
-                Street Wave — независимая студия, специализирующаяся на
-                кастомизации обуви, одежды и создании арт-объектов. Мы работаем с
-                частными клиентами и брендами, создавая уникальные предметы
-                вручную — от индивидуальных заказов до лимитированных серий и
-                коллекций. Наш подход основан на соединении художественного
-                мышления, продуманного дизайна и производственной точности.
-              </p>
+          <div className="grid gap-12 md:grid-cols-2">
+            <div className="overflow-hidden">
+              <PlaceholderImage aspectRatio="4/3" label="Команда Street Wave в студии" />
+            </div>
+            <div className="flex flex-col justify-center">
+              <div className="max-w-[580px] space-y-6">
+                <p className="sw-body text-text-secondary">
+                  Street Wave первая в России студия арт-кастомизации, объединившая
+                  сильных и талантливых художников. С ноября 2014 года команда SW
+                  создаёт уникальный арт на предметах одежды, обуви и аксессуарах.
+                </p>
+                <p className="sw-body text-text-secondary">
+                  Мы работаем с формой, силуэтом и поверхностью, превращая вещь в
+                  носимый арт-объект. От индивидуальных заказов до лимитированных
+                  серий для брендов — каждый проект создаётся вручную и существует в
+                  единственном визуальном решении.
+                </p>
+                <p className="sw-body text-text-secondary">
+                  Street Wave — это студия, где соединяется уличная культура, дизайн
+                  и художественное мышление. Мы создаем концепции и превращаем
+                  масс-маркет в реальный арт продукт.
+                </p>
+                <p className="sw-body text-text-secondary">
+                  Мы интерпретируем, создаём и формируем собственный визуальный язык.
+                </p>
+              </div>
             </div>
           </div>
         </div>
