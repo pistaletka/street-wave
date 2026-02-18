@@ -1,26 +1,215 @@
 @import "tailwindcss";
 
+/* ── TT Firs Neue (Trial) ── */
+@font-face {
+  font-family: 'Firs Neue';
+  src: url('/fonts/TT Firs Neue Trial Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Firs Neue';
+  src: url('/fonts/TT Firs Neue Trial Light Italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Firs Neue';
+  src: url('/fonts/TT Firs Neue Trial Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Firs Neue';
+  src: url('/fonts/TT Firs Neue Trial Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Firs Neue';
+  src: url('/fonts/TT Firs Neue Trial Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Firs Neue';
+  src: url('/fonts/TT Firs Neue Trial Medium Italic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+/* Bold (700) — нет в Trial-паке, Medium (500) используется как максимальный вес */
+
+/* ── Brand tokens ── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Surfaces */
+  --background:       #000000;
+  --surface:          #171717;
+  --foreground:       #ffffff;
+
+  /* Text */
+  --text-primary:     #ffffff;
+  --text-secondary:   rgba(255, 255, 255, 0.6);
+  --muted:            #a6a6a6;
+
+  /* Accent — Neon */
+  --accent:           #F4F85B;
+  --accent-foreground:#000000;
+
+  /* Borders */
+  --border:           rgba(255, 255, 255, 0.10);
+  --border-light:     #d9d9d9;
+
+  /* Legacy alias */
+  --card:             var(--surface);
+
+  /* Font stacks */
+  --font-heading: 'Firs Neue', Arial, Helvetica, sans-serif;
+  --font-body:    'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-background:       var(--background);
+  --color-surface:          var(--surface);
+  --color-foreground:       var(--foreground);
+  --color-text-primary:     var(--text-primary);
+  --color-text-secondary:   var(--text-secondary);
+  --color-muted:            var(--muted);
+  --color-accent:           var(--accent);
+  --color-accent-foreground:var(--accent-foreground);
+  --color-border:           var(--border);
+  --color-border-light:     var(--border-light);
+  --color-card:             var(--card);
+  --font-sans: var(--font-heading);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 0.96;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent);
+  color: #000000;
+}
+
+/* ── Typography scale — from Figma (SW® / Website page) ──
+ *
+ * Primary:   TT Firs Neue (headings, nav, UI)     → var(--font-heading)
+ * Secondary: Helvetica Neue (body text, display)   → var(--font-body)
+ *
+ * Trial pack: max weight 500 (Medium).
+ * ────────────────────────────────────────────────── */
+
+/* Display — Helvetica Neue 500, 162→62px, lh 1.1, ls -0.04em */
+.sw-display {
+  font-family: var(--font-body);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+/* H1 — TT Firs Neue 600→500, 84px, lh 1.0, ls -0.05em */
+.sw-h1 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.0;
+  letter-spacing: -0.05em;
+}
+
+/* H2 — TT Firs Neue 500, 28–62px, lh 1.1, ls -0.04em */
+.sw-h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+/* H3 — TT Firs Neue 500, 18px, lh 0.96, ls -0.05em, uppercase */
+.sw-h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+/* Subtitle — TT Firs Neue 500, 28px, lh 1.1, ls -0.04em */
+.sw-subtitle {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+/* Body — Helvetica Neue 400, 18px, lh 1.2, ls 0.05em */
+.sw-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+/* Body small — TT Firs Neue 400, 16px, lh 0.96 */
+.sw-body-sm {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+/* Caption — Helvetica Neue 300, 14px, lh 1.3 */
+.sw-caption {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+/* Label / badge — TT Firs Neue 500, 12px, uppercase, wide tracking */
+.sw-label {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* Button — TT Firs Neue 500, 13px, uppercase */
+.sw-btn {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Nav link — TT Firs Neue 500, 22px→14px, lh 0.96 */
+.sw-nav {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: 0;
 }

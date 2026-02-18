@@ -1,65 +1,157 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import content from "../content/home.json";
+import SectionHeader from "../components/shared/SectionHeader";
+import PlaceholderImage from "../components/shared/PlaceholderImage";
+import HeroSlider from "../components/HeroSlider";
+
+export const metadata: Metadata = {
+  title: content.meta.title,
+  description: content.meta.description,
+};
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-background text-foreground">
+      {/* 1. Hero */}
+      <HeroSlider
+        badge={content.hero.badge}
+        badgeSub={content.hero.badgeSub}
+        title={content.hero.title}
+        subtitle={content.hero.subtitle}
+        cta1={content.hero.cta1}
+        cta2={content.hero.cta2}
+      />
+
+      {/* 2. About */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader badge={content.about.badge} title={content.about.title} />
+          <div className="grid gap-12 md:grid-cols-2">
+            <PlaceholderImage aspectRatio="16/9" />
+            <div className="flex flex-col justify-center">
+              <p className="sw-body text-text-secondary whitespace-pre-line">
+                {content.about.text}
+              </p>
+              <Link
+                href={content.about.cta.href}
+                className="sw-btn mt-8 inline-flex h-12 w-fit items-center justify-center border border-border px-8 text-foreground transition-colors hover:border-accent hover:text-accent"
+              >
+                {content.about.cta.label}
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* 3. Directions */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader badge={content.directions.badge} title={content.directions.title} />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {content.directions.items.map((dir) => (
+              <Link
+                key={dir.title}
+                href={dir.href}
+                className="group border border-border bg-surface p-8 transition-colors hover:border-accent/20"
+              >
+                <h3 className="sw-h3 mb-4 text-lg">{dir.title}</h3>
+                <p className="sw-body-sm text-text-secondary">{dir.desc}</p>
+                <div className="mt-6 h-px w-8 bg-accent/20 transition-all group-hover:w-16 group-hover:bg-accent/60" />
+              </Link>
+            ))}
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* 4. Process */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader badge={content.process.badge} title={content.process.title} />
+          <div className="grid gap-px md:grid-cols-4">
+            {content.process.steps.map((item) => (
+              <div key={item.step} className="border border-border bg-surface p-8">
+                <span className="font-mono text-xs tracking-widest text-accent">
+                  {item.step}
+                </span>
+                <h3 className="sw-h3 mt-3 mb-3 text-lg">{item.title}</h3>
+                <p className="sw-body-sm text-text-secondary">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Clients */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader badge={content.clients.badge} title={content.clients.title} />
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+            {content.clients.logos.map((logo) => (
+              <div
+                key={logo}
+                className="flex h-24 items-center justify-center border border-border bg-surface text-sm text-text-secondary"
+              >
+                {logo}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Why us */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader badge={content.whyUs.badge} title={content.whyUs.title} />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {content.whyUs.items.map((item) => (
+              <div key={item.title} className="border border-border bg-surface p-8">
+                <h3 className="sw-h3 mb-4 text-sm">{item.title}</h3>
+                <p className="sw-body-sm text-text-secondary">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Shop teaser */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="sw-label mb-2 text-accent">{content.shop.badge}</p>
+          <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{content.shop.title}</h2>
+          <p className="sw-body text-text-secondary">{content.shop.text}</p>
+        </div>
+      </section>
+
+      {/* 8. Geo */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-3xl">
+          <SectionHeader badge={content.geo.badge} title={content.geo.title} />
+          <p className="sw-body text-text-secondary">{content.geo.text}</p>
+        </div>
+      </section>
+
+      {/* 9. Final CTA */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{content.finalCta.title}</h2>
+          <p className="mb-10 text-base text-text-secondary">{content.finalCta.subtitle}</p>
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <Link
+              href={content.finalCta.cta1.href}
+              className="sw-btn inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
+            >
+              {content.finalCta.cta1.label}
+            </Link>
+            <Link
+              href={content.finalCta.cta2.href}
+              className="sw-btn inline-flex h-12 items-center justify-center border border-border px-8 text-foreground transition-colors hover:border-accent hover:text-accent"
+            >
+              {content.finalCta.cta2.label}
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

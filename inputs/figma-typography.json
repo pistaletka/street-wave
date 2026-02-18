@@ -1,0 +1,271 @@
+{
+  "source": "Figma file SW® — page Website (189:11275)",
+  "extractedAt": "2026-02-18T10:25:46.741670",
+  "stylesCount": 24,
+  "styles": [
+    {
+      "fontFamily": "Helvetica Neue",
+      "fontWeight": 500,
+      "fontSize": 162.0,
+      "lineHeightPx": 178.2,
+      "lineHeightRatio": 1.1,
+      "letterSpacing": -6.0,
+      "textCase": null,
+      "textDecoration": null,
+      "sample": "StreetWaveСustomization"
+    },
+    {
+      "fontFamily": "Helvetica Neue",
+      "fontWeight": 400,
+      "fontSize": 153.25680541992188,
+      "lineHeightPx": 168.58,
+      "lineHeightRatio": 1.1,
+      "letterSpacing": -2.47,
+      "textCase": null,
+      "textDecoration": null,
+      "sample": "Street Wave Сustomization"
+    },
+    {
+      "fontFamily": "TT Firs Neue Trial Var Roman",
+      "fontWeight": 600,
+      "fontSize": 84.0,
+      "lineHeightPx": 84.0,
+      "lineHeightRatio": 1.0,
+      "letterSpacing": -4.0,
+      "textCase": "UPPER",
+      "textDecoration": null,
+      "sample": "We’re\nhiring\nSMM - manager"
+    },
+    {
+      "fontFamily": "Helvetica Neue",
+      "fontWeight": 700,
+      "fontSize": 69.21275329589844,
+      "lineHeightPx": 66.44,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": 0.0,
+      "textCase": "UPPER",
+      "textDecoration": null,
+      "sample": "®"
+    },
+    {
+      "fontFamily": "Helvetica Neue",
+      "fontWeight": 400,
+      "fontSize": 62.0,
+      "lineHeightPx": 68.2,
+      "lineHeightRatio": 1.1,
+      "letterSpacing": -1.0,
+      "textCase": null,
+      "textDecoration": null,
+      "sample": "Street Wave  — первая в России студия арт-кастомизации, объединившая сильных и т"
+    },
+    {
+      "fontFamily": "TT Firs Neue Trl",
+      "fontWeight": 800,
+      "fontSize": 60.90885543823242,
+      "lineHeightPx": 58.47,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": -4.94,
+      "textCase": "LOWER",
+      "textDecoration": null,
+      "sample": "STREETWAVE"
+    },
+    {
+      "fontFamily": "TT Firs Neue Trial Var Roman",
+      "fontWeight": 800,
+      "fontSize": 30.967741012573242,
+      "lineHeightPx": 29.73,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": -1.94,
+      "textCase": "LOWER",
+      "textDecoration": null,
+      "sample": "streetwave"
+    },
+    {
+      "fontFamily": "TT Firs Neue Trl",
+      "fontWeight": 400,
+      "fontSize": 30.0,
+      "lineHeightPx": 28.8,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": -1.0,
+      "textCase": "LOWER",
+      "textDecoration": null,
+      "sample": "cила простых форм"
+    },
+    {
+      "fontFamily": "Helvetica Neue",
+      "fontWeight": 700,
+      "fontSize": 28.0,
+      "lineHeightPx": 26.88,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": 0.0,
+      "textCase": "UPPER",
+      "textDecoration": null,
+      "sample": "®"
+    },
+    {
+      "fontFamily": "TT Firs Neue Trial Var Roman",
+      "fontWeight": 500,
+      "fontSize": 28.0,
+      "lineHeightPx": 30.8,
+      "lineHeightRatio": 1.1,
+      "letterSpacing": -1.0,
+      "textCase": null,
+      "textDecoration": null,
+      "sample": "Street Wave — студия арт-кастомизации."
+    },
+    {
+      "fontFamily": "TT Firs Neue Trial Var Roman",
+      "fontWeight": 400,
+      "fontSize": 24.0,
+      "lineHeightPx": 26.4,
+      "lineHeightRatio": 1.1,
+      "letterSpacing": -1.0,
+      "textCase": null,
+      "textDecoration": null,
+      "sample": "Создаём уникальные пары, лимитированные коллекции и арт-проекты для частных клие"
+    },
+    {
+      "fontFamily": "TT Firs Neue Trial Var Roman",
+      "fontWeight": 500,
+      "fontSize": 22.0,
+      "lineHeightPx": 21.12,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": 0.0,
+      "textCase": "UPPER",
+      "textDecoration": null,
+      "sample": "SW®"
+    },
+    {
+      "fontFamily": "Helvetica Neue",
+      "fontWeight": 400,
+      "fontSize": 22.0,
+      "lineHeightPx": 28.6,
+      "lineHeightRatio": 1.3,
+      "letterSpacing": 0.0,
+      "textCase": "UPPER",
+      "textDecoration": null,
+      "sample": "CAMPAIGN #1"
+    },
+    {
+      "fontFamily": "TT Firs Neue Trial Var Italic",
+      "fontWeight": 500,
+      "fontSize": 21.290321350097656,
+      "lineHeightPx": 20.44,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": 0.0,
+      "textCase": "UPPER",
+      "textDecoration": null,
+      "sample": "®"
+    },
+    {
+      "fontFamily": "TT Firs Neue Trl",
+      "fontWeight": 400,
+      "fontSize": 19.8275203704834,
+      "lineHeightPx": 19.03,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": -6.13,
+      "textCase": "LOWER",
+      "textDecoration": null,
+      "sample": "©"
+    },
+    {
+      "fontFamily": "Helvetica Neue",
+      "fontWeight": 400,
+      "fontSize": 18.0,
+      "lineHeightPx": 21.6,
+      "lineHeightRatio": 1.2,
+      "letterSpacing": 1.0,
+      "textCase": null,
+      "textDecoration": null,
+      "sample": "Мы являюмся официальными авторизованными в России диллерами американского бренда"
+    },
+    {
+      "fontFamily": "TT Firs Neue Trial Var Roman",
+      "fontWeight": 400,
+      "fontSize": 18.0,
+      "lineHeightPx": 17.28,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": -1.0,
+      "textCase": "TITLE",
+      "textDecoration": null,
+      "sample": "ивенты"
+    },
+    {
+      "fontFamily": "TT Firs Neue Trial Var Italic",
+      "fontWeight": 400,
+      "fontSize": 18.0,
+      "lineHeightPx": 17.28,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": 0.0,
+      "textCase": "UPPER",
+      "textDecoration": null,
+      "sample": "®"
+    },
+    {
+      "fontFamily": "Fira Mono",
+      "fontWeight": 400,
+      "fontSize": 18.0,
+      "lineHeightPx": 21.6,
+      "lineHeightRatio": 1.2,
+      "letterSpacing": 1.0,
+      "textCase": null,
+      "textDecoration": null,
+      "sample": "↗"
+    },
+    {
+      "fontFamily": "Helvetica Neue",
+      "fontWeight": 400,
+      "fontSize": 17.0,
+      "lineHeightPx": 16.32,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": 0.0,
+      "textCase": "TITLE",
+      "textDecoration": null,
+      "sample": "ивенты"
+    },
+    {
+      "fontFamily": "TT Firs Neue Trial Var Roman",
+      "fontWeight": 400,
+      "fontSize": 16.0,
+      "lineHeightPx": 15.36,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": 0.0,
+      "textCase": null,
+      "textDecoration": null,
+      "sample": "Бесплатная доставка при заказе от 15.000 р."
+    },
+    {
+      "fontFamily": "Helvetica Neue",
+      "fontWeight": 400,
+      "fontSize": 16.0,
+      "lineHeightPx": 20.8,
+      "lineHeightRatio": 1.3,
+      "letterSpacing": 0.0,
+      "textCase": "UPPER",
+      "textDecoration": null,
+      "sample": "ИП Ефимова Галина Сергеевна\n\nИНН: 312324295602\nОГРНИП: 318650100019757"
+    },
+    {
+      "fontFamily": "Helvetica Neue",
+      "fontWeight": 300,
+      "fontSize": 14.0,
+      "lineHeightPx": 18.2,
+      "lineHeightRatio": 1.3,
+      "letterSpacing": 0.0,
+      "textCase": "TITLE",
+      "textDecoration": "UNDERLINE",
+      "sample": "Пользовательское соглашение"
+    },
+    {
+      "fontFamily": "Helvetica Neue",
+      "fontWeight": 500,
+      "fontSize": 8.0,
+      "lineHeightPx": 7.68,
+      "lineHeightRatio": 0.96,
+      "letterSpacing": 0.0,
+      "textCase": "TITLE",
+      "textDecoration": null,
+      "sample": "3"
+    }
+  ]
+}

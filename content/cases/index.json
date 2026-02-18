@@ -1,0 +1,67 @@
+{
+  "cases": [
+    {
+      "slug": "new-concept",
+      "title": "New Concept",
+      "client": "New Concept",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Флагманский проект: 30+ кастомных изделий для бренд-пространства.",
+      "featured": true
+    },
+    {
+      "slug": "superstep",
+      "title": "Superstep",
+      "client": "Superstep",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Лимитированная серия кастомных кроссовок для розничной сети.",
+      "featured": false
+    },
+    {
+      "slug": "reebok-zivert",
+      "title": "Reebok \u00d7 Зиверт",
+      "client": "Reebok",
+      "year": "2023",
+      "category": "brand",
+      "shortDesc": "Коллаборация с Зиверт: кастомные Reebok для промо-кампании.",
+      "featured": false
+    },
+    {
+      "slug": "agama",
+      "title": "Agama",
+      "client": "Agama",
+      "year": "2023",
+      "category": "event",
+      "shortDesc": "Кастом-зона на мероприятии бренда: live-роспись для гостей.",
+      "featured": false
+    },
+    {
+      "slug": "yandex-market",
+      "title": "Яндекс Маркет",
+      "client": "Яндекс Маркет",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Корпоративные кастомные подарки для команды.",
+      "featured": false
+    },
+    {
+      "slug": "dolce-gabbana",
+      "title": "Dolce & Gabbana",
+      "client": "Dolce & Gabbana",
+      "year": "2023",
+      "category": "brand",
+      "shortDesc": "Эксклюзивный кастом-проект для бренда.",
+      "featured": false
+    },
+    {
+      "slug": "pinko",
+      "title": "Pinko",
+      "client": "Pinko",
+      "year": "2023",
+      "category": "brand",
+      "shortDesc": "Кастомная коллекция аксессуаров для поп-ап магазина.",
+      "featured": false
+    }
+  ]
+}
