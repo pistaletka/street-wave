@@ -1,0 +1,20 @@
+{
+  "slug": "helmet-cyber",
+  "title": "Шлем «Cyberpunk»",
+  "category": "art-objects",
+  "price": 45000,
+  "status": "available",
+  "image": "/products/helmet-cyber/main.jpg",
+  "images": [
+    "/products/helmet-cyber/main.jpg",
+    "/products/helmet-cyber/side.jpg",
+    "/products/helmet-cyber/back.jpg"
+  ],
+  "description": "Мотошлем с авторской росписью в стиле киберпанк. Неоновые элементы, светоотражающие детали. Сертифицированная база.",
+  "specs": [
+    { "label": "Размер", "value": "M (57-58 см)" },
+    { "label": "База", "value": "Сертифицированный мотошлем" },
+    { "label": "Техника", "value": "Аэрография + ручная роспись" },
+    { "label": "Покрытие", "value": "Автомобильный лак, 2 слоя" }
+  ]
+}

@@ -1,0 +1,89 @@
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import type { Metadata } from "next";
+import type { ProductDetail } from "@/types/product";
+import { formatPrice } from "@/lib/formatPrice";
+import ProductGallery from "@/components/shop/ProductGallery";
+import AddToCartButton from "@/components/shop/AddToCartButton";
+import productsIndex from "@/content/products/index.json";
+import fs from "fs";
+import path from "path";
+
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+function getProduct(slug: string): ProductDetail | null {
+  const filePath = path.join(process.cwd(), "content/products", `${slug}.json`);
+  try {
+    const raw = fs.readFileSync(filePath, "utf-8");
+    return JSON.parse(raw) as ProductDetail;
+  } catch {
+    return null;
+  }
+}
+
+export async function generateStaticParams() {
+  return productsIndex.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const product = getProduct(slug);
+  if (!product) return { title: "Товар не найден — streetwave®" };
+  return {
+    title: `${product.title} — streetwave®`,
+    description: product.description,
+  };
+}
+
+export default async function ProductPage({ params }: PageProps) {
+  const { slug } = await params;
+  const product = getProduct(slug);
+  if (!product) notFound();
+
+  return (
+    <section className="px-6 py-24">
+      <div className="mx-auto max-w-7xl">
+        <Link
+          href="/shop"
+          className="sw-label mb-8 inline-block text-muted transition-colors hover:text-foreground"
+        >
+          &larr; Назад в магазин
+        </Link>
+
+        <div className="grid gap-12 lg:grid-cols-2">
+          <ProductGallery images={product.images} title={product.title} />
+
+          <div className="flex flex-col gap-6">
+            <div>
+              <p className="sw-label mb-2 text-accent">{product.category === "sneakers" ? "Кроссовки" : product.category === "clothing" ? "Одежда" : product.category === "accessories" ? "Аксессуары" : "Арт-объекты"}</p>
+              <h1 className="sw-h1 text-3xl sm:text-4xl">{product.title}</h1>
+            </div>
+
+            <p className="sw-h2 text-2xl text-accent">{formatPrice(product.price)}</p>
+
+            <p className="sw-body text-text-secondary leading-relaxed">
+              {product.description}
+            </p>
+
+            {product.specs && product.specs.length > 0 && (
+              <div className="space-y-3 border-t border-border pt-6">
+                {product.specs.map((spec) => (
+                  <div key={spec.label} className="flex justify-between">
+                    <span className="sw-caption text-muted">{spec.label}</span>
+                    <span className="sw-body-sm text-foreground">{spec.value}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <div className="mt-2">
+              <AddToCartButton product={product} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

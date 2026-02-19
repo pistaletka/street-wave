@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import common from "../../content/common.json";
+import CartBadge from "./CartBadge";
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -14,7 +15,7 @@ export default function Navbar() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.svg" alt="streetwave®" className="h-5 w-auto" />
         </Link>
-        <div className="hidden gap-8 md:flex">
+        <div className="hidden items-center gap-8 md:flex">
           {common.nav.links.map((link) => (
             <Link
               key={link.href}
@@ -24,6 +25,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <CartBadge />
         </div>
         <button
           className="flex flex-col gap-1.5 md:hidden"
@@ -60,6 +62,9 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div onClick={() => setMobileMenu(false)}>
+              <CartBadge />
+            </div>
           </div>
         </div>
       )}

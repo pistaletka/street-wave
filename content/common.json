@@ -2,6 +2,7 @@
   "nav": {
     "brand": "streetwave\u00ae",
     "links": [
+      { "href": "/shop", "label": "Магазин" },
       { "href": "/place-order", "label": "Заказать кастом" },
       { "href": "/projects", "label": "Проекты" },
       { "href": "/live-customization", "label": "Ивенты" },
@@ -16,6 +17,7 @@
       {
         "title": "Услуги",
         "links": [
+          { "href": "/shop", "label": "Магазин" },
           { "href": "/place-order", "label": "Персональный кастом" },
           { "href": "/projects", "label": "Бренд-проекты" },
           { "href": "/live-customization", "label": "Выездная кастомизация" },
@@ -51,9 +53,9 @@
         "tariff": {
           "label": "Тариф",
           "options": [
-            { "value": "basic", "label": "Базовый (от 10 000 \u20bd)" },
-            { "value": "full", "label": "Полный (от 25 000 \u20bd)" },
-            { "value": "premium", "label": "Премиум (от 18 000 \u20bd)" }
+            { "value": "malevich", "label": "Малевич (10 000 \u20bd)" },
+            { "value": "van-gogh", "label": "Ван Гог (18 000 \u20bd)" },
+            { "value": "picasso", "label": "Пикассо (25 000 \u20bd)" }
           ]
         },
         "item": { "label": "Что кастомизировать", "placeholder": "Кроссовки, куртка, шлем..." },

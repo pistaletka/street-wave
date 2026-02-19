@@ -1,0 +1,18 @@
+{
+  "slug": "tote-streetart",
+  "title": "Тоут-бэг «Street Art»",
+  "category": "accessories",
+  "price": 8000,
+  "status": "sold",
+  "image": "/products/tote-streetart/main.jpg",
+  "images": [
+    "/products/tote-streetart/main.jpg",
+    "/products/tote-streetart/detail.jpg"
+  ],
+  "description": "Тканевая сумка-тоут с авторским граффити-принтом. Плотный канвас, кожаные ручки.",
+  "specs": [
+    { "label": "Материал", "value": "Канвас 450 г/м²" },
+    { "label": "Ручки", "value": "Натуральная кожа" },
+    { "label": "Техника", "value": "Трафаретная печать + ручная роспись" }
+  ]
+}
