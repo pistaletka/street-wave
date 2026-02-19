@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import content from "../../content/place-order.json";
 import SectionHeader from "../../components/shared/SectionHeader";
 import ContactForm from "../../components/shared/ContactForm";
+import TariffSelectButton from "../../components/shared/TariffSelectButton";
 
 export const metadata: Metadata = {
   title: content.meta.title,
@@ -12,26 +14,40 @@ export default function PlaceOrderPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="flex min-h-[50vh] flex-col items-center justify-center px-6 text-center">
-        <p className="sw-label mb-6 text-accent">{content.hero.badge}</p>
-        <h1 className="sw-h1 max-w-3xl text-4xl sm:text-5xl md:text-6xl">
-          {content.hero.title}
-        </h1>
-        <p className="mt-6 max-w-xl sw-body text-text-secondary">
-          {content.hero.subtitle}
-        </p>
+      <section className="px-6 pt-0 pb-0">
+        {/* Banner */}
+        <div className="relative mx-auto max-w-7xl overflow-hidden">
+          <Image
+            src="/custom-banner.png"
+            alt="Кастомизированные кроссовки — примеры работ streetwave"
+            width={1920}
+            height={360}
+            className="h-[210px] w-full object-cover sm:h-[265px] md:h-[320px]"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+            <p className="sw-label mb-4 text-accent">{content.hero.badge}</p>
+            <h1 className="sw-h1 max-w-3xl text-3xl text-white sm:text-4xl md:text-5xl">
+              {content.hero.title}
+            </h1>
+            <p className="mt-4 max-w-xl sw-body text-sm text-white/80">
+              {content.hero.subtitle}
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Form (top) */}
-      <section className="px-6 pb-24">
+      <section id="order-form" className="px-6 pt-10 pb-24">
         <div className="mx-auto max-w-3xl">
           <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">Оставить заявку</h2>
-          <ContactForm variant="place-order" />
+          <ContactForm variant="place-order" successUrl="/place-order/success" />
         </div>
       </section>
 
       {/* Tariffs */}
-      <section className="px-6 py-24">
+      <section id="tariffs" className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.tariffs.badge} title={content.tariffs.title} />
           <div className="grid gap-6 md:grid-cols-3">
@@ -44,10 +60,12 @@ export default function PlaceOrderPage() {
                     : "border-border bg-surface"
                 }`}
               >
-                {tariff.highlighted && (
-                  <p className="sw-label mb-4 text-accent">Популярный</p>
-                )}
-                <h3 className="sw-h3 mb-2 text-xl">{tariff.name}</h3>
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="sw-h3 text-xl">{tariff.name}</h3>
+                  {tariff.highlighted && (
+                    <span className="sw-label text-[10px] text-accent border border-accent/30 px-2 py-0.5">Популярный</span>
+                  )}
+                </div>
                 <p className="mb-6 text-2xl font-medium text-foreground">{tariff.price}</p>
                 <ul className="space-y-3">
                   {tariff.features.map((feat) => (
@@ -60,6 +78,12 @@ export default function PlaceOrderPage() {
                     </li>
                   ))}
                 </ul>
+                {"format" in tariff && (
+                  <p className="mt-6 pt-4 border-t border-border text-xs tracking-wide uppercase text-accent">
+                    {tariff.format}
+                  </p>
+                )}
+                <TariffSelectButton tariffValue={tariff.value} />
               </div>
             ))}
           </div>
@@ -107,7 +131,7 @@ export default function PlaceOrderPage() {
             {content.closer.text}
           </p>
           <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">Оставить заявку</h2>
-          <ContactForm variant="place-order" />
+          <ContactForm variant="place-order" successUrl="/place-order/success" />
         </div>
       </section>
     </div>

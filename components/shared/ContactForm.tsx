@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { useRouter } from "next/navigation";
 import common from "../../content/common.json";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 
@@ -8,6 +9,7 @@ type FormVariant = "general" | "place-order" | "brand-project";
 
 interface ContactFormProps {
   variant?: FormVariant;
+  successUrl?: string;
 }
 
 const inputClass =
@@ -18,11 +20,16 @@ const selectClass =
 const textareaClass =
   "border border-border bg-transparent px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-accent";
 
-export default function ContactForm({ variant = "general" }: ContactFormProps) {
+export default function ContactForm({ variant = "general", successUrl }: ContactFormProps) {
   const { submit, loading, error, success } = useFormSubmit();
   const formRef = useRef<HTMLFormElement>(null);
+  const router = useRouter();
 
   if (success) {
+    if (successUrl) {
+      router.push(successUrl);
+      return null;
+    }
     return (
       <div className="flex flex-col items-center gap-4 py-12 text-center">
         <p className="sw-h3 text-xl text-accent">Заявка отправлена!</p>

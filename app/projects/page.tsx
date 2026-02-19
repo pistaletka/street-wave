@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import projectsContent from "../../content/projects.json";
 import casesIndex from "../../content/cases/index.json";
@@ -13,21 +14,34 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero */}
-      <section className="flex min-h-[50vh] flex-col items-center justify-center px-6 text-center">
-        <p className="sw-label mb-6 text-accent">{projectsContent.hero.badge}</p>
-        <h1 className="sw-h1 max-w-3xl text-4xl sm:text-5xl md:text-6xl">
-          {projectsContent.hero.title}
-        </h1>
-        <p className="mt-6 max-w-xl sw-body text-text-secondary">
-          {projectsContent.hero.subtitle}
-        </p>
-        <button
-          onClick={() => setModalOpen(true)}
-          className="sw-btn mt-10 inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
-        >
-          Обсудить проект
-        </button>
+      {/* Hero + Banner */}
+      <section className="px-6 pt-0 pb-0">
+        <div className="relative mx-auto max-w-7xl overflow-hidden">
+          <Image
+            src="/projects-banner.png"
+            alt="Кастомизированные кроссовки Puma — streetwave x бренд-проект"
+            width={1920}
+            height={540}
+            className="h-[210px] w-full object-cover sm:h-[265px] md:h-[320px]"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+            <p className="sw-label mb-4 text-accent">{projectsContent.hero.badge}</p>
+            <h1 className="sw-h1 max-w-3xl text-3xl text-white sm:text-4xl md:text-5xl">
+              {projectsContent.hero.title}
+            </h1>
+            <p className="mt-4 max-w-xl sw-body text-sm text-white/80">
+              {projectsContent.hero.subtitle}
+            </p>
+            <button
+              onClick={() => setModalOpen(true)}
+              className="sw-btn mt-6 inline-flex h-10 items-center justify-center border border-accent bg-accent px-8 text-sm text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
+            >
+              Обсудить проект
+            </button>
+          </div>
+        </div>
       </section>
 
       {/* Manifesto */}
