@@ -1,0 +1,20 @@
+{
+  "slug": "offwhite-xiaomi",
+  "title": "Off-White × Xiaomi MI",
+  "client": "Xiaomi",
+  "year": "2024",
+  "category": "brand",
+  "coverImage": "/offwhite-xiaomi.jpg",
+  "description": "Коллаборация с Xiaomi MI: кастомизация кроссовок Off-White в рамках совместного проекта. Уникальный дизайн, объединяющий уличную культуру и технологический бренд.",
+  "stats": [
+    { "value": "1", "label": "коллаборация" },
+    { "value": "Off-White", "label": "база" },
+    { "value": "Xiaomi MI", "label": "партнёр" }
+  ],
+  "gallery": ["/offwhite-xiaomi.jpg", null, null],
+  "details": {
+    "task": "Создать кастомные кроссовки Off-White для коллаборации с Xiaomi MI.",
+    "solution": "Разработали уникальный дизайн, объединяющий эстетику Off-White и визуальный код Xiaomi MI.",
+    "result": "Эксклюзивный проект, подчеркнувший синергию уличной моды и технологий."
+  }
+}

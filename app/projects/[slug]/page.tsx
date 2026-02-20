@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import casesIndex from "../../../content/cases/index.json";
@@ -13,8 +14,14 @@ import agama from "../../../content/cases/agama.json";
 import yandexMarket from "../../../content/cases/yandex-market.json";
 import dolceGabbana from "../../../content/cases/dolce-gabbana.json";
 import pinko from "../../../content/cases/pinko.json";
+import offwhiteXiaomi from "../../../content/cases/offwhite-xiaomi.json";
 
-const caseDataMap: Record<string, typeof newConcept> = {
+type CaseData = Omit<typeof newConcept, "gallery" | "coverImage"> & {
+  gallery: (string | null)[];
+  coverImage?: string;
+};
+
+const caseDataMap: Record<string, CaseData> = {
   "new-concept": newConcept,
   superstep,
   "reebok-zivert": reebokZivert,
@@ -22,6 +29,7 @@ const caseDataMap: Record<string, typeof newConcept> = {
   "yandex-market": yandexMarket,
   "dolce-gabbana": dolceGabbana,
   pinko,
+  "offwhite-xiaomi": offwhiteXiaomi,
 };
 
 export function generateStaticParams() {
@@ -96,9 +104,20 @@ export default async function CasePage({ params }: Props) {
       <section className="px-6 pb-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {caseData.gallery.map((_, i) => (
-              <PlaceholderImage key={i} aspectRatio="4/5" />
-            ))}
+            {caseData.gallery.map((item, i) =>
+              item ? (
+                <div key={i} className="relative" style={{ aspectRatio: "4/5" }}>
+                  <Image
+                    src={item}
+                    alt={`${caseData.title} — фото ${i + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ) : (
+                <PlaceholderImage key={i} aspectRatio="4/5" />
+              )
+            )}
           </div>
         </div>
       </section>

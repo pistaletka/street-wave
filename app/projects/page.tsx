@@ -91,17 +91,29 @@ export default function ProjectsPage() {
               </Link>
             ))}
 
-          {/* Other cases */}
+          {/* Other cases — show 6 */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {casesIndex.cases
               .filter((c) => !c.featured)
+              .slice(0, 6)
               .map((c) => (
                 <Link
                   key={c.slug}
                   href={`/projects/${c.slug}`}
                   className="group"
                 >
-                  <PlaceholderImage aspectRatio="4/5" />
+                  {"coverImage" in c && c.coverImage ? (
+                    <div className="relative" style={{ aspectRatio: "4/5" }}>
+                      <Image
+                        src={c.coverImage}
+                        alt={c.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <PlaceholderImage aspectRatio="4/5" />
+                  )}
                   <div className="mt-4">
                     <h3 className="sw-h3 text-sm">{c.title}</h3>
                     <p className="mt-1 text-xs text-muted">
@@ -113,6 +125,16 @@ export default function ProjectsPage() {
                   </div>
                 </Link>
               ))}
+          </div>
+
+          {/* View all button */}
+          <div className="mt-12 text-center">
+            <Link
+              href="/projects"
+              className="sw-btn inline-flex h-12 items-center justify-center border border-border px-8 text-foreground transition-colors hover:border-accent hover:text-accent"
+            >
+              Смотреть все проекты
+            </Link>
           </div>
         </div>
       </section>

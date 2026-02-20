@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* 3. Directions */}
-      <section className="px-6 py-24">
+      <section className="px-6 pt-24 pb-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.directions.badge} title={content.directions.title} />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -65,7 +65,7 @@ export default function Home() {
       </section>
 
       {/* 4. Process */}
-      <section className="px-6 py-24">
+      <section className="px-6 pt-8 pb-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.process.badge} title={content.process.title} />
           <div className="grid gap-px md:grid-cols-4">
@@ -83,16 +83,21 @@ export default function Home() {
       </section>
 
       {/* 5. Clients */}
-      <section className="px-6 py-24">
+      <section className="px-6 pt-8 pb-24">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.clients.badge} title={content.clients.title} />
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
-            {content.clients.logos.map((logo) => (
+          <div className="grid grid-cols-3 gap-px sm:grid-cols-4 lg:grid-cols-7">
+            {content.clients.logos.map((logo: { name: string; src: string }) => (
               <div
-                key={logo}
-                className="flex h-24 items-center justify-center border border-border bg-surface text-sm text-text-secondary"
+                key={logo.name}
+                className="flex h-20 items-center justify-center border border-border bg-surface px-5"
               >
-                {logo}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="h-6 w-auto max-w-[120px] object-contain opacity-60 transition-opacity hover:opacity-100"
+                />
               </div>
             ))}
           </div>

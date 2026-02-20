@@ -55,6 +55,16 @@
       "featured": false
     },
     {
+      "slug": "offwhite-xiaomi",
+      "title": "Off-White × Xiaomi MI",
+      "client": "Xiaomi",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Кастомизация кроссовок Off-White для коллаборации с Xiaomi MI.",
+      "coverImage": "/offwhite-xiaomi.jpg",
+      "featured": false
+    },
+    {
       "slug": "pinko",
       "title": "Pinko",
       "client": "Pinko",
