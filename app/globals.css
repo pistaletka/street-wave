@@ -111,6 +111,14 @@ body {
   color: #000000;
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* ── Typography scale — from Figma (SW® / Website page) ──
  *
  * Primary:   TT Firs Neue (headings, nav, UI)     → var(--font-heading)

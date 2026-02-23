@@ -1,0 +1,17 @@
+{
+  "slug": "certificate-25000",
+  "title": "Сертификат на 25 000 ₽",
+  "category": "certificates",
+  "price": 25000,
+  "status": "available",
+  "image": "/products/certificates/25000.jpg",
+  "images": [
+    "/products/certificates/25000.jpg"
+  ],
+  "description": "Подарочный сертификат streetwave® на 25 000 ₽. Можно использовать для заказа персонального кастома по тарифу «Пикассо» или покупки готовых работ в магазине. Срок действия — 6 месяцев.",
+  "specs": [
+    { "label": "Номинал", "value": "25 000 ₽" },
+    { "label": "Срок действия", "value": "6 месяцев" },
+    { "label": "Формат", "value": "Электронный + печатный" }
+  ]
+}

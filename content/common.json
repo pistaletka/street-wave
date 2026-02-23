@@ -58,7 +58,7 @@
             { "value": "picasso", "label": "Пикассо (25 000 \u20bd)" }
           ]
         },
-        "item": { "label": "Что кастомизировать", "placeholder": "Кроссовки, куртка, шлем..." },
+        "item": { "label": "Что кастомизировать", "placeholder": "Кроссовки, куртка, сумка..." },
         "idea": { "label": "Идея / референсы", "placeholder": "Опишите идею, пришлите ссылки на референсы..." },
         "contact": { "label": "Telegram / WhatsApp", "placeholder": "@ник или номер телефона" },
         "email": { "label": "Email", "placeholder": "your@email.com" }

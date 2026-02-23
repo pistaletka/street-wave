@@ -1,0 +1,17 @@
+{
+  "slug": "certificate-10000",
+  "title": "Сертификат на 10 000 ₽",
+  "category": "certificates",
+  "price": 10000,
+  "status": "available",
+  "image": "/products/certificates/10000.jpg",
+  "images": [
+    "/products/certificates/10000.jpg"
+  ],
+  "description": "Подарочный сертификат streetwave® на 10 000 ₽. Можно использовать для заказа персонального кастома по тарифу «Малевич» или покупки готовых работ в магазине. Срок действия — 6 месяцев.",
+  "specs": [
+    { "label": "Номинал", "value": "10 000 ₽" },
+    { "label": "Срок действия", "value": "6 месяцев" },
+    { "label": "Формат", "value": "Электронный + печатный" }
+  ]
+}

@@ -57,7 +57,7 @@ export default async function ProductPage({ params }: PageProps) {
 
           <div className="flex flex-col gap-6">
             <div>
-              <p className="sw-label mb-2 text-accent">{product.category === "sneakers" ? "Кроссовки" : product.category === "clothing" ? "Одежда" : product.category === "accessories" ? "Аксессуары" : "Арт-объекты"}</p>
+              <p className="sw-label mb-2 text-accent">{{"sneakers":"Кроссовки","clothing":"Одежда","accessories":"Аксессуары","art-objects":"Арт-объекты","art":"Арт","certificates":"Сертификаты"}[product.category]}</p>
               <h1 className="sw-h1 text-3xl sm:text-4xl">{product.title}</h1>
             </div>
 

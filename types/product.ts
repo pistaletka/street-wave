@@ -1,4 +1,4 @@
-export type ProductCategory = "sneakers" | "accessories" | "art-objects" | "clothing";
+export type ProductCategory = "sneakers" | "accessories" | "art-objects" | "clothing" | "art" | "certificates";
 
 export type ProductStatus = "available" | "sold";
 

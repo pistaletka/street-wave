@@ -91,6 +91,42 @@
       }
     ]
   },
+  "gallery": {
+    "badge": "Примеры работ",
+    "title": "Что получается на каждом тарифе",
+    "tariffs": [
+      {
+        "name": "Малевич",
+        "subtitle": "Точечная арт-интервенция",
+        "images": [
+          "/gallery/malevich-1.jpg",
+          "/gallery/malevich-2.jpg",
+          "/gallery/malevich-3.jpg",
+          "/gallery/malevich-4.jpg"
+        ]
+      },
+      {
+        "name": "Ван Гог",
+        "subtitle": "Полноценный художественный образ",
+        "images": [
+          "/gallery/vangogh-1.jpg",
+          "/gallery/vangogh-2.jpg",
+          "/gallery/vangogh-3.jpg",
+          "/gallery/vangogh-4.jpg"
+        ]
+      },
+      {
+        "name": "Пикассо",
+        "subtitle": "Авторский арт-объект",
+        "images": [
+          "/gallery/picasso-1.jpg",
+          "/gallery/picasso-2.jpg",
+          "/gallery/picasso-3.jpg",
+          "/gallery/picasso-4.jpg"
+        ]
+      }
+    ]
+  },
   "closer": {
     "text": "Кастом — это не декор. Это способ выразить себя."
   }

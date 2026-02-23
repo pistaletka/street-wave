@@ -9,7 +9,9 @@
     { "value": "sneakers", "label": "Кроссовки" },
     { "value": "clothing", "label": "Одежда" },
     { "value": "accessories", "label": "Аксессуары" },
-    { "value": "art-objects", "label": "Арт-объекты" }
+    { "value": "art-objects", "label": "Арт-объекты" },
+    { "value": "art", "label": "Арт" },
+    { "value": "certificates", "label": "Сертификаты" }
   ],
   "emptyState": "В этой категории пока нет товаров",
   "soldLabel": "Продано"

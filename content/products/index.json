@@ -46,5 +46,29 @@
     "price": 35000,
     "image": "/products/aj1-fire/main.jpg",
     "status": "sold"
+  },
+  {
+    "slug": "certificate-10000",
+    "title": "Сертификат на 10 000 ₽",
+    "category": "certificates",
+    "price": 10000,
+    "image": "/products/certificates/10000.jpg",
+    "status": "available"
+  },
+  {
+    "slug": "certificate-18000",
+    "title": "Сертификат на 18 000 ₽",
+    "category": "certificates",
+    "price": 18000,
+    "image": "/products/certificates/18000.jpg",
+    "status": "available"
+  },
+  {
+    "slug": "certificate-25000",
+    "title": "Сертификат на 25 000 ₽",
+    "category": "certificates",
+    "price": 25000,
+    "image": "/products/certificates/25000.jpg",
+    "status": "available"
   }
 ]

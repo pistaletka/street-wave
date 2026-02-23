@@ -4,6 +4,8 @@ import content from "../../content/place-order.json";
 import SectionHeader from "../../components/shared/SectionHeader";
 import ContactForm from "../../components/shared/ContactForm";
 import TariffSelectButton from "../../components/shared/TariffSelectButton";
+import PlaceholderImage from "../../components/shared/PlaceholderImage";
+import ImageCarousel from "../../components/shared/ImageCarousel";
 
 export const metadata: Metadata = {
   title: content.meta.title,
@@ -39,7 +41,7 @@ export default function PlaceOrderPage() {
       </section>
 
       {/* Form (top) */}
-      <section id="order-form" className="px-6 pt-10 pb-24">
+      <section id="order-form" className="px-6 pt-10 pb-8">
         <div className="mx-auto max-w-3xl">
           <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">Оставить заявку</h2>
           <ContactForm variant="place-order" successUrl="/place-order/success" />
@@ -47,14 +49,14 @@ export default function PlaceOrderPage() {
       </section>
 
       {/* Tariffs */}
-      <section id="tariffs" className="px-6 py-24">
+      <section id="tariffs" className="px-6 pt-8 pb-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.tariffs.badge} title={content.tariffs.title} />
           <div className="grid gap-6 md:grid-cols-3">
             {content.tariffs.items.map((tariff) => (
               <div
                 key={tariff.name}
-                className={`border p-8 ${
+                className={`flex flex-col border p-8 ${
                   tariff.highlighted
                     ? "border-accent bg-accent/5"
                     : "border-border bg-surface"
@@ -78,12 +80,14 @@ export default function PlaceOrderPage() {
                     </li>
                   ))}
                 </ul>
-                {"format" in tariff && (
-                  <p className="mt-6 pt-4 border-t border-border text-xs tracking-wide uppercase text-accent">
-                    {tariff.format}
-                  </p>
-                )}
-                <TariffSelectButton tariffValue={tariff.value} />
+                <div className="mt-auto">
+                  {"format" in tariff && (
+                    <p className="mt-6 pt-4 border-t border-border text-xs tracking-wide uppercase text-accent">
+                      {tariff.format}
+                    </p>
+                  )}
+                  <TariffSelectButton tariffValue={tariff.value} />
+                </div>
               </div>
             ))}
           </div>
@@ -92,7 +96,7 @@ export default function PlaceOrderPage() {
       </section>
 
       {/* Process */}
-      <section className="px-6 py-24">
+      <section className="px-6 pt-8 pb-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.process.badge} title={content.process.title} />
           <div className="grid gap-px md:grid-cols-5">
@@ -110,7 +114,7 @@ export default function PlaceOrderPage() {
       </section>
 
       {/* FAQ */}
-      <section className="px-6 py-24">
+      <section className="px-6 pt-8 pb-8">
         <div className="mx-auto max-w-3xl">
           <SectionHeader badge={content.faq.badge} title={content.faq.title} />
           <div className="divide-y divide-border">
@@ -124,14 +128,34 @@ export default function PlaceOrderPage() {
         </div>
       </section>
 
-      {/* Emotional closer + Form (bottom) */}
-      <section className="px-6 py-24">
+      {/* Tariff gallery */}
+      <section className="px-6 pt-8 pb-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader badge={content.gallery.badge} title={content.gallery.title} />
+          <div className="grid gap-6 md:grid-cols-3">
+            {content.gallery.tariffs.map((tariff) => (
+              <div key={tariff.name}>
+                <div className="mb-4">
+                  <h3 className="sw-h3 text-xl">{tariff.name}</h3>
+                  <p className="mt-1 text-xs tracking-wide uppercase text-accent">
+                    {tariff.subtitle}
+                  </p>
+                </div>
+                <ImageCarousel images={tariff.images} label={tariff.name} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Emotional closer + Contact form */}
+      <section className="px-6 pt-8 pb-24">
         <div className="mx-auto max-w-3xl">
-          <p className="mb-16 text-center text-lg italic text-text-secondary">
+          <p className="mb-12 text-center text-lg italic text-text-secondary">
             {content.closer.text}
           </p>
-          <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">Оставить заявку</h2>
-          <ContactForm variant="place-order" successUrl="/place-order/success" />
+          <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">Связаться с нами</h2>
+          <ContactForm variant="general" successUrl="/place-order/success" />
         </div>
       </section>
     </div>
