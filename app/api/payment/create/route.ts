@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createInvoice } from "@/lib/paykeeper";
 import { createLead } from "@/lib/amocrm";
+import { notifyOwner, confirmToClient } from "@/lib/whatcrm";
 import { generateOrderId } from "@/lib/generateOrderId";
 import { formatPrice } from "@/lib/formatPrice";
 import productsIndex from "@/content/products/index.json";
@@ -80,6 +81,17 @@ export async function POST(request: Request) {
     } catch (crmErr) {
       console.error("CRM lead creation failed (non-blocking):", crmErr);
     }
+
+    // Fire-and-forget: WhatCRM notifications
+    notifyOwner({
+      source: "shop-order",
+      name: buyer.name,
+      phone: buyer.phone,
+      email: buyer.email,
+      leadName: `Магазин: заказ ${orderId}`,
+      note: `Товары:\n${itemsList}\n\nСумма: ${formatPrice(verifiedTotal)}`,
+    }).catch(() => {});
+    confirmToClient(buyer.phone).catch(() => {});
 
     // Create PayKeeper invoice
     const paymentUrl = await createInvoice({

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createLead, type LeadSource } from "@/lib/amocrm";
+import { notifyOwner, confirmToClient } from "@/lib/whatcrm";
 
 const VALID_SOURCES: LeadSource[] = [
   "place-order",
@@ -37,6 +38,10 @@ export async function POST(request: Request) {
       note,
       customFields,
     });
+
+    // Fire-and-forget: send WhatCRM notifications (don't block response)
+    notifyOwner({ source, name, phone, email, leadName, note }).catch(() => {});
+    confirmToClient(phone).catch(() => {});
 
     return NextResponse.json({ success: true, leadId });
   } catch (err) {
