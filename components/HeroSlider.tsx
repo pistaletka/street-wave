@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BANNERS = [
+  "/hero-banner-workshop.png",
   "/hero-banner.png",
   "/hero-banner-2.png",
   "/hero-banner-3.png",
@@ -43,7 +44,7 @@ export default function HeroSlider({ badge, badgeSub, title, subtitle, cta1, cta
           priority={i === 0}
         />
       ))}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex flex-col items-center">
         <p className="text-xs uppercase tracking-[0.25em] text-accent">{badge}</p>
         {badgeSub && <p className="text-xs uppercase tracking-[0.25em] text-accent mb-8">{badgeSub}</p>}
