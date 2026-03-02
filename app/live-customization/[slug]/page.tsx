@@ -8,25 +8,31 @@ import SectionHeader from "../../../components/shared/SectionHeader";
 import EventCaseCta from "./EventCaseCta";
 
 // Import event case data
-import agama from "../../../content/cases/agama.json";
 import customTruck from "../../../content/cases/custom-truck.json";
 import dolceGabbanaEvent from "../../../content/cases/dolce-gabbana-event.json";
 import pinkoEvent from "../../../content/cases/pinko-event.json";
 import superstepEvent from "../../../content/cases/superstep-event.json";
 import yandexNetworking from "../../../content/cases/yandex-networking.json";
+import stockman from "../../../content/cases/stockman.json";
+import adidasFootball from "../../../content/cases/adidas-football.json";
+import stereoLetta from "../../../content/cases/stereo-letta.json";
+import customZoneLv from "../../../content/cases/custom-zone-lv.json";
 
-type CaseData = Omit<typeof agama, "gallery" | "coverImage"> & {
+type CaseData = Omit<typeof customTruck, "gallery" | "coverImage"> & {
   gallery: (string | null)[];
   coverImage?: string;
 };
 
 const caseDataMap: Record<string, CaseData> = {
-  agama,
   "custom-truck": customTruck,
   "dolce-gabbana-event": dolceGabbanaEvent,
   "pinko-event": pinkoEvent,
   "superstep-event": superstepEvent,
   "yandex-networking": yandexNetworking,
+  stockman,
+  "adidas-football": adidasFootball,
+  "stereo-letta": stereoLetta,
+  "custom-zone-lv": customZoneLv,
 };
 
 const eventSlugs = casesIndex.cases

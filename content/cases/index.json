@@ -66,15 +66,6 @@
       "featured": false
     },
     {
-      "slug": "agama",
-      "title": "Agama",
-      "client": "Agama",
-      "year": "2023",
-      "category": "event",
-      "shortDesc": "Кастом-зона на мероприятии бренда: live-роспись для гостей.",
-      "featured": false
-    },
-    {
       "slug": "custom-truck",
       "title": "Кастом Трак",
       "client": "Яндекс Маркет",
@@ -120,6 +111,42 @@
       "year": "2024",
       "category": "event",
       "shortDesc": "Кастомизация футболок на корпоративном нетворкинге в Башне ОКО.",
+      "featured": false
+    },
+    {
+      "slug": "stockman",
+      "title": "Stockman",
+      "client": "Stockman",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Кастомизация футболок в магазинах Stockman.",
+      "featured": false
+    },
+    {
+      "slug": "adidas-football",
+      "title": "Adidas Football",
+      "client": "Adidas",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Кастомизация бутс во флагманском магазине в Москве.",
+      "featured": false
+    },
+    {
+      "slug": "stereo-letta",
+      "title": "Stereo Letta",
+      "client": "Stereo Letta",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Кастомизация шопперов на ивенте в Севкабель Порту, Санкт-Петербург.",
+      "featured": false
+    },
+    {
+      "slug": "custom-zone-lv",
+      "title": "Custom Zone LV",
+      "client": "Частный заказ",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Кастом-зона на дне рождения в стиле Louis Vuitton в Красноярске.",
       "featured": false
     }
   ]
