@@ -30,7 +30,7 @@ export default function ShopPage() {
           </div>
         </div>
       </div>
-      <section className="px-6 pt-8 pb-24">
+      <section className="px-6 pt-8 pb-6">
         <div className="mx-auto max-w-7xl">
           <ProductGrid products={products as Product[]} />
         </div>

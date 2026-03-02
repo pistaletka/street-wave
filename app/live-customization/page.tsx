@@ -17,7 +17,7 @@ export default function LiveCustomizationPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="relative flex min-h-[70vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
+      <section className="relative flex min-h-[63vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
         <Image
           src="/live-hero-events.png"
           alt=""
@@ -44,7 +44,7 @@ export default function LiveCustomizationPage() {
       </section>
 
       {/* Formats */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={liveContent.formats.badge} title={liveContent.formats.title} />
           <div className="grid gap-6 md:grid-cols-3">
@@ -92,7 +92,7 @@ export default function LiveCustomizationPage() {
       </section>
 
       {/* Event cases */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={liveContent.cases.badge}
@@ -132,7 +132,7 @@ export default function LiveCustomizationPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{liveContent.cta.title}</h2>
           <p className="mb-10 sw-body text-text-secondary">{liveContent.cta.subtitle}</p>

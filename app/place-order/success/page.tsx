@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function PlaceOrderSuccessPage() {
   return (
-    <section className="px-6 py-24">
+    <section className="px-6 py-6">
       <div className="mx-auto max-w-2xl text-center">
         <p className="sw-label mb-4 text-accent">Готово</p>
         <h1 className="sw-h1 mb-6 text-3xl sm:text-4xl">Заявка отправлена</h1>

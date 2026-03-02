@@ -12,7 +12,7 @@ export default function ContactsPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl">
           <SectionHeader
             badge={content.hero.badge}
@@ -23,7 +23,7 @@ export default function ContactsPage() {
       </section>
 
       {/* Channels */}
-      <section className="px-6 pb-24">
+      <section className="px-6 pb-6">
         <div className="mx-auto max-w-3xl">
           <div className="mb-16 grid gap-6 sm:grid-cols-2">
             {content.channels.map((ch) => (

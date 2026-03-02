@@ -104,7 +104,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. Фото слева / Текст справа */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 md:grid-cols-2">
             <div className="overflow-hidden">
@@ -138,7 +138,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. Команда */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader title="Команда" />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -157,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. Наши направления */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader title="Наши направления" />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -177,7 +177,7 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Технологии и методы */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader title="Технологии и методы" />
           <div className="flex flex-wrap gap-3">
@@ -194,7 +194,7 @@ export default function AboutPage() {
       </section>
 
       {/* 6. Процесс работы */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader title="Процесс работы" />
           <div className="grid gap-px md:grid-cols-4 mb-12">
@@ -218,7 +218,7 @@ export default function AboutPage() {
       </section>
 
       {/* 7. Нам доверяют */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             title="Нам доверяют"

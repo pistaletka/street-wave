@@ -23,7 +23,7 @@ export default function FaqPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl">
           <SectionHeader
             badge={faqContent.hero.badge}

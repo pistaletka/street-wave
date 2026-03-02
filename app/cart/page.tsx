@@ -9,7 +9,7 @@ export default function CartPage() {
   const { items, total, count } = useCart();
 
   return (
-    <section className="px-6 py-24">
+    <section className="px-6 py-6">
       <div className="mx-auto max-w-3xl">
         <Link
           href="/shop"

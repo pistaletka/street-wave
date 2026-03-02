@@ -61,7 +61,7 @@ export default async function CasePage({ params }: Props) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <Link
             href="/projects"
@@ -83,7 +83,7 @@ export default async function CasePage({ params }: Props) {
 
       {/* Stats */}
       {caseData.stats && caseData.stats.length > 0 && (
-        <section className="px-6 pb-24">
+        <section className="px-6 pb-6">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-6 sm:grid-cols-3">
               {caseData.stats.map((stat) => (
@@ -101,7 +101,7 @@ export default async function CasePage({ params }: Props) {
       )}
 
       {/* Gallery */}
-      <section className="px-6 pb-24">
+      <section className="px-6 pb-6">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
             {caseData.gallery.map((item, i) =>
@@ -124,7 +124,7 @@ export default async function CasePage({ params }: Props) {
 
       {/* Details */}
       {caseData.details && (
-        <section className="px-6 pb-24">
+        <section className="px-6 pb-6">
           <div className="mx-auto max-w-3xl">
             <SectionHeader badge="Детали" title="О проекте" />
             <div className="space-y-8">
@@ -152,7 +152,7 @@ export default async function CasePage({ params }: Props) {
       )}
 
       {/* Back to projects */}
-      <section className="px-6 pb-24">
+      <section className="px-6 pb-6">
         <div className="mx-auto max-w-3xl text-center">
           <Link
             href="/projects"

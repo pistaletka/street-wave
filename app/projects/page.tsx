@@ -45,7 +45,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Manifesto */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl">
           <SectionHeader
             badge={projectsContent.manifesto.badge}
@@ -58,7 +58,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Cases */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={projectsContent.cases.badge}
@@ -151,7 +151,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Process */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={projectsContent.process.badge}
@@ -172,7 +172,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{projectsContent.cta.title}</h2>
           <p className="mb-10 sw-body text-text-secondary">{projectsContent.cta.subtitle}</p>

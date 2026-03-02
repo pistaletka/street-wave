@@ -149,7 +149,7 @@ export default function PlaceOrderPage() {
       </section>
 
       {/* Emotional closer + Contact form */}
-      <section className="px-6 pt-8 pb-24">
+      <section className="px-6 pt-8 pb-6">
         <div className="mx-auto max-w-3xl">
           <p className="mb-12 text-center text-lg italic text-text-secondary">
             {content.closer.text}

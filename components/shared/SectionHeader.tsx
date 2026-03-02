@@ -6,7 +6,7 @@ interface SectionHeaderProps {
 
 export default function SectionHeader({ badge, title, description }: SectionHeaderProps) {
   return (
-    <div className="mb-16">
+    <div className="mb-6">
       {badge && <p className="sw-label mb-2 text-accent">{badge}</p>}
       <h2 className="sw-h2 text-3xl sm:text-4xl">{title}</h2>
       {description && (

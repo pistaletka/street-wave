@@ -24,7 +24,7 @@ export default function Home() {
       />
 
       {/* 2. About */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.about.badge} title={content.about.title} />
           <div className="grid gap-12 md:grid-cols-2">
@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* 3. Directions */}
-      <section className="px-6 pt-24 pb-8">
+      <section className="px-6 pt-6 pb-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.directions.badge} title={content.directions.title} />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* 5. Clients */}
-      <section className="px-6 pt-8 pb-24">
+      <section className="px-6 pt-8 pb-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.clients.badge} title={content.clients.title} />
           <div className="grid grid-cols-3 gap-px sm:grid-cols-4 lg:grid-cols-7">
@@ -105,7 +105,7 @@ export default function Home() {
       </section>
 
       {/* 6. Why us */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.whyUs.badge} title={content.whyUs.title} />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -120,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* 7. Shop teaser */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="sw-label mb-2 text-accent">{content.shop.badge}</p>
           <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{content.shop.title}</h2>
@@ -129,7 +129,7 @@ export default function Home() {
       </section>
 
       {/* 8. Geo */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl">
           <SectionHeader badge={content.geo.badge} title={content.geo.title} />
           <p className="sw-body text-text-secondary">{content.geo.text}</p>
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* 9. Final CTA */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{content.finalCta.title}</h2>
           <p className="mb-10 text-base text-text-secondary">{content.finalCta.subtitle}</p>

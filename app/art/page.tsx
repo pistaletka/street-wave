@@ -21,7 +21,7 @@ export default function ArtPage() {
         </p>
       </section>
 
-      <section className="px-6 pb-24">
+      <section className="px-6 pb-6">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {Array.from({ length: 6 }).map((_, i) => (
@@ -37,7 +37,7 @@ export default function ArtPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-24">
+      <section className="px-6 pb-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="sw-h2 mb-6 text-3xl">Хотите заказать картину?</h2>
           <p className="mb-10 text-base text-text-secondary">
