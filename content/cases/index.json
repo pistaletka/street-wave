@@ -2,11 +2,12 @@
   "cases": [
     {
       "slug": "new-concept",
-      "title": "New Concept",
-      "client": "New Concept",
+      "title": "No CONCEPT",
+      "client": "No CONCEPT",
       "year": "2024",
       "category": "brand",
       "shortDesc": "Флагманский проект: 30+ кастомных изделий для бренд-пространства.",
+      "coverImage": "/projects/new-concept/25.jpg",
       "featured": true
     },
     {
@@ -20,20 +21,11 @@
     },
     {
       "slug": "reebok-zivert",
-      "title": "Reebok \u00d7 Зиверт",
+      "title": "Reebok × Зиверт",
       "client": "Reebok",
       "year": "2023",
       "category": "brand",
       "shortDesc": "Коллаборация с Зиверт: кастомные Reebok для промо-кампании.",
-      "featured": false
-    },
-    {
-      "slug": "agama",
-      "title": "Agama",
-      "client": "Agama",
-      "year": "2023",
-      "category": "event",
-      "shortDesc": "Кастом-зона на мероприятии бренда: live-роспись для гостей.",
       "featured": false
     },
     {
@@ -71,6 +63,63 @@
       "year": "2023",
       "category": "brand",
       "shortDesc": "Кастомная коллекция аксессуаров для поп-ап магазина.",
+      "featured": false
+    },
+    {
+      "slug": "agama",
+      "title": "Agama",
+      "client": "Agama",
+      "year": "2023",
+      "category": "event",
+      "shortDesc": "Кастом-зона на мероприятии бренда: live-роспись для гостей.",
+      "featured": false
+    },
+    {
+      "slug": "custom-truck",
+      "title": "Кастом Трак",
+      "client": "Яндекс Маркет",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Кастомизация кроссовок по 6 городам с Яндекс.Маркет.",
+      "coverImage": "/case-custom-truck.png",
+      "featured": false
+    },
+    {
+      "slug": "dolce-gabbana-event",
+      "title": "Dolce & Gabbana",
+      "client": "Dolce & Gabbana",
+      "year": "2023",
+      "category": "event",
+      "shortDesc": "Кастомизация кроссовок, сумок и аксессуаров в ЦУМе и бутиках бренда.",
+      "coverImage": "/case-dolce-gabbana.png",
+      "featured": false
+    },
+    {
+      "slug": "pinko-event",
+      "title": "Pinko",
+      "client": "Pinko",
+      "year": "2023",
+      "category": "event",
+      "shortDesc": "Кастомизация сумок и обуви в бутиках Москвы и Санкт-Петербурга.",
+      "coverImage": "/case-pinko.png",
+      "featured": false
+    },
+    {
+      "slug": "superstep-event",
+      "title": "SuperStep",
+      "client": "SuperStep",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Бесплатная кастомизация кроссовок в магазинах 4 городов.",
+      "featured": false
+    },
+    {
+      "slug": "yandex-networking",
+      "title": "Яндекс Нетворкинг",
+      "client": "Яндекс",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Кастомизация футболок на корпоративном нетворкинге в Башне ОКО.",
       "featured": false
     }
   ]

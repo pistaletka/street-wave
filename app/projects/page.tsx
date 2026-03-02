@@ -67,7 +67,7 @@ export default function ProjectsPage() {
 
           {/* Featured case (first) */}
           {casesIndex.cases
-            .filter((c) => c.featured)
+            .filter((c) => c.category === "brand" && c.featured)
             .map((c) => (
               <Link
                 key={c.slug}
@@ -75,7 +75,18 @@ export default function ProjectsPage() {
                 className="group mb-12 block border border-border bg-surface transition-colors hover:border-accent/20"
               >
                 <div className="grid md:grid-cols-2">
-                  <PlaceholderImage aspectRatio="16/10" />
+                  {"coverImage" in c && c.coverImage ? (
+                    <div className="relative" style={{ aspectRatio: "16/10" }}>
+                      <Image
+                        src={c.coverImage}
+                        alt={c.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <PlaceholderImage aspectRatio="16/10" />
+                  )}
                   <div className="flex flex-col justify-center p-8 md:p-12">
                     <p className="sw-label mb-2 text-accent">Флагманский проект</p>
                     <h3 className="sw-h2 mb-4 text-2xl sm:text-3xl">{c.title}</h3>
@@ -94,7 +105,7 @@ export default function ProjectsPage() {
           {/* Other cases — show 6 */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {casesIndex.cases
-              .filter((c) => !c.featured)
+              .filter((c) => c.category === "brand" && !c.featured)
               .slice(0, 6)
               .map((c) => (
                 <Link

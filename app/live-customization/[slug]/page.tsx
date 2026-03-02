@@ -5,35 +5,36 @@ import { notFound } from "next/navigation";
 import casesIndex from "../../../content/cases/index.json";
 import PlaceholderImage from "../../../components/shared/PlaceholderImage";
 import SectionHeader from "../../../components/shared/SectionHeader";
+import EventCaseCta from "./EventCaseCta";
 
-// Import brand case data
-import newConcept from "../../../content/cases/new-concept.json";
-import superstep from "../../../content/cases/superstep.json";
-import reebokZivert from "../../../content/cases/reebok-zivert.json";
-import yandexMarket from "../../../content/cases/yandex-market.json";
-import dolceGabbana from "../../../content/cases/dolce-gabbana.json";
-import pinko from "../../../content/cases/pinko.json";
-import offwhiteXiaomi from "../../../content/cases/offwhite-xiaomi.json";
+// Import event case data
+import agama from "../../../content/cases/agama.json";
+import customTruck from "../../../content/cases/custom-truck.json";
+import dolceGabbanaEvent from "../../../content/cases/dolce-gabbana-event.json";
+import pinkoEvent from "../../../content/cases/pinko-event.json";
+import superstepEvent from "../../../content/cases/superstep-event.json";
+import yandexNetworking from "../../../content/cases/yandex-networking.json";
 
-type CaseData = Omit<typeof newConcept, "gallery" | "coverImage"> & {
+type CaseData = Omit<typeof agama, "gallery" | "coverImage"> & {
   gallery: (string | null)[];
   coverImage?: string;
 };
 
 const caseDataMap: Record<string, CaseData> = {
-  "new-concept": newConcept,
-  superstep,
-  "reebok-zivert": reebokZivert,
-  "yandex-market": yandexMarket,
-  "dolce-gabbana": dolceGabbana,
-  pinko,
-  "offwhite-xiaomi": offwhiteXiaomi,
+  agama,
+  "custom-truck": customTruck,
+  "dolce-gabbana-event": dolceGabbanaEvent,
+  "pinko-event": pinkoEvent,
+  "superstep-event": superstepEvent,
+  "yandex-networking": yandexNetworking,
 };
 
+const eventSlugs = casesIndex.cases
+  .filter((c) => c.category === "event")
+  .map((c) => c.slug);
+
 export function generateStaticParams() {
-  return casesIndex.cases
-    .filter((c) => c.category === "brand")
-    .map((c) => ({ slug: c.slug }));
+  return eventSlugs.map((slug) => ({ slug }));
 }
 
 type Props = {
@@ -50,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function CasePage({ params }: Props) {
+export default async function EventCasePage({ params }: Props) {
   const { slug } = await params;
   const caseData = caseDataMap[slug];
 
@@ -64,10 +65,10 @@ export default async function CasePage({ params }: Props) {
       <section className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <Link
-            href="/projects"
+            href="/live-customization"
             className="sw-label mb-8 inline-flex items-center gap-2 text-text-secondary transition-colors hover:text-foreground"
           >
-            &larr; Все проекты
+            &larr; Все ивенты
           </Link>
           <p className="sw-label mb-2 text-accent">
             {caseData.client} — {caseData.year}
@@ -100,7 +101,7 @@ export default async function CasePage({ params }: Props) {
         </section>
       )}
 
-      {/* Gallery */}
+      {/* Gallery — 8 photos, 4 columns × 2 rows */}
       <section className="px-6 pb-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
@@ -126,7 +127,7 @@ export default async function CasePage({ params }: Props) {
       {caseData.details && (
         <section className="px-6 pb-24">
           <div className="mx-auto max-w-3xl">
-            <SectionHeader badge="Детали" title="О проекте" />
+            <SectionHeader badge="Детали" title="Об ивенте" />
             <div className="space-y-8">
               <div>
                 <h3 className="sw-h3 mb-3 text-sm">Задача</h3>
@@ -151,15 +152,10 @@ export default async function CasePage({ params }: Props) {
         </section>
       )}
 
-      {/* Back to projects */}
+      {/* CTA */}
       <section className="px-6 pb-24">
         <div className="mx-auto max-w-3xl text-center">
-          <Link
-            href="/projects"
-            className="sw-btn inline-flex h-12 items-center justify-center border border-border px-8 text-foreground transition-colors hover:border-accent hover:text-accent"
-          >
-            Все проекты
-          </Link>
+          <EventCaseCta />
         </div>
       </section>
     </div>
