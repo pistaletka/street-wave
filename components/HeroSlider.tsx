@@ -5,10 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BANNERS = [
-  "/hero-banner-workshop.png",
-  "/hero-banner.png",
-  "/hero-banner-2.png",
-  "/hero-banner-3.png",
+  "/hero-banner-main.png",
 ];
 
 interface HeroSliderProps {
@@ -31,19 +28,32 @@ export default function HeroSlider({ badge, badgeSub, title, subtitle, cta1, cta
   }, []);
 
   return (
-    <section className="relative flex min-h-[calc(100vh-73px)] flex-col items-center justify-center px-6 text-center overflow-hidden">
-      {BANNERS.map((src, i) => (
+    <section className="relative flex min-h-[calc(60vh-73px)] md:min-h-[calc(80vh-73px)] flex-col items-center justify-center px-6 text-center overflow-hidden">
+      {/* Desktop banner */}
+      <div className="absolute inset-0 hidden md:block">
+        {BANNERS.map((src, i) => (
+          <Image
+            key={src}
+            src={src}
+            alt=""
+            fill
+            className={`object-cover transition-opacity duration-1000 ${
+              i === current ? "opacity-100" : "opacity-0"
+            }`}
+            priority={i === 0}
+          />
+        ))}
+      </div>
+      {/* Mobile banner */}
+      <div className="absolute inset-0 md:hidden">
         <Image
-          key={src}
-          src={src}
+          src="/hero-banner-main-mobile.png"
           alt=""
           fill
-          className={`object-cover transition-opacity duration-1000 ${
-            i === current ? "opacity-100" : "opacity-0"
-          }`}
-          priority={i === 0}
+          className="object-cover"
+          priority
         />
-      ))}
+      </div>
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex flex-col items-center">
         <p className="text-xs uppercase tracking-[0.25em] text-accent">{badge}</p>

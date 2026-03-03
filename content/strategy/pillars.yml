@@ -1,0 +1,38 @@
+B2B_CASE:
+  goal: показать масштаб и управляемость
+  tone: стратегический
+  platforms: [ig, tg, linkedin]
+
+PROCESS:
+  goal: показать системность
+  tone: экспертный
+  platforms: [ig, tg]
+
+OFFER_PREMIUM:
+  goal: подчеркнуть ограниченность
+  tone: премиальный
+  platforms: [ig]
+
+B2B_CASE:
+  goal: показать масштаб и управляемость
+  business_objective: усиление доверия со стороны брендов
+  tone: стратегический
+  platforms: [ig, tg, linkedin]
+  format: carousel
+  figma_template: IG_CASE
+
+PROCESS:
+  goal: показать системность
+  business_objective: снять страх сложных проектов
+  tone: экспертный
+  platforms: [ig, tg]
+  format: post
+  figma_template: IG_PROCESS
+
+OFFER_PREMIUM:
+  goal: подчеркнуть ограниченность
+  business_objective: стимулировать заявки с высоким чеком
+  tone: премиальный
+  platforms: [ig]
+  format: post
+  figma_template: IG_PREMIUM

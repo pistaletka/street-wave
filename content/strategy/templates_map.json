@@ -1,0 +1,17 @@
+{
+  "IG_CASE": {
+    "nodeId": "123:456",
+    "type": "instagram_post",
+    "ratio": "4:5"
+  },
+  "IG_PROCESS": {
+    "nodeId": "123:789",
+    "type": "instagram_post",
+    "ratio": "4:5"
+  }
+}
+{
+  "B2B_CASE": "IG_POST_1",
+  "PROCESS": "IG_POST_1",
+  "OFFER_PREMIUM": "IG_POST_1"
+}

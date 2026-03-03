@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "streetwave-drive-bot",
+  "private_key_id": "e52952c45426ee91974a2536ac24dd60e2463c76",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC6uzfFtJsT5uJU\nZkI6ju9JVbXSpXpt+NxpKZcyexBaa8QvWR4HxzwEVZlePs3Lzidt6r5WeXGIzdbH\naA0TNbV/KkHfut6VobIOETYafPX0mKtkiQCxSohwJ2eGFtWvoCMAB8Me4YSIMLnn\nZKqlAwfG5KvCu5bnhLSb/UtpHDUZ0UaTT+TK0YRJff+xPB9RzzcuvfgJvXDnzr8Q\nvxosM6WxB9IRLl8704o2Sba/bnC0DpVo1uet58iqiAgBP78v07w80eXMg8tdVwt+\nUrf/YuzHnE7wixixuxiV8w2lfo+NZLl3B0UJbqTpzfcY1GV9YtysAeOMjA2RKC40\niWvYB8VJAgMBAAECggEAGek8tfx3wG07XsbJzeJjpeN01YQM1xG/VABncKPPAx0N\nHhzZo+6rj1Zpb8B7QhqbMg9u1gUIEhmuAgGYPuAnDTxJ48fEdzL2yCjvPwG0B3rf\n3ZV9ORzEjfuJy/uDL1mjQa/SDYjxoQxR36ACZd9jxt+YTe9F415wyWx+eFlnrOs2\nIttgAaJXJ2E4HtOwW2eDlML4qbRhV3FoGLKGXCUpajEB8PGB2cIc5TpUzKswDJlY\n7q1UUBT99L5pDdUDcVl2q0Hn3C5LnhjxUeP2UMHfwan4IB2Mx6Ydt5qDTWef4ukj\nt7TdF+u6oHhqMd0ccGgCpMG6+uL0bsXcCbWlS13GmQKBgQD3N/HBzVrZ1NgQVgKZ\n76g2GaH0GtxwpGYi4/x36IsjQouxTFGqrWuHrk/13E3xzO5iXO72hcZOosCPpkC9\nFoWB+mZKMjld+5+S5/UaCKYG1frOx2zH/1YqV+bpQLTsRBXX6pFKSJN0aHDqQPbN\n32EjFvPH6IEo3TOOwd9wulB8mwKBgQDBXT1J+mndBY5b5zGpcQT4hFgpL203jkSI\nv4Tl+bE/nuRH5kOZ1YPqrZs5OvTmDVCTNSrMsLx4zJi/AZallhlcTRnwq71XzrMK\nKG4p6FHMrYO5MOWmv0MOLD/4QZLSHRVEgHPRSzh27p025GJI7BVYKQDUEKYT5Ac8\nUHElJPLZ6wKBgQCGHOphCadsnsPr8M0Od23Yk4VBaMUHspfZ+7Z90kCRC0u/DjkL\nj3LTM2Qba705HMSBxgq44A+Znz85bqaWLb6VqaKOQ7rNWnDSAFX+Hoz7DmA2hwdj\nZAh5hiA1j63WsoTrEkxpcP/VWcdPvZhmTPVkVNJBM8fFxGJw4on1nI2HWwKBgF+C\nYYqP8Qhl/Sox6RrLo2vpWu6E6Yp+cCWni8pYag+FuTY2a3+psi4RsFE1aM/VFc6Q\nfWJ7jayRSoVWEIYbvM0VnFF/UtfzVgYXcEqs4PKbZivsFhMl98YhXzuNkCrOiLm8\nRPjFEc/VDryVVGK2kdho8GrPCmlawaQuC6UQOhAfAoGAItSVkdtlM0cwMPLV5L9w\nYU9OPosjyVijsdgHDB1GWhaGN/F9bUKYQVlWNLhVR+z1RZSygSHk61GRBY1xo4nB\nB5o64kxtGnh4GaiMTeq+7AOHzgh5chUhmR+46r2TFzK7dZV5moc2lkgDyjFzmYkS\nCGKXp/eZnK/ke0YvOO2aau0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "sw-bot@streetwave-drive-bot.iam.gserviceaccount.com",
+  "client_id": "101960382678405224241",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sw-bot%40streetwave-drive-bot.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

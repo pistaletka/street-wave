@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import casesIndex from "../../../content/cases/index.json";
 import PlaceholderImage from "../../../components/shared/PlaceholderImage";
 import SectionHeader from "../../../components/shared/SectionHeader";
+import ProjectCta from "./ProjectCta";
 
 // Import brand case data
 import newConcept from "../../../content/cases/new-concept.json";
@@ -96,6 +97,12 @@ export default async function CasePage({ params }: Props) {
                 </div>
               ))}
             </div>
+            <a
+              href="#details"
+              className="mt-6 inline-flex items-center gap-1 text-xs uppercase tracking-widest text-accent transition-opacity hover:opacity-70"
+            >
+              О проекте &darr;
+            </a>
           </div>
         </section>
       )}
@@ -124,7 +131,7 @@ export default async function CasePage({ params }: Props) {
 
       {/* Details */}
       {caseData.details && (
-        <section className="px-6 pb-6">
+        <section id="details" className="px-6 pb-6 scroll-mt-6">
           <div className="mx-auto max-w-3xl">
             <SectionHeader badge="Детали" title="О проекте" />
             <div className="space-y-8">
@@ -151,15 +158,16 @@ export default async function CasePage({ params }: Props) {
         </section>
       )}
 
-      {/* Back to projects */}
+      {/* CTA */}
       <section className="px-6 pb-6">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/projects"
             className="sw-btn inline-flex h-12 items-center justify-center border border-border px-8 text-foreground transition-colors hover:border-accent hover:text-accent"
           >
             Все проекты
           </Link>
+          <ProjectCta />
         </div>
       </section>
     </div>

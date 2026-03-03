@@ -2,8 +2,8 @@
   "cases": [
     {
       "slug": "new-concept",
-      "title": "No CONCEPT",
-      "client": "No CONCEPT",
+      "title": "No Concept 2024",
+      "client": "No Concept",
       "year": "2024",
       "category": "brand",
       "shortDesc": "Флагманский проект: 30+ кастомных изделий для бренд-пространства.",
@@ -12,11 +12,11 @@
     },
     {
       "slug": "superstep",
-      "title": "Superstep",
+      "title": "Superstep 2025",
       "client": "Superstep",
-      "year": "2024",
+      "year": "2025",
       "category": "brand",
-      "shortDesc": "Лимитированная серия кастомных кроссовок для розничной сети.",
+      "shortDesc": "Лимитированная серия кастомизированных кроссовок для розничной сети SuperStep.",
       "featured": false
     },
     {

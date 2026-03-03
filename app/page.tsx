@@ -5,6 +5,7 @@ import SectionHeader from "../components/shared/SectionHeader";
 import PlaceholderImage from "../components/shared/PlaceholderImage";
 import HeroSlider from "../components/HeroSlider";
 
+
 export const metadata: Metadata = {
   title: content.meta.title,
   description: content.meta.description,

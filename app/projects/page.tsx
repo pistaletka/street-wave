@@ -96,7 +96,9 @@ export default function ProjectsPage() {
                     <p className="sw-body-sm text-text-secondary">
                       {c.shortDesc}
                     </p>
-                    <div className="mt-6 h-px w-8 bg-accent/20 transition-all group-hover:w-16 group-hover:bg-accent/60" />
+                    <span className="mt-6 inline-flex items-center gap-1 text-xs uppercase tracking-widest text-accent opacity-70 transition-opacity group-hover:opacity-100">
+                      Смотреть &rarr;
+                    </span>
                   </div>
                 </div>
               </Link>
@@ -133,6 +135,9 @@ export default function ProjectsPage() {
                     <p className="mt-2 text-xs leading-relaxed text-text-secondary">
                       {c.shortDesc}
                     </p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-xs uppercase tracking-widest text-accent opacity-70 transition-opacity group-hover:opacity-100">
+                      Смотреть &rarr;
+                    </span>
                   </div>
                 </Link>
               ))}

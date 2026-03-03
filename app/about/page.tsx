@@ -10,18 +10,21 @@ export const metadata: Metadata = {
     "Студия арт-кастомизации STREET WAVE. Работаем на стыке искусства, дизайна и ручного производства.",
 };
 
-const team = [
+const team: { name: string; role: string; photo?: string }[] = [
   {
     name: "Галя Pistaletka",
     role: "Основатель и арт-директор Street Wave. Отвечает за концепцию проектов, визуальную стратегию и развитие студии. Работает с брендами и формирует художественное направление.",
+    photo: "/team-galya.jpg",
   },
   {
     name: "Сергей StereoBoogie",
     role: "Художник и кастом-специалист. Работает с ручной росписью, фактурами и экспериментальными техниками. Участвует в разработке лимитированных серий.",
+    photo: "/team-sergey.jpg",
   },
   {
     name: "Инна TechnoPunkQueen",
     role: "Дизайнер и специалист по технологиям кастомизации. Работает с 3D-элементами, принтами и конструктивными решениями.",
+    photo: "/team-inna.jpg",
   },
   {
     name: "Настя Bescry",
@@ -29,11 +32,12 @@ const team = [
   },
 ];
 
-const directions = [
+const directions: { title: string; desc: string; href: string; bg?: string }[] = [
   {
     title: "Персональная кастомизация",
     desc: "Индивидуальные заказы на кастомизацию обуви, одежды и аксессуаров. Каждый проект создаётся под конкретный запрос.",
     href: "/place-order",
+    bg: "/dir-personal.png",
   },
   {
     title: "Лимитированные коллекции и арт-проекты",
@@ -103,20 +107,31 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Фото слева / Текст справа */}
+      {/* 2. Вступительный текст */}
+      <section className="px-6 py-6">
+        <div className="mx-auto max-w-3xl">
+          <p className="sw-body text-text-secondary">
+            Street Wave — первая в России студия арт-кастомизации, объединившая сильных и талантливых художников. С ноября 2014 года команда SW создаёт уникальный арт на предметах одежды, обуви и аксессуарах.
+          </p>
+        </div>
+      </section>
+
+      {/* 3. Фото слева / Текст справа */}
       <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 md:grid-cols-2">
             <div className="overflow-hidden">
-              <PlaceholderImage aspectRatio="4/3" label="Команда Street Wave в студии" />
+              <div className="relative" style={{ aspectRatio: "4/3" }}>
+                <Image
+                  src="/about-team-v2.jpg"
+                  alt="Процесс кастомизации в студии Street Wave"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
             <div className="flex flex-col justify-center">
               <div className="max-w-[580px] space-y-6">
-                <p className="sw-body text-text-secondary">
-                  Street Wave первая в России студия арт-кастомизации, объединившая
-                  сильных и талантливых художников. С ноября 2014 года команда SW
-                  создаёт уникальный арт на предметах одежды, обуви и аксессуарах.
-                </p>
                 <p className="sw-body text-text-secondary">
                   Мы работаем с формой, силуэтом и поверхностью, превращая вещь в
                   носимый арт-объект. От индивидуальных заказов до лимитированных
@@ -125,8 +140,8 @@ export default function AboutPage() {
                 </p>
                 <p className="sw-body text-text-secondary">
                   Street Wave — это студия, где соединяется уличная культура, дизайн
-                  и художественное мышление. Мы создаем концепции и превращаем
-                  масс-маркет в реальный арт продукт.
+                  и художественное мышление. Мы создаём концепции и превращаем
+                  масс-маркет в реальный арт-продукт.
                 </p>
                 <p className="sw-body text-text-secondary">
                   Мы интерпретируем, создаём и формируем собственный визуальный язык.
@@ -147,7 +162,18 @@ export default function AboutPage() {
                 key={member.name}
                 className="border border-border bg-surface p-6"
               >
-                <PlaceholderImage aspectRatio="1/1" label={member.name} />
+                {member.photo ? (
+                  <div className="relative" style={{ aspectRatio: "1/1" }}>
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <PlaceholderImage aspectRatio="1/1" label={member.name} />
+                )}
                 <h3 className="sw-h3 mt-6 mb-3 text-sm">{member.name}</h3>
                 <p className="sw-body-sm text-text-secondary">{member.role}</p>
               </div>
@@ -165,11 +191,24 @@ export default function AboutPage() {
               <Link
                 key={dir.title}
                 href={dir.href}
-                className="group border border-border bg-surface p-8 transition-colors hover:border-accent/20"
+                className="group relative overflow-hidden border border-border bg-surface p-8 transition-colors hover:border-accent/20"
               >
-                <h3 className="sw-h3 mb-4 text-lg">{dir.title}</h3>
-                <p className="sw-body-sm text-text-secondary">{dir.desc}</p>
-                <div className="mt-6 h-px w-8 bg-accent/20 transition-all group-hover:w-16 group-hover:bg-accent/60" />
+                {dir.bg && (
+                  <>
+                    <Image
+                      src={dir.bg}
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/60" />
+                  </>
+                )}
+                <div className="relative z-10">
+                  <h3 className="sw-h3 mb-4 text-lg">{dir.title}</h3>
+                  <p className={`sw-body-sm ${dir.bg ? "text-white/70" : "text-text-secondary"}`}>{dir.desc}</p>
+                  <div className="mt-6 h-px w-8 bg-accent/20 transition-all group-hover:w-16 group-hover:bg-accent/60" />
+                </div>
               </Link>
             ))}
           </div>

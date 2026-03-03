@@ -1,0 +1,7 @@
+{
+  "title": "string <= 48 chars",
+  "subtitle": "string <= 80 chars",
+  "body": "string <= 220 chars",
+  "cta": "string <= 20 chars",
+  "visual_note": "string"
+}

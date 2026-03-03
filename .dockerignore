@@ -1,0 +1,14 @@
+node_modules
+.next
+.git
+.claude
+.vercel
+google
+inputs
+schemas
+scripts
+content/brand
+content/briefs
+content/outputs
+content/strategy
+*.zip
