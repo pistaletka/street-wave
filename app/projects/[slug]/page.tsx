@@ -15,6 +15,7 @@ import yandexMarket from "../../../content/cases/yandex-market.json";
 import dolceGabbana from "../../../content/cases/dolce-gabbana.json";
 import pinko from "../../../content/cases/pinko.json";
 import offwhiteXiaomi from "../../../content/cases/offwhite-xiaomi.json";
+import agama from "../../../content/cases/agama.json";
 
 type CaseData = Omit<typeof newConcept, "gallery" | "coverImage"> & {
   gallery: (string | null)[];
@@ -29,6 +30,7 @@ const caseDataMap: Record<string, CaseData> = {
   "dolce-gabbana": dolceGabbana,
   pinko,
   "offwhite-xiaomi": offwhiteXiaomi,
+  agama,
 };
 
 export function generateStaticParams() {
@@ -79,6 +81,14 @@ export default async function CasePage({ params }: Props) {
           <p className="max-w-2xl sw-body text-text-secondary">
             {caseData.description}
           </p>
+          {caseData.details && (
+            <a
+              href="#details"
+              className="mt-6 inline-flex items-center gap-1 text-xs uppercase tracking-widest text-accent transition-opacity hover:opacity-70"
+            >
+              О проекте &darr;
+            </a>
+          )}
         </div>
       </section>
 
@@ -97,12 +107,6 @@ export default async function CasePage({ params }: Props) {
                 </div>
               ))}
             </div>
-            <a
-              href="#details"
-              className="mt-6 inline-flex items-center gap-1 text-xs uppercase tracking-widest text-accent transition-opacity hover:opacity-70"
-            >
-              О проекте &darr;
-            </a>
           </div>
         </section>
       )}

@@ -1,6 +1,6 @@
 {
   "slug": "custom-zone-lv",
-  "title": "Custom Zone LV",
+  "title": "Custom зона: день рождения в стиле Louis Vuitton",
   "client": "Частный заказ",
   "year": "2024",
   "category": "event",
@@ -9,7 +9,20 @@
     { "value": "50+", "label": "гостей" },
     { "value": "1", "label": "день" }
   ],
-  "gallery": [null, null, null, null, null, null, null, null],
+  "gallery": [
+    "/events/custom-zone-lv/1.jpg",
+    "/events/custom-zone-lv/2.jpg",
+    "/events/custom-zone-lv/3.jpg",
+    "/events/custom-zone-lv/4.jpg",
+    "/events/custom-zone-lv/5.jpg",
+    "/events/custom-zone-lv/6.jpg",
+    "/events/custom-zone-lv/7.jpg",
+    "/events/custom-zone-lv/8.jpg",
+    "/events/custom-zone-lv/9.jpg",
+    "/events/custom-zone-lv/10.jpg",
+    "/events/custom-zone-lv/11.jpg",
+    null
+  ],
   "details": {
     "task": "Организовать кастом-зону на частном мероприятии — дне рождения в стиле Louis Vuitton в Красноярске.",
     "solution": "Развернули полноценную мастерскую на площадке. Мастера расписывали аксессуары и подарки для гостей в стилистике Louis Vuitton.",

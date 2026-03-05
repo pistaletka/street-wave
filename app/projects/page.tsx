@@ -22,16 +22,16 @@ export default function ProjectsPage() {
             alt="Кастомизированные кроссовки Puma — streetwave x бренд-проект"
             width={1920}
             height={540}
-            className="h-[210px] w-full object-cover sm:h-[265px] md:h-[320px]"
+            className="h-[180px] w-full object-cover sm:h-[220px] md:h-[260px]"
             priority
           />
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <p className="sw-label mb-4 text-accent">{projectsContent.hero.badge}</p>
-            <h1 className="sw-h1 max-w-3xl text-3xl text-white sm:text-4xl md:text-5xl">
+            <p className="sw-label mb-3 text-accent">{projectsContent.hero.badge}</p>
+            <h1 className="sw-h1 text-2xl text-white sm:text-3xl md:text-4xl whitespace-nowrap">
               {projectsContent.hero.title}
             </h1>
-            <p className="mt-4 max-w-xl sw-body text-sm text-white/80">
+            <p className="mt-3 sw-body text-sm text-white/80">
               {projectsContent.hero.subtitle}
             </p>
             <button
@@ -46,7 +46,7 @@ export default function ProjectsPage() {
 
       {/* Manifesto */}
       <section className="px-6 py-6">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={projectsContent.manifesto.badge}
             title={projectsContent.manifesto.title}
@@ -115,18 +115,23 @@ export default function ProjectsPage() {
                   href={`/projects/${c.slug}`}
                   className="group"
                 >
-                  {"coverImage" in c && c.coverImage ? (
-                    <div className="relative" style={{ aspectRatio: "4/5" }}>
+                  <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                    {"coverImage" in c && c.coverImage ? (
                       <Image
                         src={c.coverImage}
                         alt={c.title}
                         fill
                         className="object-cover"
                       />
+                    ) : (
+                      <PlaceholderImage aspectRatio="4/5" />
+                    )}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors group-hover:bg-black/40">
+                      <span className="text-xs uppercase tracking-widest text-white opacity-0 transition-opacity group-hover:opacity-100">
+                        Смотреть &rarr;
+                      </span>
                     </div>
-                  ) : (
-                    <PlaceholderImage aspectRatio="4/5" />
-                  )}
+                  </div>
                   <div className="mt-4">
                     <h3 className="sw-h3 text-sm">{c.title}</h3>
                     <p className="mt-1 text-xs text-muted">
@@ -135,9 +140,6 @@ export default function ProjectsPage() {
                     <p className="mt-2 text-xs leading-relaxed text-text-secondary">
                       {c.shortDesc}
                     </p>
-                    <span className="mt-3 inline-flex items-center gap-1 text-xs uppercase tracking-widest text-accent opacity-70 transition-opacity group-hover:opacity-100">
-                      Смотреть &rarr;
-                    </span>
                   </div>
                 </Link>
               ))}

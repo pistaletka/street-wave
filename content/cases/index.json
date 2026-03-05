@@ -17,6 +17,17 @@
       "year": "2025",
       "category": "brand",
       "shortDesc": "Лимитированная серия кастомизированных кроссовок для розничной сети SuperStep.",
+      "coverImage": "/projects/superstep/cover.jpg",
+      "featured": false
+    },
+    {
+      "slug": "agama",
+      "title": "Агама 2023",
+      "client": "Agama",
+      "year": "2023",
+      "category": "brand",
+      "shortDesc": "Создание коллекции кастомизированных кроссовок для сотрудников бренда.",
+      "coverImage": "/projects/agama/cover.jpg",
       "featured": false
     },
     {
@@ -142,7 +153,7 @@
     },
     {
       "slug": "custom-zone-lv",
-      "title": "Custom Zone LV",
+      "title": "Custom зона: день рождения в стиле Louis Vuitton",
       "client": "Частный заказ",
       "year": "2024",
       "category": "event",
