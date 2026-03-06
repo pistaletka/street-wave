@@ -8,8 +8,15 @@ import PlaceholderImage from "../../components/shared/PlaceholderImage";
 import ImageCarousel from "../../components/shared/ImageCarousel";
 
 export const metadata: Metadata = {
-  title: content.meta.title,
-  description: content.meta.description,
+  title: "Заказать кастомизацию кроссовок и одежды — тарифы от 10 000 ₽",
+  description:
+    "Закажите уникальную кастомизацию кроссовок, одежды или арт-объектов в streetwave®. Тарифы от 10 000 ₽. Доставка по всей России.",
+  openGraph: {
+    title: "Персональный кастом — streetwave®",
+    description: "Закажите уникальную кастомизацию. Тарифы от 10 000 ₽.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
+  alternates: { canonical: "/place-order" },
 };
 
 export default function PlaceOrderPage() {

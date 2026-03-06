@@ -4,8 +4,15 @@ import SectionHeader from "../../components/shared/SectionHeader";
 import PlaceholderImage from "../../components/shared/PlaceholderImage";
 
 export const metadata: Metadata = {
-  title: "Арт / Картины — streetwave®",
-  description: "Авторские картины и арт-объекты. Уличная эстетика, перенесённая на холст и в интерьер.",
+  title: "Арт-объекты и картины на заказ",
+  description:
+    "Авторские картины и арт-объекты от streetwave®. Уличная эстетика, перенесённая на холст и в интерьер. Заказать арт-объект в Москве.",
+  openGraph: {
+    title: "Арт / Картины — streetwave®",
+    description: "Авторские картины и арт-объекты. Уличная эстетика на холсте.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
+  alternates: { canonical: "/art" },
 };
 
 export default function ArtPage() {
