@@ -4,8 +4,15 @@ import SectionHeader from "../../components/shared/SectionHeader";
 import ContactForm from "../../components/shared/ContactForm";
 
 export const metadata: Metadata = {
-  title: content.meta.title,
-  description: content.meta.description,
+  title: "Контакты студии арт-кастомизации streetwave®",
+  description:
+    "Свяжитесь со студией streetwave® — Telegram, WhatsApp, email. Москва. Ответим в течение 24 часов.",
+  openGraph: {
+    title: "Контакты — streetwave®",
+    description: "Telegram, WhatsApp, email. Ответим в течение 24 часов.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
+  alternates: { canonical: "/contacts" },
 };
 
 export default function ContactsPage() {

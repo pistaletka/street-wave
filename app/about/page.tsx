@@ -5,9 +5,15 @@ import SectionHeader from "../../components/shared/SectionHeader";
 import PlaceholderImage from "../../components/shared/PlaceholderImage";
 
 export const metadata: Metadata = {
-  title: "О нас — streetwave®",
+  title: "О студии арт-кастомизации STREET WAVE",
   description:
-    "Студия арт-кастомизации STREET WAVE. Работаем на стыке искусства, дизайна и ручного производства.",
+    "Студия арт-кастомизации STREET WAVE с 2014 года. Работаем на стыке искусства, дизайна и ручного производства. Москва, доставка по всей России.",
+  openGraph: {
+    title: "О нас — streetwave®",
+    description: "Студия арт-кастомизации с 2014 года. Искусство, дизайн, ручное производство.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
+  alternates: { canonical: "/about" },
 };
 
 const team: { name: string; role: string; photo?: string }[] = [
