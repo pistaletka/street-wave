@@ -121,7 +121,7 @@ export default function AnalyticsLoader() {
     if (META_PIXEL_ID && isComDomain() && !metaLoaded.current) {
       metaLoaded.current = true;
       loadScript("https://connect.facebook.net/en_US/fbevents.js").then(() => {
-        const fbq = (window as Record<string, unknown>).fbq as (
+        const fbq = (window as unknown as Record<string, unknown>).fbq as (
           action: string,
           value: string,
         ) => void;
