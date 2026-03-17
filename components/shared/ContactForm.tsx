@@ -1,15 +1,20 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import common from "../../content/common.json";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
+import { reachGoal } from "@/lib/analytics";
+import { GOALS } from "@/lib/goals";
+import LegalConsent from "./LegalConsent";
+import MarketingConsent from "./MarketingConsent";
 
 type FormVariant = "general" | "place-order" | "brand-project";
 
 interface ContactFormProps {
   variant?: FormVariant;
   successUrl?: string;
+  sourceOverride?: string;
 }
 
 const inputClass =
@@ -20,22 +25,43 @@ const selectClass =
 const textareaClass =
   "border border-border bg-transparent px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-accent";
 
-export default function ContactForm({ variant = "general", successUrl }: ContactFormProps) {
+function getConsentNote(form: HTMLFormElement): string {
+  const marketing = form.querySelector<HTMLInputElement>('input[name="marketingConsent"]');
+  return [
+    "Согласие на обработку ПДн: да",
+    `Согласие на рассылку: ${marketing?.checked ? "да" : "нет"}`,
+  ].join("\n");
+}
+
+export default function ContactForm({ variant = "general", successUrl, sourceOverride }: ContactFormProps) {
   const { submit, loading, error, success } = useFormSubmit();
   const formRef = useRef<HTMLFormElement>(null);
   const router = useRouter();
+  const [consentError, setConsentError] = useState(false);
 
-  if (success) {
-    if (successUrl) {
+  useEffect(() => {
+    if (success && successUrl) {
       router.push(successUrl);
-      return null;
     }
+  }, [success, successUrl, router]);
+
+  if (success && !successUrl) {
     return (
       <div className="flex flex-col items-center gap-4 py-12 text-center">
         <p className="sw-h3 text-xl text-accent">Заявка отправлена!</p>
         <p className="sw-body text-text-secondary">Мы свяжемся с вами в ближайшее время.</p>
       </div>
     );
+  }
+
+  function checkConsent(form: HTMLFormElement): boolean {
+    const checkbox = form.querySelector<HTMLInputElement>('input[name="legalConsent"]');
+    if (!checkbox?.checked) {
+      setConsentError(true);
+      return false;
+    }
+    setConsentError(false);
+    return true;
   }
 
   if (variant === "place-order") {
@@ -45,21 +71,40 @@ export default function ContactForm({ variant = "general", successUrl }: Contact
         ref={formRef}
         onSubmit={async (e) => {
           e.preventDefault();
+          if (!checkConsent(e.currentTarget)) return;
           const fd = new FormData(e.currentTarget);
-          const tariffLabel = f.tariff.options.find((o) => o.value === fd.get("tariff"))?.label || "";
+          const tariffOption = f.tariff.options.find((o) => o.value === fd.get("tariff"));
+          const tariffLabel = tariffOption?.label || "";
+          const tariffPrices: Record<string, number> = { malevich: 10000, "van-gogh": 18000, picasso: 25000 };
+          const tariffPrice = tariffPrices[fd.get("tariff") as string] || 0;
+          const itemOption = f.item.options.find((o) => o.value === fd.get("item"));
+          const ownOption = f.ownItem.options.find((o) => o.value === fd.get("ownItem"));
+          const consentInfo = getConsentNote(e.currentTarget);
           const ok = await submit({
             name: fd.get("name") as string,
             phone: fd.get("contact") as string,
             email: fd.get("email") as string,
             source: "place-order",
-            leadName: `Кастом: ${fd.get("item") || "не указано"}`,
+            leadName: `Кастом: ${itemOption?.label || "не указано"}`,
+            price: tariffPrice,
             note: [
               `Тариф: ${tariffLabel}`,
-              `Предмет: ${fd.get("item")}`,
+              `Предмет: ${itemOption?.label || "не указано"}`,
+              `Изделие: ${ownOption?.label || "не указано"}`,
+              `Мессенджер: ${fd.get("messenger") || "не выбран"}`,
               `Идея: ${fd.get("idea")}`,
+              `---`,
+              consentInfo,
             ].join("\n"),
+            customFields: {
+              itemType: String(itemOption?.enumId || ""),
+              ownItem: String(ownOption?.enumId || ""),
+            },
           });
-          if (ok) formRef.current?.reset();
+          if (ok) {
+            reachGoal(GOALS.FORM_CUSTOM_ORDER);
+            formRef.current?.reset();
+          }
         }}
         className="grid gap-6 sm:grid-cols-2"
       >
@@ -88,11 +133,41 @@ export default function ContactForm({ variant = "general", successUrl }: Contact
         </div>
         <div className="flex flex-col gap-2">
           <label htmlFor="po-item" className={labelClass}>{f.item.label}</label>
-          <input id="po-item" name="item" type="text" placeholder={f.item.placeholder} className={inputClass} />
+          <select id="po-item" name="item" defaultValue="" className={selectClass}>
+            <option value="" disabled className="bg-surface text-muted">Выберите тип</option>
+            {f.item.options.map((opt) => (
+              <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
+            ))}
+          </select>
+        </div>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="po-own" className={labelClass}>{f.ownItem.label}</label>
+          <select id="po-own" name="ownItem" defaultValue="" className={selectClass}>
+            <option value="" disabled className="bg-surface text-muted">Своё или закупаем</option>
+            {f.ownItem.options.map((opt) => (
+              <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
+            ))}
+          </select>
         </div>
         <div className="flex flex-col gap-2">
           <label htmlFor="po-contact" className={labelClass}>{f.contact.label}</label>
-          <input id="po-contact" name="contact" type="text" required placeholder={f.contact.placeholder} className={inputClass} />
+          {"messengerOptions" in f.contact && (
+            <div className="flex gap-4">
+              {(f.contact as { messengerOptions: string[] }).messengerOptions.map((opt: string, idx: number) => (
+                <label key={opt} className="flex items-center gap-1.5 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="messenger"
+                    value={opt}
+                    defaultChecked={idx === 0}
+                    className="accent-accent w-3 h-3"
+                  />
+                  <span className="text-[11px] text-muted">{opt}</span>
+                </label>
+              ))}
+            </div>
+          )}
+          <input id="po-contact" name="contact" type="tel" required placeholder={f.contact.placeholder} className={inputClass} />
         </div>
         <div className="flex flex-col gap-2">
           <label htmlFor="po-email" className={labelClass}>{f.email.label}</label>
@@ -107,6 +182,10 @@ export default function ContactForm({ variant = "general", successUrl }: Contact
             <p className="sw-caption text-red-400">{error}</p>
           </div>
         )}
+        <div className="sm:col-span-2 flex flex-col gap-4">
+          <LegalConsent id="po-consent" consentError={consentError} variant="order" />
+          <MarketingConsent id="po-marketing" />
+        </div>
         <div className="sm:col-span-2">
           <button
             type="submit"
@@ -127,16 +206,24 @@ export default function ContactForm({ variant = "general", successUrl }: Contact
         ref={formRef}
         onSubmit={async (e) => {
           e.preventDefault();
+          if (!checkConsent(e.currentTarget)) return;
           const fd = new FormData(e.currentTarget);
+          const consentInfo = getConsentNote(e.currentTarget);
+          const isEvent = sourceOverride === "live-event";
           const ok = await submit({
             name: fd.get("name") as string,
             phone: fd.get("phone") as string,
             email: fd.get("email") as string,
-            source: "brand-project",
-            leadName: `Бренд-проект от ${fd.get("name")}`,
-            note: fd.get("comment") as string,
+            source: isEvent ? "live-customization" : "brand-project",
+            leadName: isEvent
+              ? `Лайв-кастомизация от ${fd.get("name")}`
+              : `Бренд-проект от ${fd.get("name")}`,
+            note: [(fd.get("comment") as string) || "", `---`, consentInfo].join("\n"),
           });
-          if (ok) formRef.current?.reset();
+          if (ok) {
+            reachGoal(isEvent ? GOALS.FORM_EVENT : GOALS.FORM_BRAND_PROJECT);
+            formRef.current?.reset();
+          }
         }}
         className="grid gap-6 sm:grid-cols-2"
       >
@@ -161,6 +248,10 @@ export default function ContactForm({ variant = "general", successUrl }: Contact
             <p className="sw-caption text-red-400">{error}</p>
           </div>
         )}
+        <div className="sm:col-span-2 flex flex-col gap-4">
+          <LegalConsent id="bp-consent" consentError={consentError} />
+          <MarketingConsent id="bp-marketing" />
+        </div>
         <div className="sm:col-span-2">
           <button
             type="submit"
@@ -181,16 +272,21 @@ export default function ContactForm({ variant = "general", successUrl }: Contact
       ref={formRef}
       onSubmit={async (e) => {
         e.preventDefault();
+        if (!checkConsent(e.currentTarget)) return;
         const fd = new FormData(e.currentTarget);
         const typeLabel = f.type.options.find((o) => o.value === fd.get("type"))?.label || "";
+        const consentInfo = getConsentNote(e.currentTarget);
         const ok = await submit({
           name: fd.get("name") as string,
           phone: fd.get("contact") as string,
           source: "general",
           leadName: `Обращение: ${typeLabel || "общее"}`,
-          note: fd.get("message") as string,
+          note: [(fd.get("message") as string) || "", `---`, consentInfo].join("\n"),
         });
-        if (ok) formRef.current?.reset();
+        if (ok) {
+          reachGoal(GOALS.FORM_CONTACT);
+          formRef.current?.reset();
+        }
       }}
       className="grid gap-6 sm:grid-cols-2"
     >
@@ -220,6 +316,10 @@ export default function ContactForm({ variant = "general", successUrl }: Contact
           <p className="sw-caption text-red-400">{error}</p>
         </div>
       )}
+      <div className="sm:col-span-2 flex flex-col gap-4">
+        <LegalConsent id="g-consent" consentError={consentError} />
+        <MarketingConsent id="g-marketing" />
+      </div>
       <div className="sm:col-span-2">
         <button
           type="submit"
