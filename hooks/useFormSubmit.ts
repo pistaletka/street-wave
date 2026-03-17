@@ -12,6 +12,7 @@ interface SubmitParams {
   leadName: string;
   price?: number;
   note?: string;
+  customFields?: Record<string, string>;
 }
 
 interface UseFormSubmitReturn {
