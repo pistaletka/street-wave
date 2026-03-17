@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import content from "../content/home.json";
 import SectionHeader from "../components/shared/SectionHeader";
+import Image from "next/image";
 import PlaceholderImage from "../components/shared/PlaceholderImage";
 import HeroSlider from "../components/HeroSlider";
 
@@ -29,7 +30,14 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.about.badge} title={content.about.title} />
           <div className="grid gap-12 md:grid-cols-2">
-            <PlaceholderImage aspectRatio="16/9" />
+            <div className="relative aspect-[16/9] overflow-hidden">
+              <Image
+                src="/team.png"
+                alt="Команда Street Wave"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div className="flex flex-col justify-center">
               <p className="sw-body text-text-secondary whitespace-pre-line">
                 {content.about.text}
@@ -54,11 +62,20 @@ export default function Home() {
               <Link
                 key={dir.title}
                 href={dir.href}
-                className="group border border-border bg-surface p-8 transition-colors hover:border-accent/20"
+                className="group relative overflow-hidden border border-border aspect-[4/3] flex flex-col justify-end transition-colors hover:border-accent/20"
               >
-                <h3 className="sw-h3 mb-4 text-lg">{dir.title}</h3>
-                <p className="sw-body-sm text-text-secondary">{dir.desc}</p>
-                <div className="mt-6 h-px w-8 bg-accent/20 transition-all group-hover:w-16 group-hover:bg-accent/60" />
+                <Image
+                  src={dir.image}
+                  alt={dir.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-x-0 bottom-0 z-10 p-8">
+                  <h3 className="sw-h3 text-lg text-white h-[3.5rem]">{dir.title}</h3>
+                  <p className="sw-body-sm text-white/70 h-[4.5rem]">{dir.desc}</p>
+                  <div className="mt-4 h-px w-8 bg-accent/20 transition-all group-hover:w-16 group-hover:bg-accent/60" />
+                </div>
               </Link>
             ))}
           </div>

@@ -17,6 +17,13 @@ import stockman from "../../../content/cases/stockman.json";
 import adidasFootball from "../../../content/cases/adidas-football.json";
 import stereoLetta from "../../../content/cases/stereo-letta.json";
 import customZoneLv from "../../../content/cases/custom-zone-lv.json";
+import tommyHilfiger from "../../../content/cases/tommy-hilfiger.json";
+import tsum2019 from "../../../content/cases/tsum-2019.json";
+import tsumPopupDolceGabbana from "../../../content/cases/tsum-popup-dolce-gabbana.json";
+import worldCup from "../../../content/cases/world-cup.json";
+import dkny from "../../../content/cases/dkny.json";
+import vfno from "../../../content/cases/vfno.json";
+import ralphLaurenTsum from "../../../content/cases/ralph-lauren-tsum.json";
 
 type CaseData = Omit<typeof customTruck, "gallery" | "coverImage"> & {
   gallery: (string | null)[];
@@ -33,6 +40,13 @@ const caseDataMap: Record<string, CaseData> = {
   "adidas-football": adidasFootball,
   "stereo-letta": stereoLetta,
   "custom-zone-lv": customZoneLv,
+  "tommy-hilfiger": tommyHilfiger,
+  "tsum-2019": tsum2019,
+  "tsum-popup-dolce-gabbana": tsumPopupDolceGabbana,
+  "world-cup": worldCup,
+  dkny,
+  vfno,
+  "ralph-lauren-tsum": ralphLaurenTsum,
 };
 
 const eventSlugs = casesIndex.cases
@@ -110,7 +124,7 @@ export default async function EventCasePage({ params }: Props) {
       {/* Gallery — 8 photos, 4 columns × 2 rows */}
       <section className="px-6 pb-6">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 grid-cols-3 lg:grid-cols-6">
             {caseData.gallery.map((item, i) =>
               item ? (
                 <div key={i} className="relative" style={{ aspectRatio: "4/5" }}>

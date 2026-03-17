@@ -27,7 +27,7 @@ export default function PlaceOrderPage() {
         {/* Banner */}
         <div className="relative mx-auto max-w-7xl overflow-hidden">
           <Image
-            src="/custom-banner.png"
+            src="/desktop.png"
             alt="Кастомизированные кроссовки — примеры работ streetwave"
             width={1920}
             height={360}

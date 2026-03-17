@@ -19,6 +19,7 @@ export default function EventCaseCta() {
         onClose={() => setModalOpen(false)}
         variant="brand-project"
         title="Обсудить ивент"
+        sourceOverride="live-event"
       />
     </>
   );

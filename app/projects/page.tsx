@@ -18,11 +18,11 @@ export default function ProjectsPage() {
       <section className="px-6 pt-0 pb-0">
         <div className="relative mx-auto max-w-7xl overflow-hidden">
           <Image
-            src="/projects-banner.png"
+            src="/banner_desktop.jpg"
             alt="Кастомизированные кроссовки Puma — streetwave x бренд-проект"
             width={1920}
             height={540}
-            className="h-[180px] w-full object-cover sm:h-[220px] md:h-[260px]"
+            className="h-[180px] w-full object-cover object-bottom sm:h-[220px] md:h-[260px]"
             priority
           />
           <div className="absolute inset-0 bg-black/50" />
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Manifesto */}
-      <section className="px-6 py-6">
+      <section className="px-6 pt-12 pb-0">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={projectsContent.manifesto.badge}
@@ -58,14 +58,14 @@ export default function ProjectsPage() {
       </section>
 
       {/* Cases */}
-      <section className="px-6 py-6">
+      <section className="px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={projectsContent.cases.badge}
             title={projectsContent.cases.title}
           />
 
-          {/* Featured case (first) */}
+          {/* Featured case — No Concept */}
           {casesIndex.cases
             .filter((c) => c.category === "brand" && c.featured)
             .map((c) => (
@@ -104,11 +104,10 @@ export default function ProjectsPage() {
               </Link>
             ))}
 
-          {/* Other cases — show 6 */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {/* 4 cases in a row */}
+          <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
             {casesIndex.cases
-              .filter((c) => c.category === "brand" && !c.featured)
-              .slice(0, 6)
+              .filter((c) => ["agama", "offwhite-xiaomi", "christmas-balls", "superstep", "vk", "sport-theme", "cska"].includes(c.slug))
               .map((c) => (
                 <Link
                   key={c.slug}
@@ -144,21 +143,11 @@ export default function ProjectsPage() {
                 </Link>
               ))}
           </div>
-
-          {/* View all button */}
-          <div className="mt-12 text-center">
-            <Link
-              href="/projects"
-              className="sw-btn inline-flex h-12 items-center justify-center border border-border px-8 text-foreground transition-colors hover:border-accent hover:text-accent"
-            >
-              Смотреть все проекты
-            </Link>
-          </div>
         </div>
       </section>
 
       {/* Process */}
-      <section className="px-6 py-6">
+      <section className="px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={projectsContent.process.badge}
@@ -179,7 +168,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 py-6">
+      <section className="px-6 py-12">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{projectsContent.cta.title}</h2>
           <p className="mb-10 sw-body text-text-secondary">{projectsContent.cta.subtitle}</p>

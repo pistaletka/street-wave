@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BANNERS = [
-  "/hero-banner-main.png",
+  "/hero-slide-1.png",
+  "/hero-slide-2.png",
+  "/hero-slide-3.png",
 ];
 
 interface HeroSliderProps {

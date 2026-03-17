@@ -31,6 +31,15 @@
           { "href": "/faq", "label": "FAQ" },
           { "href": "/contacts", "label": "Контакты" }
         ]
+      },
+      {
+        "title": "Документы",
+        "links": [
+          { "href": "/offers", "label": "Публичная оферта" },
+          { "href": "/privacy", "label": "Политика конфиденциальности" },
+          { "href": "/agreements", "label": "Пользовательское соглашение" },
+          { "href": "/consent", "label": "Согласие на обработку данных" }
+        ]
       }
     ],
     "social": [
@@ -58,9 +67,25 @@
             { "value": "picasso", "label": "Пикассо (25 000 \u20bd)" }
           ]
         },
-        "item": { "label": "Что кастомизировать", "placeholder": "Кроссовки, куртка, сумка..." },
+        "item": {
+          "label": "Что кастомизировать",
+          "options": [
+            { "value": "sneakers", "label": "Кроссовки", "enumId": 1027739 },
+            { "value": "bag", "label": "Сумка", "enumId": 1027741 },
+            { "value": "jacket", "label": "Куртка", "enumId": 1027743 },
+            { "value": "painting", "label": "Картина", "enumId": 2146557 },
+            { "value": "other", "label": "Другое", "enumId": 1027745 }
+          ]
+        },
+        "ownItem": {
+          "label": "Изделие",
+          "options": [
+            { "value": "own", "label": "Своё", "enumId": 1027749 },
+            { "value": "buy", "label": "Закупаете вы", "enumId": 1027751 }
+          ]
+        },
         "idea": { "label": "Идея / референсы", "placeholder": "Опишите идею, пришлите ссылки на референсы..." },
-        "contact": { "label": "Telegram / WhatsApp", "placeholder": "@ник или номер телефона" },
+        "contact": { "label": "Телефон", "placeholder": "+7 (___) ___-__-__", "messengerOptions": ["Telegram", "Max"] },
         "email": { "label": "Email", "placeholder": "your@email.com" }
       },
       "submit": "Отправить заявку"

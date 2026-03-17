@@ -17,9 +17,9 @@ export default function LiveCustomizationPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="relative flex min-h-[63vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
+      <section className="relative flex min-h-[50vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
         <Image
-          src="/live-hero-events.png"
+          src="/live-hero-events.jpg"
           alt=""
           fill
           className="object-cover"
@@ -31,14 +31,16 @@ export default function LiveCustomizationPage() {
           <h1 className="sw-h1 max-w-3xl text-4xl sm:text-5xl md:text-6xl text-white">
             {liveContent.hero.title}
           </h1>
-          <p className="mt-6 max-w-xl sw-body text-white/80">
-            {liveContent.hero.subtitle}
+          <p className="mt-6 max-w-2xl sw-body text-white/80">
+            {liveContent.hero.subtitle.split(". ").map((s: string, i: number, arr: string[]) => (
+              <span key={i} className="block">{s}{i < arr.length - 1 ? "." : ""}</span>
+            ))}
           </p>
           <button
             onClick={() => setModalOpen(true)}
             className="sw-btn mt-10 inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
           >
-            Обсудить проект
+            Обсудить ивент
           </button>
         </div>
       </section>
@@ -140,7 +142,7 @@ export default function LiveCustomizationPage() {
             onClick={() => setModalOpen(true)}
             className="sw-btn inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
           >
-            Обсудить проект
+            Обсудить ивент
           </button>
         </div>
       </section>
@@ -149,7 +151,8 @@ export default function LiveCustomizationPage() {
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         variant="brand-project"
-        title="Обсудить проект"
+        title="Обсудить ивент"
+        sourceOverride="live-event"
       />
     </div>
   );

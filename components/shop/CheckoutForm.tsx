@@ -3,6 +3,11 @@
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import checkoutContent from "@/content/checkout.json";
+import LegalConsent from "../shared/LegalConsent";
+import MarketingConsent from "../shared/MarketingConsent";
+import { reachGoal } from "@/lib/analytics";
+import { GOALS } from "@/lib/goals";
+import { buildFormTrackingPayload } from "@/lib/formTracking";
 
 const inputClass =
   "h-12 border border-border bg-transparent px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-accent";
@@ -14,24 +19,41 @@ export default function CheckoutForm() {
   const { items, total } = useCart();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [consentError, setConsentError] = useState(false);
 
   const f = checkoutContent.fields;
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
+
+    const checkbox = e.currentTarget.querySelector<HTMLInputElement>('input[name="legalConsent"]');
+    if (!checkbox?.checked) {
+      setConsentError(true);
+      return;
+    }
+    setConsentError(false);
+
     setLoading(true);
 
     const form = new FormData(e.currentTarget);
+    const marketingCheckbox = e.currentTarget.querySelector<HTMLInputElement>('input[name="marketingConsent"]');
     const buyer = {
       name: form.get("name") as string,
       phone: form.get("phone") as string,
       email: form.get("email") as string,
       address: form.get("address") as string,
-      comment: (form.get("comment") as string) || "",
+      comment: [
+        (form.get("comment") as string) || "",
+        "---",
+        "Согласие на обработку ПДн: да",
+        `Согласие на рассылку: ${marketingCheckbox?.checked ? "да" : "нет"}`,
+      ].join("\n"),
     };
 
     try {
+      const trackingPayload = await buildFormTrackingPayload("form_checkout");
+
       const res = await fetch("/api/payment/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -39,6 +61,7 @@ export default function CheckoutForm() {
           items: items.map((i) => ({ slug: i.slug, title: i.title, price: i.price })),
           buyer,
           total,
+          tracking: trackingPayload,
         }),
       });
 
@@ -51,6 +74,7 @@ export default function CheckoutForm() {
       }
 
       if (data.paymentUrl) {
+        reachGoal(GOALS.FORM_CHECKOUT);
         window.location.href = data.paymentUrl;
       }
     } catch {
@@ -87,6 +111,11 @@ export default function CheckoutForm() {
           <p className="sw-caption text-red-400">{error}</p>
         </div>
       )}
+
+      <div className="sm:col-span-2 flex flex-col gap-4">
+        <LegalConsent id="ch-consent" consentError={consentError} variant="order" />
+        <MarketingConsent id="ch-marketing" />
+      </div>
 
       <div className="sm:col-span-2">
         <button

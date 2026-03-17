@@ -48,7 +48,19 @@ export default function ContactsPage() {
           {content.address && (
             <div className="mb-16 border border-border bg-surface p-6">
               <p className="sw-label mb-2 text-muted">{content.address.label}</p>
-              <p className="text-foreground">{content.address.value}</p>
+              <p className="text-foreground">
+                {content.address.value}
+                {" ("}
+                <a
+                  href={content.address.navHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline hover:text-accent/80"
+                >
+                  {content.address.navLabel}
+                </a>
+                {")"}
+              </p>
             </div>
           )}
 

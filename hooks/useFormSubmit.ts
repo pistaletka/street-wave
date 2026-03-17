@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { LeadSource } from "@/lib/amocrm";
+import { buildFormTrackingPayload } from "@/lib/formTracking";
 
 interface SubmitParams {
   name: string;
@@ -32,10 +33,14 @@ export function useFormSubmit(): UseFormSubmitReturn {
     setSuccess(false);
 
     try {
+      const trackingPayload = await buildFormTrackingPayload(params.source);
+      const payload = { ...params, tracking: trackingPayload };
+      console.log("FORM_SUBMIT_PAYLOAD", payload);
+
       const res = await fetch("/api/crm/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(params),
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok) {
@@ -45,6 +50,7 @@ export function useFormSubmit(): UseFormSubmitReturn {
         return false;
       }
 
+      console.log("FORM_SUBMIT_SUCCESS", params.source);
       setSuccess(true);
       setLoading(false);
       return true;

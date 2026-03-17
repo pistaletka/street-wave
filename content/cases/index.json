@@ -68,6 +68,43 @@
       "featured": false
     },
     {
+      "slug": "christmas-balls",
+      "title": "Ёлочные шары",
+      "client": "streetwave",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Кастомизированные ёлочные шары с росписью вручную.",
+      "coverImage": "/case-christmas-balls.jpg",
+      "featured": false
+    },
+    {
+      "slug": "vk",
+      "title": "VK",
+      "client": "VK",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Кастомизация для VK.",
+      "featured": false
+    },
+    {
+      "slug": "sport-theme",
+      "title": "Спортивная тематика",
+      "client": "streetwave",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Кастомизация в спортивной тематике.",
+      "featured": false
+    },
+    {
+      "slug": "cska",
+      "title": "ЦСКА",
+      "client": "ЦСКА",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Кастомизация для ПФК ЦСКА.",
+      "featured": false
+    },
+    {
       "slug": "pinko",
       "title": "Pinko",
       "client": "Pinko",
@@ -83,7 +120,7 @@
       "year": "2024",
       "category": "event",
       "shortDesc": "Кастомизация кроссовок по 6 городам с Яндекс.Маркет.",
-      "coverImage": "/case-custom-truck.png",
+      "coverImage": "/case-custom-truck.jpg",
       "featured": false
     },
     {
@@ -93,7 +130,7 @@
       "year": "2023",
       "category": "event",
       "shortDesc": "Кастомизация кроссовок, сумок и аксессуаров в ЦУМе и бутиках бренда.",
-      "coverImage": "/case-dolce-gabbana.png",
+      "coverImage": "/case-dolce-gabbana.jpg",
       "featured": false
     },
     {
@@ -103,7 +140,7 @@
       "year": "2023",
       "category": "event",
       "shortDesc": "Кастомизация сумок и обуви в бутиках Москвы и Санкт-Петербурга.",
-      "coverImage": "/case-pinko.png",
+      "coverImage": "/case-pinko.jpg",
       "featured": false
     },
     {
@@ -113,6 +150,7 @@
       "year": "2024",
       "category": "event",
       "shortDesc": "Бесплатная кастомизация кроссовок в магазинах 4 городов.",
+      "coverImage": "/case-superstep-event.jpg",
       "featured": false
     },
     {
@@ -122,6 +160,7 @@
       "year": "2024",
       "category": "event",
       "shortDesc": "Кастомизация футболок на корпоративном нетворкинге в Башне ОКО.",
+      "coverImage": "/case-yandex-networking.jpg",
       "featured": false
     },
     {
@@ -131,6 +170,7 @@
       "year": "2024",
       "category": "event",
       "shortDesc": "Кастомизация футболок в магазинах Stockman.",
+      "coverImage": "/case-stockman.jpg",
       "featured": false
     },
     {
@@ -140,15 +180,17 @@
       "year": "2024",
       "category": "event",
       "shortDesc": "Кастомизация бутс во флагманском магазине в Москве.",
+      "coverImage": "/case-adidas-football.jpg",
       "featured": false
     },
     {
       "slug": "stereo-letta",
-      "title": "Stereo Letta",
-      "client": "Stereo Letta",
+      "title": "Stereoleto",
+      "client": "Stereoleto",
       "year": "2024",
       "category": "event",
-      "shortDesc": "Кастомизация шопперов на ивенте в Севкабель Порту, Санкт-Петербург.",
+      "shortDesc": "Кастомизация шопперов на фестивале Stereoleto в Севкабель Порту, Санкт-Петербург.",
+      "coverImage": "/case-stereo-letta.jpg",
       "featured": false
     },
     {
@@ -158,6 +200,70 @@
       "year": "2024",
       "category": "event",
       "shortDesc": "Кастом-зона на дне рождения в стиле Louis Vuitton в Красноярске.",
+      "coverImage": "/case-custom-zone-lv.jpg",
+      "featured": false
+    },
+    {
+      "slug": "tommy-hilfiger",
+      "title": "Tommy Hilfiger",
+      "client": "Tommy Hilfiger",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Кастомизация изделий на ивенте Tommy Hilfiger.",
+      "featured": false
+    },
+    {
+      "slug": "tsum-2019",
+      "title": "ЦУМ 2019",
+      "client": "ЦУМ",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Кастомизация в ЦУМе. Live-роспись для покупателей.",
+      "featured": false
+    },
+    {
+      "slug": "tsum-popup-dolce-gabbana",
+      "title": "ЦУМ — Pop-up Dolce & Gabbana",
+      "client": "Dolce & Gabbana / ЦУМ",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Кастомизация на открытии Pop-up Dolce & Gabbana в ЦУМе.",
+      "featured": false
+    },
+    {
+      "slug": "world-cup",
+      "title": "Чемпионат Мира по Футболу",
+      "client": "FIFA",
+      "year": "2018",
+      "category": "event",
+      "shortDesc": "Кастомизация на Чемпионате Мира по Футболу.",
+      "featured": false
+    },
+    {
+      "slug": "dkny",
+      "title": "DKNY",
+      "client": "DKNY",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Кастомизация на ивенте DKNY.",
+      "featured": false
+    },
+    {
+      "slug": "vfno",
+      "title": "VFNO",
+      "client": "Vogue",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Кастомизация на Vogue Fashion's Night Out.",
+      "featured": false
+    },
+    {
+      "slug": "ralph-lauren-tsum",
+      "title": "Ralph Lauren ЦУМ",
+      "client": "Ralph Lauren",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Кастомизация в бутике Ralph Lauren в ЦУМе.",
       "featured": false
     }
   ]

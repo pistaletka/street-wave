@@ -221,3 +221,66 @@ body {
   line-height: 0.96;
   letter-spacing: 0;
 }
+
+/* ── Legal prose ── */
+.prose-legal {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+.prose-legal h1 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.prose-legal h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+.prose-legal p {
+  margin-bottom: 12px;
+}
+.prose-legal ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 12px;
+}
+.prose-legal ul li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+}
+.prose-legal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.5;
+}
+.prose-legal hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.prose-legal strong {
+  color: #fff;
+  font-weight: 500;
+}

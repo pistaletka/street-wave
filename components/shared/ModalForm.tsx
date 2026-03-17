@@ -9,9 +9,10 @@ interface ModalFormProps {
   onClose: () => void;
   variant?: "general" | "place-order" | "brand-project";
   title?: string;
+  sourceOverride?: string;
 }
 
-export default function ModalForm({ open, onClose, variant = "brand-project", title }: ModalFormProps) {
+export default function ModalForm({ open, onClose, variant = "brand-project", title, sourceOverride }: ModalFormProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -57,7 +58,7 @@ export default function ModalForm({ open, onClose, variant = "brand-project", ti
         {title && (
           <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">{title}</h2>
         )}
-        <ContactForm variant={variant} />
+        <ContactForm variant={variant} sourceOverride={sourceOverride} />
       </div>
     </div>,
     document.body
