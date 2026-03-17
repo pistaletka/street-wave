@@ -75,7 +75,7 @@ async function findOrCreateContact(data: ContactData): Promise<number> {
   }
 
   // Create new contact
-  const customFields: { field_code: string; values: { value: string }[] }[] = [];
+  const customFields: { field_code: string; values: { value: string; enum_code?: string }[] }[] = [];
   if (data.phone) {
     customFields.push({ field_code: "PHONE", values: [{ value: data.phone, enum_code: "WORK" }] });
   }
@@ -158,7 +158,7 @@ export async function createLead(params: CreateLeadParams): Promise<number> {
   ];
 
   // Формируем кастомные поля из трекинга
-  const customFieldsValues: { field_id: number; values: { value: string | number; enum_id?: number }[] }[] = [];
+  const customFieldsValues: { field_id: number; values: { value?: string | number; enum_id?: number }[] }[] = [];
   if (params.tracking) {
     for (const [key, fieldId] of Object.entries(TRACKING_FIELD_IDS)) {
       const value = params.tracking[key as keyof TrackingData];
