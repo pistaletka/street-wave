@@ -100,7 +100,7 @@ export default function AnalyticsLoader() {
     if (GA_ID && isComDomain() && !gaLoaded.current) {
       gaLoaded.current = true;
       loadScript(`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`).then(() => {
-        const w = window as Record<string, unknown>;
+        const w = window as unknown as Record<string, unknown>;
         w.dataLayer = (w.dataLayer as unknown[]) || [];
         function gtag(...args: unknown[]) {
           (w.dataLayer as unknown[]).push(args);
