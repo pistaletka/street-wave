@@ -1,0 +1,37 @@
+{
+  "slug": "sport-theme",
+  "title": "Спортивная тематика",
+  "client": "streetwave",
+  "year": "2024",
+  "category": "brand",
+  "description": "Кастомизация кроссовок в спортивной тематике. Уникальные дизайны, вдохновлённые миром спорта.",
+  "stats": [],
+  "coverImage": "/projects/sport-theme/1.jpeg",
+  "gallery": [
+    "/projects/sport-theme/1.jpeg",
+    "/projects/sport-theme/2.jpeg",
+    "/projects/sport-theme/3.jpeg",
+    "/projects/sport-theme/4.jpeg",
+    "/projects/sport-theme/5.jpeg",
+    "/projects/sport-theme/6.jpeg",
+    "/projects/sport-theme/7.jpg",
+    "/projects/sport-theme/8.jpeg",
+    "/projects/sport-theme/9.jpeg",
+    "/projects/sport-theme/10.jpeg",
+    "/projects/sport-theme/11.jpeg",
+    "/projects/sport-theme/12.jpeg",
+    "/projects/sport-theme/13.jpeg",
+    "/projects/sport-theme/14.jpeg",
+    "/projects/sport-theme/15.jpeg",
+    "/projects/sport-theme/16.jpeg",
+    "/projects/sport-theme/17.jpeg",
+    "/projects/sport-theme/18.jpeg",
+    "/projects/sport-theme/19.jpeg",
+    "/projects/sport-theme/20.jpeg"
+  ],
+  "details": {
+    "task": "",
+    "solution": "",
+    "result": ""
+  }
+}

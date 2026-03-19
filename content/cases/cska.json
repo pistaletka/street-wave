@@ -1,0 +1,25 @@
+{
+  "slug": "cska",
+  "title": "ЦСКА",
+  "client": "ЦСКА",
+  "year": "2024",
+  "category": "brand",
+  "description": "Кастомизация кроссовок для ПФК ЦСКА. Клубная символика и фирменные цвета — уникальный мерч для команды и болельщиков.",
+  "stats": [],
+  "coverImage": "/projects/cska/1.jpeg",
+  "gallery": [
+    "/projects/cska/1.jpeg",
+    "/projects/cska/2.jpeg",
+    "/projects/cska/3.jpeg",
+    "/projects/cska/4.jpeg",
+    "/projects/cska/5.jpeg",
+    "/projects/cska/6.jpeg",
+    "/projects/cska/7.jpeg",
+    "/projects/cska/8.jpeg"
+  ],
+  "details": {
+    "task": "",
+    "solution": "",
+    "result": ""
+  }
+}
