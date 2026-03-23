@@ -1,0 +1,24 @@
+{
+  "slug": "dkny",
+  "title": "DKNY",
+  "client": "DKNY",
+  "year": "2019",
+  "category": "event",
+  "description": "Customization at a DKNY event. Live painting of products for event guests.",
+  "stats": [],
+  "gallery": [
+    "/events/dkny/1.jpg",
+    "/events/dkny/2.jpg",
+    "/events/dkny/3.jpg",
+    "/events/dkny/4.jpg",
+    "/events/dkny/5.jpg",
+    "/events/dkny/6.jpg",
+    "/events/dkny/7.jpg",
+    "/events/dkny/8.jpg"
+  ],
+  "details": {
+    "task": "",
+    "solution": "",
+    "result": ""
+  }
+}

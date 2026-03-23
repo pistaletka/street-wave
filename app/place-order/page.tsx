@@ -1,25 +1,29 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import content from "../../content/place-order.json";
+import { getContent } from "../../lib/getContent";
 import SectionHeader from "../../components/shared/SectionHeader";
 import ContactForm from "../../components/shared/ContactForm";
 import TariffSelectButton from "../../components/shared/TariffSelectButton";
 import PlaceholderImage from "../../components/shared/PlaceholderImage";
 import ImageCarousel from "../../components/shared/ImageCarousel";
 
-export const metadata: Metadata = {
-  title: "Заказать кастомизацию кроссовок и одежды — тарифы от 10 000 ₽",
-  description:
-    "Закажите уникальную кастомизацию кроссовок, одежды или арт-объектов в streetwave®. Тарифы от 10 000 ₽. Доставка по всей России.",
-  openGraph: {
-    title: "Персональный кастом — streetwave®",
-    description: "Закажите уникальную кастомизацию. Тарифы от 10 000 ₽.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
-  },
-  alternates: { canonical: "/place-order" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const content = await getContent<any>("placeOrder");
+  return {
+    title: content.meta?.title ?? "Заказать кастомизацию кроссовок и одежды — тарифы от 10 000 ₽",
+    description:
+      content.meta?.description ?? "Закажите уникальную кастомизацию кроссовок, одежды или арт-объектов в streetwave®. Тарифы от 10 000 ₽. Доставка по всей России.",
+    openGraph: {
+      title: content.meta?.ogTitle ?? "Персональный кастом — streetwave®",
+      description: content.meta?.ogDescription ?? "Закажите уникальную кастомизацию. Тарифы от 10 000 ₽.",
+      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+    },
+    alternates: { canonical: "/place-order" },
+  };
+}
 
-export default function PlaceOrderPage() {
+export default async function PlaceOrderPage() {
+  const content = await getContent<any>("placeOrder");
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
@@ -50,7 +54,7 @@ export default function PlaceOrderPage() {
       {/* Form (top) */}
       <section id="order-form" className="px-6 pt-10 pb-8">
         <div className="mx-auto max-w-3xl">
-          <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">Оставить заявку</h2>
+          <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">{content.formTitle}</h2>
           <ContactForm variant="place-order" successUrl="/place-order/success" />
         </div>
       </section>
@@ -135,33 +139,13 @@ export default function PlaceOrderPage() {
         </div>
       </section>
 
-      {/* Tariff gallery */}
-      <section className="px-6 pt-8 pb-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeader badge={content.gallery.badge} title={content.gallery.title} />
-          <div className="grid gap-6 md:grid-cols-3">
-            {content.gallery.tariffs.map((tariff) => (
-              <div key={tariff.name}>
-                <div className="mb-4">
-                  <h3 className="sw-h3 text-xl">{tariff.name}</h3>
-                  <p className="mt-1 text-xs tracking-wide uppercase text-accent">
-                    {tariff.subtitle}
-                  </p>
-                </div>
-                <ImageCarousel images={tariff.images} label={tariff.name} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Emotional closer + Contact form */}
       <section className="px-6 pt-8 pb-6">
         <div className="mx-auto max-w-3xl">
           <p className="mb-12 text-center text-lg italic text-text-secondary">
             {content.closer.text}
           </p>
-          <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">Связаться с нами</h2>
+          <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">{content.contactTitle}</h2>
           <ContactForm variant="general" successUrl="/place-order/success" />
         </div>
       </section>

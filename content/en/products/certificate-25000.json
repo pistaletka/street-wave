@@ -1,0 +1,17 @@
+{
+  "slug": "certificate-25000",
+  "title": "Gift Certificate — Picasso ($300)",
+  "category": "certificates",
+  "price": 300,
+  "status": "available",
+  "image": "/products/certificates/25000.jpg",
+  "images": [
+    "/products/certificates/25000.jpg"
+  ],
+  "description": "A streetwave® gift certificate worth $300. Use it to order a personal custom piece at the Picasso tier or shop ready-made items in our store. Valid for 6 months.",
+  "specs": [
+    { "label": "Value", "value": "$300" },
+    { "label": "Validity", "value": "6 months" },
+    { "label": "Format", "value": "Digital + printed" }
+  ]
+}

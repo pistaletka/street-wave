@@ -1,0 +1,20 @@
+{
+  "slug": "aj1-fire",
+  "title": "Air Jordan 1 \"Fire\"",
+  "category": "sneakers",
+  "price": 350,
+  "status": "sold",
+  "image": "/products/aj1-fire/main.jpg",
+  "images": [
+    "/products/aj1-fire/main.jpg",
+    "/products/aj1-fire/side.jpg",
+    "/products/aj1-fire/detail.jpg"
+  ],
+  "description": "Air Jordan 1 Mid with a flame-inspired hand-painted design. Red-to-orange gradient with fire details. Size: 43 EU.",
+  "specs": [
+    { "label": "Size", "value": "43 EU" },
+    { "label": "Base model", "value": "Air Jordan 1 Mid" },
+    { "label": "Technique", "value": "Hand-painted, acrylic" },
+    { "label": "Coating", "value": "Finisher + UV protection" }
+  ]
+}

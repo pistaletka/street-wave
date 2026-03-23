@@ -1,21 +1,25 @@
 import type { Metadata } from "next";
-import content from "../../content/contacts.json";
+import { getContent } from "../../lib/getContent";
 import SectionHeader from "../../components/shared/SectionHeader";
 import ContactForm from "../../components/shared/ContactForm";
 
-export const metadata: Metadata = {
-  title: "Контакты студии арт-кастомизации streetwave®",
-  description:
-    "Свяжитесь со студией streetwave® — Telegram, WhatsApp, email. Москва. Ответим в течение 24 часов.",
-  openGraph: {
-    title: "Контакты — streetwave®",
-    description: "Telegram, WhatsApp, email. Ответим в течение 24 часов.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
-  },
-  alternates: { canonical: "/contacts" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const content = await getContent<any>("contacts");
+  return {
+    title: content.meta?.title ?? "Контакты студии арт-кастомизации streetwave®",
+    description:
+      content.meta?.description ?? "Свяжитесь со студией streetwave® — Telegram, WhatsApp, email. Москва. Ответим в течение 24 часов.",
+    openGraph: {
+      title: content.meta?.ogTitle ?? "Контакты — streetwave®",
+      description: content.meta?.ogDescription ?? "Telegram, WhatsApp, email. Ответим в течение 24 часов.",
+      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+    },
+    alternates: { canonical: "/contacts" },
+  };
+}
 
-export default function ContactsPage() {
+export default async function ContactsPage() {
+  const content = await getContent<any>("contacts");
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}

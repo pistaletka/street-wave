@@ -1,8 +1,10 @@
-import faqContent from "../../content/faq.json";
+import { getContent } from "../../lib/getContent";
 
 type FaqTab = { items: { q: string; a: string }[] };
 
-export default function FaqJsonLd() {
+export default async function FaqJsonLd() {
+  const faqContent = await getContent<any>("faq");
+
   const allItems = [
     ...faqContent.tabs.private.items,
     ...faqContent.tabs.brands.items,

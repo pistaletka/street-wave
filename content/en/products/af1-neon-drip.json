@@ -1,0 +1,20 @@
+{
+  "slug": "af1-neon-drip",
+  "title": "Nike AF1 \"Neon Drip\"",
+  "category": "sneakers",
+  "price": 280,
+  "status": "available",
+  "image": "/products/af1-neon-drip/main.jpg",
+  "images": [
+    "/products/af1-neon-drip/main.jpg",
+    "/products/af1-neon-drip/side.jpg",
+    "/products/af1-neon-drip/detail.jpg"
+  ],
+  "description": "Custom Nike Air Force 1 with neon drip elements. Hand-painted with acrylic paints, finished with a protective coating. Size: 42 EU.",
+  "specs": [
+    { "label": "Size", "value": "42 EU" },
+    { "label": "Base model", "value": "Nike Air Force 1 Low" },
+    { "label": "Technique", "value": "Hand-painted, acrylic" },
+    { "label": "Coating", "value": "Finisher + UV protection" }
+  ]
+}

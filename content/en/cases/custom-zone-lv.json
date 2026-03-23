@@ -1,0 +1,39 @@
+{
+  "slug": "custom-zone-lv",
+  "title": "Custom Zone: Louis Vuitton-Themed Birthday",
+  "client": "Private order",
+  "year": "2024",
+  "category": "event",
+  "description": "Custom zone at a Louis Vuitton-themed birthday party in Krasnoyarsk. Live painting of accessories and gifts for guests in the brand's aesthetic.",
+  "stats": [
+    { "value": "50+", "label": "guests" },
+    { "value": "1", "label": "day" }
+  ],
+  "gallery": [
+    "/events/custom-zone-lv/1.jpg",
+    "/events/custom-zone-lv/2.jpg",
+    "/events/custom-zone-lv/3.jpg",
+    "/events/custom-zone-lv/4.jpg",
+    "/events/custom-zone-lv/5.jpg",
+    "/events/custom-zone-lv/6.jpg",
+    "/events/custom-zone-lv/7.jpg",
+    "/events/custom-zone-lv/8.jpg",
+    "/events/custom-zone-lv/9.jpg",
+    "/events/custom-zone-lv/10.jpg",
+    "/events/custom-zone-lv/11.jpg",
+    "/events/custom-zone-lv/12.jpg",
+    "/events/custom-zone-lv/13.jpg",
+    "/events/custom-zone-lv/14.jpg",
+    "/events/custom-zone-lv/15.jpg",
+    "/events/custom-zone-lv/16.jpg",
+    "/events/custom-zone-lv/17.jpg",
+    "/events/custom-zone-lv/18.jpg",
+    "/events/custom-zone-lv/19.jpg",
+    "/events/custom-zone-lv/20.jpg"
+  ],
+  "details": {
+    "task": "Organize a custom zone at a private event \u2014 a Louis Vuitton-themed birthday party in Krasnoyarsk.",
+    "solution": "Set up a full workshop at the venue. Artists painted accessories and gifts for guests in the Louis Vuitton aesthetic.",
+    "result": "Over 50 custom pieces for guests. The activation became the highlight of the evening and received rave reviews."
+  }
+}

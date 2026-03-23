@@ -1,0 +1,32 @@
+{
+  "slug": "agama",
+  "title": "Агама 2023",
+  "client": "Agama",
+  "year": "2023",
+  "category": "brand",
+  "coverImage": "/projects/agama/cover.jpg",
+  "description": "Создание коллекции кастомизированных кроссовок для сотрудников бренда. Компания «АГАМА» - лидер по производству рыбы и морепродуктов высшего качества. Каждый год компания награждает лучших сотрудников и дарит уникальные подарки.",
+  "stats": [],
+  "gallery": [
+    "/projects/agama/1.jpg",
+    "/projects/agama/2.jpg",
+    "/projects/agama/3.jpg",
+    "/projects/agama/4.JPG",
+    "/projects/agama/5.jpg",
+    "/projects/agama/6.jpg",
+    "/projects/agama/7.jpg",
+    "/projects/agama/8.jpg",
+    "/projects/agama/9.jpg",
+    "/projects/agama/11.jpg",
+    "/projects/agama/12.jpg",
+    "/projects/agama/13.jpg",
+    "/projects/agama/14.jpg",
+    "/projects/agama/15.jpg",
+    "/projects/agama/17.jpg"
+  ],
+  "details": {
+    "task": "Создать коллекцию кастомизированных кроссовок для сотрудников бренда.",
+    "solution": "Разработали уникальный дизайн с элементами айдентики бренда и расписали каждую пару вручную.",
+    "result": "Коллекция стала корпоративным подарком для команды бренда."
+  }
+}

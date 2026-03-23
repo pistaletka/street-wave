@@ -1,6 +1,6 @@
 "use client";
 
-import shopContent from "@/content/shop.json";
+import { useMessages } from "next-intl";
 
 interface CategoryFilterProps {
   current: string;
@@ -8,6 +8,8 @@ interface CategoryFilterProps {
 }
 
 export default function CategoryFilter({ current, onChange }: CategoryFilterProps) {
+  const messages = useMessages();
+  const shopContent = messages.shop as any;
   return (
     <div className="flex flex-wrap gap-3">
       {shopContent.categories.map((cat) => (

@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import content from "../content/home.json";
+import { getContent } from "../lib/getContent";
 import SectionHeader from "../components/shared/SectionHeader";
 import Image from "next/image";
 import PlaceholderImage from "../components/shared/PlaceholderImage";
 import HeroSlider from "../components/HeroSlider";
 
+export async function generateMetadata(): Promise<Metadata> {
+  const content = await getContent<any>("home");
+  return {
+    title: content.meta.title,
+    description: content.meta.description,
+  };
+}
 
-export const metadata: Metadata = {
-  title: content.meta.title,
-  description: content.meta.description,
-};
-
-export default function Home() {
+export default async function Home() {
+  const content = await getContent<any>("home");
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* 1. Hero */}

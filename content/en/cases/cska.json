@@ -1,0 +1,25 @@
+{
+  "slug": "cska",
+  "title": "CSKA",
+  "client": "CSKA",
+  "year": "2024",
+  "category": "brand",
+  "description": "Sneaker customization for PFC CSKA. Club symbols and signature colors brought to life as unique merch for the team and fans.",
+  "stats": [],
+  "coverImage": "/projects/cska/1.jpeg",
+  "gallery": [
+    "/projects/cska/1.jpeg",
+    "/projects/cska/2.jpeg",
+    "/projects/cska/3.jpeg",
+    "/projects/cska/4.jpeg",
+    "/projects/cska/5.jpeg",
+    "/projects/cska/6.jpeg",
+    "/projects/cska/7.jpeg",
+    "/projects/cska/8.jpeg"
+  ],
+  "details": {
+    "task": "",
+    "solution": "",
+    "result": ""
+  }
+}

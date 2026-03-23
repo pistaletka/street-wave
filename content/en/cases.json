@@ -1,0 +1,78 @@
+{
+  "brands": [
+    {
+      "title": "Nike Air Max — Limited Edition",
+      "client": "Nike Russia",
+      "year": "2024",
+      "desc": "Limited series of 30 pairs for a new model launch"
+    },
+    {
+      "title": "Custom Zone at FACES&LACES",
+      "client": "Faces&Laces",
+      "year": "2024",
+      "desc": "Live sneaker customization at the street culture festival"
+    },
+    {
+      "title": "Corporate Gifts",
+      "client": "Yandex",
+      "year": "2024",
+      "desc": "50 custom hoodies for the team's company anniversary"
+    },
+    {
+      "title": "Collaboration: Street Collection",
+      "client": "SBERBANK \u00d7 STREET WAVE",
+      "year": "2023",
+      "desc": "Capsule merch collection for an internal event"
+    },
+    {
+      "title": "Pop-up: Art Basel Moscow",
+      "client": "Winzavod Gallery",
+      "year": "2023",
+      "desc": "Interactive installation with live painting of objects"
+    },
+    {
+      "title": "Festival Merch",
+      "client": "Alfa Future People",
+      "year": "2023",
+      "desc": "Limited edition accessories for the festival"
+    }
+  ],
+  "private": [
+    {
+      "title": "Air Jordan 1 'Samurai'",
+      "client": "Private client",
+      "year": "2024",
+      "desc": "Full repaint and hand-painting in Japanese style"
+    },
+    {
+      "title": "Denim Jacket with Mural",
+      "client": "Private client",
+      "year": "2024",
+      "desc": "Custom hand-painted jacket in street mural style"
+    },
+    {
+      "title": "Motorcycle Helmet 'Neon'",
+      "client": "Private client",
+      "year": "2024",
+      "desc": "Custom airbrushed helmet with neon details"
+    },
+    {
+      "title": "New Balance 550 'Terracotta'",
+      "client": "Private client",
+      "year": "2023",
+      "desc": "Repaint and distressing in a warm color palette"
+    },
+    {
+      "title": "Skateboard Art",
+      "client": "Private client",
+      "year": "2023",
+      "desc": "Decorative board with custom hand-painting for interior display"
+    },
+    {
+      "title": "Nike Dunk 'Graffiti'",
+      "client": "Private client",
+      "year": "2023",
+      "desc": "Custom Dunks with street graffiti elements"
+    }
+  ]
+}

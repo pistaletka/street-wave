@@ -2,9 +2,11 @@
 
 import { useCart } from "@/context/CartContext";
 import { formatPrice } from "@/lib/formatPrice";
-import checkoutContent from "@/content/checkout.json";
+import { useMessages } from "next-intl";
 
 export default function OrderSummary() {
+  const messages = useMessages();
+  const checkoutContent = messages.checkout as any;
   const { items, total } = useCart();
 
   return (

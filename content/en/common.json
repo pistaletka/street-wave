@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "brand": "streetwave®",
+    "links": [
+      { "href": "/shop", "label": "Shop" },
+      { "href": "/place-order", "label": "Custom Order" },
+      { "href": "/projects", "label": "Projects" },
+      { "href": "/live-customization", "label": "Events" },
+      { "href": "/art", "label": "Art" },
+      { "href": "/faq", "label": "FAQ" },
+      { "href": "/contacts", "label": "Contacts" }
+    ]
+  },
+  "footer": {
+    "copy": "streetwave®. All rights reserved.",
+    "columns": [
+      {
+        "title": "Services",
+        "links": [
+          { "href": "/shop", "label": "Shop" },
+          { "href": "/place-order", "label": "Personal Custom" },
+          { "href": "/projects", "label": "Brand Projects" },
+          { "href": "/live-customization", "label": "Live Customization" },
+          { "href": "/art", "label": "Art / Paintings" }
+        ]
+      },
+      {
+        "title": "Information",
+        "links": [
+          { "href": "/about", "label": "About Us" },
+          { "href": "/faq", "label": "FAQ" },
+          { "href": "/contacts", "label": "Contacts" }
+        ]
+      }
+    ],
+    "social": [
+      { "label": "Instagram", "href": "#" },
+      { "label": "Telegram", "href": "#" },
+      { "label": "TikTok", "href": "#" }
+    ]
+  },
+  "cta": {
+    "discussProject": "Discuss a Project",
+    "orderCustom": "Order Custom",
+    "learnMore": "Learn More",
+    "sendRequest": "Submit Request"
+  },
+  "forms": {
+    "placeOrder": {
+      "title": "Request a Custom Order",
+      "fields": {
+        "name": { "label": "Name", "placeholder": "Your name" },
+        "tariff": {
+          "label": "Tariff",
+          "options": [
+            { "value": "malevich", "label": "Malevich ($100)" },
+            { "value": "van-gogh", "label": "Van Gogh ($200)" },
+            { "value": "picasso", "label": "Picasso ($300)" }
+          ]
+        },
+        "item": {
+          "label": "What to customize",
+          "options": [
+            { "value": "sneakers", "label": "Sneakers", "enumId": 1027739 },
+            { "value": "bag", "label": "Bag", "enumId": 1027741 },
+            { "value": "jacket", "label": "Jacket", "enumId": 1027743 },
+            { "value": "painting", "label": "Painting", "enumId": 2146557 },
+            { "value": "other", "label": "Other", "enumId": 1027745 }
+          ]
+        },
+        "ownItem": {
+          "label": "Item",
+          "options": [
+            { "value": "own", "label": "My own item", "enumId": 1027749 },
+            { "value": "buy", "label": "You source it", "enumId": 1027751 }
+          ]
+        },
+        "idea": { "label": "Idea / References", "placeholder": "Describe your idea, share reference links..." },
+        "contact": { "label": "Phone", "placeholder": "+1 (___) ___-____", "messengerOptions": ["Telegram", "WhatsApp"] },
+        "email": { "label": "Email", "placeholder": "your@email.com" }
+      },
+      "submit": "Submit Request"
+    },
+    "brandProject": {
+      "title": "Discuss a Project",
+      "fields": {
+        "name": { "label": "Name", "placeholder": "Your name" },
+        "phone": { "label": "Phone", "placeholder": "+1 (___) ___-____" },
+        "email": { "label": "Email", "placeholder": "your@email.com" },
+        "comment": { "label": "Comment", "placeholder": "Tell us about the project..." }
+      },
+      "submit": "Submit"
+    },
+    "general": {
+      "title": "Get in Touch",
+      "fields": {
+        "name": { "label": "Name", "placeholder": "Your name" },
+        "contact": { "label": "Contact (Telegram or email)", "placeholder": "@handle or email" },
+        "type": {
+          "label": "Request type",
+          "options": [
+            { "value": "private", "label": "Private order" },
+            { "value": "brand", "label": "Brand project" },
+            { "value": "event", "label": "Event / Custom zone" },
+            { "value": "art", "label": "Art / Painting" },
+            { "value": "other", "label": "Other" }
+          ]
+        },
+        "message": { "label": "Message", "placeholder": "Tell us about your idea..." }
+      },
+      "submit": "Submit"
+    }
+  }
+}

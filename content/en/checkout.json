@@ -1,0 +1,15 @@
+{
+  "title": "Checkout",
+  "fields": {
+    "name": { "label": "Name", "placeholder": "Your name" },
+    "phone": { "label": "Phone / Telegram", "placeholder": "+1 (___) ___-____ or @handle" },
+    "email": { "label": "Email", "placeholder": "your@email.com" },
+    "address": { "label": "Shipping address", "placeholder": "City, street, building, apartment" },
+    "comment": { "label": "Comment", "placeholder": "Order notes..." }
+  },
+  "submit": "Pay",
+  "summary": {
+    "title": "Your Order",
+    "total": "Total"
+  }
+}

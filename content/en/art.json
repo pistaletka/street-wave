@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Art Objects & Custom Paintings",
+    "description": "Original paintings and art objects by streetwave®. Street aesthetics brought to canvas and interiors."
+  },
+  "hero": {
+    "badge": "Art Direction",
+    "title": "Art / Paintings",
+    "subtitle": "Original paintings and art objects. Street art translated onto canvas."
+  },
+  "manifesto": {
+    "badge": "Manifesto",
+    "title": "Art beyond customization",
+    "text": "Street Wave is more than customization. We operate at the intersection of art, fashion, and product design. Every object — whether sneakers, a canvas, or an installation — is a statement.\n\nWe transform street culture into collectible art. We collaborate with artists who think beyond the canvas — in the space between digital, physical, and everything in between.\n\nCustom objects, in our view, aren't decoration. They are art pieces, each carrying an idea, context, and a signature voice."
+  },
+  "artist": {
+    "badge": "Lead Artist",
+    "name": "StereoBoogie",
+    "role": "Multidisciplinary Artist",
+    "bio": "A multidisciplinary artist working at the intersection of digital and physical. Paintings, objects, customs, installations. Core themes — identity, digital anxiety, the post-human condition.",
+    "cta": "More about the artist"
+  },
+  "gallery": {
+    "badge": "Works",
+    "title": "Gallery"
+  },
+  "services": {
+    "badge": "What We Do",
+    "title": "Art Directions",
+    "items": [
+      {
+        "title": "Custom Paintings",
+        "desc": "Original works on canvas — from concept to finished piece."
+      },
+      {
+        "title": "Art Objects",
+        "desc": "Interior pieces and sculptures created as works of art."
+      },
+      {
+        "title": "Custom as Art",
+        "desc": "Sneakers and apparel as canvas — every pair is unique."
+      },
+      {
+        "title": "Brand Collaborations",
+        "desc": "Joint projects with brands at the crossroads of fashion and contemporary art."
+      },
+      {
+        "title": "Installations & Events",
+        "desc": "Live performances, art installations, and spatial design."
+      }
+    ]
+  },
+  "cta": {
+    "title": "We work with private clients, brands, and spaces",
+    "subtitle": "Let's discuss your project — from idea to execution."
+  }
+}

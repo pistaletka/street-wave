@@ -2,11 +2,43 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import common from "../../content/common.json";
+import { useMessages, useLocale } from "next-intl";
 import CartBadge from "./CartBadge";
+
+function LanguageSwitcher() {
+  const locale = useLocale();
+  const targetLocale = locale === "ru" ? "en" : "ru";
+
+  function handleSwitch() {
+    document.cookie = `sw-locale=${targetLocale};path=/;max-age=31536000;samesite=lax`;
+    // On production, redirect to the other domain
+    // On localhost, just reload (middleware reads the cookie)
+    if (typeof window !== "undefined") {
+      const host = window.location.host;
+      if (host.includes("street-wave.ru") || host.includes("street-wave.com")) {
+        const targetDomain = targetLocale === "en" ? "https://street-wave.com" : "https://street-wave.ru";
+        window.location.href = targetDomain + window.location.pathname;
+      } else {
+        window.location.reload();
+      }
+    }
+  }
+
+  return (
+    <button
+      onClick={handleSwitch}
+      className="sw-nav text-xs font-medium border border-border px-2.5 py-1 text-text-secondary transition-colors hover:border-accent hover:text-accent"
+      aria-label={targetLocale === "en" ? "Switch to English" : "Переключить на русский"}
+    >
+      {targetLocale.toUpperCase()}
+    </button>
+  );
+}
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const messages = useMessages();
+  const common = messages.common as any;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
@@ -16,7 +48,7 @@ export default function Navbar() {
           <img src="/logo.svg" alt="streetwave®" className="h-5 w-auto" />
         </Link>
         <div className="hidden items-center gap-8 md:flex">
-          {common.nav.links.map((link) => (
+          {common.nav.links.map((link: any) => (
             <Link
               key={link.href}
               href={link.href}
@@ -26,33 +58,37 @@ export default function Navbar() {
             </Link>
           ))}
           <CartBadge />
+          <LanguageSwitcher />
         </div>
-        <button
-          className="flex flex-col gap-1.5 md:hidden"
-          aria-label="Меню"
-          onClick={() => setMobileMenu(!mobileMenu)}
-        >
-          <span
-            className={`block h-px w-6 bg-foreground transition-transform ${
-              mobileMenu ? "translate-y-[3.5px] rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`block h-px w-6 bg-foreground transition-opacity ${
-              mobileMenu ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block h-px w-6 bg-foreground transition-transform ${
-              mobileMenu ? "-translate-y-[3.5px] -rotate-45" : ""
-            }`}
-          />
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageSwitcher />
+          <button
+            className="flex flex-col gap-1.5"
+            aria-label="Menu"
+            onClick={() => setMobileMenu(!mobileMenu)}
+          >
+            <span
+              className={`block h-px w-6 bg-foreground transition-transform ${
+                mobileMenu ? "translate-y-[3.5px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`block h-px w-6 bg-foreground transition-opacity ${
+                mobileMenu ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`block h-px w-6 bg-foreground transition-transform ${
+                mobileMenu ? "-translate-y-[3.5px] -rotate-45" : ""
+              }`}
+            />
+          </button>
+        </div>
       </div>
       {mobileMenu && (
         <div className="border-t border-border px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4">
-            {common.nav.links.map((link) => (
+            {common.nav.links.map((link: any) => (
               <Link
                 key={link.href}
                 href={link.href}

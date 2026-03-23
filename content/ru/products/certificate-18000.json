@@ -1,0 +1,17 @@
+{
+  "slug": "certificate-18000",
+  "title": "Сертификат на 18 000 ₽",
+  "category": "certificates",
+  "price": 18000,
+  "status": "available",
+  "image": "/products/certificates/18000.jpg",
+  "images": [
+    "/products/certificates/18000.jpg"
+  ],
+  "description": "Подарочный сертификат streetwave® на 18 000 ₽. Можно использовать для заказа персонального кастома по тарифу «Ван Гог» или покупки готовых работ в магазине. Срок действия — 6 месяцев.",
+  "specs": [
+    { "label": "Номинал", "value": "18 000 ₽" },
+    { "label": "Срок действия", "value": "6 месяцев" },
+    { "label": "Формат", "value": "Электронный + печатный" }
+  ]
+}

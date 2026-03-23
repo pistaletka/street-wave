@@ -1,0 +1,18 @@
+{
+  "slug": "reebok-zivert",
+  "title": "Reebok \u00d7 Zivert",
+  "client": "Reebok",
+  "year": "2023",
+  "category": "brand",
+  "description": "Collaboration with singer Zivert: custom Reebok sneakers for a promo campaign. A unique design reflecting the artist's style and the brand's DNA.",
+  "stats": [
+    { "value": "1", "label": "pair" },
+    { "value": "500K+", "label": "reach" }
+  ],
+  "gallery": [null, null, null],
+  "details": {
+    "task": "Create an exclusive pair of sneakers for a promo campaign featuring Zivert.",
+    "solution": "Developed a design combining Reebok's signature elements with the artist's visual style.",
+    "result": "The sneakers became the centerpiece of the campaign, with posts reaching over 500K views."
+  }
+}

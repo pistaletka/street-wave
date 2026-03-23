@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "title": "Personal Custom — streetwave®",
+    "description": "Order unique customization for sneakers, apparel, or art objects. Tariffs starting at $100."
+  },
+  "hero": {
+    "badge": "Personal Custom",
+    "title": "Custom That Expresses You",
+    "subtitle": "Sneakers, apparel, accessories, and art objects — made to order, designed around your idea, and finished by hand."
+  },
+  "formTitle": "Submit a Request",
+  "contactTitle": "Contact Us",
+  "tariffs": {
+    "badge": "Personal Customization Tariffs",
+    "title": "Choose your customization tier",
+    "items": [
+      {
+        "name": "Malevich",
+        "value": "malevich",
+        "price": "$100",
+        "highlighted": false,
+        "features": [
+          "1 art zone (localized area of the surface)",
+          "Minimal graphics, symbol, or lettering",
+          "Up to 2–3 colors",
+          "Idea adapted to the shape and material",
+          "Handcrafted with protective coating"
+        ],
+        "format": "Precision art intervention"
+      },
+      {
+        "name": "Van Gogh",
+        "value": "van-gogh",
+        "price": "$200",
+        "highlighted": true,
+        "features": [
+          "1–2 art zones",
+          "Medium-complexity illustration",
+          "Compositional design with color depth",
+          "Detailed textures and finishing",
+          "Handcrafted with protective coating"
+        ],
+        "format": "Full artistic vision"
+      },
+      {
+        "name": "Picasso",
+        "value": "picasso",
+        "price": "$300",
+        "highlighted": false,
+        "features": [
+          "2–4 art zones or a large central composition",
+          "Complex narrative or concept",
+          "High detail and deep refinement",
+          "Working with the entire object form",
+          "Individual artistic approach",
+          "Handcrafted with protective coating"
+        ],
+        "format": "Signature art object"
+      }
+    ],
+    "disclaimer": "Final pricing depends on the complexity, materials, and base item. Design rights remain with the studio. All work is done by hand — minor variations from the sketch are possible."
+  },
+  "process": {
+    "badge": "How It Works",
+    "title": "Process",
+    "steps": [
+      { "step": "01", "title": "Brief", "desc": "You describe your idea and share references. We define the scope and timeline." },
+      { "step": "02", "title": "Sketch", "desc": "We create a detailed visual mockup for your approval." },
+      { "step": "03", "title": "Payment", "desc": "Once the sketch is approved — 50% upfront payment, and we begin production." },
+      { "step": "04", "title": "Production", "desc": "Handcrafted by our artists using premium materials." },
+      { "step": "05", "title": "Delivery", "desc": "Quality control, packaging, and worldwide shipping." }
+    ]
+  },
+  "faq": {
+    "badge": "Questions",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "How long does a custom take?",
+        "a": "1 to 4 weeks, depending on complexity. Rush projects can be discussed individually."
+      },
+      {
+        "q": "What can be customized?",
+        "a": "Sneakers, apparel, accessories, furniture, and more."
+      },
+      {
+        "q": "Can I send my own item?",
+        "a": "Yes, as long as the material is suitable for our work."
+      },
+      {
+        "q": "How does payment work?",
+        "a": "We require 100% prepayment. After payment, we pass the brief to our designer for mockup development. If the design doesn't suit you, we refund the amount minus the sketch development cost."
+      },
+      {
+        "q": "When does work begin?",
+        "a": "After payment and design approval, we hand the project over to our artists."
+      },
+      {
+        "q": "Can I request revisions?",
+        "a": "Yes, during the sketch approval stage."
+      },
+      {
+        "q": "Will it wear off?",
+        "a": "We provide care instructions for customized items. With proper care, the customization lasts indefinitely."
+      },
+      {
+        "q": "Do you ship internationally?",
+        "a": "Yes, we ship worldwide with tracking."
+      }
+    ]
+  },
+  "gallery": {
+    "badge": "Work Examples",
+    "title": "What each tier looks like",
+    "tariffs": [
+      {
+        "name": "Malevich",
+        "subtitle": "Precision art intervention",
+        "images": [
+          "/gallery/malevich-1.jpg",
+          "/gallery/malevich-2.jpg",
+          "/gallery/malevich-3.jpg",
+          "/gallery/malevich-4.jpg"
+        ]
+      },
+      {
+        "name": "Van Gogh",
+        "subtitle": "Full artistic vision",
+        "images": [
+          "/gallery/vangogh-1.jpg",
+          "/gallery/vangogh-2.jpg",
+          "/gallery/vangogh-3.jpg",
+          "/gallery/vangogh-4.jpg"
+        ]
+      },
+      {
+        "name": "Picasso",
+        "subtitle": "Signature art object",
+        "images": [
+          "/gallery/picasso-1.jpg",
+          "/gallery/picasso-2.jpg",
+          "/gallery/picasso-3.jpg",
+          "/gallery/picasso-4.jpg"
+        ]
+      }
+    ]
+  },
+  "closer": {
+    "text": "Custom isn't decoration. It's a way to express yourself."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "af1-neon-drip",
+  "title": "Nike AF1 «Neon Drip»",
+  "category": "sneakers",
+  "price": 28000,
+  "status": "available",
+  "image": "/products/af1-neon-drip/main.jpg",
+  "images": [
+    "/products/af1-neon-drip/main.jpg",
+    "/products/af1-neon-drip/side.jpg",
+    "/products/af1-neon-drip/detail.jpg"
+  ],
+  "description": "Кастомизированные Nike Air Force 1 с неоновыми drip-элементами. Ручная роспись акриловыми красками, защитное покрытие. Размер: 42 EU.",
+  "specs": [
+    { "label": "Размер", "value": "42 EU" },
+    { "label": "Базовая модель", "value": "Nike Air Force 1 Low" },
+    { "label": "Техника", "value": "Ручная роспись, акрил" },
+    { "label": "Покрытие", "value": "Finisher + UV-защита" }
+  ]
+}

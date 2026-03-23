@@ -1,0 +1,31 @@
+{
+  "slug": "stockman",
+  "title": "Stockman",
+  "client": "Stockman",
+  "year": "2024",
+  "category": "event",
+  "description": "Кастомизация футболок в магазинах Stockman. Live-роспись для покупателей — уникальный дизайн прямо в торговом зале.",
+  "stats": [
+    { "value": "100+", "label": "футболок" },
+    { "value": "3", "label": "дня" }
+  ],
+  "gallery": [
+    "/events/stockman/1.jpg",
+    "/events/stockman/2.jpg",
+    "/events/stockman/3.jpg",
+    "/events/stockman/4.jpg",
+    "/events/stockman/5.jpg",
+    "/events/stockman/6.jpg",
+    "/events/stockman/7.jpg",
+    "/events/stockman/8.jpg",
+    "/events/stockman/9.jpg",
+    "/events/stockman/10.jpg",
+    "/events/stockman/11.jpg",
+    "/events/stockman/12.jpg"
+  ],
+  "details": {
+    "task": "Организовать live-кастомизацию футболок в магазинах Stockman.",
+    "solution": "Развернули кастом-зону с мастерами прямо в торговом зале. Каждый покупатель получал футболку с индивидуальной росписью.",
+    "result": "Более 100 кастомных футболок. Активация привлекла новую аудиторию и повысила трафик в магазинах."
+  }
+}

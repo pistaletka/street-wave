@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import type { Product } from "@/types/product";
-import shopContent from "@/content/shop.json";
 import CategoryFilter from "@/components/shop/CategoryFilter";
 import ProductCard from "@/components/shop/ProductCard";
 
 interface ShopPageClientProps {
   products: Product[];
+  shopContent: any;
 }
 
-export default function ShopPageClient({ products }: ShopPageClientProps) {
+export default function ShopPageClient({ products, shopContent }: ShopPageClientProps) {
   const [category, setCategory] = useState("all");
 
   const filtered =

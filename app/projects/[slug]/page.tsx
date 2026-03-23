@@ -2,41 +2,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import casesIndex from "../../../content/cases/index.json";
+import { getLocaleCasesIndex, getLocaleCase } from "../../../lib/getContent";
 import PlaceholderImage from "../../../components/shared/PlaceholderImage";
 import SectionHeader from "../../../components/shared/SectionHeader";
 import ProjectCta from "./ProjectCta";
 
-// Import brand case data
-import newConcept from "../../../content/cases/new-concept.json";
-import superstep from "../../../content/cases/superstep.json";
-import reebokZivert from "../../../content/cases/reebok-zivert.json";
-import yandexMarket from "../../../content/cases/yandex-market.json";
-import dolceGabbana from "../../../content/cases/dolce-gabbana.json";
-import pinko from "../../../content/cases/pinko.json";
-import offwhiteXiaomi from "../../../content/cases/offwhite-xiaomi.json";
-import agama from "../../../content/cases/agama.json";
-
-type CaseData = Omit<typeof newConcept, "gallery" | "coverImage"> & {
-  gallery: (string | null)[];
-  coverImage?: string;
-};
-
-const caseDataMap: Record<string, CaseData> = {
-  "new-concept": newConcept,
-  superstep,
-  "reebok-zivert": reebokZivert,
-  "yandex-market": yandexMarket,
-  "dolce-gabbana": dolceGabbana,
-  pinko,
-  "offwhite-xiaomi": offwhiteXiaomi,
-  agama,
-};
-
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  // Use the default (ru) locale for static params generation
+  const casesIndex = (await import("../../../content/ru/cases/index.json")).default;
   return casesIndex.cases
-    .filter((c) => c.category === "brand")
-    .map((c) => ({ slug: c.slug }));
+    .filter((c: any) => c.category === "brand")
+    .map((c: any) => ({ slug: c.slug }));
 }
 
 type Props = {
@@ -45,17 +21,26 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const caseData = caseDataMap[slug];
-  if (!caseData) return {};
-  return {
-    title: `${caseData.title} — streetwave®`,
-    description: caseData.description,
-  };
+  try {
+    const caseData = await getLocaleCase(slug);
+    return {
+      title: `${caseData.title} — streetwave®`,
+      description: caseData.description,
+    };
+  } catch {
+    return {};
+  }
 }
 
 export default async function CasePage({ params }: Props) {
   const { slug } = await params;
-  const caseData = caseDataMap[slug];
+
+  let caseData: any;
+  try {
+    caseData = await getLocaleCase(slug);
+  } catch {
+    notFound();
+  }
 
   if (!caseData) {
     notFound();
@@ -97,7 +82,7 @@ export default async function CasePage({ params }: Props) {
         <section className="px-6 pb-6">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-6 sm:grid-cols-3">
-              {caseData.stats.map((stat) => (
+              {caseData.stats.map((stat: any) => (
                 <div
                   key={stat.label}
                   className="border border-border bg-surface p-8 text-center"
@@ -115,7 +100,7 @@ export default async function CasePage({ params }: Props) {
       <section className="px-6 pb-6">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
-            {caseData.gallery.map((item, i) =>
+            {caseData.gallery.map((item: string | null, i: number) =>
               item ? (
                 <div key={i} className="relative" style={{ aspectRatio: "4/5" }}>
                   <Image

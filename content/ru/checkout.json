@@ -1,0 +1,15 @@
+{
+  "title": "Оформление заказа",
+  "fields": {
+    "name": { "label": "Имя", "placeholder": "Ваше имя" },
+    "phone": { "label": "Телефон / Telegram", "placeholder": "+7 (___) ___-__-__ или @ник" },
+    "email": { "label": "Email", "placeholder": "your@email.com" },
+    "address": { "label": "Адрес доставки", "placeholder": "Город, улица, дом, квартира" },
+    "comment": { "label": "Комментарий", "placeholder": "Примечания к заказу..." }
+  },
+  "submit": "Оплатить",
+  "summary": {
+    "title": "Ваш заказ",
+    "total": "Итого"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "ralph-lauren-tsum",
+  "title": "Ralph Lauren TSUM",
+  "client": "Ralph Lauren",
+  "year": "2019",
+  "category": "event",
+  "description": "Customization at the Ralph Lauren boutique in TSUM. Live painting of products for shoppers.",
+  "stats": [],
+  "gallery": [
+    "/events/ralph-lauren-tsum/1.jpg",
+    "/events/ralph-lauren-tsum/2.jpg",
+    "/events/ralph-lauren-tsum/3.jpg",
+    "/events/ralph-lauren-tsum/4.jpg",
+    "/events/ralph-lauren-tsum/5.jpg",
+    "/events/ralph-lauren-tsum/6.jpg",
+    "/events/ralph-lauren-tsum/7.jpg",
+    "/events/ralph-lauren-tsum/8.jpg"
+  ],
+  "details": {
+    "task": "",
+    "solution": "",
+    "result": ""
+  }
+}

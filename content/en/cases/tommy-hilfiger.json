@@ -1,0 +1,36 @@
+{
+  "slug": "tommy-hilfiger",
+  "title": "Tommy Hilfiger",
+  "client": "Tommy Hilfiger",
+  "year": "2019",
+  "category": "event",
+  "description": "Product customization at a Tommy Hilfiger event. Live painting for event guests.",
+  "stats": [],
+  "gallery": [
+    "/events/tommy-hilfiger/1.jpg",
+    "/events/tommy-hilfiger/2.jpg",
+    "/events/tommy-hilfiger/3.jpg",
+    "/events/tommy-hilfiger/4.jpg",
+    "/events/tommy-hilfiger/5.jpg",
+    "/events/tommy-hilfiger/6.jpg",
+    "/events/tommy-hilfiger/7.jpg",
+    "/events/tommy-hilfiger/8.jpg",
+    "/events/tommy-hilfiger/9.jpg",
+    "/events/tommy-hilfiger/10.jpg",
+    "/events/tommy-hilfiger/11.jpg",
+    "/events/tommy-hilfiger/12.jpg",
+    "/events/tommy-hilfiger/13.jpg",
+    "/events/tommy-hilfiger/14.jpg",
+    "/events/tommy-hilfiger/15.jpg",
+    "/events/tommy-hilfiger/16.jpg",
+    "/events/tommy-hilfiger/17.jpg",
+    "/events/tommy-hilfiger/18.jpg",
+    "/events/tommy-hilfiger/19.jpg",
+    "/events/tommy-hilfiger/20.jpg"
+  ],
+  "details": {
+    "task": "",
+    "solution": "",
+    "result": ""
+  }
+}

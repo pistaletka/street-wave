@@ -1,0 +1,18 @@
+{
+  "slug": "yandex-market",
+  "title": "Yandex Market",
+  "client": "Yandex Market",
+  "year": "2024",
+  "category": "brand",
+  "description": "Custom corporate gifts for the Yandex Market team. Custom sneakers and hoodies featuring the brand's visual identity.",
+  "stats": [
+    { "value": "30", "label": "pieces" },
+    { "value": "2", "label": "categories" }
+  ],
+  "gallery": [null, null, null],
+  "details": {
+    "task": "Create a batch of corporate gifts with a unique design.",
+    "solution": "Developed a design integrating the Yandex Market brand identity into street aesthetics.",
+    "result": "The gifts were presented at a corporate event and received positive feedback from the team."
+  }
+}

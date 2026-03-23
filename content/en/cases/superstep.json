@@ -1,0 +1,19 @@
+{
+  "slug": "superstep",
+  "title": "Superstep 2025",
+  "client": "Superstep",
+  "year": "2025",
+  "category": "brand",
+  "coverImage": "/projects/superstep/cover.jpg",
+  "description": "Limited series of customized sneakers for the SuperStep retail chain. The models were designed for display spaces and customization zones in three cities: Moscow, Saint Petersburg, and Yekaterinburg. Each pair is an exclusive piece hand-painted by Street Wave artists, created to showcase the studio's capabilities and the brand's visual language.",
+  "stats": [
+    { "value": "36", "label": "pairs" },
+    { "value": "3", "label": "stores" }
+  ],
+  "gallery": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+  "details": {
+    "task": "Create a customized sneaker series to draw attention to the in-store custom zone.",
+    "solution": "Developed unique designs with street art elements. Each pair was hand-painted.",
+    "result": "The series was displayed in three of the brand's stores and successfully attracted shopper attention to the customization service."
+  }
+}

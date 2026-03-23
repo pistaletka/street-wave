@@ -1,0 +1,40 @@
+{
+  "slug": "yandex-networking",
+  "title": "Yandex Networking",
+  "client": "Yandex",
+  "year": "2024",
+  "category": "event",
+  "description": "T-shirt customization at a corporate event for guests and attendees. Moscow, OKO Tower. Live t-shirt painting as a networking and team-building activity.",
+  "stats": [
+    { "value": "150+", "label": "attendees" },
+    { "value": "1", "label": "day" },
+    { "value": "150+", "label": "t-shirts" }
+  ],
+  "gallery": [
+    "/events/yandex-networking/1.jpg",
+    "/events/yandex-networking/2.jpg",
+    "/events/yandex-networking/3.jpg",
+    "/events/yandex-networking/4.jpg",
+    "/events/yandex-networking/5.jpg",
+    "/events/yandex-networking/6.jpg",
+    "/events/yandex-networking/7.jpg",
+    "/events/yandex-networking/8.jpg",
+    "/events/yandex-networking/9.jpg",
+    "/events/yandex-networking/10.jpg",
+    "/events/yandex-networking/11.jpg",
+    "/events/yandex-networking/12.jpg",
+    "/events/yandex-networking/13.jpg",
+    "/events/yandex-networking/14.jpg",
+    "/events/yandex-networking/15.jpg",
+    "/events/yandex-networking/16.jpg",
+    "/events/yandex-networking/17.jpg",
+    "/events/yandex-networking/18.jpg",
+    "/events/yandex-networking/19.jpg",
+    "/events/yandex-networking/20.jpg"
+  ],
+  "details": {
+    "task": "Organize a custom activation at the Yandex corporate networking event at OKO Tower.",
+    "solution": "Set up a t-shirt customization zone with artists. Each attendee received a t-shirt with an individual design \u2014 serving as both a networking element and a memorable souvenir.",
+    "result": "Over 150 custom t-shirts in a single day. The activation became the centerpiece of the event and received high praise from organizers."
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "cases": [
+    {
+      "slug": "new-concept",
+      "title": "No Concept 2024",
+      "client": "No Concept",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Flagship project: 30+ custom pieces for the brand space.",
+      "coverImage": "/projects/new-concept/25.jpg",
+      "featured": true
+    },
+    {
+      "slug": "superstep",
+      "title": "Superstep 2025",
+      "client": "Superstep",
+      "year": "2025",
+      "category": "brand",
+      "shortDesc": "Limited series of customized sneakers for the SuperStep retail chain.",
+      "coverImage": "/projects/superstep/cover.jpg",
+      "featured": false
+    },
+    {
+      "slug": "agama",
+      "title": "Agama 2023",
+      "client": "Agama",
+      "year": "2023",
+      "category": "brand",
+      "shortDesc": "Custom sneaker collection created for the brand's employees.",
+      "coverImage": "/projects/agama/cover.jpg",
+      "featured": false
+    },
+    {
+      "slug": "reebok-zivert",
+      "title": "Reebok \u00d7 Zivert",
+      "client": "Reebok",
+      "year": "2023",
+      "category": "brand",
+      "shortDesc": "Collaboration with Zivert: custom Reebok sneakers for a promo campaign.",
+      "featured": false
+    },
+    {
+      "slug": "yandex-market",
+      "title": "Yandex Market",
+      "client": "Yandex Market",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Custom corporate gifts for the team.",
+      "featured": false
+    },
+    {
+      "slug": "dolce-gabbana",
+      "title": "Dolce & Gabbana",
+      "client": "Dolce & Gabbana",
+      "year": "2023",
+      "category": "brand",
+      "shortDesc": "Exclusive custom project for the brand.",
+      "featured": false
+    },
+    {
+      "slug": "offwhite-xiaomi",
+      "title": "Off-White \u00d7 Xiaomi MI",
+      "client": "Xiaomi",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Off-White sneaker customization for a collaboration with Xiaomi MI.",
+      "coverImage": "/offwhite-xiaomi.jpg",
+      "featured": false
+    },
+    {
+      "slug": "christmas-balls",
+      "title": "Christmas Ornaments",
+      "client": "streetwave",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Hand-painted custom Christmas ornaments.",
+      "coverImage": "/case-christmas-balls.jpg",
+      "featured": false
+    },
+    {
+      "slug": "vk",
+      "title": "VK",
+      "client": "VK",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Customization for VK.",
+      "coverImage": "/projects/vk/cover.png",
+      "featured": false
+    },
+    {
+      "slug": "sport-theme",
+      "title": "Sports Theme",
+      "client": "streetwave",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Sports-themed sneaker customization.",
+      "coverImage": "/projects/sport-theme/cover.png",
+      "featured": false
+    },
+    {
+      "slug": "cska",
+      "title": "CSKA",
+      "client": "CSKA",
+      "year": "2024",
+      "category": "brand",
+      "shortDesc": "Customization for PFC CSKA.",
+      "coverImage": "/projects/cska/cover.png",
+      "featured": false
+    },
+    {
+      "slug": "pinko",
+      "title": "Pinko",
+      "client": "Pinko",
+      "year": "2023",
+      "category": "brand",
+      "shortDesc": "Custom accessories collection for a pop-up store.",
+      "featured": false
+    },
+    {
+      "slug": "custom-truck",
+      "title": "Custom Truck",
+      "client": "Yandex Market",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Sneaker customization across 6 cities with Yandex Market.",
+      "coverImage": "/case-custom-truck.jpg",
+      "featured": false
+    },
+    {
+      "slug": "dolce-gabbana-event",
+      "title": "Dolce & Gabbana",
+      "client": "Dolce & Gabbana",
+      "year": "2023",
+      "category": "event",
+      "shortDesc": "Customization of sneakers, bags, and accessories at TSUM and brand boutiques.",
+      "coverImage": "/case-dolce-gabbana.jpg",
+      "featured": false
+    },
+    {
+      "slug": "pinko-event",
+      "title": "Pinko",
+      "client": "Pinko",
+      "year": "2023",
+      "category": "event",
+      "shortDesc": "Bag and shoe customization at boutiques in Moscow and Saint Petersburg.",
+      "coverImage": "/case-pinko.jpg",
+      "featured": false
+    },
+    {
+      "slug": "superstep-event",
+      "title": "SuperStep",
+      "client": "SuperStep",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Free sneaker customization at stores in 4 cities.",
+      "coverImage": "/case-superstep-event.jpg",
+      "featured": false
+    },
+    {
+      "slug": "yandex-networking",
+      "title": "Yandex Networking",
+      "client": "Yandex",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "T-shirt customization at a corporate networking event at OKO Tower.",
+      "coverImage": "/case-yandex-networking.jpg",
+      "featured": false
+    },
+    {
+      "slug": "stockman",
+      "title": "Stockman",
+      "client": "Stockman",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "T-shirt customization at Stockman stores.",
+      "coverImage": "/case-stockman.jpg",
+      "featured": false
+    },
+    {
+      "slug": "adidas-football",
+      "title": "Adidas Football",
+      "client": "Adidas",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Football boot customization at the flagship store in Moscow.",
+      "coverImage": "/case-adidas-football.jpg",
+      "featured": false
+    },
+    {
+      "slug": "stereo-letta",
+      "title": "Stereoleto",
+      "client": "Stereoleto",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Tote bag customization at the Stereoleto festival in Sevkabel Port, Saint Petersburg.",
+      "coverImage": "/case-stereo-letta.jpg",
+      "featured": false
+    },
+    {
+      "slug": "custom-zone-lv",
+      "title": "Custom Zone: Louis Vuitton-Themed Birthday",
+      "client": "Private order",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Custom zone at a Louis Vuitton-themed birthday party in Krasnoyarsk.",
+      "coverImage": "/case-custom-zone-lv.jpg",
+      "featured": false
+    },
+    {
+      "slug": "tommy-hilfiger",
+      "title": "Tommy Hilfiger",
+      "client": "Tommy Hilfiger",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Product customization at a Tommy Hilfiger event.",
+      "featured": false
+    },
+    {
+      "slug": "tsum-2019",
+      "title": "TSUM 2019",
+      "client": "TSUM",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Customization at TSUM. Live painting for shoppers.",
+      "featured": false
+    },
+    {
+      "slug": "tsum-popup-dolce-gabbana",
+      "title": "TSUM \u2014 Pop-up Dolce & Gabbana",
+      "client": "Dolce & Gabbana / TSUM",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Customization at the Dolce & Gabbana pop-up opening at TSUM.",
+      "featured": false
+    },
+    {
+      "slug": "world-cup",
+      "title": "FIFA World Cup",
+      "client": "FIFA",
+      "year": "2018",
+      "category": "event",
+      "shortDesc": "Customization at the FIFA World Cup.",
+      "featured": false
+    },
+    {
+      "slug": "dkny",
+      "title": "DKNY",
+      "client": "DKNY",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Customization at a DKNY event.",
+      "featured": false
+    },
+    {
+      "slug": "vfno",
+      "title": "VFNO",
+      "client": "Vogue",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Customization at Vogue Fashion's Night Out.",
+      "featured": false
+    },
+    {
+      "slug": "ralph-lauren-tsum",
+      "title": "Ralph Lauren TSUM",
+      "client": "Ralph Lauren",
+      "year": "2019",
+      "category": "event",
+      "shortDesc": "Customization at the Ralph Lauren boutique in TSUM.",
+      "featured": false
+    }
+  ]
+}

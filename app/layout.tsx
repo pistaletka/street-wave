@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import Providers from "../components/providers/Providers";
@@ -16,87 +18,132 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://streetwave-site.vercel.app"),
-  title: {
-    default: "streetwave® — Студия арт-кастомизации кроссовок и одежды в Москве",
-    template: "%s | streetwave®",
-  },
-  description:
-    "Студия арт-кастомизации streetwave® — кастомные кроссовки, одежда и арт-объекты. Персональные проекты и лимитированные коллекции для брендов. Москва, доставка по всей России.",
-  keywords: [
-    "кастомизация кроссовок",
-    "кастомные кроссовки",
-    "арт-кастомизация",
-    "кастом обувь Москва",
-    "кастомизация одежды",
-    "роспись кроссовок",
-    "streetwave",
-    "кастом зона на ивент",
-    "кастомизация для брендов",
-    "лимитированные кроссовки",
-    "кастомные Nike",
-    "кастомные Air Force",
-    "арт объекты на заказ",
-  ],
-  authors: [{ name: "streetwave®" }],
-  creator: "streetwave®",
-  openGraph: {
-    type: "website",
-    locale: "ru_RU",
-    url: "https://streetwave-site.vercel.app",
-    siteName: "streetwave®",
-    title: "streetwave® — Студия арт-кастомизации кроссовок и одежды",
-    description:
-      "Кастомные кроссовки, одежда и арт-объекты. Персональные проекты и лимитированные коллекции для брендов. С 2014 года.",
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: "streetwave® — Студия арт-кастомизации",
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const isRu = locale === "ru";
+
+  const baseUrl = isRu
+    ? "https://street-wave.ru"
+    : "https://street-wave.com";
+
+  return {
+    metadataBase: new URL(baseUrl),
+    title: {
+      default: isRu
+        ? "streetwave® — Студия арт-кастомизации кроссовок и одежды в Москве"
+        : "streetwave® — Art Customization Studio for Sneakers & Apparel",
+      template: "%s | streetwave®",
+    },
+    description: isRu
+      ? "Студия арт-кастомизации streetwave® — кастомные кроссовки, одежда и арт-объекты. Персональные проекты и лимитированные коллекции для брендов. Москва, доставка по всей России."
+      : "streetwave® art customization studio — custom sneakers, apparel and art objects. Personal projects and limited collections for brands. Worldwide shipping.",
+    keywords: isRu
+      ? [
+          "кастомизация кроссовок",
+          "кастомные кроссовки",
+          "арт-кастомизация",
+          "кастом обувь Москва",
+          "кастомизация одежды",
+          "роспись кроссовок",
+          "streetwave",
+          "кастом зона на ивент",
+          "кастомизация для брендов",
+          "лимитированные кроссовки",
+          "кастомные Nike",
+          "кастомные Air Force",
+          "арт объекты на заказ",
+        ]
+      : [
+          "custom sneakers",
+          "sneaker customization",
+          "art customization",
+          "custom shoes",
+          "custom apparel",
+          "hand-painted sneakers",
+          "streetwave",
+          "custom zone event",
+          "brand customization",
+          "limited edition sneakers",
+          "custom Nike",
+          "custom Air Force",
+          "art objects",
+        ],
+    authors: [{ name: "streetwave®" }],
+    creator: "streetwave®",
+    openGraph: {
+      type: "website",
+      locale: isRu ? "ru_RU" : "en_US",
+      url: baseUrl,
+      siteName: "streetwave®",
+      title: isRu
+        ? "streetwave® — Студия арт-кастомизации кроссовок и одежды"
+        : "streetwave® — Art Customization Studio for Sneakers & Apparel",
+      description: isRu
+        ? "Кастомные кроссовки, одежда и арт-объекты. Персональные проекты и лимитированные коллекции для брендов. С 2014 года."
+        : "Custom sneakers, apparel and art objects. Personal projects and limited collections for brands. Since 2014.",
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: isRu
+            ? "streetwave® — Студия арт-кастомизации"
+            : "streetwave® — Art Customization Studio",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: isRu
+        ? "streetwave® — Студия арт-кастомизации"
+        : "streetwave® — Art Customization Studio",
+      description: isRu
+        ? "Кастомные кроссовки, одежда и арт-объекты. Персональные проекты и коллекции для брендов."
+        : "Custom sneakers, apparel and art objects. Personal projects and collections for brands.",
+      images: ["/opengraph-image"],
+    },
+    alternates: {
+      canonical: baseUrl,
+      languages: {
+        ru: "https://street-wave.ru",
+        en: "https://street-wave.com",
       },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "streetwave® — Студия арт-кастомизации",
-    description:
-      "Кастомные кроссовки, одежда и арт-объекты. Персональные проекты и коллекции для брендов.",
-    images: ["/opengraph-image"],
-  },
-  alternates: {
-    canonical: "https://streetwave-site.vercel.app",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    robots: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
-  },
-};
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="ru">
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <OrganizationJsonLd />
-        <Providers>
-          <Navbar />
-          <main className="pt-[73px]">{children}</main>
-          <Footer />
-        </Providers>
+        <NextIntlClientProvider messages={messages}>
+          <OrganizationJsonLd />
+          <Providers>
+            <Navbar />
+            <main className="pt-[73px]">{children}</main>
+            <Footer />
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

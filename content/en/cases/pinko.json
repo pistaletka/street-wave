@@ -1,0 +1,18 @@
+{
+  "slug": "pinko",
+  "title": "Pinko",
+  "client": "Pinko",
+  "year": "2023",
+  "category": "brand",
+  "description": "Custom accessories collection for a Pinko pop-up store. Unique bags and accessories with original hand-painting.",
+  "stats": [
+    { "value": "10", "label": "pieces" },
+    { "value": "1", "label": "pop-up" }
+  ],
+  "gallery": [null, null, null],
+  "details": {
+    "task": "Create a custom collection for the brand's pop-up store.",
+    "solution": "Hand-painted Pinko accessories in an original style while preserving the brand's DNA.",
+    "result": "The collection drew additional attention to the pop-up space."
+  }
+}

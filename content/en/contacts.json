@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Contacts — streetwave®",
+    "description": "Get in touch: Telegram, WhatsApp, email. We respond within 24 hours."
+  },
+  "hero": {
+    "badge": "Contacts",
+    "title": "Get in Touch",
+    "subtitle": "Message us on Telegram, WhatsApp, or fill out the form — we'll respond within 24 hours."
+  },
+  "channels": [
+    { "label": "Telegram", "value": "@streetwaveart", "href": "https://t.me/streetwaveart" },
+    { "label": "WhatsApp", "value": "+7 906 768 1204", "href": "https://wa.me/79067681204" },
+    { "label": "Email", "value": "order@street-wave.com", "href": "mailto:order@street-wave.com" }
+  ],
+  "address": {
+    "label": "Studio",
+    "value": "Moscow, Russia, Aviatsionnaya St. 67/1",
+    "navLabel": "Get Directions",
+    "navHref": "https://yandex.ru/maps/?rtext=~55.812886,37.417156&rtt=auto"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "title": "StereoBoogie — Street Wave Artist",
+    "description": "StereoBoogie — multidisciplinary artist, art director of Street Wave. Paintings, objects, digital art."
+  },
+  "hero": {
+    "badge": "Artist",
+    "name": "StereoBoogie",
+    "subtitle": "Multidisciplinary Artist"
+  },
+  "bio": {
+    "badge": "About the Artist",
+    "text": "StereoBoogie is a multidisciplinary artist working at the intersection of painting, digital art, and product design. He creates paintings, sculptures, custom objects, and installations. At the core of his practice is an exploration of identity in the digital age."
+  },
+  "statement": {
+    "badge": "Artist Statement",
+    "title": "Between the screen and the skin",
+    "paragraphs": [
+      "My work is an exploration of what happens to a person when they exist simultaneously in physical and digital space. The mask is not a way to hide a face — it's a way to reveal what lies beneath: anxiety, fragmentation, multiplicity.",
+      "Six eyes are not a mutation. It's a state of constant observation: we look at screens, screens look at us. Cursors, interfaces, pixels — they've become part of our anatomy, not just tools.",
+      "I don't separate digital and analog. Canvas and screen are one surface. Brush and stylus are one instrument. What matters is only what remains after — an image, a feeling, a question without an answer."
+    ]
+  },
+  "visualLanguage": {
+    "badge": "Visual Language",
+    "title": "Elements",
+    "items": [
+      {
+        "title": "The Mask",
+        "desc": "Identity as construct. What we show — and what we conceal."
+      },
+      {
+        "title": "Six Eyes",
+        "desc": "Hyperawareness. A state of constant observation and being observed."
+      },
+      {
+        "title": "Fragmented Body",
+        "desc": "A person split between realities — physical and digital."
+      },
+      {
+        "title": "Interfaces & Cursors",
+        "desc": "Digital artifacts as part of the bodily experience."
+      },
+      {
+        "title": "Pixel as Anatomy",
+        "desc": "Screen resolution becomes the resolution of the body."
+      }
+    ]
+  },
+  "series": {
+    "badge": "Series",
+    "title": "Art Series",
+    "items": [
+      {
+        "title": "Backspace Tourist",
+        "years": "2021 — present",
+        "desc": "A series about digital nomadism and the erasure of boundaries between real and virtual. Characters travel through spaces that are impossible to define — is it an interface? A city? A dream? Each work is an attempt to hit backspace on one's own identity."
+      },
+      {
+        "title": "Masked Figures",
+        "years": "2023 — present",
+        "desc": "Masked figures are not characters — they are states. Anxiety, observation, multiplicity. The mask here doesn't conceal — it reveals. The series explores how we construct ourselves for the outside gaze and what remains when the camera is off."
+      }
+    ]
+  },
+  "media": {
+    "badge": "Media & Practice",
+    "title": "Formats",
+    "items": [
+      "Canvas / Acrylic / Mixed media",
+      "Digital painting",
+      "Sculpture and objects",
+      "Custom sneakers and apparel",
+      "Installations"
+    ]
+  },
+  "role": {
+    "badge": "Street Wave",
+    "title": "Art Director of Street Wave",
+    "text": "StereoBoogie is the lead artist and art director of Street Wave. He oversees the visual quality of all projects, curates guest artists, and develops concepts for brand collaborations. Every custom object at Street Wave passes through his creative vision."
+  },
+  "cta": {
+    "title": "Open to collaboration",
+    "subtitle": "Private commissions, collaborations, exhibitions, brand projects."
+  }
+}

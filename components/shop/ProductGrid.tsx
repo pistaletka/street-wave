@@ -4,13 +4,15 @@ import { useState } from "react";
 import type { Product } from "@/types/product";
 import ProductCard from "./ProductCard";
 import CategoryFilter from "./CategoryFilter";
-import shopContent from "@/content/shop.json";
+import { useMessages } from "next-intl";
 
 interface ProductGridProps {
   products: Product[];
 }
 
 export default function ProductGrid({ products }: ProductGridProps) {
+  const messages = useMessages();
+  const shopContent = messages.shop as any;
   const [category, setCategory] = useState("all");
 
   const filtered =

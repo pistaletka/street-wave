@@ -1,0 +1,32 @@
+{
+  "slug": "agama",
+  "title": "Agama 2023",
+  "client": "Agama",
+  "year": "2023",
+  "category": "brand",
+  "coverImage": "/projects/agama/cover.jpg",
+  "description": "Custom sneaker collection created for the brand's employees. AGAMA is a leading producer of premium fish and seafood. Every year the company rewards its top performers with unique gifts.",
+  "stats": [],
+  "gallery": [
+    "/projects/agama/1.jpg",
+    "/projects/agama/2.jpg",
+    "/projects/agama/3.jpg",
+    "/projects/agama/4.JPG",
+    "/projects/agama/5.jpg",
+    "/projects/agama/6.jpg",
+    "/projects/agama/7.jpg",
+    "/projects/agama/8.jpg",
+    "/projects/agama/9.jpg",
+    "/projects/agama/11.jpg",
+    "/projects/agama/12.jpg",
+    "/projects/agama/13.jpg",
+    "/projects/agama/14.jpg",
+    "/projects/agama/15.jpg",
+    "/projects/agama/17.jpg"
+  ],
+  "details": {
+    "task": "Create a collection of customized sneakers for the brand's employees.",
+    "solution": "Developed a unique design incorporating the brand's identity elements and hand-painted each pair.",
+    "result": "The collection became a corporate gift for the brand's team."
+  }
+}

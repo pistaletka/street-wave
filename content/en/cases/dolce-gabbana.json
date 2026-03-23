@@ -1,0 +1,18 @@
+{
+  "slug": "dolce-gabbana",
+  "title": "Dolce & Gabbana",
+  "client": "Dolce & Gabbana",
+  "year": "2023",
+  "category": "brand",
+  "description": "Exclusive custom project for Dolce & Gabbana. Hand-painted accessories for the brand's VIP clients.",
+  "stats": [
+    { "value": "5", "label": "pieces" },
+    { "value": "VIP", "label": "format" }
+  ],
+  "gallery": [null, null, null],
+  "details": {
+    "task": "Create exclusive custom accessories for VIP clients.",
+    "solution": "Developed a premium design using techniques that match the brand's level of craftsmanship.",
+    "result": "All pieces were presented to the brand's VIP clients at a private event."
+  }
+}

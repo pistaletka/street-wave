@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import common from "../../content/common.json";
+import { useMessages, useLocale } from "next-intl";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import { reachGoal } from "@/lib/analytics";
 import { GOALS } from "@/lib/goals";
@@ -25,11 +25,17 @@ const selectClass =
 const textareaClass =
   "border border-border bg-transparent px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-accent";
 
-function getConsentNote(form: HTMLFormElement): string {
+function getConsentNote(form: HTMLFormElement, isRu: boolean): string {
   const marketing = form.querySelector<HTMLInputElement>('input[name="marketingConsent"]');
+  if (isRu) {
+    return [
+      "Согласие на обработку ПДн: да",
+      `Согласие на рассылку: ${marketing?.checked ? "да" : "нет"}`,
+    ].join("\n");
+  }
   return [
-    "Согласие на обработку ПДн: да",
-    `Согласие на рассылку: ${marketing?.checked ? "да" : "нет"}`,
+    "Data processing consent: yes",
+    `Marketing consent: ${marketing?.checked ? "yes" : "no"}`,
   ].join("\n");
 }
 
@@ -38,6 +44,10 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
   const formRef = useRef<HTMLFormElement>(null);
   const router = useRouter();
   const [consentError, setConsentError] = useState(false);
+  const messages = useMessages();
+  const common = messages.common as any;
+  const locale = useLocale();
+  const isRu = locale === "ru";
 
   useEffect(() => {
     if (success && successUrl) {
@@ -48,8 +58,8 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
   if (success && !successUrl) {
     return (
       <div className="flex flex-col items-center gap-4 py-12 text-center">
-        <p className="sw-h3 text-xl text-accent">Заявка отправлена!</p>
-        <p className="sw-body text-text-secondary">Мы свяжемся с вами в ближайшее время.</p>
+        <p className="sw-h3 text-xl text-accent">{isRu ? "Заявка отправлена!" : "Request submitted!"}</p>
+        <p className="sw-body text-text-secondary">{isRu ? "Мы свяжемся с вами в ближайшее время." : "We will contact you shortly."}</p>
       </div>
     );
   }
@@ -79,20 +89,21 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
           const tariffPrice = tariffPrices[fd.get("tariff") as string] || 0;
           const itemOption = f.item.options.find((o) => o.value === fd.get("item"));
           const ownOption = f.ownItem.options.find((o) => o.value === fd.get("ownItem"));
-          const consentInfo = getConsentNote(e.currentTarget);
+          const consentInfo = getConsentNote(e.currentTarget, isRu);
+          const na = isRu ? "не указано" : "not specified";
           const ok = await submit({
             name: fd.get("name") as string,
             phone: fd.get("contact") as string,
             email: fd.get("email") as string,
             source: "place-order",
-            leadName: `Кастом: ${itemOption?.label || "не указано"}`,
+            leadName: `${isRu ? "Кастом" : "Custom"}: ${itemOption?.label || na}`,
             price: tariffPrice,
             note: [
-              `Тариф: ${tariffLabel}`,
-              `Предмет: ${itemOption?.label || "не указано"}`,
-              `Изделие: ${ownOption?.label || "не указано"}`,
-              `Мессенджер: ${fd.get("messenger") || "не выбран"}`,
-              `Идея: ${fd.get("idea")}`,
+              `${isRu ? "Тариф" : "Tier"}: ${tariffLabel}`,
+              `${isRu ? "Предмет" : "Item"}: ${itemOption?.label || na}`,
+              `${isRu ? "Изделие" : "Own item"}: ${ownOption?.label || na}`,
+              `${isRu ? "Мессенджер" : "Messenger"}: ${fd.get("messenger") || (isRu ? "не выбран" : "not selected")}`,
+              `${isRu ? "Идея" : "Idea"}: ${fd.get("idea")}`,
               `---`,
               consentInfo,
             ].join("\n"),
@@ -122,10 +133,10 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
                 document.getElementById("tariffs")?.scrollIntoView({ behavior: "smooth" });
               }}
               className="text-xs text-accent hover:underline"
-            >&darr; Подробнее о тарифах</a>
+            >&darr; {isRu ? "Подробнее о тарифах" : "More about tiers"}</a>
           </div>
           <select id="po-tariff" name="tariff" defaultValue="" className={selectClass}>
-            <option value="" disabled className="bg-surface text-muted">Выберите тариф</option>
+            <option value="" disabled className="bg-surface text-muted">{isRu ? "Выберите тариф" : "Select a tier"}</option>
             {f.tariff.options.map((opt) => (
               <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
             ))}
@@ -134,7 +145,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
         <div className="flex flex-col gap-2">
           <label htmlFor="po-item" className={labelClass}>{f.item.label}</label>
           <select id="po-item" name="item" defaultValue="" className={selectClass}>
-            <option value="" disabled className="bg-surface text-muted">Выберите тип</option>
+            <option value="" disabled className="bg-surface text-muted">{isRu ? "Выберите тип" : "Select type"}</option>
             {f.item.options.map((opt) => (
               <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
             ))}
@@ -143,7 +154,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
         <div className="flex flex-col gap-2">
           <label htmlFor="po-own" className={labelClass}>{f.ownItem.label}</label>
           <select id="po-own" name="ownItem" defaultValue="" className={selectClass}>
-            <option value="" disabled className="bg-surface text-muted">Своё или закупаем</option>
+            <option value="" disabled className="bg-surface text-muted">{isRu ? "Своё или закупаем" : "Own or we source"}</option>
             {f.ownItem.options.map((opt) => (
               <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
             ))}
@@ -192,7 +203,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
             disabled={loading}
             className="sw-btn h-12 w-full border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent disabled:opacity-50 sm:w-auto"
           >
-            {loading ? "Отправка..." : common.forms.placeOrder.submit}
+            {loading ? (isRu ? "Отправка..." : "Submitting...") : common.forms.placeOrder.submit}
           </button>
         </div>
       </form>
@@ -208,7 +219,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
           e.preventDefault();
           if (!checkConsent(e.currentTarget)) return;
           const fd = new FormData(e.currentTarget);
-          const consentInfo = getConsentNote(e.currentTarget);
+          const consentInfo = getConsentNote(e.currentTarget, isRu);
           const isEvent = sourceOverride === "live-event";
           const ok = await submit({
             name: fd.get("name") as string,
@@ -216,8 +227,8 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
             email: fd.get("email") as string,
             source: isEvent ? "live-customization" : "brand-project",
             leadName: isEvent
-              ? `Лайв-кастомизация от ${fd.get("name")}`
-              : `Бренд-проект от ${fd.get("name")}`,
+              ? `${isRu ? "Лайв-кастомизация от" : "Live customization from"} ${fd.get("name")}`
+              : `${isRu ? "Бренд-проект от" : "Brand project from"} ${fd.get("name")}`,
             note: [(fd.get("comment") as string) || "", `---`, consentInfo].join("\n"),
           });
           if (ok) {
@@ -258,7 +269,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
             disabled={loading}
             className="sw-btn h-12 w-full border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent disabled:opacity-50 sm:w-auto"
           >
-            {loading ? "Отправка..." : common.forms.brandProject.submit}
+            {loading ? (isRu ? "Отправка..." : "Submitting...") : common.forms.brandProject.submit}
           </button>
         </div>
       </form>
@@ -275,12 +286,12 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
         if (!checkConsent(e.currentTarget)) return;
         const fd = new FormData(e.currentTarget);
         const typeLabel = f.type.options.find((o) => o.value === fd.get("type"))?.label || "";
-        const consentInfo = getConsentNote(e.currentTarget);
+        const consentInfo = getConsentNote(e.currentTarget, isRu);
         const ok = await submit({
           name: fd.get("name") as string,
           phone: fd.get("contact") as string,
           source: "general",
-          leadName: `Обращение: ${typeLabel || "общее"}`,
+          leadName: `${isRu ? "Обращение" : "Inquiry"}: ${typeLabel || (isRu ? "общее" : "general")}`,
           note: [(fd.get("message") as string) || "", `---`, consentInfo].join("\n"),
         });
         if (ok) {
@@ -301,7 +312,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
       <div className="flex flex-col gap-2">
         <label htmlFor="g-type" className={labelClass}>{f.type.label}</label>
         <select id="g-type" name="type" defaultValue="" className={selectClass}>
-          <option value="" disabled className="bg-surface text-muted">Выберите тип</option>
+          <option value="" disabled className="bg-surface text-muted">{isRu ? "Выберите тип" : "Select type"}</option>
           {f.type.options.map((opt) => (
             <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
           ))}
@@ -326,7 +337,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
           disabled={loading}
           className="sw-btn h-12 w-full border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent disabled:opacity-50 sm:w-auto"
         >
-          {loading ? "Отправка..." : common.forms.general.submit}
+          {loading ? (isRu ? "Отправка..." : "Submitting...") : common.forms.general.submit}
         </button>
       </div>
     </form>

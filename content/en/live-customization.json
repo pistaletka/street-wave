@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "title": "Live Customization — streetwave®",
+    "description": "Live customization at your event. Custom zones, interactive activations, and a WOW factor."
+  },
+  "hero": {
+    "badge": "Live Customization",
+    "title": "Live customization at your event",
+    "subtitle": "A custom zone with artists, equipment, and branding. Interactive activations that engage your audience."
+  },
+  "formats": {
+    "badge": "Formats",
+    "title": "What It Looks Like",
+    "items": [
+      {
+        "title": "Custom Zone",
+        "desc": "An artist on-site customizing sneakers and apparel for guests in real time. Zone branding tailored to your style.",
+        "features": ["Artist(s) on-site", "Consumable materials", "Equipment and furniture", "Branded zone setup"]
+      },
+      {
+        "title": "Limited Edition Run",
+        "desc": "We produce a batch of custom items for gifting to guests or retail. Ready-made merch with a unique design.",
+        "features": ["Design development", "Batch production", "Packaging", "Delivery to venue"]
+      },
+      {
+        "title": "Interactive Activation",
+        "desc": "Guests take part in the process — choosing design elements, watching the painting unfold. We create engagement and content.",
+        "features": ["Interactive format", "Social media content", "Photo and video zone", "Branded souvenirs"]
+      }
+    ]
+  },
+  "cases": {
+    "badge": "Case Studies",
+    "title": "Events & Activations"
+  },
+  "cta": {
+    "title": "Planning an event?",
+    "subtitle": "Tell us about the format — we'll propose a solution and estimate the budget."
+  }
+}

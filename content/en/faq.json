@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "FAQ — streetwave®",
+    "description": "Answers to common questions about customization, timelines, payment, and shipping."
+  },
+  "hero": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to the most common questions. Can't find what you're looking for? Reach out to us."
+  },
+  "tabs": {
+    "private": {
+      "label": "For Private Clients",
+      "items": [
+        {
+          "q": "How long does a custom take?",
+          "a": "Typically 2–4 weeks depending on complexity. Rush orders can be discussed individually."
+        },
+        {
+          "q": "What can be customized?",
+          "a": "Sneakers, jackets, denim jackets, bags, helmets, skateboards, and other objects. If it can be worn or displayed — we can customize it."
+        },
+        {
+          "q": "Can I send my own item?",
+          "a": "Yes, you can send your own sneakers, clothing, or objects. We can also source base items if needed."
+        },
+        {
+          "q": "How does payment work?",
+          "a": "50% upfront after sketch approval, the remaining balance before shipping. We accept PayPal and bank transfers."
+        },
+        {
+          "q": "Do you ship internationally?",
+          "a": "Yes, we offer worldwide shipping with tracking and insurance."
+        },
+        {
+          "q": "How durable is the customization?",
+          "a": "We use professional Angelus paints and protective coatings. With proper care, the custom lasts for years."
+        },
+        {
+          "q": "Can I actually wear custom sneakers?",
+          "a": "Absolutely. All our work is fully functional. We use flexible paints and finishes designed to withstand regular wear."
+        }
+      ]
+    },
+    "brands": {
+      "label": "For Brands & Events",
+      "items": [
+        {
+          "q": "What is the minimum order for limited editions?",
+          "a": "Minimum quantities are discussed on a case-by-case basis. We work with both one-off pieces and runs starting from 10 units."
+        },
+        {
+          "q": "Do you work under contract?",
+          "a": "Yes, all brand projects are formalized with a contract that includes fixed timelines, a detailed budget, and mutual obligations."
+        },
+        {
+          "q": "What's included in a custom zone at an event?",
+          "a": "Artist(s) on-site, consumable materials, equipment, and branded zone setup. Format and scale are tailored to your budget."
+        },
+        {
+          "q": "What are the timelines for brand projects?",
+          "a": "It depends on scale: from 2 weeks for small collaborations to 2 months for large-scale projects."
+        },
+        {
+          "q": "Can I get a quote before signing a contract?",
+          "a": "Yes, we prepare a preliminary estimate after discussing the brief. It's free and comes with no obligations."
+        }
+      ]
+    },
+    "general": {
+      "label": "General",
+      "items": [
+        {
+          "q": "Where is the studio located?",
+          "a": "Our studio is based in Moscow. We work with clients worldwide."
+        },
+        {
+          "q": "How can I reach you?",
+          "a": "Telegram @streetwave, email hello@streetwave.studio, or via the contact form on our website. We respond within 24 hours."
+        },
+        {
+          "q": "Do you have a shop with ready-made pieces?",
+          "a": "Our online shop is in development. Follow us on social media for updates."
+        }
+      ]
+    }
+  }
+}

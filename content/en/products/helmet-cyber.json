@@ -1,0 +1,20 @@
+{
+  "slug": "helmet-cyber",
+  "title": "Helmet \"Cyberpunk\"",
+  "category": "art-objects",
+  "price": 450,
+  "status": "available",
+  "image": "/products/helmet-cyber/main.jpg",
+  "images": [
+    "/products/helmet-cyber/main.jpg",
+    "/products/helmet-cyber/side.jpg",
+    "/products/helmet-cyber/back.jpg"
+  ],
+  "description": "Motorcycle helmet with original cyberpunk-style artwork. Neon accents and reflective details. Certified base helmet.",
+  "specs": [
+    { "label": "Size", "value": "M (57-58 cm)" },
+    { "label": "Base", "value": "Certified motorcycle helmet" },
+    { "label": "Technique", "value": "Airbrush + hand-painted" },
+    { "label": "Coating", "value": "Automotive clear coat, 2 layers" }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "certificate-10000",
+  "title": "Gift Certificate — Malevich ($100)",
+  "category": "certificates",
+  "price": 100,
+  "status": "available",
+  "image": "/products/certificates/10000.jpg",
+  "images": [
+    "/products/certificates/10000.jpg"
+  ],
+  "description": "A streetwave® gift certificate worth $100. Use it to order a personal custom piece at the Malevich tier or shop ready-made items in our store. Valid for 6 months.",
+  "specs": [
+    { "label": "Value", "value": "$100" },
+    { "label": "Validity", "value": "6 months" },
+    { "label": "Format", "value": "Digital + printed" }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "certificate-18000",
+  "title": "Gift Certificate — Van Gogh ($200)",
+  "category": "certificates",
+  "price": 200,
+  "status": "available",
+  "image": "/products/certificates/18000.jpg",
+  "images": [
+    "/products/certificates/18000.jpg"
+  ],
+  "description": "A streetwave® gift certificate worth $200. Use it to order a personal custom piece at the Van Gogh tier or shop ready-made items in our store. Valid for 6 months.",
+  "specs": [
+    { "label": "Value", "value": "$200" },
+    { "label": "Validity", "value": "6 months" },
+    { "label": "Format", "value": "Digital + printed" }
+  ]
+}

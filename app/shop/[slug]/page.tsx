@@ -5,42 +5,39 @@ import type { ProductDetail } from "@/types/product";
 import { formatPrice } from "@/lib/formatPrice";
 import ProductGallery from "@/components/shop/ProductGallery";
 import AddToCartButton from "@/components/shop/AddToCartButton";
-import productsIndex from "@/content/products/index.json";
-import fs from "fs";
-import path from "path";
+import { getLocaleProductsIndex, getLocaleProduct } from "@/lib/getContent";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-function getProduct(slug: string): ProductDetail | null {
-  const filePath = path.join(process.cwd(), "content/products", `${slug}.json`);
-  try {
-    const raw = fs.readFileSync(filePath, "utf-8");
-    return JSON.parse(raw) as ProductDetail;
-  } catch {
-    return null;
-  }
-}
-
 export async function generateStaticParams() {
-  return productsIndex.map((p) => ({ slug: p.slug }));
+  // Use the default (ru) locale for static params generation
+  const productsIndex = (await import("../../../content/ru/products/index.json")).default;
+  return productsIndex.map((p: any) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const product = getProduct(slug);
-  if (!product) return { title: "Товар не найден — streetwave®" };
-  return {
-    title: `${product.title} — streetwave®`,
-    description: product.description,
-  };
+  try {
+    const product = await getLocaleProduct(slug);
+    return {
+      title: `${product.title} — streetwave®`,
+      description: product.description,
+    };
+  } catch {
+    return { title: "Товар не найден — streetwave®" };
+  }
 }
 
 export default async function ProductPage({ params }: PageProps) {
   const { slug } = await params;
-  const product = getProduct(slug);
-  if (!product) notFound();
+  let product: ProductDetail;
+  try {
+    product = await getLocaleProduct(slug) as ProductDetail;
+  } catch {
+    notFound();
+  }
 
   return (
     <section className="px-6 py-6">

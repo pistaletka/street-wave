@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Контакты — streetwave®",
+    "description": "Свяжитесь с нами: Telegram, WhatsApp, email. Ответим в течение 24 часов."
+  },
+  "hero": {
+    "badge": "Контакты",
+    "title": "Свяжитесь с нами",
+    "subtitle": "Напишите в Telegram, WhatsApp или заполните форму — ответим в течение 24 часов."
+  },
+  "channels": [
+    { "label": "Telegram", "value": "@streetwaveart", "href": "https://t.me/streetwaveart" },
+    { "label": "WhatsApp", "value": "+7 906 768 1204", "href": "https://wa.me/79067681204" },
+    { "label": "Email", "value": "order@street-wave.com", "href": "mailto:order@street-wave.com" }
+  ],
+  "address": {
+    "label": "Студия",
+    "value": "Москва, Россия, ул. Авиационная, 67/1",
+    "navLabel": "Построить маршрут",
+    "navHref": "https://yandex.ru/maps/?rtext=~55.812886,37.417156&rtt=auto"
+  }
+}

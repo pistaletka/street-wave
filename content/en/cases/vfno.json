@@ -1,0 +1,36 @@
+{
+  "slug": "vfno",
+  "title": "VFNO",
+  "client": "Vogue",
+  "year": "2019",
+  "category": "event",
+  "description": "Customization at Vogue Fashion's Night Out. Live painting for guests of the fashion night.",
+  "stats": [],
+  "gallery": [
+    "/events/vfno/1.jpg",
+    "/events/vfno/2.jpg",
+    "/events/vfno/3.jpg",
+    "/events/vfno/4.jpg",
+    "/events/vfno/5.jpg",
+    "/events/vfno/6.jpg",
+    "/events/vfno/7.jpg",
+    "/events/vfno/8.jpg",
+    "/events/vfno/9.jpg",
+    "/events/vfno/10.jpg",
+    "/events/vfno/11.jpg",
+    "/events/vfno/12.jpg",
+    "/events/vfno/13.jpg",
+    "/events/vfno/14.jpg",
+    "/events/vfno/15.jpg",
+    "/events/vfno/16.jpg",
+    "/events/vfno/17.jpg",
+    "/events/vfno/18.jpg",
+    "/events/vfno/19.jpg",
+    "/events/vfno/20.jpg"
+  ],
+  "details": {
+    "task": "",
+    "solution": "",
+    "result": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "offwhite-xiaomi",
+  "title": "Off-White \u00d7 Xiaomi MI",
+  "client": "Xiaomi",
+  "year": "2024",
+  "category": "brand",
+  "coverImage": "/offwhite-xiaomi.jpg",
+  "description": "Collaboration with Xiaomi MI: Off-White sneaker customization as part of a joint project. A unique design bridging street culture and a technology brand.",
+  "stats": [
+    { "value": "1", "label": "collaboration" },
+    { "value": "Off-White", "label": "base" },
+    { "value": "Xiaomi MI", "label": "partner" }
+  ],
+  "gallery": ["/offwhite-xiaomi.jpg", null, null],
+  "details": {
+    "task": "Create custom Off-White sneakers for a collaboration with Xiaomi MI.",
+    "solution": "Developed a unique design merging Off-White aesthetics with the Xiaomi MI visual code.",
+    "result": "An exclusive project highlighting the synergy between street fashion and technology."
+  }
+}

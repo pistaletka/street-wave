@@ -1,0 +1,52 @@
+{
+  "slug": "new-concept",
+  "title": "No Concept 2024",
+  "client": "No Concept",
+  "year": "2024",
+  "category": "brand",
+  "description": "The studio's flagship project: over 30 custom pieces for the No Concept brand space. A clothing collection united by a single visual code. The project included concept development, production, and an art performance on the collection launch day at the brand's boutique.",
+  "stats": [
+    { "value": "30+", "label": "pieces" },
+    { "value": "1M \u20bd", "label": "project revenue" },
+    { "value": "3", "label": "months of work" }
+  ],
+  "gallery": [
+    "/projects/new-concept/1.jpg",
+    "/projects/new-concept/2.jpg",
+    "/projects/new-concept/3.jpg",
+    "/projects/new-concept/4.jpg",
+    "/projects/new-concept/5.jpg",
+    "/projects/new-concept/6.jpg",
+    "/projects/new-concept/7.jpg",
+    "/projects/new-concept/8.jpg",
+    "/projects/new-concept/9.jpg",
+    "/projects/new-concept/10.jpg",
+    "/projects/new-concept/11.jpg",
+    "/projects/new-concept/12.jpg",
+    "/projects/new-concept/13.jpg",
+    "/projects/new-concept/14.jpg",
+    "/projects/new-concept/15.jpg",
+    "/projects/new-concept/16.jpg",
+    "/projects/new-concept/17.jpg",
+    "/projects/new-concept/18.jpg",
+    "/projects/new-concept/19.jpg",
+    "/projects/new-concept/20.jpg",
+    "/projects/new-concept/21.jpg",
+    "/projects/new-concept/22.jpg",
+    "/projects/new-concept/23.jpg",
+    "/projects/new-concept/24.jpg",
+    "/projects/new-concept/25.jpg",
+    "/projects/new-concept/26.jpg",
+    "/projects/new-concept/27.jpg",
+    "/projects/new-concept/28.jpg",
+    "/projects/new-concept/29.jpg",
+    "/projects/new-concept/30.jpg",
+    "/projects/new-concept/31.jpg",
+    "/projects/new-concept/32.jpg"
+  ],
+  "details": {
+    "task": "Create a unique collection of custom pieces for the brand.",
+    "solution": "Developed a visual code blending street aesthetics with the brand's identity. Produced 30+ pieces across different categories.",
+    "result": "Drew attention to the brand through art. The space became a destination for the brand's audience. All pieces sold out within the first month."
+  }
+}

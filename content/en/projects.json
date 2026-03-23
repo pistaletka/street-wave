@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Brand Projects — streetwave®",
+    "description": "Limited-edition collections, collaborations, and branded customs for campaigns and gifting."
+  },
+  "hero": {
+    "badge": "Brand Projects",
+    "title": "Limited-edition projects for brands",
+    "subtitle": "Custom collections, collaborations, and branded work. From concept to logistics.",
+    "ctaButton": "Discuss a Project"
+  },
+  "manifesto": {
+    "badge": "Manifesto",
+    "title": "From mass market to contemporary art masterpiece",
+    "text": "The Street Wave team creates collections that transcend the product and become objects of contemporary art. We shape a statement through art and amplify the meaning of a project, turning it into a cultural event. Every project is a dialogue between street culture and business strategy. Between emotion and objective. Between a brand's identity and its audience. We translate the brand into the language of art. From mass product to cultural artifact."
+  },
+  "cases": {
+    "badge": "Case Studies",
+    "title": "Selected Projects",
+    "featuredLabel": "Flagship Project",
+    "viewLabel": "View"
+  },
+  "process": {
+    "badge": "Process",
+    "title": "How We Work with Brands",
+    "steps": [
+      { "step": "01", "title": "Brief", "desc": "We discuss the objective, audience, format, and budget." },
+      { "step": "02", "title": "Concept & Quote", "desc": "We prepare a visual concept and detailed estimate for approval." },
+      { "step": "03", "title": "Contract", "desc": "We agree on terms and sign the contract." },
+      { "step": "04", "title": "Production", "desc": "We launch production with quality control at every stage." },
+      { "step": "05", "title": "Logistics & Report", "desc": "Delivery, setup (for events), and a final report." }
+    ]
+  },
+  "cta": {
+    "title": "Have a project idea?",
+    "subtitle": "Tell us about the task — we'll propose a format and estimate the budget."
+  }
+}

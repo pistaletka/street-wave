@@ -1,0 +1,44 @@
+{
+  "slug": "adidas-football",
+  "title": "Adidas Football",
+  "client": "Adidas",
+  "year": "2024",
+  "category": "event",
+  "description": "Football boot customization at the Adidas flagship store in Moscow. Live painting of football footwear with a unique design for every customer.",
+  "stats": [
+    { "value": "1", "label": "flagship" },
+    { "value": "80+", "label": "pairs of boots" },
+    { "value": "3", "label": "days" }
+  ],
+  "gallery": [
+    "/events/adidas-football/1.jpg",
+    "/events/adidas-football/2.jpg",
+    "/events/adidas-football/3.jpg",
+    "/events/adidas-football/4.jpg",
+    "/events/adidas-football/5.jpg",
+    "/events/adidas-football/6.jpg",
+    "/events/adidas-football/7.jpg",
+    "/events/adidas-football/8.jpg",
+    "/events/adidas-football/9.jpg",
+    "/events/adidas-football/10.jpg",
+    "/events/adidas-football/11.jpg",
+    "/events/adidas-football/12.jpg",
+    "/events/adidas-football/13.jpg",
+    "/events/adidas-football/14.jpg",
+    "/events/adidas-football/15.jpg",
+    "/events/adidas-football/16.jpg",
+    "/events/adidas-football/17.jpg",
+    "/events/adidas-football/18.jpg",
+    "/events/adidas-football/19.jpg",
+    "/events/adidas-football/20.jpg",
+    "/events/adidas-football/21.jpg",
+    "/events/adidas-football/22.jpg",
+    "/events/adidas-football/23.jpg",
+    "/events/adidas-football/24.jpg"
+  ],
+  "details": {
+    "task": "Set up football boot customization at the Adidas flagship store in Moscow.",
+    "solution": "We deployed a custom station inside the store. Artists hand-painted customers' boots with individual designs in the brand's aesthetic.",
+    "result": "Over 80 pairs of custom boots in 3 days. The activation received strong customer engagement and reinforced the flagship's positioning."
+  }
+}

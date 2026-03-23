@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
-import checkoutContent from "@/content/checkout.json";
+import { useMessages } from "next-intl";
 import LegalConsent from "../shared/LegalConsent";
 import MarketingConsent from "../shared/MarketingConsent";
 import { reachGoal } from "@/lib/analytics";
@@ -16,6 +16,8 @@ const textareaClass =
   "border border-border bg-transparent px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-accent";
 
 export default function CheckoutForm() {
+  const messages = useMessages();
+  const checkoutContent = messages.checkout as any;
   const { items, total } = useCart();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

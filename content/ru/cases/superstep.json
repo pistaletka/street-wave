@@ -1,0 +1,19 @@
+{
+  "slug": "superstep",
+  "title": "Superstep 2025",
+  "client": "Superstep",
+  "year": "2025",
+  "category": "brand",
+  "coverImage": "/projects/superstep/cover.jpg",
+  "description": "Лимитированная серия кастомизированных кроссовок для розничной сети SuperStep. Модели были разработаны для оформления выставочного пространства и зоны кастомизации в трех городах: Москве, Санкт-Петербурге и Екатеринбурге. Каждая пара это эксклюзив с авторской росписью художников Street Wave, созданный как демонстрация возможностей студии и визуального языка бренда.",
+  "stats": [
+    { "value": "36", "label": "пар" },
+    { "value": "3", "label": "магазина" }
+  ],
+  "gallery": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+  "details": {
+    "task": "Создать кастомизированную серию кроссовок для привлечения внимания к кастом-зоне в магазине.",
+    "solution": "Разработали уникальные дизайны с элементами уличного искусства. Каждую пару расписали вручную.",
+    "result": "Серия была выставлена в трех магазинах бренда и стала привлекать внимание посетителей к услуге кастомизации."
+  }
+}

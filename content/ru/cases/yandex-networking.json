@@ -1,0 +1,40 @@
+{
+  "slug": "yandex-networking",
+  "title": "Яндекс Нетворкинг",
+  "client": "Яндекс",
+  "year": "2024",
+  "category": "event",
+  "description": "Кастомизация футболок на корпоративном ивенте для гостей и участников. Москва, Башня ОКО. Live-роспись футболок как элемент нетворкинга и командного взаимодействия.",
+  "stats": [
+    { "value": "150+", "label": "участников" },
+    { "value": "1", "label": "день" },
+    { "value": "150+", "label": "футболок" }
+  ],
+  "gallery": [
+    "/events/yandex-networking/1.jpg",
+    "/events/yandex-networking/2.jpg",
+    "/events/yandex-networking/3.jpg",
+    "/events/yandex-networking/4.jpg",
+    "/events/yandex-networking/5.jpg",
+    "/events/yandex-networking/6.jpg",
+    "/events/yandex-networking/7.jpg",
+    "/events/yandex-networking/8.jpg",
+    "/events/yandex-networking/9.jpg",
+    "/events/yandex-networking/10.jpg",
+    "/events/yandex-networking/11.jpg",
+    "/events/yandex-networking/12.jpg",
+    "/events/yandex-networking/13.jpg",
+    "/events/yandex-networking/14.jpg",
+    "/events/yandex-networking/15.jpg",
+    "/events/yandex-networking/16.jpg",
+    "/events/yandex-networking/17.jpg",
+    "/events/yandex-networking/18.jpg",
+    "/events/yandex-networking/19.jpg",
+    "/events/yandex-networking/20.jpg"
+  ],
+  "details": {
+    "task": "Организовать кастом-активацию на корпоративном нетворкинге Яндекса в Башне ОКО.",
+    "solution": "Развернули зону кастомизации футболок с мастерами. Каждый участник получал футболку с индивидуальным дизайном — элемент нетворкинга и памятный сувенир.",
+    "result": "Более 150 кастомных футболок за один день. Активация стала центральным элементом мероприятия и получила высокие оценки организаторов."
+  }
+}

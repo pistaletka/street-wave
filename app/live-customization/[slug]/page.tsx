@@ -2,59 +2,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import casesIndex from "../../../content/cases/index.json";
+import { getLocaleCasesIndex, getLocaleCase } from "../../../lib/getContent";
 import PlaceholderImage from "../../../components/shared/PlaceholderImage";
 import SectionHeader from "../../../components/shared/SectionHeader";
 import EventCaseCta from "./EventCaseCta";
 
-// Import event case data
-import customTruck from "../../../content/cases/custom-truck.json";
-import dolceGabbanaEvent from "../../../content/cases/dolce-gabbana-event.json";
-import pinkoEvent from "../../../content/cases/pinko-event.json";
-import superstepEvent from "../../../content/cases/superstep-event.json";
-import yandexNetworking from "../../../content/cases/yandex-networking.json";
-import stockman from "../../../content/cases/stockman.json";
-import adidasFootball from "../../../content/cases/adidas-football.json";
-import stereoLetta from "../../../content/cases/stereo-letta.json";
-import customZoneLv from "../../../content/cases/custom-zone-lv.json";
-import tommyHilfiger from "../../../content/cases/tommy-hilfiger.json";
-import tsum2019 from "../../../content/cases/tsum-2019.json";
-import tsumPopupDolceGabbana from "../../../content/cases/tsum-popup-dolce-gabbana.json";
-import worldCup from "../../../content/cases/world-cup.json";
-import dkny from "../../../content/cases/dkny.json";
-import vfno from "../../../content/cases/vfno.json";
-import ralphLaurenTsum from "../../../content/cases/ralph-lauren-tsum.json";
-
-type CaseData = Omit<typeof customTruck, "gallery" | "coverImage"> & {
-  gallery: (string | null)[];
-  coverImage?: string;
-};
-
-const caseDataMap: Record<string, CaseData> = {
-  "custom-truck": customTruck,
-  "dolce-gabbana-event": dolceGabbanaEvent,
-  "pinko-event": pinkoEvent,
-  "superstep-event": superstepEvent,
-  "yandex-networking": yandexNetworking,
-  stockman,
-  "adidas-football": adidasFootball,
-  "stereo-letta": stereoLetta,
-  "custom-zone-lv": customZoneLv,
-  "tommy-hilfiger": tommyHilfiger,
-  "tsum-2019": tsum2019,
-  "tsum-popup-dolce-gabbana": tsumPopupDolceGabbana,
-  "world-cup": worldCup,
-  dkny,
-  vfno,
-  "ralph-lauren-tsum": ralphLaurenTsum,
-};
-
-const eventSlugs = casesIndex.cases
-  .filter((c) => c.category === "event")
-  .map((c) => c.slug);
-
-export function generateStaticParams() {
-  return eventSlugs.map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  // Use the default (ru) locale for static params generation
+  const casesIndex = (await import("../../../content/ru/cases/index.json")).default;
+  return casesIndex.cases
+    .filter((c: any) => c.category === "event")
+    .map((c: any) => ({ slug: c.slug }));
 }
 
 type Props = {
@@ -63,17 +21,26 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const caseData = caseDataMap[slug];
-  if (!caseData) return {};
-  return {
-    title: `${caseData.title} — streetwave®`,
-    description: caseData.description,
-  };
+  try {
+    const caseData = await getLocaleCase(slug);
+    return {
+      title: `${caseData.title} — streetwave®`,
+      description: caseData.description,
+    };
+  } catch {
+    return {};
+  }
 }
 
 export default async function EventCasePage({ params }: Props) {
   const { slug } = await params;
-  const caseData = caseDataMap[slug];
+
+  let caseData: any;
+  try {
+    caseData = await getLocaleCase(slug);
+  } catch {
+    notFound();
+  }
 
   if (!caseData) {
     notFound();
@@ -107,7 +74,7 @@ export default async function EventCasePage({ params }: Props) {
         <section className="px-6 pb-6">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-6 sm:grid-cols-3">
-              {caseData.stats.map((stat) => (
+              {caseData.stats.map((stat: any) => (
                 <div
                   key={stat.label}
                   className="border border-border bg-surface p-8 text-center"
@@ -121,11 +88,11 @@ export default async function EventCasePage({ params }: Props) {
         </section>
       )}
 
-      {/* Gallery — 8 photos, 4 columns × 2 rows */}
+      {/* Gallery — 8 photos, 4 columns x 2 rows */}
       <section className="px-6 pb-6">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-4 grid-cols-3 lg:grid-cols-6">
-            {caseData.gallery.map((item, i) =>
+            {caseData.gallery.map((item: string | null, i: number) =>
               item ? (
                 <div key={i} className="relative" style={{ aspectRatio: "4/5" }}>
                   <Image

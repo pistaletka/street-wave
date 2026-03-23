@@ -1,7 +1,12 @@
 import Link from "next/link";
-import common from "../../content/common.json";
+import { getContent } from "../../lib/getContent";
+import { getLocale } from "next-intl/server";
 
-export default function Footer() {
+export default async function Footer() {
+  const common = await getContent<any>("common");
+  const locale = await getLocale();
+  const socialLabel = locale === "ru" ? "Соцсети" : "Social";
+
   return (
     <footer className="border-t border-border px-6 py-16">
       <div className="mx-auto max-w-7xl">
@@ -18,11 +23,11 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
-          {common.footer.columns.map((col) => (
+          {common.footer.columns.map((col: any) => (
             <div key={col.title}>
               <p className="sw-label mb-4 text-muted">{col.title}</p>
               <ul className="space-y-3">
-                {col.links.map((link) => (
+                {col.links.map((link: any) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
@@ -38,9 +43,9 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <p className="sw-label mb-4 text-muted">Соцсети</p>
+            <p className="sw-label mb-4 text-muted">{socialLabel}</p>
             <ul className="space-y-3">
-              {common.footer.social.map((s) => (
+              {common.footer.social.map((s: any) => (
                 <li key={s.label}>
                   <a
                     href={s.href}
