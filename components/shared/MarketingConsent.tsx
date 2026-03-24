@@ -1,12 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 interface MarketingConsentProps {
   id?: string;
 }
 
 export default function MarketingConsent({ id = "marketing-consent" }: MarketingConsentProps) {
+  const locale = useLocale();
+
+  // Hide marketing consent on English version
+  if (locale !== "ru") return null;
+
   return (
     <label className="flex items-start gap-3 cursor-pointer group">
       <input
