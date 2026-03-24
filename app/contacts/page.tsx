@@ -37,7 +37,7 @@ export default async function ContactsPage() {
       <section className="px-6 pb-6">
         <div className="mx-auto max-w-3xl">
           <div className="mb-16 grid gap-6 sm:grid-cols-2">
-            {content.channels.map((ch) => (
+            {content.channels.map((ch: any) => (
               <a
                 key={ch.label}
                 href={ch.href}

@@ -61,7 +61,7 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.directions.badge} title={content.directions.title} />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {content.directions.items.map((dir) => (
+            {content.directions.items.map((dir: any) => (
               <Link
                 key={dir.title}
                 href={dir.href}
@@ -90,7 +90,7 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.process.badge} title={content.process.title} />
           <div className="grid gap-px md:grid-cols-4">
-            {content.process.steps.map((item) => (
+            {content.process.steps.map((item: any) => (
               <div key={item.step} className="border border-border bg-surface p-8">
                 <span className="font-mono text-xs tracking-widest text-accent">
                   {item.step}
@@ -130,7 +130,7 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.whyUs.badge} title={content.whyUs.title} />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {content.whyUs.items.map((item) => (
+            {content.whyUs.items.map((item: any) => (
               <div key={item.title} className="border border-border bg-surface p-8">
                 <h3 className="sw-h3 mb-4 text-sm">{item.title}</h3>
                 <p className="sw-body-sm text-text-secondary">{item.desc}</p>

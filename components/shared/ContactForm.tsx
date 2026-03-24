@@ -83,12 +83,12 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
           e.preventDefault();
           if (!checkConsent(e.currentTarget)) return;
           const fd = new FormData(e.currentTarget);
-          const tariffOption = f.tariff.options.find((o) => o.value === fd.get("tariff"));
+          const tariffOption = f.tariff.options.find((o: any) => o.value === fd.get("tariff"));
           const tariffLabel = tariffOption?.label || "";
           const tariffPrices: Record<string, number> = { malevich: 10000, "van-gogh": 18000, picasso: 25000 };
           const tariffPrice = tariffPrices[fd.get("tariff") as string] || 0;
-          const itemOption = f.item.options.find((o) => o.value === fd.get("item"));
-          const ownOption = f.ownItem.options.find((o) => o.value === fd.get("ownItem"));
+          const itemOption = f.item.options.find((o: any) => o.value === fd.get("item"));
+          const ownOption = f.ownItem.options.find((o: any) => o.value === fd.get("ownItem"));
           const consentInfo = getConsentNote(e.currentTarget, isRu);
           const na = isRu ? "не указано" : "not specified";
           const ok = await submit({
@@ -137,7 +137,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
           </div>
           <select id="po-tariff" name="tariff" defaultValue="" className={selectClass}>
             <option value="" disabled className="bg-surface text-muted">{isRu ? "Выберите тариф" : "Select a tier"}</option>
-            {f.tariff.options.map((opt) => (
+            {f.tariff.options.map((opt: any) => (
               <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
             ))}
           </select>
@@ -146,7 +146,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
           <label htmlFor="po-item" className={labelClass}>{f.item.label}</label>
           <select id="po-item" name="item" defaultValue="" className={selectClass}>
             <option value="" disabled className="bg-surface text-muted">{isRu ? "Выберите тип" : "Select type"}</option>
-            {f.item.options.map((opt) => (
+            {f.item.options.map((opt: any) => (
               <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
             ))}
           </select>
@@ -155,7 +155,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
           <label htmlFor="po-own" className={labelClass}>{f.ownItem.label}</label>
           <select id="po-own" name="ownItem" defaultValue="" className={selectClass}>
             <option value="" disabled className="bg-surface text-muted">{isRu ? "Своё или закупаем" : "Own or we source"}</option>
-            {f.ownItem.options.map((opt) => (
+            {f.ownItem.options.map((opt: any) => (
               <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
             ))}
           </select>
@@ -285,7 +285,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
         e.preventDefault();
         if (!checkConsent(e.currentTarget)) return;
         const fd = new FormData(e.currentTarget);
-        const typeLabel = f.type.options.find((o) => o.value === fd.get("type"))?.label || "";
+        const typeLabel = f.type.options.find((o: any) => o.value === fd.get("type"))?.label || "";
         const consentInfo = getConsentNote(e.currentTarget, isRu);
         const ok = await submit({
           name: fd.get("name") as string,
@@ -313,7 +313,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
         <label htmlFor="g-type" className={labelClass}>{f.type.label}</label>
         <select id="g-type" name="type" defaultValue="" className={selectClass}>
           <option value="" disabled className="bg-surface text-muted">{isRu ? "Выберите тип" : "Select type"}</option>
-          {f.type.options.map((opt) => (
+          {f.type.options.map((opt: any) => (
             <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
           ))}
         </select>

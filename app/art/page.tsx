@@ -58,7 +58,7 @@ export default async function ArtPage() {
             title={content.manifesto.title}
           />
           <div className="mx-auto max-w-3xl">
-            {content.manifesto.text.split("\n\n").map((p, i) => (
+            {content.manifesto.text.split("\n\n").map((p: string, i: number) => (
               <p
                 key={i}
                 className="sw-body mb-6 text-text-secondary leading-relaxed"
@@ -133,7 +133,7 @@ export default async function ArtPage() {
             title={content.services.title}
           />
           <div className="grid gap-px md:grid-cols-5">
-            {content.services.items.map((item, i) => (
+            {content.services.items.map((item: any, i: number) => (
               <div
                 key={i}
                 className="border border-border p-8 transition-colors hover:border-accent"

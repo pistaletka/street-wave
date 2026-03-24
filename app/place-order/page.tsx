@@ -64,7 +64,7 @@ export default async function PlaceOrderPage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.tariffs.badge} title={content.tariffs.title} />
           <div className="grid gap-6 md:grid-cols-3">
-            {content.tariffs.items.map((tariff) => (
+            {content.tariffs.items.map((tariff: any) => (
               <div
                 key={tariff.name}
                 className={`flex flex-col border p-8 ${
@@ -81,7 +81,7 @@ export default async function PlaceOrderPage() {
                 </div>
                 <p className="mb-6 text-2xl font-medium text-foreground">{tariff.price}</p>
                 <ul className="space-y-3">
-                  {tariff.features.map((feat) => (
+                  {tariff.features.map((feat: any) => (
                     <li
                       key={feat}
                       className="flex items-start gap-3 sw-body-sm text-text-secondary"
@@ -111,7 +111,7 @@ export default async function PlaceOrderPage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.process.badge} title={content.process.title} />
           <div className="grid gap-px md:grid-cols-5">
-            {content.process.steps.map((item) => (
+            {content.process.steps.map((item: any) => (
               <div key={item.step} className="border border-border bg-surface p-8">
                 <span className="font-mono text-xs tracking-widest text-accent">
                   {item.step}
@@ -129,7 +129,7 @@ export default async function PlaceOrderPage() {
         <div className="mx-auto max-w-3xl">
           <SectionHeader badge={content.faq.badge} title={content.faq.title} />
           <div className="divide-y divide-border">
-            {content.faq.items.map((item) => (
+            {content.faq.items.map((item: any) => (
               <div key={item.q} className="py-6">
                 <h3 className="sw-h3 text-sm">{item.q}</h3>
                 <p className="mt-3 sw-body-sm text-text-secondary">{item.a}</p>

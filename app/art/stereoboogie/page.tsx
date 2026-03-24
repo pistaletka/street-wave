@@ -62,7 +62,7 @@ export default async function StereoBoogiePage() {
             title={content.statement.title}
           />
           <div className="mx-auto max-w-3xl">
-            {content.statement.paragraphs.map((p, i) => (
+            {content.statement.paragraphs.map((p: any, i: number) => (
               <p
                 key={i}
                 className="sw-body mb-8 text-text-secondary leading-relaxed last:mb-0"
@@ -82,7 +82,7 @@ export default async function StereoBoogiePage() {
             title={content.visualLanguage.title}
           />
           <div className="grid gap-px md:grid-cols-5">
-            {content.visualLanguage.items.map((item, i) => (
+            {content.visualLanguage.items.map((item: any, i: number) => (
               <div
                 key={i}
                 className="border border-border p-8 transition-colors hover:border-accent"
@@ -104,7 +104,7 @@ export default async function StereoBoogiePage() {
             title={content.series.title}
           />
           <div className="grid gap-12 md:grid-cols-2">
-            {content.series.items.map((series, i) => (
+            {content.series.items.map((series: any, i: number) => (
               <div key={i} className="border border-border p-10">
                 <p className="sw-label text-accent mb-4">{series.years}</p>
                 <h3 className="sw-h2 text-2xl sm:text-3xl mb-6">
@@ -145,7 +145,7 @@ export default async function StereoBoogiePage() {
             title={content.media.title}
           />
           <div className="grid gap-px md:grid-cols-5">
-            {content.media.items.map((item, i) => (
+            {content.media.items.map((item: any, i: number) => (
               <div
                 key={i}
                 className="border border-border p-8 flex items-center"

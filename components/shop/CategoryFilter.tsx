@@ -12,7 +12,7 @@ export default function CategoryFilter({ current, onChange }: CategoryFilterProp
   const shopContent = messages.shop as any;
   return (
     <div className="flex flex-wrap gap-3">
-      {shopContent.categories.map((cat) => (
+      {shopContent.categories.map((cat: any) => (
         <button
           key={cat.value}
           onClick={() => onChange(cat.value)}
