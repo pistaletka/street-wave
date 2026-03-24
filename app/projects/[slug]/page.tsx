@@ -99,7 +99,7 @@ export default async function CasePage({ params }: Props) {
       {/* Gallery */}
       <section className="px-6 pb-6">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
             {caseData.gallery.map((item: string | null, i: number) =>
               item ? (
                 <div key={i} className="relative" style={{ aspectRatio: "4/5" }}>
