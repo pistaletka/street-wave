@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeader from "../../../components/shared/SectionHeader";
+import GalleryWithLightbox from "../../../components/shared/GalleryWithLightbox";
 import { getContent } from "../../../lib/getContent";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -18,44 +19,48 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+const paintings = Array.from({ length: 29 }, (_, i) => `/art/paintings/${i + 1}.jpg`);
+const prints = Array.from({ length: 25 }, (_, i) => `/art/prints/${i + 1}.jpg`);
+const figures = Array.from({ length: 14 }, (_, i) => `/art/figures/${i + 1}.jpeg`);
+const hovers = Array.from({ length: 3 }, (_, i) => `/art/hovers/${i + 1}.png`);
+
 export default async function StereoBoogiePage() {
   const content = await getContent<any>("stereoboogie");
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="relative">
-        <div className="relative mx-auto max-w-7xl overflow-hidden">
-          <Image
-            src="/art/desktop.png"
-            alt="StereoBoogie"
-            width={1920}
-            height={800}
-            className="h-[55vh] w-full object-cover sm:h-[60vh] md:h-[70vh]"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0 flex flex-col items-center justify-end px-6 pb-16 text-center">
-            <p className="sw-label mb-4 text-accent">{content.hero.badge}</p>
-            <h1 className="sw-h1 text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white">
-              {content.hero.name}
-            </h1>
-            <p className="sw-body mt-4 text-white/60">{content.hero.subtitle}</p>
+      <section className="px-6 py-6">
+        <div className="mx-auto max-w-7xl">
+          <p className="sw-label mb-2 text-accent">{content.hero.badge}</p>
+          <h1 className="sw-h1 mb-2 text-4xl sm:text-5xl md:text-6xl">
+            {content.hero.name}
+          </h1>
+          <p className="sw-body text-text-secondary">{content.hero.subtitle}</p>
+        </div>
+      </section>
+
+      {/* Short Bio + Photo */}
+      <section className="px-6 py-6">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader badge={content.bio.badge} title="" />
+          <div className="grid gap-12 md:grid-cols-2 items-center">
+            <p className="sw-body text-text-secondary text-lg leading-relaxed">
+              {content.bio.text}
+            </p>
+            <div className="relative aspect-[4/5] overflow-hidden bg-surface">
+              <Image
+                src="/art/photos/3.jpeg"
+                alt="StereoBoogie в студии"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Short Bio */}
-      <section className="px-6 py-24 md:py-32">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeader badge={content.bio.badge} title="" />
-          <p className="sw-body mx-auto max-w-3xl text-text-secondary text-lg leading-relaxed">
-            {content.bio.text}
-          </p>
-        </div>
-      </section>
-
       {/* Artist Statement */}
-      <section className="px-6 py-24 md:py-32 border-t border-border">
+      <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={content.statement.badge}
@@ -75,7 +80,7 @@ export default async function StereoBoogiePage() {
       </section>
 
       {/* Visual Language */}
-      <section className="px-6 py-24 md:py-32 border-t border-border">
+      <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={content.visualLanguage.badge}
@@ -96,8 +101,40 @@ export default async function StereoBoogiePage() {
         </div>
       </section>
 
+      {/* Paintings Gallery */}
+      <section className="px-6 py-6 border-t border-border">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader badge={content.galleries.paintingsBadge} title={content.galleries.paintingsTitle} />
+          <GalleryWithLightbox images={paintings} title="Картины StereoBoogie" />
+        </div>
+      </section>
+
+      {/* Prints Gallery */}
+      <section className="px-6 py-6 border-t border-border">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader badge={content.galleries.printsBadge} title={content.galleries.printsTitle} />
+          <GalleryWithLightbox images={prints} title="Принты StereoBoogie" />
+        </div>
+      </section>
+
+      {/* Art Toys with Brisko */}
+      <section className="px-6 py-6 border-t border-border">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader badge={content.galleries.figuresBadge} title={content.galleries.figuresTitle} />
+          <GalleryWithLightbox images={figures} title="Фигурки StereoBoogie × Brisko" />
+        </div>
+      </section>
+
+      {/* Hovers Collaboration */}
+      <section className="px-6 py-6 border-t border-border">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader badge={content.galleries.hoversBadge} title={content.galleries.hoversTitle} />
+          <GalleryWithLightbox images={hovers} title="StereoBoogie × Hovers" />
+        </div>
+      </section>
+
       {/* Series */}
-      <section className="px-6 py-24 md:py-32 border-t border-border">
+      <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={content.series.badge}
@@ -119,17 +156,50 @@ export default async function StereoBoogiePage() {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="px-6 py-24 md:py-32 border-t border-border">
+      {/* Key Projects & Collaborations */}
+      <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader badge="Работы" title="Галерея" />
-          <div className="grid gap-6 grid-cols-2 lg:grid-cols-3">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="group">
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface border border-border transition-colors group-hover:border-accent">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="sw-caption text-muted/40">Скоро</span>
-                  </div>
+          <SectionHeader
+            badge={content.projects.badge}
+            title={content.projects.title}
+          />
+          <div className="grid gap-6 md:grid-cols-2">
+            {content.projects.items.map((project: any, i: number) => (
+              <div key={i} className="border border-border p-10 transition-colors hover:border-accent">
+                <p className="sw-label text-accent mb-4">{project.year}</p>
+                <h3 className="sw-h2 text-xl sm:text-2xl mb-4">
+                  {project.title}
+                </h3>
+                <p className="sw-body text-text-secondary leading-relaxed">
+                  {project.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Exhibitions */}
+      <section className="px-6 py-6 border-t border-border">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            badge={content.exhibitions.badge}
+            title={content.exhibitions.title}
+          />
+          <div className="mx-auto max-w-3xl">
+            {content.exhibitions.items.map((item: any, i: number) => (
+              <div
+                key={i}
+                className="flex gap-6 border-b border-border py-6 last:border-b-0"
+              >
+                <p className="sw-label text-accent min-w-[100px] pt-1">
+                  {item.year}
+                </p>
+                <div>
+                  <p className="sw-body text-foreground">{item.title}</p>
+                  <p className="sw-caption text-text-secondary mt-1">
+                    {item.venue}
+                  </p>
                 </div>
               </div>
             ))}
@@ -138,7 +208,7 @@ export default async function StereoBoogiePage() {
       </section>
 
       {/* Media & Practice */}
-      <section className="px-6 py-24 md:py-32 border-t border-border">
+      <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={content.media.badge}
@@ -158,7 +228,7 @@ export default async function StereoBoogiePage() {
       </section>
 
       {/* Street Wave Role */}
-      <section className="px-6 py-24 md:py-32 border-t border-border">
+      <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.role.badge} title={content.role.title} />
           <p className="sw-body mx-auto max-w-3xl text-text-secondary leading-relaxed">
@@ -168,7 +238,7 @@ export default async function StereoBoogiePage() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 py-24 md:py-32 border-t border-border">
+      <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="sw-h2 mb-4 text-2xl sm:text-3xl">
             {content.cta.title}
@@ -181,13 +251,13 @@ export default async function StereoBoogiePage() {
               href="/place-order"
               className="sw-btn inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
             >
-              Запросить сотрудничество
+              {content.cta.buttons?.primary || "Запросить сотрудничество"}
             </Link>
             <Link
               href="/contacts"
               className="sw-btn inline-flex h-12 items-center justify-center border border-border bg-background px-8 text-foreground transition-colors hover:border-accent"
             >
-              Связаться
+              {content.cta.buttons?.secondary || "Связаться"}
             </Link>
           </div>
         </div>

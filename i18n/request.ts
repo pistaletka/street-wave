@@ -27,6 +27,7 @@ export default getRequestConfig(async () => {
       shop: (await import(`../content/${locale}/shop.json`)).default,
       faq: (await import(`../content/${locale}/faq.json`)).default,
       checkout: (await import(`../content/${locale}/checkout.json`)).default,
+      stereoboogie: (await import(`../content/${locale}/stereoboogie.json`)).default,
     },
   };
 });

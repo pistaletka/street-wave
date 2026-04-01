@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getLocaleCasesIndex, getLocaleCase } from "../../../lib/getContent";
-import PlaceholderImage from "../../../components/shared/PlaceholderImage";
+import GalleryWithLightbox from "../../../components/shared/GalleryWithLightbox";
 import SectionHeader from "../../../components/shared/SectionHeader";
 import ProjectCta from "./ProjectCta";
 
@@ -34,6 +33,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CasePage({ params }: Props) {
   const { slug } = await params;
+  const locale = (await import("next-intl/server")).getLocale;
+  const currentLocale = await locale();
+  const en = currentLocale === "en";
 
   let caseData: any;
   try {
@@ -55,7 +57,7 @@ export default async function CasePage({ params }: Props) {
             href="/projects"
             className="sw-label mb-8 inline-flex items-center gap-2 text-text-secondary transition-colors hover:text-foreground"
           >
-            &larr; Все проекты
+            &larr; {en ? "All projects" : "Все проекты"}
           </Link>
           <p className="sw-label mb-2 text-accent">
             {caseData.client} — {caseData.year}
@@ -71,7 +73,7 @@ export default async function CasePage({ params }: Props) {
               href="#details"
               className="mt-6 inline-flex items-center gap-1 text-xs uppercase tracking-widest text-accent transition-opacity hover:opacity-70"
             >
-              О проекте &darr;
+              {en ? "About the project" : "О проекте"} &darr;
             </a>
           )}
         </div>
@@ -99,22 +101,10 @@ export default async function CasePage({ params }: Props) {
       {/* Gallery */}
       <section className="px-6 pb-6">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
-            {caseData.gallery.map((item: string | null, i: number) =>
-              item ? (
-                <div key={i} className="relative" style={{ aspectRatio: "4/5" }}>
-                  <Image
-                    src={item}
-                    alt={`${caseData.title} — фото ${i + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ) : (
-                <PlaceholderImage key={i} aspectRatio="4/5" />
-              )
-            )}
-          </div>
+          <GalleryWithLightbox
+            images={caseData.gallery}
+            title={caseData.title}
+          />
         </div>
       </section>
 
@@ -122,22 +112,22 @@ export default async function CasePage({ params }: Props) {
       {caseData.details && (
         <section id="details" className="px-6 pb-6 scroll-mt-6">
           <div className="mx-auto max-w-3xl">
-            <SectionHeader badge="Детали" title="О проекте" />
+            <SectionHeader badge={en ? "Details" : "Детали"} title={en ? "About the project" : "О проекте"} />
             <div className="space-y-8">
               <div>
-                <h3 className="sw-h3 mb-3 text-sm">Задача</h3>
+                <h3 className="sw-h3 mb-3 text-sm">{en ? "Task" : "Задача"}</h3>
                 <p className="sw-body-sm text-text-secondary">
                   {caseData.details.task}
                 </p>
               </div>
               <div>
-                <h3 className="sw-h3 mb-3 text-sm">Решение</h3>
+                <h3 className="sw-h3 mb-3 text-sm">{en ? "Solution" : "Решение"}</h3>
                 <p className="sw-body-sm text-text-secondary">
                   {caseData.details.solution}
                 </p>
               </div>
               <div>
-                <h3 className="sw-h3 mb-3 text-sm">Результат</h3>
+                <h3 className="sw-h3 mb-3 text-sm">{en ? "Result" : "Результат"}</h3>
                 <p className="sw-body-sm text-text-secondary">
                   {caseData.details.result}
                 </p>

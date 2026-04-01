@@ -4,9 +4,12 @@ import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { formatPrice } from "@/lib/formatPrice";
 import CartItemRow from "@/components/shop/CartItemRow";
+import { useLocale } from "next-intl";
 
 export default function CartPage() {
   const { items, total, count } = useCart();
+  const locale = useLocale();
+  const en = locale === "en";
 
   return (
     <section className="px-6 py-6">
@@ -15,19 +18,19 @@ export default function CartPage() {
           href="/shop"
           className="sw-label mb-8 inline-block text-muted transition-colors hover:text-foreground"
         >
-          &larr; Продолжить покупки
+          &larr; {en ? "Continue shopping" : "Продолжить покупки"}
         </Link>
 
-        <h1 className="sw-h1 mb-12 text-3xl sm:text-4xl">Корзина</h1>
+        <h1 className="sw-h1 mb-12 text-3xl sm:text-4xl">{en ? "Cart" : "Корзина"}</h1>
 
         {count === 0 ? (
           <div className="py-20 text-center">
-            <p className="sw-body text-muted mb-6">Корзина пуста</p>
+            <p className="sw-body text-muted mb-6">{en ? "Cart is empty" : "Корзина пуста"}</p>
             <Link
               href="/shop"
               className="sw-btn inline-block h-12 border border-accent bg-accent px-8 leading-[48px] text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
             >
-              В магазин
+              {en ? "To Shop" : "В магазин"}
             </Link>
           </div>
         ) : (
@@ -40,7 +43,7 @@ export default function CartPage() {
 
             <div className="mt-8 flex flex-col items-end gap-6">
               <div className="flex items-center gap-4">
-                <span className="sw-label text-muted">Итого</span>
+                <span className="sw-label text-muted">{en ? "Total" : "Итого"}</span>
                 <span className="sw-h2 text-2xl text-accent">
                   {formatPrice(total)}
                 </span>
@@ -49,7 +52,7 @@ export default function CartPage() {
                 href="/checkout"
                 className="sw-btn inline-block h-12 border border-accent bg-accent px-8 leading-[48px] text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
               >
-                Оформить заказ
+                {en ? "Checkout" : "Оформить заказ"}
               </Link>
             </div>
           </>

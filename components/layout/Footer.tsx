@@ -49,6 +49,8 @@ export default async function Footer() {
                 <li key={s.label}>
                   <a
                     href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="sw-caption text-text-secondary transition-colors hover:text-foreground"
                   >
                     {s.label}

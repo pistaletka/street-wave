@@ -14,5 +14,10 @@
     { "value": "certificates", "label": "Gift Cards" }
   ],
   "emptyState": "No items in this category yet",
-  "soldLabel": "Sold"
+  "soldLabel": "Sold",
+  "comingSoon": {
+    "badge": "coming soon",
+    "title": "Section in development",
+    "text": "We're preparing detailed pages for each piece — so you can explore the details, learn the story, and grab your favorite item in a few clicks. We'll announce the online store opening soon."
+  }
 }

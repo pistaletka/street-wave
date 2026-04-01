@@ -27,17 +27,21 @@ export default async function PlaceOrderPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="px-6 pt-0 pb-0">
+      <section className="relative overflow-hidden">
         {/* Banner */}
-        <div className="relative mx-auto max-w-7xl overflow-hidden">
-          <Image
-            src="/desktop.png"
-            alt="Кастомизированные кроссовки — примеры работ streetwave"
-            width={1920}
-            height={360}
-            className="h-[210px] w-full object-cover sm:h-[265px] md:h-[320px]"
-            priority
-          />
+        <div className="relative">
+          <picture>
+            <source media="(max-width: 639px)" srcSet="/custom-banner-mobile.png" />
+            <source media="(max-width: 1023px)" srcSet="/custom-banner-tablet.png" />
+            <Image
+              src="/custom-banner-desktop.png"
+              alt="Кастомизированные кроссовки — примеры работ streetwave"
+              width={1920}
+              height={360}
+              className="h-[210px] w-full object-cover sm:h-[265px] md:h-[320px]"
+              priority
+            />
+          </picture>
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
             <p className="sw-label mb-4 text-accent">{content.hero.badge}</p>

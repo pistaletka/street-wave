@@ -2,11 +2,11 @@
   "nav": {
     "brand": "streetwave®",
     "links": [
-      { "href": "/shop", "label": "Shop" },
       { "href": "/place-order", "label": "Custom Order" },
       { "href": "/projects", "label": "Projects" },
       { "href": "/live-customization", "label": "Events" },
       { "href": "/art", "label": "Art" },
+      { "href": "/shop", "label": "Shop" },
       { "href": "/faq", "label": "FAQ" },
       { "href": "/contacts", "label": "Contacts" }
     ]
@@ -34,9 +34,8 @@
       }
     ],
     "social": [
-      { "label": "Instagram", "href": "#" },
-      { "label": "Telegram", "href": "#" },
-      { "label": "TikTok", "href": "#" }
+      { "label": "Instagram", "href": "https://instagram.com/streetwave.studio" },
+      { "label": "Telegram", "href": "https://t.me/streetwavecustom" }
     ]
   },
   "cta": {

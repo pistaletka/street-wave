@@ -1,20 +1,39 @@
 {
   "slug": "offwhite-xiaomi",
-  "title": "Off-White × Xiaomi MI",
-  "client": "Xiaomi",
-  "year": "2024",
+  "title": "Xiaomi Mi",
+  "client": "Xiaomi Mi",
+  "year": "2020",
   "category": "brand",
   "coverImage": "/offwhite-xiaomi.jpg",
-  "description": "Коллаборация с Xiaomi MI: кастомизация кроссовок Off-White в рамках совместного проекта. Уникальный дизайн, объединяющий уличную культуру и технологический бренд.",
+  "description": "Арт-проект для Xiaomi Mi к запуску линейки Mi 10T. Два художника — Ilya Slak и Alexey Barhan — разработали авторские дизайны на базе кроссовок Off-White, а студия Street Wave выступила производственной площадкой и воплотила 50 пар с ручной росписью.",
   "stats": [
-    { "value": "1", "label": "коллаборация" },
-    { "value": "Off-White", "label": "база" },
-    { "value": "Xiaomi MI", "label": "партнёр" }
+    { "value": "50", "label": "пар" },
+    { "value": "2", "label": "дизайна" },
+    { "value": "Off-White", "label": "база" }
   ],
-  "gallery": ["/offwhite-xiaomi.jpg", null, null],
+  "gallery": [
+    "/projects/offwhite-xiaomi/1.jpeg",
+    "/projects/offwhite-xiaomi/2.jpeg",
+    "/projects/offwhite-xiaomi/3.jpeg",
+    "/projects/offwhite-xiaomi/4.jpg",
+    "/projects/offwhite-xiaomi/5.jpeg",
+    "/projects/offwhite-xiaomi/6.jpeg",
+    "/projects/offwhite-xiaomi/7.jpeg",
+    "/projects/offwhite-xiaomi/8.jpeg",
+    "/projects/offwhite-xiaomi/9.jpg",
+    "/projects/offwhite-xiaomi/10.jpeg",
+    "/projects/offwhite-xiaomi/11.jpeg",
+    "/projects/offwhite-xiaomi/12.jpeg",
+    "/projects/offwhite-xiaomi/13.jpg",
+    "/projects/offwhite-xiaomi/14.jpeg",
+    "/projects/offwhite-xiaomi/15.jpeg",
+    "/projects/offwhite-xiaomi/16.jpeg",
+    "/projects/offwhite-xiaomi/17.jpeg",
+    "/projects/offwhite-xiaomi/18.jpg"
+  ],
   "details": {
-    "task": "Создать кастомные кроссовки Off-White для коллаборации с Xiaomi MI.",
-    "solution": "Разработали уникальный дизайн, объединяющий эстетику Off-White и визуальный код Xiaomi MI.",
-    "result": "Эксклюзивный проект, подчеркнувший синергию уличной моды и технологий."
+    "task": "Реализовать арт-проект для Xiaomi Mi к запуску линейки Mi 10T — серию из 50 кастомных пар кроссовок Off-White с авторской росписью двух художников.",
+    "solution": "Художники Ilya Slak и Alexey Barhan разработали два уникальных дизайна, вдохновлённых возможностями камеры Mi 10T. Студия Street Wave выступила производственной базой: перенесла концепты на кроссовки Off-White, выполнив ручную роспись всех 50 пар.",
+    "result": "Получился арт-проект на стыке технологий и уличной культуры, который усилил запуск продукта и превратил кроссовки в коллекционные объекты."
   }
 }

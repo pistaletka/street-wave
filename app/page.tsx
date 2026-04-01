@@ -140,24 +140,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* 7. Shop teaser */}
-      <section className="px-6 py-6">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="sw-label mb-2 text-accent">{content.shop.badge}</p>
-          <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{content.shop.title}</h2>
-          <p className="sw-body text-text-secondary">{content.shop.text}</p>
-        </div>
-      </section>
-
-      {/* 8. Geo */}
-      <section className="px-6 py-6">
-        <div className="mx-auto max-w-3xl">
-          <SectionHeader badge={content.geo.badge} title={content.geo.title} />
-          <p className="sw-body text-text-secondary">{content.geo.text}</p>
-        </div>
-      </section>
-
-      {/* 9. Final CTA */}
+      {/* Final CTA */}
       <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{content.finalCta.title}</h2>

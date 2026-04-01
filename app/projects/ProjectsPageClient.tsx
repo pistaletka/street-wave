@@ -18,14 +18,14 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero + Banner */}
-      <section className="px-6 pt-0 pb-0">
-        <div className="relative mx-auto max-w-7xl overflow-hidden">
+      <section className="relative overflow-hidden">
+        <div className="relative">
           <Image
             src="/banner_desktop.jpg"
             alt="Кастомизированные кроссовки Puma — streetwave x бренд-проект"
             width={1920}
             height={540}
-            className="h-[180px] w-full object-cover object-bottom sm:h-[220px] md:h-[260px]"
+            className="h-[180px] w-full object-cover object-[center_70%] sm:h-[220px] md:h-[260px]"
             priority
           />
           <div className="absolute inset-0 bg-black/50" />
@@ -109,8 +109,9 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
 
           {/* 4 cases in a row */}
           <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
-            {casesIndex.cases
-              .filter((c: any) => ["agama", "offwhite-xiaomi", "christmas-balls", "superstep", "vk", "sport-theme", "cska"].includes(c.slug))
+            {["vk", "offwhite-xiaomi", "superstep", "cska", "christmas-balls", "sport-theme", "agama"]
+              .map((slug: string) => casesIndex.cases.find((c: any) => c.slug === slug))
+              .filter(Boolean)
               .map((c: any) => (
                 <Link
                   key={c.slug}
@@ -179,7 +180,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
             onClick={() => setModalOpen(true)}
             className="sw-btn inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
           >
-            Обсудить проект
+            {projectsContent.hero?.ctaButton || "Обсудить проект"}
           </button>
         </div>
       </section>

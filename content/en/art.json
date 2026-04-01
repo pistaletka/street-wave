@@ -22,7 +22,8 @@
   },
   "gallery": {
     "badge": "Works",
-    "title": "Gallery"
+    "title": "Gallery",
+    "interiorsTitle": "Paintings in Interiors"
   },
   "services": {
     "badge": "What We Do",
@@ -52,6 +53,8 @@
   },
   "cta": {
     "title": "We work with private clients, brands, and spaces",
-    "subtitle": "Let's discuss your project — from idea to execution."
+    "subtitle": "Let's discuss your project — from idea to execution.",
+    "primary": "Discuss a Project",
+    "secondary": "Contact"
   }
 }

@@ -2,36 +2,32 @@
   "slug": "vk",
   "title": "VK",
   "client": "VK",
-  "year": "2024",
+  "year": "2024 — present",
   "category": "brand",
-  "description": "Sneaker customization for the VK team. Unique pairs with individual designs \u2014 corporate merch on a whole new level.",
+  "description": "Creating limited art objects for VK ambassadors and artists: from custom sneakers and 3D flash drive cases to art boxes with original design. Recipients include Ksenia Sobchak, Yulia Gavrilina, Garik Kharlamov, Timati, singer Valeria, Artemy Lebedev, Valya Karnaval, Milana Khametova, as well as other platform ambassadors.",
   "stats": [],
   "coverImage": "/projects/vk/cover.png",
   "gallery": [
     "/projects/vk/1.jpeg",
     "/projects/vk/2.jpeg",
-    "/projects/vk/3.jpeg",
     "/projects/vk/4.jpeg",
-    "/projects/vk/5.jpeg",
     "/projects/vk/6.jpeg",
     "/projects/vk/7.jpeg",
     "/projects/vk/8.jpeg",
-    "/projects/vk/9.jpeg",
     "/projects/vk/10.jpg",
     "/projects/vk/11.jpeg",
     "/projects/vk/12.jpg",
     "/projects/vk/13.jpeg",
     "/projects/vk/14.jpeg",
     "/projects/vk/15.jpeg",
-    "/projects/vk/16.jpeg",
     "/projects/vk/17.jpg",
-    "/projects/vk/18.jpeg",
     "/projects/vk/19.jpg",
-    "/projects/vk/20.jpg"
+    "/projects/vk/20.jpg",
+    "/projects/vk/21.jpeg"
   ],
   "details": {
-    "task": "",
-    "solution": "",
-    "result": ""
+    "task": "Create unique art objects for VK ambassadors and artists — from custom sneakers to 3D accessories and limited edition boxes.",
+    "solution": "For each request we develop an individual design and produce art objects by hand. Formats include custom sneakers, 3D flash drive cases shaped like a VK cassette, and art boxes with original design.",
+    "result": "Long-term collaboration with VK: regular orders for the platform's artists and ambassadors. Each object becomes a unique gift and content opportunity."
   }
 }

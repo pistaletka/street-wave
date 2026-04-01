@@ -2,17 +2,17 @@
   "cases": [
     {
       "slug": "new-concept",
-      "title": "No Concept 2024",
-      "client": "No Concept",
+      "title": "NO'CONCEPT",
+      "client": "NO'CONCEPT",
       "year": "2024",
       "category": "brand",
-      "shortDesc": "Флагманский проект: 30+ кастомных изделий для бренд-пространства.",
-      "coverImage": "/projects/new-concept/25.jpg",
+      "shortDesc": "30+ кастомных изделий для московского streetwear-бренда.",
+      "coverImage": "/projects/new-concept/cover.png",
       "featured": true
     },
     {
       "slug": "superstep",
-      "title": "Superstep 2025",
+      "title": "Superstep",
       "client": "Superstep",
       "year": "2025",
       "category": "brand",
@@ -22,7 +22,7 @@
     },
     {
       "slug": "agama",
-      "title": "Агама 2023",
+      "title": "Агама",
       "client": "Agama",
       "year": "2023",
       "category": "brand",
@@ -59,21 +59,21 @@
     },
     {
       "slug": "offwhite-xiaomi",
-      "title": "Off-White × Xiaomi MI",
-      "client": "Xiaomi",
-      "year": "2024",
+      "title": "Xiaomi Mi",
+      "client": "Xiaomi Mi",
+      "year": "2020",
       "category": "brand",
-      "shortDesc": "Кастомизация кроссовок Off-White для коллаборации с Xiaomi MI.",
+      "shortDesc": "Арт-проект: интеграция художников и бренда Xiaomi. 50 пар Off-White для запуска Mi 10T.",
       "coverImage": "/offwhite-xiaomi.jpg",
       "featured": false
     },
     {
       "slug": "christmas-balls",
-      "title": "Ёлочные шары",
+      "title": "Новогодние ёлочные шары",
       "client": "streetwave",
-      "year": "2024",
+      "year": "2025",
       "category": "brand",
-      "shortDesc": "Кастомизированные ёлочные шары с росписью вручную.",
+      "shortDesc": "Брендовые и арт-кастомные ёлочные шары лимитированной серии.",
       "coverImage": "/projects/christmas-balls/1.jpeg",
       "featured": false
     },
@@ -81,9 +81,9 @@
       "slug": "vk",
       "title": "VK",
       "client": "VK",
-      "year": "2024",
+      "year": "2024 — н.в.",
       "category": "brand",
-      "shortDesc": "Кастомизация для VK.",
+      "shortDesc": "Лимитированные арт-объекты для амбассадоров и артистов VK.",
       "coverImage": "/projects/vk/cover.png",
       "featured": false
     },
@@ -101,9 +101,9 @@
       "slug": "cska",
       "title": "ЦСКА",
       "client": "ЦСКА",
-      "year": "2024",
+      "year": "2025 — н.в.",
       "category": "brand",
-      "shortDesc": "Кастомизация для ПФК ЦСКА.",
+      "shortDesc": "Лимитированные брендированные кроссовки для VIP-персон клуба.",
       "coverImage": "/projects/cska/cover.png",
       "featured": false
     },
@@ -123,7 +123,7 @@
       "year": "2024",
       "category": "event",
       "shortDesc": "Кастомизация кроссовок по 6 городам с Яндекс.Маркет.",
-      "coverImage": "/case-custom-truck.jpg",
+      "coverImage": "/events/custom-truck.png",
       "featured": false
     },
     {
@@ -133,7 +133,7 @@
       "year": "2023",
       "category": "event",
       "shortDesc": "Кастомизация кроссовок, сумок и аксессуаров в ЦУМе и бутиках бренда.",
-      "coverImage": "/case-dolce-gabbana.jpg",
+      "coverImage": "/events/dolce-gabbana.png",
       "featured": false
     },
     {
@@ -143,17 +143,7 @@
       "year": "2023",
       "category": "event",
       "shortDesc": "Кастомизация сумок и обуви в бутиках Москвы и Санкт-Петербурга.",
-      "coverImage": "/case-pinko.jpg",
-      "featured": false
-    },
-    {
-      "slug": "superstep-event",
-      "title": "SuperStep",
-      "client": "SuperStep",
-      "year": "2024",
-      "category": "event",
-      "shortDesc": "Бесплатная кастомизация кроссовок в магазинах 4 городов.",
-      "coverImage": "/case-superstep-event.jpg",
+      "coverImage": "/events/pinko.png",
       "featured": false
     },
     {
@@ -163,7 +153,17 @@
       "year": "2024",
       "category": "event",
       "shortDesc": "Кастомизация футболок на корпоративном нетворкинге в Башне ОКО.",
-      "coverImage": "/case-yandex-networking.jpg",
+      "coverImage": "/events/yandex-networking.png",
+      "featured": false
+    },
+    {
+      "slug": "superstep-event",
+      "title": "SuperStep",
+      "client": "SuperStep",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Бесплатная кастомизация кроссовок в магазинах 4 городов.",
+      "coverImage": "/events/superstep.png",
       "featured": false
     },
     {
@@ -173,37 +173,7 @@
       "year": "2024",
       "category": "event",
       "shortDesc": "Кастомизация футболок в магазинах Stockman.",
-      "coverImage": "/case-stockman.jpg",
-      "featured": false
-    },
-    {
-      "slug": "adidas-football",
-      "title": "Adidas Football",
-      "client": "Adidas",
-      "year": "2024",
-      "category": "event",
-      "shortDesc": "Кастомизация бутс во флагманском магазине в Москве.",
-      "coverImage": "/case-adidas-football.jpg",
-      "featured": false
-    },
-    {
-      "slug": "stereo-letta",
-      "title": "Stereoleto",
-      "client": "Stereoleto",
-      "year": "2024",
-      "category": "event",
-      "shortDesc": "Кастомизация шопперов на фестивале Stereoleto в Севкабель Порту, Санкт-Петербург.",
-      "coverImage": "/case-stereo-letta.jpg",
-      "featured": false
-    },
-    {
-      "slug": "custom-zone-lv",
-      "title": "Custom зона: день рождения в стиле Louis Vuitton",
-      "client": "Частный заказ",
-      "year": "2024",
-      "category": "event",
-      "shortDesc": "Кастом-зона на дне рождения в стиле Louis Vuitton в Красноярске.",
-      "coverImage": "/case-custom-zone-lv.jpg",
+      "coverImage": "/events/stockman.png",
       "featured": false
     },
     {
@@ -213,15 +183,47 @@
       "year": "2019",
       "category": "event",
       "shortDesc": "Кастомизация изделий на ивенте Tommy Hilfiger.",
+      "coverImage": "/events/tommy-hilfiger.png",
+      "featured": false
+    },
+    {
+      "slug": "stereo-letta",
+      "title": "Stereoleto",
+      "client": "Stereoleto",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Кастомизация шопперов на фестивале Stereoleto в Севкабель Порту, Санкт-Петербург.",
+      "coverImage": "/events/stereo-letta.png",
+      "featured": false
+    },
+    {
+      "slug": "adidas-football",
+      "title": "Adidas Football",
+      "client": "Adidas",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Кастомизация бутс во флагманском магазине в Москве.",
+      "coverImage": "/events/adidas-football.png",
+      "featured": false
+    },
+    {
+      "slug": "custom-zone-lv",
+      "title": "Custom зона: день рождения в стиле Louis Vuitton",
+      "client": "Частный заказ",
+      "year": "2024",
+      "category": "event",
+      "shortDesc": "Кастом-зона на дне рождения в стиле Louis Vuitton в Красноярске.",
+      "coverImage": "/events/custom-zone-lv.png",
       "featured": false
     },
     {
       "slug": "tsum-2019",
-      "title": "ЦУМ 2019",
+      "title": "ЦУМ",
       "client": "ЦУМ",
       "year": "2019",
       "category": "event",
       "shortDesc": "Кастомизация в ЦУМе. Live-роспись для покупателей.",
+      "coverImage": "/events/tsum-2019.png",
       "featured": false
     },
     {
@@ -231,6 +233,7 @@
       "year": "2019",
       "category": "event",
       "shortDesc": "Кастомизация на открытии Pop-up Dolce & Gabbana в ЦУМе.",
+      "coverImage": "/events/tsum-popup-dolce-gabbana.png",
       "featured": false
     },
     {
@@ -240,6 +243,7 @@
       "year": "2018",
       "category": "event",
       "shortDesc": "Кастомизация на Чемпионате Мира по Футболу.",
+      "coverImage": "/events/world-cup.png",
       "featured": false
     },
     {
@@ -249,6 +253,7 @@
       "year": "2019",
       "category": "event",
       "shortDesc": "Кастомизация на ивенте DKNY.",
+      "coverImage": "/events/dkny.png",
       "featured": false
     },
     {
@@ -258,6 +263,7 @@
       "year": "2019",
       "category": "event",
       "shortDesc": "Кастомизация на Vogue Fashion's Night Out.",
+      "coverImage": "/events/vfno.png",
       "featured": false
     },
     {
@@ -267,6 +273,7 @@
       "year": "2019",
       "category": "event",
       "shortDesc": "Кастомизация в бутике Ralph Lauren в ЦУМе.",
+      "coverImage": "/events/ralph-lauren-tsum.png",
       "featured": false
     }
   ]

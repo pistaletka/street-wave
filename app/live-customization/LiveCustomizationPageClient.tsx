@@ -43,7 +43,7 @@ export default function LiveCustomizationPageClient({ liveContent, casesIndex }:
             onClick={() => setModalOpen(true)}
             className="sw-btn mt-10 inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
           >
-            Обсудить ивент
+            {liveContent.cta?.button || "Обсудить ивент"}
           </button>
         </div>
       </section>
@@ -145,7 +145,7 @@ export default function LiveCustomizationPageClient({ liveContent, casesIndex }:
             onClick={() => setModalOpen(true)}
             className="sw-btn inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
           >
-            Обсудить ивент
+            {liveContent.cta?.button || "Обсудить ивент"}
           </button>
         </div>
       </section>
@@ -154,7 +154,7 @@ export default function LiveCustomizationPageClient({ liveContent, casesIndex }:
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         variant="brand-project"
-        title="Обсудить ивент"
+        title={liveContent.cta?.button || "Обсудить ивент"}
         sourceOverride="live-event"
       />
     </div>

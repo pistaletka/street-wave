@@ -63,6 +63,46 @@
       }
     ]
   },
+  "exhibitions": {
+    "badge": "Exhibitions",
+    "title": "Exhibition History",
+    "items": [
+      { "year": "2024", "title": "Africa Cultural Code", "venue": "International Exhibition Complex Art-space" },
+      { "year": "2021", "title": "Art of Breathing", "venue": "Aviapark Mall, Moscow, charity" },
+      { "year": "2019", "title": "ART-ALL", "venue": "Proun Gallery, Moscow" },
+      { "year": "2017–2019", "title": "Artoholics", "venue": "Street art auction, Moscow" },
+      { "year": "2018", "title": "Russian Art Week", "venue": "21st International Exhibition" },
+      { "year": "2015", "title": "Street Wave Presentation", "venue": "Bar Golova s Plech, Moscow" },
+      { "year": "2014", "title": "Construct", "venue": "Vinyl Gallery, Moscow" },
+      { "year": "2010", "title": "Canned", "venue": "Kto Art Gallery, Cherepovets" }
+    ]
+  },
+  "projects": {
+    "badge": "Key Projects",
+    "title": "Collaborations",
+    "items": [
+      {
+        "title": "Dolce & Gabbana × TSUM",
+        "year": "2018",
+        "desc": "Internship in Milan and work as a customizer at the D&G pop-up in TSUM. A pivotal project that led to brand inquiries."
+      },
+      {
+        "title": "Art Toys with Brisko",
+        "year": "2024–2025",
+        "desc": "Collectible vinyl figures featuring the signature character. The sad mask in 3D — at the intersection of sculpture and designer toys."
+      },
+      {
+        "title": "Collaboration with Hovers",
+        "year": "2025",
+        "desc": "Integration of original characters into the brand's product line."
+      },
+      {
+        "title": "Street Wave",
+        "year": "2014 — present",
+        "desc": "12 years of customization. Thousands of hand-painted pairs, dozens of brand projects, concepts for events and limited collections."
+      }
+    ]
+  },
   "media": {
     "badge": "Media & Practice",
     "title": "Formats",
@@ -79,8 +119,22 @@
     "title": "Art Director of Street Wave",
     "text": "StereoBoogie is the lead artist and art director of Street Wave. He oversees the visual quality of all projects, curates guest artists, and develops concepts for brand collaborations. Every custom object at Street Wave passes through his creative vision."
   },
+  "galleries": {
+    "paintingsBadge": "Works",
+    "paintingsTitle": "Paintings",
+    "printsBadge": "Editions",
+    "printsTitle": "Prints",
+    "figuresBadge": "Collaboration with Brisko",
+    "figuresTitle": "Art Toys",
+    "hoversBadge": "Collaboration",
+    "hoversTitle": "Hovers Partnership"
+  },
   "cta": {
     "title": "Open to collaboration",
-    "subtitle": "Private commissions, collaborations, exhibitions, brand projects."
+    "subtitle": "Private commissions, collaborations, exhibitions, brand projects.",
+    "buttons": {
+      "primary": "Request collaboration",
+      "secondary": "Get in touch"
+    }
   }
 }

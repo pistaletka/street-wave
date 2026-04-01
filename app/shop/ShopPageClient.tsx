@@ -46,10 +46,10 @@ export default function ShopPageClient({ products, shopContent }: ShopPageClient
       </div>
       <section className="px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="sw-label mb-4 text-accent">coming soon</p>
-          <h2 className="sw-h2 text-2xl sm:text-3xl mb-6">Раздел в разработке</h2>
+          <p className="sw-label mb-4 text-accent">{shopContent.comingSoon?.badge || "coming soon"}</p>
+          <h2 className="sw-h2 text-2xl sm:text-3xl mb-6">{shopContent.comingSoon?.title || "Раздел в разработке"}</h2>
           <p className="sw-body text-text-secondary">
-            Мы готовим карточки каждой работы — чтобы вы могли рассмотреть детали, узнать историю и забрать понравившуюся вещь в пару кликов. Скоро объявим об открытии онлайн-магазина.
+            {shopContent.comingSoon?.text || ""}
           </p>
         </div>
       </section>

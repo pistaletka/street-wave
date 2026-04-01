@@ -35,6 +35,7 @@
   },
   "cta": {
     "title": "Planning an event?",
-    "subtitle": "Tell us about the format — we'll propose a solution and estimate the budget."
+    "subtitle": "Tell us about the format — we'll propose a solution and estimate the budget.",
+    "button": "Discuss an event"
   }
 }

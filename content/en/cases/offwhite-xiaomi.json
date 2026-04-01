@@ -1,20 +1,39 @@
 {
   "slug": "offwhite-xiaomi",
-  "title": "Off-White \u00d7 Xiaomi MI",
-  "client": "Xiaomi",
-  "year": "2024",
+  "title": "Xiaomi Mi",
+  "client": "Xiaomi Mi",
+  "year": "2020",
   "category": "brand",
   "coverImage": "/offwhite-xiaomi.jpg",
-  "description": "Collaboration with Xiaomi MI: Off-White sneaker customization as part of a joint project. A unique design bridging street culture and a technology brand.",
+  "description": "An art project for Xiaomi Mi to accompany the Mi 10T lineup launch. Two artists — Ilya Slak and Alexey Barhan — developed original designs on Off-White sneakers, while Street Wave studio served as the production facility and hand-painted all 50 pairs.",
   "stats": [
-    { "value": "1", "label": "collaboration" },
-    { "value": "Off-White", "label": "base" },
-    { "value": "Xiaomi MI", "label": "partner" }
+    { "value": "50", "label": "pairs" },
+    { "value": "2", "label": "designs" },
+    { "value": "Off-White", "label": "base" }
   ],
-  "gallery": ["/offwhite-xiaomi.jpg", null, null],
+  "gallery": [
+    "/projects/offwhite-xiaomi/1.jpeg",
+    "/projects/offwhite-xiaomi/2.jpeg",
+    "/projects/offwhite-xiaomi/3.jpeg",
+    "/projects/offwhite-xiaomi/4.jpg",
+    "/projects/offwhite-xiaomi/5.jpeg",
+    "/projects/offwhite-xiaomi/6.jpeg",
+    "/projects/offwhite-xiaomi/7.jpeg",
+    "/projects/offwhite-xiaomi/8.jpeg",
+    "/projects/offwhite-xiaomi/9.jpg",
+    "/projects/offwhite-xiaomi/10.jpeg",
+    "/projects/offwhite-xiaomi/11.jpeg",
+    "/projects/offwhite-xiaomi/12.jpeg",
+    "/projects/offwhite-xiaomi/13.jpg",
+    "/projects/offwhite-xiaomi/14.jpeg",
+    "/projects/offwhite-xiaomi/15.jpeg",
+    "/projects/offwhite-xiaomi/16.jpeg",
+    "/projects/offwhite-xiaomi/17.jpeg",
+    "/projects/offwhite-xiaomi/18.jpg"
+  ],
   "details": {
-    "task": "Create custom Off-White sneakers for a collaboration with Xiaomi MI.",
-    "solution": "Developed a unique design merging Off-White aesthetics with the Xiaomi MI visual code.",
-    "result": "An exclusive project highlighting the synergy between street fashion and technology."
+    "task": "Produce an art project for Xiaomi Mi for the Mi 10T lineup launch — a series of 50 custom Off-White sneakers with original artwork by two artists.",
+    "solution": "Artists Ilya Slak and Alexey Barhan created two unique designs inspired by the Mi 10T camera capabilities. Street Wave studio served as the production base, transferring the concepts onto Off-White sneakers and hand-painting all 50 pairs.",
+    "result": "The result was an art project at the intersection of technology and street culture that amplified the product launch and turned sneakers into collectible art objects."
   }
 }

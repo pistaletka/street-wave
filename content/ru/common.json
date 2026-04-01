@@ -2,11 +2,11 @@
   "nav": {
     "brand": "streetwave\u00ae",
     "links": [
-      { "href": "/shop", "label": "Магазин" },
       { "href": "/place-order", "label": "Заказать кастом" },
       { "href": "/projects", "label": "Проекты" },
       { "href": "/live-customization", "label": "Ивенты" },
       { "href": "/art", "label": "Арт" },
+      { "href": "/shop", "label": "Магазин" },
       { "href": "/faq", "label": "FAQ" },
       { "href": "/contacts", "label": "Контакты" }
     ]
@@ -43,9 +43,7 @@
       }
     ],
     "social": [
-      { "label": "Instagram", "href": "#" },
-      { "label": "Telegram", "href": "#" },
-      { "label": "TikTok", "href": "#" }
+      { "label": "Telegram", "href": "https://t.me/streetwavecustom" }
     ]
   },
   "cta": {

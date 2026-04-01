@@ -1,10 +1,10 @@
 {
   "slug": "new-concept",
-  "title": "No Concept 2024",
-  "client": "No Concept",
+  "title": "NO'CONCEPT",
+  "client": "NO'CONCEPT",
   "year": "2024",
   "category": "brand",
-  "description": "The studio's flagship project: over 30 custom pieces for the No Concept brand space. A clothing collection united by a single visual code. The project included concept development, production, and an art performance on the collection launch day at the brand's boutique.",
+  "description": "The studio's flagship project: over 30 custom pieces for streetwear brand NO'CONCEPT. A clothing collection united by a single visual code. The project included concept development, production, and an art performance on the collection launch day at the brand's boutique.",
   "stats": [
     { "value": "30+", "label": "pieces" },
     { "value": "1M \u20bd", "label": "project revenue" },
@@ -45,8 +45,8 @@
     "/projects/new-concept/32.jpg"
   ],
   "details": {
-    "task": "Create a unique collection of custom pieces for the brand.",
-    "solution": "Developed a visual code blending street aesthetics with the brand's identity. Produced 30+ pieces across different categories.",
-    "result": "Drew attention to the brand through art. The space became a destination for the brand's audience. All pieces sold out within the first month."
+    "task": "Reimagine the basic lineup and create a limited collection of custom pieces for NO'CONCEPT that would capture the audience's attention through art and experimental design.",
+    "solution": "The Street Wave team developed the concept and produced a custom series of 35 pieces. The process involved textile dyeing, hand screen printing, graffiti techniques, custom patches with artwork in Japanese grunge aesthetics, as well as hand distressing and decorative finishing.",
+    "result": "The result was a limited collection at the intersection of fashion and art that strengthened the brand's visual identity and made basic pieces more expressive, collectible, and eye-catching for the audience."
   }
 }

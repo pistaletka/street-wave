@@ -51,7 +51,7 @@ export default async function ArtPage() {
       </section>
 
       {/* Manifesto */}
-      <section className="px-6 py-24 md:py-32">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={content.manifesto.badge}
@@ -71,13 +71,13 @@ export default async function ArtPage() {
       </section>
 
       {/* Lead Artist — StereoBoogie */}
-      <section className="px-6 py-24 md:py-32 border-t border-border">
+      <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.artist.badge} title="" />
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="relative aspect-[4/5] overflow-hidden bg-surface">
               <Image
-                src="/art/desktop.png"
+                src="/IMG_1415.JPG"
                 alt="StereoBoogie"
                 fill
                 className="object-cover"
@@ -104,29 +104,35 @@ export default async function ArtPage() {
         </div>
       </section>
 
-      {/* Artwork Gallery */}
-      <section className="px-6 py-24 md:py-32 border-t border-border">
+      {/* Paintings in Interiors */}
+      <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={content.gallery.badge}
-            title={content.gallery.title}
+            title={content.gallery.interiorsTitle}
           />
-          <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="relative aspect-[4/5] overflow-hidden bg-surface border border-border transition-colors group-hover:border-accent">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="sw-caption text-muted/40">Скоро</span>
+          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+            {Array.from({ length: 10 }).map((_, i) => {
+              const ext = i === 2 ? "jpeg" : "jpg";
+              return (
+                <div key={i} className="group">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-surface border border-border transition-colors group-hover:border-accent">
+                    <Image
+                      src={`/art/interiors/${i + 1}.${ext}`}
+                      alt={`Картина в интерьере ${i + 1}`}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Art Services */}
-      <section className="px-6 py-24 md:py-32 border-t border-border">
+      <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={content.services.badge}
@@ -147,7 +153,7 @@ export default async function ArtPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 py-24 md:py-32 border-t border-border">
+      <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="sw-h2 mb-4 text-2xl sm:text-3xl">
             {content.cta.title}
@@ -160,13 +166,13 @@ export default async function ArtPage() {
               href="/place-order"
               className="sw-btn inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
             >
-              Обсудить проект
+              {content.cta.primary}
             </Link>
             <Link
               href="/contacts"
               className="sw-btn inline-flex h-12 items-center justify-center border border-border bg-background px-8 text-foreground transition-colors hover:border-accent"
             >
-              Связаться
+              {content.cta.secondary}
             </Link>
           </div>
         </div>
