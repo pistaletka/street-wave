@@ -79,7 +79,7 @@ export async function generateMetadata(): Promise<Metadata> {
         ? "streetwave® — Студия art-кастомизации"
         : "streetwave® — Art Customization Studio",
       description: isRu
-        ? "Кастомные кроссовки, одежда, арт-объекты. Эст. 2014"
+        ? "Кастомные кроссовки, одежда, арт-объекты. Est. 2014"
         : "Custom sneakers, apparel, art objects. Est. 2014",
       images: [
         {
@@ -98,7 +98,7 @@ export async function generateMetadata(): Promise<Metadata> {
         ? "streetwave® — Студия art-кастомизации"
         : "streetwave® — Art Customization Studio",
       description: isRu
-        ? "Кастомные кроссовки, одежда, арт-объекты. Эст. 2014"
+        ? "Кастомные кроссовки, одежда, арт-объекты. Est. 2014"
         : "Custom sneakers, apparel, art objects. Est. 2014",
       images: ["/og-image.png"],
     },
