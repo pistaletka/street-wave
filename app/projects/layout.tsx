@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "Бренд-проекты — streetwave®",
     description:
       "Лимитированные коллекции и коллаборации с брендами. От концепта до логистики.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
   alternates: {
     canonical: "/projects",
