@@ -6,7 +6,9 @@ const VALID_SOURCES: LeadSource[] = [
   "place-order",
   "brand-project",
   "live-customization",
+  "live-event",
   "general",
+  "contacts",
   "shop-order",
 ];
 

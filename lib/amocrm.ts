@@ -97,7 +97,9 @@ export type LeadSource =
   | "place-order"
   | "brand-project"
   | "live-customization"
+  | "live-event"
   | "general"
+  | "contacts"
   | "shop-order";
 
 interface TrackingData {
