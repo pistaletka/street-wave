@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: content?.meta?.ogTitle ?? "Магазин — streetwave®",
       description: content?.meta?.ogDescription ?? "Кастомные кроссовки и одежда. Каждая вещь уникальна.",
-      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     },
     alternates: { canonical: "/shop" },
   };

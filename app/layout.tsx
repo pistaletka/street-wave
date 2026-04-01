@@ -76,18 +76,18 @@ export async function generateMetadata(): Promise<Metadata> {
       url: baseUrl,
       siteName: "streetwave®",
       title: isRu
-        ? "streetwave® — Студия арт-кастомизации кроссовок и одежды"
-        : "streetwave® — Art Customization Studio for Sneakers & Apparel",
+        ? "streetwave® — Студия art-кастомизации"
+        : "streetwave® — Art Customization Studio",
       description: isRu
-        ? "Кастомные кроссовки, одежда и арт-объекты. Персональные проекты и лимитированные коллекции для брендов. С 2014 года."
-        : "Custom sneakers, apparel and art objects. Personal projects and limited collections for brands. Since 2014.",
+        ? "Кастомные кроссовки, одежда, арт-объекты. Эст. 2014"
+        : "Custom sneakers, apparel, art objects. Est. 2014",
       images: [
         {
-          url: "/opengraph-image",
+          url: "/og-image.png",
           width: 1200,
           height: 630,
           alt: isRu
-            ? "streetwave® — Студия арт-кастомизации"
+            ? "streetwave® — Студия art-кастомизации"
             : "streetwave® — Art Customization Studio",
         },
       ],
@@ -95,12 +95,12 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: isRu
-        ? "streetwave® — Студия арт-кастомизации"
+        ? "streetwave® — Студия art-кастомизации"
         : "streetwave® — Art Customization Studio",
       description: isRu
-        ? "Кастомные кроссовки, одежда и арт-объекты. Персональные проекты и коллекции для брендов."
-        : "Custom sneakers, apparel and art objects. Personal projects and collections for brands.",
-      images: ["/opengraph-image"],
+        ? "Кастомные кроссовки, одежда, арт-объекты. Эст. 2014"
+        : "Custom sneakers, apparel, art objects. Est. 2014",
+      images: ["/og-image.png"],
     },
     alternates: {
       canonical: baseUrl,

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "FAQ — streetwave®",
     description:
       "Ответы на частые вопросы о кастомизации: сроки, цены, доставка.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   alternates: {
     canonical: "/faq",

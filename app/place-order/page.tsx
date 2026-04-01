@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: content.meta?.ogTitle ?? "Персональный кастом — streetwave®",
       description: content.meta?.ogDescription ?? "Закажите уникальную кастомизацию. Тарифы от 10 000 ₽.",
-      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     },
     alternates: { canonical: "/place-order" },
   };

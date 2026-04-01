@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: content.meta?.ogTitle ?? "Контакты — streetwave®",
       description: content.meta?.ogDescription ?? "Telegram, WhatsApp, email. Ответим в течение 24 часов.",
-      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     },
     alternates: { canonical: "/contacts" },
   };

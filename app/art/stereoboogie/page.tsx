@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: content.meta.ogTitle ?? "StereoBoogie — streetwave®",
       description: content.meta.description,
-      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     },
     alternates: { canonical: "/art/stereoboogie" },
   };

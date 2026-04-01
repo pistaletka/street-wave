@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "О нас — streetwave®",
     description: "Студия арт-кастомизации с 2014 года. Искусство, дизайн, ручное производство.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   alternates: { canonical: "/about" },
 };
