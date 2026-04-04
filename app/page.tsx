@@ -38,6 +38,7 @@ export default async function Home() {
                 src="/team.png"
                 alt="Команда Street Wave"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -71,6 +72,7 @@ export default async function Home() {
                   src={dir.image}
                   alt={dir.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/50" />

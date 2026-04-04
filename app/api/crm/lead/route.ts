@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import { createLead, type LeadSource } from "@/lib/amocrm";
 import { notifyOwner, confirmToClient } from "@/lib/whatcrm";
 import { confirmByEmail } from "@/lib/email";
+import { isValidPhone } from "@/lib/validatePhone";
 
 const VALID_SOURCES: LeadSource[] = [
   "place-order",
@@ -25,6 +26,13 @@ export async function POST(request: Request) {
     if (!name || !source || !leadName) {
       return NextResponse.json(
         { error: "Обязательные поля: name, source, leadName" },
+        { status: 400 }
+      );
+    }
+
+    if (phone && !isValidPhone(phone)) {
+      return NextResponse.json(
+        { error: "Некорректный номер телефона" },
         { status: 400 }
       );
     }

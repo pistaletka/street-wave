@@ -29,6 +29,7 @@ export default function LiveCustomizationPageClient({ liveContent, casesIndex }:
           src="/live-hero-events.jpg"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />
@@ -71,6 +72,7 @@ export default function LiveCustomizationPageClient({ liveContent, casesIndex }:
                         src={bgImages[idx]}
                         alt=""
                         fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         className="object-cover"
                       />
                       <div className="absolute inset-0 bg-black/60" />
@@ -120,6 +122,7 @@ export default function LiveCustomizationPageClient({ liveContent, casesIndex }:
                       src={item.coverImage}
                       alt={item.title}
                       fill
+                      sizes="(max-width: 640px) 50vw, 25vw"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   ) : (

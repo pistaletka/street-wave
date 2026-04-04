@@ -76,6 +76,7 @@ export default async function StereoBoogiePage() {
                 src="/art/photos/3.jpeg"
                 alt="StereoBoogie в студии"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

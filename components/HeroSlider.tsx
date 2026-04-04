@@ -42,6 +42,7 @@ export default function HeroSlider({ badge, badgeSub, title, subtitle, cta1, cta
             className={`object-cover transition-opacity duration-1000 ${
               i === current ? "opacity-100" : "opacity-0"
             }`}
+            sizes="100vw"
             priority={i === 0}
           />
         ))}
@@ -53,6 +54,7 @@ export default function HeroSlider({ badge, badgeSub, title, subtitle, cta1, cta
           alt=""
           fill
           className="object-cover"
+          sizes="100vw"
           priority
         />
       </div>

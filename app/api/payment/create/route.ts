@@ -7,6 +7,7 @@ import { confirmByEmail } from "@/lib/email";
 import { generateOrderId } from "@/lib/generateOrderId";
 import { formatPrice } from "@/lib/formatPrice";
 import productsIndex from "@/content/products/index.json";
+import { isValidPhone } from "@/lib/validatePhone";
 import type { BuyerInfo, OrderItem } from "@/types/order";
 
 interface RequestBody {
@@ -26,6 +27,13 @@ export async function POST(request: Request) {
     if (!items?.length || !buyer?.name || !buyer?.email || !buyer?.phone || !buyer?.address) {
       return NextResponse.json(
         { error: "Заполните все обязательные поля" },
+        { status: 400 }
+      );
+    }
+
+    if (!isValidPhone(buyer.phone)) {
+      return NextResponse.json(
+        { error: "Некорректный номер телефона" },
         { status: 400 }
       );
     }

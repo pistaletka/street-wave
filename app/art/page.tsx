@@ -71,26 +71,36 @@ export default async function ArtPage() {
       </section>
 
       {/* Lead Artist - StereoBoogie */}
-      <section className="px-6 py-6 border-t border-border">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 md:grid-cols-2 items-start">
-            <div className="relative aspect-[3/4] overflow-hidden bg-surface">
-              <Image
-                src="/IMG_1415.JPG"
-                alt="StereoBoogie"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div>
-              <p className="sw-label mb-6 text-accent">{content.artist.badge}</p>
-              <h2 className="sw-h2 text-3xl sm:text-4xl md:text-5xl mb-2">
+      <section className="relative h-[100svh] md:h-[600px] overflow-hidden border-t border-border">
+        {/* Mobile image */}
+        <Image
+          src="/IMG_1415.JPG"
+          alt="StereoBoogie"
+          fill
+          sizes="100vw"
+          className="object-cover object-top md:hidden"
+          priority
+        />
+        {/* Desktop/tablet image */}
+        <Image
+          src="/IMG_1415.JPG"
+          alt="StereoBoogie"
+          fill
+          sizes="100vw"
+          className="object-cover object-top hidden md:block"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 flex h-full items-end px-6 pb-12 md:items-center md:pb-0">
+          <div className="mx-auto w-full max-w-7xl">
+            <div className="max-w-xl">
+              <p className="sw-label mb-4 text-accent">{content.artist.badge}</p>
+              <h2 className="sw-h2 text-3xl sm:text-4xl md:text-5xl mb-2 text-white">
                 {content.artist.name}
               </h2>
-              <p className="sw-label text-accent mb-8">
+              <p className="sw-label text-accent mb-6">
                 {content.artist.role}
               </p>
-              <p className="sw-body text-text-secondary leading-relaxed mb-10">
+              <p className="sw-body text-white/80 leading-relaxed mb-8">
                 {content.artist.bio}
               </p>
               <Link
@@ -121,6 +131,7 @@ export default async function ArtPage() {
                       src={`/art/interiors/${i + 1}.${ext}`}
                       alt={`Картина в интерьере ${i + 1}`}
                       fill
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                       className="object-cover"
                     />
                   </div>

@@ -6,6 +6,7 @@ import { useMessages, useLocale } from "next-intl";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import { reachGoal } from "@/lib/analytics";
 import { GOALS } from "@/lib/goals";
+import { isValidPhone } from "@/lib/validatePhone";
 import LegalConsent from "./LegalConsent";
 import MarketingConsent from "./MarketingConsent";
 
@@ -44,6 +45,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
   const formRef = useRef<HTMLFormElement>(null);
   const router = useRouter();
   const [consentError, setConsentError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
   const messages = useMessages();
   const common = messages.common as any;
   const locale = useLocale();
@@ -83,6 +85,9 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
           e.preventDefault();
           if (!checkConsent(e.currentTarget)) return;
           const fd = new FormData(e.currentTarget);
+          const phoneVal = (fd.get("contact") as string) || "";
+          if (!isValidPhone(phoneVal)) { setPhoneError(true); return; }
+          setPhoneError(false);
           const tariffOption = f.tariff.options.find((o: any) => o.value === fd.get("tariff"));
           const tariffLabel = tariffOption?.label || "";
           const tariffPrices: Record<string, number> = { malevich: 10000, "van-gogh": 18000, picasso: 25000 };
@@ -179,6 +184,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
             </div>
           )}
           <input id="po-contact" name="contact" type="tel" required placeholder={f.contact.placeholder} className={inputClass} />
+          {phoneError && <p className="sw-caption text-red-400 mt-1">{isRu ? "Введите корректный номер телефона" : "Enter a valid phone number"}</p>}
         </div>
         <div className="flex flex-col gap-2">
           <label htmlFor="po-email" className={labelClass}>{f.email.label}</label>
@@ -219,6 +225,9 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
           e.preventDefault();
           if (!checkConsent(e.currentTarget)) return;
           const fd = new FormData(e.currentTarget);
+          const phoneVal = (fd.get("phone") as string) || "";
+          if (!isValidPhone(phoneVal)) { setPhoneError(true); return; }
+          setPhoneError(false);
           const consentInfo = getConsentNote(e.currentTarget, isRu);
           const isEvent = sourceOverride === "live-event";
           const ok = await submit({
@@ -245,6 +254,7 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
         <div className="flex flex-col gap-2">
           <label htmlFor="bp-phone" className={labelClass}>{f.phone.label}</label>
           <input id="bp-phone" name="phone" type="tel" required placeholder={f.phone.placeholder} className={inputClass} />
+          {phoneError && <p className="sw-caption text-red-400 mt-1">{isRu ? "Введите корректный номер телефона" : "Enter a valid phone number"}</p>}
         </div>
         <div className="flex flex-col gap-2">
           <label htmlFor="bp-email" className={labelClass}>{f.email.label}</label>
@@ -285,6 +295,9 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
         e.preventDefault();
         if (!checkConsent(e.currentTarget)) return;
         const fd = new FormData(e.currentTarget);
+        const phoneVal = (fd.get("contact") as string) || "";
+        if (!isValidPhone(phoneVal)) { setPhoneError(true); return; }
+        setPhoneError(false);
         const typeLabel = f.type.options.find((o: any) => o.value === fd.get("type"))?.label || "";
         const consentInfo = getConsentNote(e.currentTarget, isRu);
         const ok = await submit({
@@ -307,7 +320,8 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
       </div>
       <div className="flex flex-col gap-2">
         <label htmlFor="g-contact" className={labelClass}>{f.contact.label}</label>
-        <input id="g-contact" name="contact" type="text" required placeholder={f.contact.placeholder} className={inputClass} />
+        <input id="g-contact" name="contact" type="tel" required placeholder={f.contact.placeholder} className={inputClass} />
+        {phoneError && <p className="sw-caption text-red-400 mt-1">{isRu ? "Введите корректный номер телефона" : "Enter a valid phone number"}</p>}
       </div>
       <div className="flex flex-col gap-2">
         <label htmlFor="g-type" className={labelClass}>{f.type.label}</label>

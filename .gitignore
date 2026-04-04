@@ -39,6 +39,9 @@ yarn-error.log*
 # google credentials (secrets!)
 /google/
 
+# original uncompressed images backup
+/_originals/
+
 # vercel
 .vercel
 

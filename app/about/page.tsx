@@ -99,6 +99,7 @@ export default function AboutPage() {
           src="/about-hero.png"
           alt="Street Wave Custom"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />
@@ -135,6 +136,7 @@ export default function AboutPage() {
                   src="/about-team-v2.jpg"
                   alt="Процесс кастомизации в студии Street Wave"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
@@ -177,6 +179,7 @@ export default function AboutPage() {
                       src={member.photo}
                       alt={member.name}
                       fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover"
                     />
                   </div>
@@ -208,6 +211,7 @@ export default function AboutPage() {
                       src={dir.bg}
                       alt=""
                       fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-black/60" />

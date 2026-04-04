@@ -7,6 +7,7 @@ import LegalConsent from "../shared/LegalConsent";
 import MarketingConsent from "../shared/MarketingConsent";
 import { reachGoal } from "@/lib/analytics";
 import { GOALS } from "@/lib/goals";
+import { isValidPhone } from "@/lib/validatePhone";
 import { buildFormTrackingPayload } from "@/lib/formTracking";
 
 const inputClass =
@@ -22,6 +23,7 @@ export default function CheckoutForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [consentError, setConsentError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
 
   const f = checkoutContent.fields;
 
@@ -36,9 +38,12 @@ export default function CheckoutForm() {
     }
     setConsentError(false);
 
-    setLoading(true);
-
     const form = new FormData(e.currentTarget);
+    const phoneVal = (form.get("phone") as string) || "";
+    if (!isValidPhone(phoneVal)) { setPhoneError(true); return; }
+    setPhoneError(false);
+
+    setLoading(true);
     const marketingCheckbox = e.currentTarget.querySelector<HTMLInputElement>('input[name="marketingConsent"]');
     const buyer = {
       name: form.get("name") as string,
@@ -93,7 +98,8 @@ export default function CheckoutForm() {
       </div>
       <div className="flex flex-col gap-2">
         <label htmlFor="ch-phone" className={labelClass}>{f.phone.label}</label>
-        <input id="ch-phone" name="phone" type="text" required placeholder={f.phone.placeholder} className={inputClass} />
+        <input id="ch-phone" name="phone" type="tel" required placeholder={f.phone.placeholder} className={inputClass} />
+        {phoneError && <p className="sw-caption text-red-400 mt-1">Введите корректный номер телефона</p>}
       </div>
       <div className="flex flex-col gap-2">
         <label htmlFor="ch-email" className={labelClass}>{f.email.label}</label>

@@ -5,6 +5,7 @@ import type { Product } from "@/types/product";
 import { reachGoal } from "@/lib/analytics";
 import { GOALS } from "@/lib/goals";
 import CategoryFilter from "@/components/shop/CategoryFilter";
+import Image from "next/image";
 import ProductCard from "@/components/shop/ProductCard";
 
 interface ShopPageClientProps {
@@ -25,12 +26,15 @@ export default function ShopPageClient({ products, shopContent }: ShopPageClient
   return (
     <>
       <div className="relative w-full overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/shop-banner.jpg"
           alt="streetwave® - магазин"
+          width={1920}
+          height={540}
+          sizes="100vw"
           className="w-full h-auto object-cover"
           style={{ marginTop: "-10%", marginBottom: "-10%" }}
+          priority
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute top-0 left-0 right-0 px-6 pt-10">
