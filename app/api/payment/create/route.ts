@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { createInvoice } from "@/lib/paykeeper";
 import { createLead } from "@/lib/amocrm";
 import { notifyOwner, confirmToClient } from "@/lib/whatcrm";
+import { confirmByEmail } from "@/lib/email";
 import { generateOrderId } from "@/lib/generateOrderId";
 import { formatPrice } from "@/lib/formatPrice";
 import productsIndex from "@/content/products/index.json";
@@ -17,6 +19,9 @@ export async function POST(request: Request) {
   try {
     const body: RequestBody = await request.json();
     const { items, buyer, total } = body;
+
+    const cookieStore = await cookies();
+    const locale = cookieStore.get("sw-locale")?.value || "ru";
 
     if (!items?.length || !buyer?.name || !buyer?.email || !buyer?.phone || !buyer?.address) {
       return NextResponse.json(
@@ -60,7 +65,7 @@ export async function POST(request: Request) {
     const orderId = generateOrderId();
 
     // Create lead in AmoCRM
-    const itemsList = items.map((i) => `${i.title} — ${formatPrice(i.price)}`).join("\n");
+    const itemsList = items.map((i) => `${i.title} - ${formatPrice(i.price)}`).join("\n");
     try {
       await createLead({
         name: buyer.name,
@@ -92,6 +97,7 @@ export async function POST(request: Request) {
       note: `Товары:\n${itemsList}\n\nСумма: ${formatPrice(verifiedTotal)}`,
     }).catch(() => {});
     confirmToClient(buyer.phone).catch(() => {});
+    confirmByEmail({ to: buyer.email, name: buyer.name, source: "shop-order", locale }).catch(() => {});
 
     // Create PayKeeper invoice
     const paymentUrl = await createInvoice({

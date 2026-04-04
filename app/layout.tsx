@@ -30,13 +30,13 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(baseUrl),
     title: {
       default: isRu
-        ? "streetwave® — Студия арт-кастомизации кроссовок и одежды в Москве"
-        : "streetwave® — Art Customization Studio for Sneakers & Apparel",
+        ? "streetwave® - Студия арт-кастомизации кроссовок и одежды в Москве"
+        : "streetwave® - Art Customization Studio for Sneakers & Apparel",
       template: "%s | streetwave®",
     },
     description: isRu
-      ? "Студия арт-кастомизации streetwave® — кастомные кроссовки, одежда и арт-объекты. Персональные проекты и лимитированные коллекции для брендов. Москва, доставка по всей России."
-      : "streetwave® art customization studio — custom sneakers, apparel and art objects. Personal projects and limited collections for brands. Worldwide shipping.",
+      ? "Студия арт-кастомизации streetwave® - кастомные кроссовки, одежда и арт-объекты. Персональные проекты и лимитированные коллекции для брендов. Москва, доставка по всей России."
+      : "streetwave® art customization studio - custom sneakers, apparel and art objects. Personal projects and limited collections for brands. Worldwide shipping.",
     keywords: isRu
       ? [
           "кастомизация кроссовок",
@@ -76,8 +76,8 @@ export async function generateMetadata(): Promise<Metadata> {
       url: baseUrl,
       siteName: "streetwave®",
       title: isRu
-        ? "streetwave® — Студия art-кастомизации"
-        : "streetwave® — Art Customization Studio",
+        ? "streetwave® - Студия art-кастомизации"
+        : "streetwave® - Art Customization Studio",
       description: isRu
         ? "Кастомные кроссовки, одежда, арт-объекты. Est. 2014"
         : "Custom sneakers, apparel, art objects. Est. 2014",
@@ -87,16 +87,16 @@ export async function generateMetadata(): Promise<Metadata> {
           width: 1200,
           height: 630,
           alt: isRu
-            ? "streetwave® — Студия art-кастомизации"
-            : "streetwave® — Art Customization Studio",
+            ? "streetwave® - Студия art-кастомизации"
+            : "streetwave® - Art Customization Studio",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
       title: isRu
-        ? "streetwave® — Студия art-кастомизации"
-        : "streetwave® — Art Customization Studio",
+        ? "streetwave® - Студия art-кастомизации"
+        : "streetwave® - Art Customization Studio",
       description: isRu
         ? "Кастомные кроссовки, одежда, арт-объекты. Est. 2014"
         : "Custom sneakers, apparel, art objects. Est. 2014",

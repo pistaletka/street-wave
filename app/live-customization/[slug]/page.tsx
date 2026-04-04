@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const caseData = await getLocaleCase(slug);
     return {
-      title: `${caseData.title} — streetwave®`,
+      title: `${caseData.title} - streetwave®`,
       description: caseData.description,
     };
   } catch {
@@ -58,7 +58,7 @@ export default async function EventCasePage({ params }: Props) {
             &larr; Все ивенты
           </Link>
           <p className="sw-label mb-2 text-accent">
-            {caseData.client} — {caseData.year}
+            {caseData.client} - {caseData.year}
           </p>
           <h1 className="sw-h1 mb-6 text-4xl sm:text-5xl md:text-6xl">
             {caseData.title}
@@ -88,7 +88,7 @@ export default async function EventCasePage({ params }: Props) {
         </section>
       )}
 
-      {/* Gallery — 8 photos, 4 columns x 2 rows */}
+      {/* Gallery - 8 photos, 4 columns x 2 rows */}
       <section className="px-6 pb-6">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-4 grid-cols-3 lg:grid-cols-6">
@@ -97,7 +97,7 @@ export default async function EventCasePage({ params }: Props) {
                 <div key={i} className="relative" style={{ aspectRatio: "4/5" }}>
                   <Image
                     src={item}
-                    alt={`${caseData.title} — фото ${i + 1}`}
+                    alt={`${caseData.title} - фото ${i + 1}`}
                     fill
                     className="object-cover"
                   />

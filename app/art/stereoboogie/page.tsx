@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: content.meta.title,
     description: content.meta.description,
     openGraph: {
-      title: content.meta.ogTitle ?? "StereoBoogie — streetwave®",
+      title: content.meta.ogTitle ?? "StereoBoogie - streetwave®",
       description: content.meta.description,
       images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
     },
@@ -19,7 +19,34 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const paintings = Array.from({ length: 29 }, (_, i) => `/art/paintings/${i + 1}.jpg`);
+const paintings = [
+  { src: "/art/paintings/1.jpg", caption: "Change, смешанная техника, холст, акрил, 100x100 см, 2020" },
+  { src: "/art/paintings/2.jpg", caption: "Lemon Haze" },
+  { src: "/art/paintings/3.jpg", caption: "Raspad" },
+  { src: "/art/paintings/4.jpg", caption: "Cash Only" },
+  { src: "/art/paintings/5.jpg", caption: "Cicada 3302" },
+  { src: "/art/paintings/6.jpg", caption: "Crystal 33" },
+  { src: "/art/paintings/7.jpg", caption: "Shib2Face" },
+  { src: "/art/paintings/8.jpg", caption: "Enjoy" },
+  { src: "/art/paintings/9.jpg", caption: "Stereo Nature" },
+  { src: "/art/paintings/10.jpg", caption: "Neutron Noisy" },
+  { src: "/art/paintings/11.jpg", caption: "Stereo Setup" },
+  { src: "/art/paintings/12.jpg", caption: "Fireboy" },
+  { src: "/art/paintings/13.jpg", caption: "No Title" },
+  { src: "/art/paintings/14.jpg", caption: "Playgerl, 2025" },
+  { src: "/art/paintings/15.jpg", caption: "NAS, 2025" },
+  { src: "/art/paintings/16.jpg", caption: "На коне, 2026" },
+  { src: "/art/paintings/17.jpg", caption: "РМЧС" },
+  { src: "/art/paintings/18.jpg", caption: "Ловушка разума" },
+  { src: "/art/paintings/19.jpg", caption: "Ловушка разума II" },
+  { src: "/art/paintings/20.jpg", caption: "Replace Error, 2022" },
+  { src: "/art/paintings/21.jpg", caption: "Future Doubts, 120x100 см, 2022" },
+  { src: "/art/paintings/22.jpg", caption: "Elastic Dreams, 2025" },
+  { src: "/art/paintings/23.jpg", caption: "Soft Armor, 2025" },
+  { src: "/art/paintings/24.jpg", caption: "Сон, летящей на осе" },
+  { src: "/art/paintings/25.jpg", caption: "Слушатель нейтронных звёзд" },
+  { src: "/art/paintings/26.jpg", caption: "Selfie 644" },
+];
 const prints = Array.from({ length: 25 }, (_, i) => `/art/prints/${i + 1}.jpg`);
 const figures = Array.from({ length: 14 }, (_, i) => `/art/figures/${i + 1}.jpeg`);
 const hovers = Array.from({ length: 3 }, (_, i) => `/art/hovers/${i + 1}.png`);
@@ -28,25 +55,22 @@ export default async function StereoBoogiePage() {
   const content = await getContent<any>("stereoboogie");
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero */}
+      {/* Hero + Photo */}
       <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
-          <p className="sw-label mb-2 text-accent">{content.hero.badge}</p>
-          <h1 className="sw-h1 mb-2 text-4xl sm:text-5xl md:text-6xl">
-            {content.hero.name}
-          </h1>
-          <p className="sw-body text-text-secondary">{content.hero.subtitle}</p>
-        </div>
-      </section>
-
-      {/* Short Bio + Photo */}
-      <section className="px-6 py-6">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeader badge={content.bio.badge} title="" />
-          <div className="grid gap-12 md:grid-cols-2 items-center">
-            <p className="sw-body text-text-secondary text-lg leading-relaxed">
-              {content.bio.text}
-            </p>
+          <div className="grid gap-12 md:grid-cols-2 items-start">
+            <div>
+              <p className="sw-label mb-2 text-accent">{content.hero.badge}</p>
+              <h1 className="sw-h1 mb-2 text-4xl sm:text-5xl md:text-6xl">
+                {content.hero.name}
+              </h1>
+              <p className="sw-body text-text-secondary mb-10">{content.hero.subtitle}</p>
+              {content.bio.text.split("\n\n").map((p: string, i: number) => (
+                <p key={i} className="sw-body text-text-secondary text-lg leading-relaxed mb-4 last:mb-0">
+                  {p}
+                </p>
+              ))}
+            </div>
             <div className="relative aspect-[4/5] overflow-hidden bg-surface">
               <Image
                 src="/art/photos/3.jpeg"

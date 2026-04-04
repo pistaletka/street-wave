@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const caseData = await getLocaleCase(slug);
     return {
-      title: `${caseData.title} — streetwave®`,
+      title: `${caseData.title} - streetwave®`,
       description: caseData.description,
     };
   } catch {
@@ -60,7 +60,7 @@ export default async function CasePage({ params }: Props) {
             &larr; {en ? "All projects" : "Все проекты"}
           </Link>
           <p className="sw-label mb-2 text-accent">
-            {caseData.client} — {caseData.year}
+            {caseData.client} - {caseData.year}
           </p>
           <h1 className="sw-h1 mb-6 text-4xl sm:text-5xl md:text-6xl">
             {caseData.title}

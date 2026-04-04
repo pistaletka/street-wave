@@ -49,7 +49,7 @@
   },
   {
     "slug": "certificate-10000",
-    "title": "Gift Certificate — Malevich ($100)",
+    "title": "Gift Certificate - Malevich ($100)",
     "category": "certificates",
     "price": 100,
     "image": "/products/certificates/10000.jpg",
@@ -57,7 +57,7 @@
   },
   {
     "slug": "certificate-18000",
-    "title": "Gift Certificate — Van Gogh ($200)",
+    "title": "Gift Certificate - Van Gogh ($200)",
     "category": "certificates",
     "price": 200,
     "image": "/products/certificates/18000.jpg",
@@ -65,7 +65,7 @@
   },
   {
     "slug": "certificate-25000",
-    "title": "Gift Certificate — Picasso ($300)",
+    "title": "Gift Certificate - Picasso ($300)",
     "category": "certificates",
     "price": 300,
     "image": "/products/certificates/25000.jpg",

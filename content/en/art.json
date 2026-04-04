@@ -11,13 +11,13 @@
   "manifesto": {
     "badge": "Manifesto",
     "title": "Art beyond customization",
-    "text": "Street Wave is more than customization. We operate at the intersection of art, fashion, and product design. Every object — whether sneakers, a canvas, or an installation — is a statement.\n\nWe transform street culture into collectible art. We collaborate with artists who think beyond the canvas — in the space between digital, physical, and everything in between.\n\nCustom objects, in our view, aren't decoration. They are art pieces, each carrying an idea, context, and a signature voice."
+    "text": "Street Wave is more than customization. We operate at the intersection of art, fashion, and product design. Every object - whether sneakers, a canvas, or an installation - is a statement.\n\nWe transform street culture into collectible art. We collaborate with artists who think beyond the canvas - in the space between digital, physical, and everything in between.\n\nCustom objects, in our view, aren't decoration. They are art pieces, each carrying an idea, context, and a signature voice."
   },
   "artist": {
     "badge": "Lead Artist",
     "name": "StereoBoogie",
     "role": "Multidisciplinary Artist",
-    "bio": "A multidisciplinary artist working at the intersection of digital and physical. Paintings, objects, customs, installations. Core themes — identity, digital anxiety, the post-human condition.",
+    "bio": "A multidisciplinary artist working at the intersection of digital and physical. Paintings, objects, customs, installations. Core themes - identity, digital anxiety, the post-human condition.",
     "cta": "More about the artist"
   },
   "gallery": {
@@ -31,7 +31,7 @@
     "items": [
       {
         "title": "Custom Paintings",
-        "desc": "Original works on canvas — from concept to finished piece."
+        "desc": "Original works on canvas - from concept to finished piece."
       },
       {
         "title": "Art Objects",
@@ -39,7 +39,7 @@
       },
       {
         "title": "Custom as Art",
-        "desc": "Sneakers and apparel as canvas — every pair is unique."
+        "desc": "Sneakers and apparel as canvas - every pair is unique."
       },
       {
         "title": "Brand Collaborations",
@@ -53,7 +53,7 @@
   },
   "cta": {
     "title": "We work with private clients, brands, and spaces",
-    "subtitle": "Let's discuss your project — from idea to execution.",
+    "subtitle": "Let's discuss your project - from idea to execution.",
     "primary": "Discuss a Project",
     "secondary": "Contact"
   }

@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description:
       content?.meta?.description ?? "Купить кастомные кроссовки и одежду от streetwave®. Готовые работы в единственном экземпляре. Доставка по России.",
     openGraph: {
-      title: content?.meta?.ogTitle ?? "Магазин — streetwave®",
+      title: content?.meta?.ogTitle ?? "Магазин - streetwave®",
       description: content?.meta?.ogDescription ?? "Кастомные кроссовки и одежда. Каждая вещь уникальна.",
       images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
     },

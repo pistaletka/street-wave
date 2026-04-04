@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: content.meta.title,
     description: content.meta.description,
     openGraph: {
-      title: content.meta.ogTitle ?? "Арт / Картины — streetwave®",
+      title: content.meta.ogTitle ?? "Арт / Картины - streetwave®",
       description: content.meta.description,
       images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
     },
@@ -70,12 +70,11 @@ export default async function ArtPage() {
         </div>
       </section>
 
-      {/* Lead Artist — StereoBoogie */}
+      {/* Lead Artist - StereoBoogie */}
       <section className="px-6 py-6 border-t border-border">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader badge={content.artist.badge} title="" />
-          <div className="grid gap-12 md:grid-cols-2 items-center">
-            <div className="relative aspect-[4/5] overflow-hidden bg-surface">
+          <div className="grid gap-12 md:grid-cols-2 items-start">
+            <div className="relative aspect-[3/4] overflow-hidden bg-surface">
               <Image
                 src="/IMG_1415.JPG"
                 alt="StereoBoogie"
@@ -84,6 +83,7 @@ export default async function ArtPage() {
               />
             </div>
             <div>
+              <p className="sw-label mb-6 text-accent">{content.artist.badge}</p>
               <h2 className="sw-h2 text-3xl sm:text-4xl md:text-5xl mb-2">
                 {content.artist.name}
               </h2>
@@ -138,14 +138,14 @@ export default async function ArtPage() {
             badge={content.services.badge}
             title={content.services.title}
           />
-          <div className="grid gap-px md:grid-cols-5">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-px">
             {content.services.items.map((item: any, i: number) => (
               <div
                 key={i}
-                className="border border-border p-8 transition-colors hover:border-accent"
+                className="border border-border p-8 transition-colors hover:border-accent grid grid-rows-subgrid row-span-2"
               >
-                <h3 className="sw-h3 mb-3">{item.title}</h3>
-                <p className="sw-caption text-text-secondary">{item.desc}</p>
+                <h3 className="sw-h3">{item.title}</h3>
+                <p className="sw-caption text-text-secondary pt-3">{item.desc}</p>
               </div>
             ))}
           </div>

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Live Customization — streetwave®",
+    "title": "Live Customization - streetwave®",
     "description": "Live customization at your event. Custom zones, interactive activations, and a WOW factor."
   },
   "hero": {
@@ -24,7 +24,7 @@
       },
       {
         "title": "Interactive Activation",
-        "desc": "Guests take part in the process — choosing design elements, watching the painting unfold. We create engagement and content.",
+        "desc": "Guests take part in the process - choosing design elements, watching the painting unfold. We create engagement and content.",
         "features": ["Interactive format", "Social media content", "Photo and video zone", "Branded souvenirs"]
       }
     ]
@@ -35,7 +35,7 @@
   },
   "cta": {
     "title": "Planning an event?",
-    "subtitle": "Tell us about the format — we'll propose a solution and estimate the budget.",
+    "subtitle": "Tell us about the format - we'll propose a solution and estimate the budget.",
     "button": "Discuss an event"
   }
 }

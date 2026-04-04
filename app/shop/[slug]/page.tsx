@@ -22,11 +22,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   try {
     const product = await getLocaleProduct(slug);
     return {
-      title: `${product.title} — streetwave®`,
+      title: `${product.title} - streetwave®`,
       description: product.description,
     };
   } catch {
-    return { title: "Товар не найден — streetwave®" };
+    return { title: "Товар не найден - streetwave®" };
   }
 }
 

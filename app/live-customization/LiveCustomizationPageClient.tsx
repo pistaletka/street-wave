@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { reachGoal } from "@/lib/analytics";
+import { GOALS } from "@/lib/goals";
 import SectionHeader from "../../components/shared/SectionHeader";
 import PlaceholderImage from "../../components/shared/PlaceholderImage";
 import ModalForm from "../../components/shared/ModalForm";
@@ -14,6 +16,8 @@ interface LiveCustomizationPageClientProps {
 
 export default function LiveCustomizationPageClient({ liveContent, casesIndex }: LiveCustomizationPageClientProps) {
   const [modalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => { reachGoal(GOALS.VISIT_LIVE_CUSTOMIZATION); }, []);
 
   const eventCases = casesIndex.cases.filter((c: any) => c.category === "event");
 
@@ -40,7 +44,7 @@ export default function LiveCustomizationPageClient({ liveContent, casesIndex }:
             ))}
           </p>
           <button
-            onClick={() => setModalOpen(true)}
+            onClick={() => { reachGoal(GOALS.OPEN_MODAL_EVENT); setModalOpen(true); }}
             className="sw-btn mt-10 inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
           >
             {liveContent.cta?.button || "Обсудить ивент"}
@@ -142,7 +146,7 @@ export default function LiveCustomizationPageClient({ liveContent, casesIndex }:
           <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{liveContent.cta.title}</h2>
           <p className="mb-10 sw-body text-text-secondary">{liveContent.cta.subtitle}</p>
           <button
-            onClick={() => setModalOpen(true)}
+            onClick={() => { reachGoal(GOALS.OPEN_MODAL_EVENT); setModalOpen(true); }}
             className="sw-btn inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
           >
             {liveContent.cta?.button || "Обсудить ивент"}

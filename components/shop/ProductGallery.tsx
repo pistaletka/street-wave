@@ -16,7 +16,7 @@ export default function ProductGallery({ images, title }: ProductGalleryProps) {
       <div className="overflow-hidden bg-surface">
         <PlaceholderImage
           aspectRatio="1/1"
-          label={`${title} — фото ${active + 1}`}
+          label={`${title} - фото ${active + 1}`}
         />
       </div>
       {images.length > 1 && (

@@ -1,12 +1,15 @@
 import Link from "next/link";
+import PageGoal from "@/components/shared/PageGoal";
+import { GOALS } from "@/lib/goals";
 
 export const metadata = {
-  title: "Оплата прошла успешно — streetwave®",
+  title: "Оплата прошла успешно - streetwave®",
 };
 
 export default function PaymentSuccessPage() {
   return (
     <section className="px-6 py-6">
+      <PageGoal goal={GOALS.PAYMENT_SUCCESS} />
       <div className="mx-auto max-w-2xl text-center">
         <p className="sw-label mb-4 text-accent">Готово</p>
         <h1 className="sw-h1 mb-6 text-3xl sm:text-4xl">Оплата прошла успешно</h1>

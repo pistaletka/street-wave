@@ -36,7 +36,12 @@
     "social": [
       { "label": "Instagram", "href": "https://instagram.com/streetwave.studio" },
       { "label": "Telegram", "href": "https://t.me/streetwavecustom" }
-    ]
+    ],
+    "payment": {
+      "label": "Payment methods",
+      "security": "Payment security is provided by PayKeeper using SSL encryption and 3D-Secure technology.",
+      "legal": "IE Efimova Galina Sergeevna, INN 772355218401, OGRNIP 323774600594691"
+    }
   },
   "cta": {
     "discussProject": "Discuss a Project",

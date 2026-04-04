@@ -1,12 +1,19 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
+import { reachGoal } from "@/lib/analytics";
+import { GOALS } from "@/lib/goals";
 import CheckoutForm from "@/components/shop/CheckoutForm";
 import OrderSummary from "@/components/shop/OrderSummary";
 
 export default function CheckoutPage() {
   const { count } = useCart();
+
+  useEffect(() => {
+    if (count > 0) reachGoal(GOALS.CHECKOUT_START);
+  }, [count]);
 
   return (
     <section className="px-6 py-6">
@@ -22,7 +29,7 @@ export default function CheckoutPage() {
 
         {count === 0 ? (
           <div className="py-20 text-center">
-            <p className="sw-body text-muted mb-6">Корзина пуста — нечего оформлять</p>
+            <p className="sw-body text-muted mb-6">Корзина пуста - нечего оформлять</p>
             <Link
               href="/shop"
               className="sw-btn inline-block h-12 border border-accent bg-accent px-8 leading-[48px] text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"

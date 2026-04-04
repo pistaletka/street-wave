@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Контакты — streetwave®",
+    "title": "Контакты - streetwave®",
     "description": "Свяжитесь с нами: Telegram, WhatsApp, email. Ответим в течение 24 часов."
   },
   "hero": {
     "badge": "Контакты",
     "title": "Свяжитесь с нами",
-    "subtitle": "Напишите в Telegram, WhatsApp или заполните форму — ответим в течение 24 часов."
+    "subtitle": "Напишите в Telegram, WhatsApp или заполните форму - ответим в течение 24 часов."
   },
   "channels": [
     { "label": "Telegram", "value": "@streetwaveart", "href": "https://t.me/streetwaveart" },

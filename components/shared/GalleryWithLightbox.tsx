@@ -3,13 +3,27 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
+type GalleryItem = string | { src: string; caption: string } | null;
+
 type Props = {
-  images: (string | null)[];
+  images: GalleryItem[];
   title: string;
 };
 
+function getSrc(item: GalleryItem): string | null {
+  if (!item) return null;
+  return typeof item === "string" ? item : item.src;
+}
+
+function getCaption(item: GalleryItem): string | null {
+  if (!item || typeof item === "string") return null;
+  return item.caption;
+}
+
 export default function GalleryWithLightbox({ images, title }: Props) {
-  const validImages = images.filter((img): img is string => img !== null);
+  const validItems = images.filter((img): img is string | { src: string; caption: string } => img !== null);
+  const validImages = validItems.map(item => typeof item === "string" ? item : item.src);
+  const validCaptions = validItems.map(item => typeof item === "string" ? null : item.caption);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const close = useCallback(() => setOpenIndex(null), []);
@@ -51,7 +65,9 @@ export default function GalleryWithLightbox({ images, title }: Props) {
       {/* Grid */}
       <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
         {images.map((item, i) => {
-          if (!item) {
+          const src = getSrc(item);
+          const caption = getCaption(item);
+          if (!src) {
             return (
               <div
                 key={i}
@@ -62,20 +78,24 @@ export default function GalleryWithLightbox({ images, title }: Props) {
           }
           const idx = validIdx++;
           return (
-            <button
-              key={i}
-              type="button"
-              onClick={() => setOpenIndex(idx)}
-              className="relative cursor-pointer focus:outline-none"
-              style={{ aspectRatio: "4/5" }}
-            >
-              <Image
-                src={item}
-                alt={`${title} — фото ${i + 1}`}
-                fill
-                className="object-cover"
-              />
-            </button>
+            <div key={i}>
+              <button
+                type="button"
+                onClick={() => setOpenIndex(idx)}
+                className="relative w-full cursor-pointer focus:outline-none"
+                style={{ aspectRatio: "4/5" }}
+              >
+                <Image
+                  src={src}
+                  alt={caption || `${title} - ${i + 1}`}
+                  fill
+                  className="object-cover"
+                />
+              </button>
+              {caption && (
+                <p className="mt-2 text-xs text-text-secondary truncate">{caption}</p>
+              )}
+            </div>
           );
         })}
       </div>
@@ -117,7 +137,7 @@ export default function GalleryWithLightbox({ images, title }: Props) {
           >
             <Image
               src={validImages[openIndex]}
-              alt={`${title} — фото ${openIndex + 1}`}
+              alt={`${title} - фото ${openIndex + 1}`}
               fill
               className="object-contain"
               sizes="90vw"
@@ -138,10 +158,15 @@ export default function GalleryWithLightbox({ images, title }: Props) {
             &#8250;
           </button>
 
-          {/* Counter */}
-          <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/50 text-sm">
-            {openIndex + 1} / {validImages.length}
-          </span>
+          {/* Caption & Counter */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center">
+            {validCaptions[openIndex] && (
+              <p className="text-white/80 text-sm mb-1">{validCaptions[openIndex]}</p>
+            )}
+            <span className="text-white/50 text-sm">
+              {openIndex + 1} / {validImages.length}
+            </span>
+          </div>
         </div>
       )}
     </>

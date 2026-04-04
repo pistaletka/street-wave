@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "streetwave® — Art Customization Studio",
+    "title": "streetwave® - Art Customization Studio",
     "description": "Art customization and limited-edition projects for private clients and brands. Sneakers, apparel, art objects."
   },
   "hero": {
@@ -14,7 +14,7 @@
   "about": {
     "badge": "About the Studio",
     "title": "We are Street Wave.",
-    "text": "An art customization studio working with apparel, footwear, accessories, and spaces.\n\nWe create original projects for brands, events, and private clients — from one-of-a-kind pieces to limited-edition runs.\n\nFor us, every object is a surface for an idea, an image, and a new visual meaning.\n\nWe blend contemporary art, street culture, and personalization, turning everyday items into artistic statements.",
+    "text": "An art customization studio working with apparel, footwear, accessories, and spaces.\n\nWe create original projects for brands, events, and private clients - from one-of-a-kind pieces to limited-edition runs.\n\nFor us, every object is a surface for an idea, an image, and a new visual meaning.\n\nWe blend contemporary art, street culture, and personalization, turning everyday items into artistic statements.",
     "cta": { "label": "About Us", "href": "/about" }
   },
   "directions": {
@@ -23,7 +23,7 @@
     "items": [
       {
         "title": "Personal Custom",
-        "desc": "Sneakers, apparel, accessories, and art objects — unique work tailored to your vision.",
+        "desc": "Sneakers, apparel, accessories, and art objects - unique work tailored to your vision.",
         "href": "/place-order",
         "image": "/1-кастом.png"
       },
@@ -35,7 +35,7 @@
       },
       {
         "title": "Live Customization",
-        "desc": "On-site customization at your event — a WOW factor for your audience.",
+        "desc": "On-site customization at your event - a WOW factor for your audience.",
         "href": "/live-customization",
         "image": "/3-ивент.png"
       },
@@ -83,7 +83,7 @@
     "items": [
       { "title": "Signature Style", "desc": "Every piece is unique and entirely handcrafted." },
       { "title": "Brand Experience", "desc": "Projects for Reebok, D&G, Pinko, Yandex, and more." },
-      { "title": "Full-Cycle Service", "desc": "From concept to delivery — everything in one place." },
+      { "title": "Full-Cycle Service", "desc": "From concept to delivery - everything in one place." },
       { "title": "Premium Materials", "desc": "Professional Angelus paints, airbrushing, and protective coatings." },
       { "title": "Professional Team", "desc": "Artists, designers, tailors, and customization specialists." },
       { "title": "Worldwide Shipping", "desc": "Secure packaging and tracked delivery anywhere in the world." }
@@ -101,7 +101,7 @@
   },
   "finalCta": {
     "title": "Ready to create something unique?",
-    "subtitle": "Submit a request — let's discuss your idea.",
+    "subtitle": "Submit a request - let's discuss your idea.",
     "cta1": { "label": "Order Custom", "href": "/place-order" },
     "cta2": { "label": "Get in Touch", "href": "/contacts" }
   }

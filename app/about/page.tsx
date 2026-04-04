@@ -3,13 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import SectionHeader from "../../components/shared/SectionHeader";
 import PlaceholderImage from "../../components/shared/PlaceholderImage";
+import PageGoal from "../../components/shared/PageGoal";
+import { GOALS } from "../../lib/goals";
 
 export const metadata: Metadata = {
   title: "О студии арт-кастомизации STREET WAVE",
   description:
     "Студия арт-кастомизации STREET WAVE с 2014 года. Работаем на стыке искусства, дизайна и ручного производства. Москва, доставка по всей России.",
   openGraph: {
-    title: "О нас — streetwave®",
+    title: "О нас - streetwave®",
     description: "Студия арт-кастомизации с 2014 года. Искусство, дизайн, ручное производство.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
@@ -90,6 +92,7 @@ const clients = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageGoal goal={GOALS.VISIT_ABOUT} />
       {/* 1. Hero + Team image */}
       <section className="relative flex min-h-[50vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
         <Image
@@ -117,7 +120,7 @@ export default function AboutPage() {
       <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl">
           <p className="sw-body text-text-secondary">
-            Street Wave — первая в России студия арт-кастомизации, объединившая сильных и талантливых художников. С ноября 2014 года команда SW создаёт уникальный арт на предметах одежды, обуви и аксессуарах.
+            Street Wave - первая в России студия арт-кастомизации, объединившая сильных и талантливых художников. С ноября 2014 года команда SW создаёт уникальный арт на предметах одежды, обуви и аксессуарах.
           </p>
         </div>
       </section>
@@ -141,11 +144,11 @@ export default function AboutPage() {
                 <p className="sw-body text-text-secondary">
                   Мы работаем с формой, силуэтом и поверхностью, превращая вещь в
                   носимый арт-объект. От индивидуальных заказов до лимитированных
-                  серий для брендов — каждый проект создаётся вручную и существует в
+                  серий для брендов - каждый проект создаётся вручную и существует в
                   единственном визуальном решении.
                 </p>
                 <p className="sw-body text-text-secondary">
-                  Street Wave — это студия, где соединяется уличная культура, дизайн
+                  Street Wave - это студия, где соединяется уличная культура, дизайн
                   и художественное мышление. Мы создаём концепции и превращаем
                   масс-маркет в реальный арт-продукт.
                 </p>

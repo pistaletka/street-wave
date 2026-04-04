@@ -6,15 +6,17 @@ import ContactForm from "../../components/shared/ContactForm";
 import TariffSelectButton from "../../components/shared/TariffSelectButton";
 import PlaceholderImage from "../../components/shared/PlaceholderImage";
 import ImageCarousel from "../../components/shared/ImageCarousel";
+import PageGoal from "../../components/shared/PageGoal";
+import { GOALS } from "../../lib/goals";
 
 export async function generateMetadata(): Promise<Metadata> {
   const content = await getContent<any>("placeOrder");
   return {
-    title: content.meta?.title ?? "Заказать кастомизацию кроссовок и одежды — тарифы от 10 000 ₽",
+    title: content.meta?.title ?? "Заказать кастомизацию кроссовок и одежды - тарифы от 10 000 ₽",
     description:
       content.meta?.description ?? "Закажите уникальную кастомизацию кроссовок, одежды или арт-объектов в streetwave®. Тарифы от 10 000 ₽. Доставка по всей России.",
     openGraph: {
-      title: content.meta?.ogTitle ?? "Персональный кастом — streetwave®",
+      title: content.meta?.ogTitle ?? "Персональный кастом - streetwave®",
       description: content.meta?.ogDescription ?? "Закажите уникальную кастомизацию. Тарифы от 10 000 ₽.",
       images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
     },
@@ -26,6 +28,7 @@ export default async function PlaceOrderPage() {
   const content = await getContent<any>("placeOrder");
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageGoal goal={GOALS.VISIT_PLACE_ORDER} />
       {/* Hero */}
       <section className="relative overflow-hidden">
         {/* Banner */}
@@ -35,7 +38,7 @@ export default async function PlaceOrderPage() {
             <source media="(max-width: 1023px)" srcSet="/custom-banner-tablet.png" />
             <Image
               src="/custom-banner-desktop.png"
-              alt="Кастомизированные кроссовки — примеры работ streetwave"
+              alt="Кастомизированные кроссовки - примеры работ streetwave"
               width={1920}
               height={360}
               className="h-[210px] w-full object-cover sm:h-[265px] md:h-[320px]"

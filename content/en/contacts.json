@@ -1,16 +1,15 @@
 {
   "meta": {
-    "title": "Contacts — streetwave®",
-    "description": "Get in touch: Telegram, WhatsApp, email. We respond within 24 hours."
+    "title": "Contacts - streetwave®",
+    "description": "Get in touch: Telegram, email. We respond within 24 hours."
   },
   "hero": {
     "badge": "Contacts",
     "title": "Get in Touch",
-    "subtitle": "Message us on Telegram, WhatsApp, or fill out the form — we'll respond within 24 hours."
+    "subtitle": "Message us on Telegram or fill out the form - we'll respond within 24 hours."
   },
   "channels": [
     { "label": "Telegram", "value": "@streetwaveart", "href": "https://t.me/streetwaveart" },
-    { "label": "WhatsApp", "value": "+7 906 768 1204", "href": "https://wa.me/79067681204" },
     { "label": "Email", "value": "order@street-wave.com", "href": "mailto:order@street-wave.com" }
   ],
   "address": {

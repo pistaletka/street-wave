@@ -8,7 +8,7 @@ type LegalVariant = "contact" | "order";
 interface LegalConsentProps {
   id?: string;
   consentError?: boolean;
-  /** "contact" — формы обратной связи, проектов, ивентов. "order" — place-order, checkout. */
+  /** "contact" - формы обратной связи, проектов, ивентов. "order" - place-order, checkout. */
   variant?: LegalVariant;
 }
 

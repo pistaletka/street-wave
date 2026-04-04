@@ -89,14 +89,14 @@ interface NotifyParams {
 
 /**
  * Send notification to business owner about a new lead.
- * Fire-and-forget — errors are logged but don't throw.
+ * Fire-and-forget - errors are logged but don't throw.
  */
 export async function notifyOwner(params: NotifyParams): Promise<void> {
   if (!OWNER_CHAT_ID) return;
 
   const sourceLabel = SOURCE_LABELS[params.source] || params.source;
   const lines = [
-    `📩 Новая заявка — ${sourceLabel}`,
+    `📩 Новая заявка - ${sourceLabel}`,
     "",
     `👤 ${params.name}`,
   ];
@@ -112,7 +112,7 @@ export async function notifyOwner(params: NotifyParams): Promise<void> {
 /**
  * Send confirmation message to the client.
  * Only works if the client provided a phone number (not a Telegram @username).
- * Fire-and-forget — errors are logged but don't throw.
+ * Fire-and-forget - errors are logged but don't throw.
  */
 export async function confirmToClient(phone: string | undefined): Promise<void> {
   if (!phone) return;

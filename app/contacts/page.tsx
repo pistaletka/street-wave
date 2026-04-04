@@ -2,15 +2,18 @@ import type { Metadata } from "next";
 import { getContent } from "../../lib/getContent";
 import SectionHeader from "../../components/shared/SectionHeader";
 import ContactForm from "../../components/shared/ContactForm";
+import PageGoal from "../../components/shared/PageGoal";
+import TrackedLink from "../../components/shared/TrackedLink";
+import { GOALS } from "../../lib/goals";
 
 export async function generateMetadata(): Promise<Metadata> {
   const content = await getContent<any>("contacts");
   return {
     title: content.meta?.title ?? "Контакты студии арт-кастомизации streetwave®",
     description:
-      content.meta?.description ?? "Свяжитесь со студией streetwave® — Telegram, WhatsApp, email. Москва. Ответим в течение 24 часов.",
+      content.meta?.description ?? "Свяжитесь со студией streetwave® - Telegram, WhatsApp, email. Москва. Ответим в течение 24 часов.",
     openGraph: {
-      title: content.meta?.ogTitle ?? "Контакты — streetwave®",
+      title: content.meta?.ogTitle ?? "Контакты - streetwave®",
       description: content.meta?.ogDescription ?? "Telegram, WhatsApp, email. Ответим в течение 24 часов.",
       images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
     },
@@ -22,6 +25,7 @@ export default async function ContactsPage() {
   const content = await getContent<any>("contacts");
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <PageGoal goal={GOALS.VISIT_CONTACTS} />
       {/* Hero */}
       <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl">
@@ -38,14 +42,14 @@ export default async function ContactsPage() {
         <div className="mx-auto max-w-3xl">
           <div className="mb-16 grid gap-6 sm:grid-cols-2">
             {content.channels.map((ch: any) => (
-              <a
+              <TrackedLink
                 key={ch.label}
                 href={ch.href}
-                className="border border-border bg-surface p-6 transition-colors hover:border-accent/20"
+                className="border border-border bg-surface p-6 transition-colors hover:border-accent/20 block"
               >
                 <p className="sw-label mb-2 text-muted">{ch.label}</p>
                 <p className="text-foreground">{ch.value}</p>
-              </a>
+              </TrackedLink>
             ))}
           </div>
 

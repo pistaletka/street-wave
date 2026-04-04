@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Product } from "@/types/product";
+import { reachGoal } from "@/lib/analytics";
+import { GOALS } from "@/lib/goals";
 import CategoryFilter from "@/components/shop/CategoryFilter";
 import ProductCard from "@/components/shop/ProductCard";
 
@@ -12,6 +14,8 @@ interface ShopPageClientProps {
 
 export default function ShopPageClient({ products, shopContent }: ShopPageClientProps) {
   const [category, setCategory] = useState("all");
+
+  useEffect(() => { reachGoal(GOALS.VISIT_SHOP); }, []);
 
   const filtered =
     category === "all"
@@ -24,7 +28,7 @@ export default function ShopPageClient({ products, shopContent }: ShopPageClient
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/shop-banner.jpg"
-          alt="streetwave® — магазин"
+          alt="streetwave® - магазин"
           className="w-full h-auto object-cover"
           style={{ marginTop: "-10%", marginBottom: "-10%" }}
         />

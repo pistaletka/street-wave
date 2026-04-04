@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Заявка отправлена — streetwave®",
+  title: "Заявка отправлена - streetwave®",
 };
 
 export default function PlaceOrderSuccessPage() {

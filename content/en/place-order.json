@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Personal Custom — streetwave®",
+    "title": "Personal Custom - streetwave®",
     "description": "Order unique customization for sneakers, apparel, or art objects. Tariffs starting at $100."
   },
   "hero": {
     "badge": "Personal Custom",
     "title": "Custom That Expresses You",
-    "subtitle": "Sneakers, apparel, accessories, and art objects — made to order, designed around your idea, and finished by hand."
+    "subtitle": "Sneakers, apparel, accessories, and art objects - made to order, designed around your idea, and finished by hand."
   },
   "formTitle": "Submit a Request",
   "contactTitle": "Contact Us",
@@ -58,7 +58,7 @@
         "format": "Signature art object"
       }
     ],
-    "disclaimer": "Final pricing depends on the complexity, materials, and base item. Design rights remain with the studio. All work is done by hand — minor variations from the sketch are possible."
+    "disclaimer": "Final pricing depends on the complexity, materials, and base item. Design rights remain with the studio. All work is done by hand - minor variations from the sketch are possible."
   },
   "process": {
     "badge": "How It Works",
@@ -66,7 +66,7 @@
     "steps": [
       { "step": "01", "title": "Brief", "desc": "You describe your idea and share references. We define the scope and timeline." },
       { "step": "02", "title": "Sketch", "desc": "We create a detailed visual mockup for your approval." },
-      { "step": "03", "title": "Payment", "desc": "Once the sketch is approved — 50% upfront payment, and we begin production." },
+      { "step": "03", "title": "Payment", "desc": "Once the sketch is approved - 50% upfront payment, and we begin production." },
       { "step": "04", "title": "Production", "desc": "Handcrafted by our artists using premium materials." },
       { "step": "05", "title": "Delivery", "desc": "Quality control, packaging, and worldwide shipping." }
     ]

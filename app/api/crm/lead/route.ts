@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { createLead, type LeadSource } from "@/lib/amocrm";
 import { notifyOwner, confirmToClient } from "@/lib/whatcrm";
+import { confirmByEmail } from "@/lib/email";
 
 const VALID_SOURCES: LeadSource[] = [
   "place-order",
@@ -13,10 +15,10 @@ const VALID_SOURCES: LeadSource[] = [
 ];
 
 export async function POST(request: Request) {
-  console.log("ENV_CHECK subdomain:", process.env.AMOCRM_SUBDOMAIN);
-  console.log("ENV_CHECK token length:", process.env.AMOCRM_TOKEN?.length);
-  console.log("ENV_CHECK token first 20:", process.env.AMOCRM_TOKEN?.slice(0, 20));
   try {
+    const cookieStore = await cookies();
+    const locale = cookieStore.get("sw-locale")?.value || "ru";
+
     const body = await request.json();
     const { name, phone, email, source, leadName, price, note, customFields, tracking } = body;
 
@@ -46,9 +48,10 @@ export async function POST(request: Request) {
       tracking,
     });
 
-    // Fire-and-forget: send WhatCRM notifications (don't block response)
+    // Fire-and-forget: send notifications (don't block response)
     notifyOwner({ source, name, phone, email, leadName, note }).catch(() => {});
     confirmToClient(phone).catch(() => {});
+    if (email) confirmByEmail({ to: email, name, source, locale }).catch(() => {});
 
     return NextResponse.json({ success: true, leadId });
   } catch (err) {

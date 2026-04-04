@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Ошибка оплаты — streetwave®",
+  title: "Ошибка оплаты - streetwave®",
 };
 
 export default function PaymentFailPage() {

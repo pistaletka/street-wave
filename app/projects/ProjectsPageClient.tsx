@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { reachGoal } from "@/lib/analytics";
+import { GOALS } from "@/lib/goals";
 import SectionHeader from "../../components/shared/SectionHeader";
 import PlaceholderImage from "../../components/shared/PlaceholderImage";
 import ModalForm from "../../components/shared/ModalForm";
@@ -15,6 +17,8 @@ interface ProjectsPageClientProps {
 export default function ProjectsPageClient({ projectsContent, casesIndex }: ProjectsPageClientProps) {
   const [modalOpen, setModalOpen] = useState(false);
 
+  useEffect(() => { reachGoal(GOALS.VISIT_PROJECTS); }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero + Banner */}
@@ -22,7 +26,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
         <div className="relative">
           <Image
             src="/banner_desktop.jpg"
-            alt="Кастомизированные кроссовки Puma — streetwave x бренд-проект"
+            alt="Кастомизированные кроссовки Puma - streetwave x бренд-проект"
             width={1920}
             height={540}
             className="h-[180px] w-full object-cover object-[center_70%] sm:h-[220px] md:h-[260px]"
@@ -38,7 +42,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
               {projectsContent.hero.subtitle}
             </p>
             <button
-              onClick={() => setModalOpen(true)}
+              onClick={() => { reachGoal(GOALS.OPEN_MODAL_PROJECT); setModalOpen(true); }}
               className="sw-btn mt-6 inline-flex h-10 items-center justify-center border border-accent bg-accent px-8 text-sm text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
             >
               {projectsContent.hero?.ctaButton || "Обсудить проект"}
@@ -68,7 +72,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
             title={projectsContent.cases.title}
           />
 
-          {/* Featured case — No Concept */}
+          {/* Featured case - No Concept */}
           {casesIndex.cases
             .filter((c: any) => c.category === "brand" && c.featured)
             .map((c: any) => (
@@ -94,7 +98,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
                     <p className="sw-label mb-2 text-accent">{projectsContent.cases?.featuredLabel || "Флагманский проект"}</p>
                     <h3 className="sw-h2 mb-4 text-2xl sm:text-3xl">{c.title}</h3>
                     <p className="mb-2 text-xs text-muted">
-                      {c.client} — {c.year}
+                      {c.client} - {c.year}
                     </p>
                     <p className="sw-body-sm text-text-secondary">
                       {c.shortDesc}
@@ -138,7 +142,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
                   <div className="mt-4">
                     <h3 className="sw-h3 text-sm">{c.title}</h3>
                     <p className="mt-1 text-xs text-muted">
-                      {c.client} — {c.year}
+                      {c.client} - {c.year}
                     </p>
                     <p className="mt-2 text-xs leading-relaxed text-text-secondary">
                       {c.shortDesc}
@@ -177,7 +181,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
           <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{projectsContent.cta.title}</h2>
           <p className="mb-10 sw-body text-text-secondary">{projectsContent.cta.subtitle}</p>
           <button
-            onClick={() => setModalOpen(true)}
+            onClick={() => { reachGoal(GOALS.OPEN_MODAL_PROJECT); setModalOpen(true); }}
             className="sw-btn inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
           >
             {projectsContent.hero?.ctaButton || "Обсудить проект"}
