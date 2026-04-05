@@ -13,6 +13,7 @@
     { "label": "WhatsApp", "value": "+7 906 768 1204", "href": "https://wa.me/79067681204" },
     { "label": "Email", "value": "order@street-wave.com", "href": "mailto:order@street-wave.com" }
   ],
+  "formTitle": "Отправить сообщение",
   "address": {
     "label": "Студия",
     "value": "Москва, Россия, ул. Авиационная, 67/1",

@@ -1,10 +1,14 @@
 "use client";
 
+import { useLocale } from "next-intl";
+
 interface TariffSelectButtonProps {
   tariffValue: string;
 }
 
 export default function TariffSelectButton({ tariffValue }: TariffSelectButtonProps) {
+  const locale = useLocale();
+
   const handleClick = () => {
     const select = document.getElementById("po-tariff") as HTMLSelectElement | null;
     if (select) {
@@ -20,7 +24,7 @@ export default function TariffSelectButton({ tariffValue }: TariffSelectButtonPr
       onClick={handleClick}
       className="mt-6 sw-btn h-10 w-full border border-accent text-accent text-sm tracking-wide uppercase transition-colors hover:bg-accent hover:text-accent-foreground"
     >
-      Выбрать
+      {locale === "ru" ? "Выбрать" : "Select"}
     </button>
   );
 }

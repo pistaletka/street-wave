@@ -63,23 +63,23 @@ export default function Navbar() {
         <div className="flex items-center gap-3 md:hidden">
           <LanguageSwitcher />
           <button
-            className="flex flex-col gap-1.5"
+            className="relative h-6 w-6"
             aria-label="Menu"
             onClick={() => setMobileMenu(!mobileMenu)}
           >
             <span
-              className={`block h-px w-6 bg-foreground transition-transform ${
-                mobileMenu ? "translate-y-[3.5px] rotate-45" : ""
+              className={`absolute left-0 block h-0.5 w-6 bg-foreground transition-all duration-300 ${
+                mobileMenu ? "top-[11px] rotate-45" : "top-1"
               }`}
             />
             <span
-              className={`block h-px w-6 bg-foreground transition-opacity ${
-                mobileMenu ? "opacity-0" : ""
+              className={`absolute left-0 top-[11px] block h-0.5 w-6 bg-foreground transition-all duration-300 ${
+                mobileMenu ? "opacity-0" : "opacity-100"
               }`}
             />
             <span
-              className={`block h-px w-6 bg-foreground transition-transform ${
-                mobileMenu ? "-translate-y-[3.5px] -rotate-45" : ""
+              className={`absolute left-0 block h-0.5 w-6 bg-foreground transition-all duration-300 ${
+                mobileMenu ? "top-[11px] -rotate-45" : "top-[18px]"
               }`}
             />
           </button>

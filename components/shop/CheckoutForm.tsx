@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
-import { useMessages } from "next-intl";
+import { useMessages, useLocale } from "next-intl";
 import LegalConsent from "../shared/LegalConsent";
 import MarketingConsent from "../shared/MarketingConsent";
 import { reachGoal } from "@/lib/analytics";
@@ -19,6 +19,8 @@ const textareaClass =
 export default function CheckoutForm() {
   const messages = useMessages();
   const checkoutContent = messages.checkout as any;
+  const locale = useLocale();
+  const isRu = locale === "ru";
   const { items, total } = useCart();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -75,7 +77,7 @@ export default function CheckoutForm() {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error || "Ошибка при создании заказа");
+        setError(data.error || (isRu ? "Ошибка при создании заказа" : "Failed to create order"));
         setLoading(false);
         return;
       }
@@ -85,7 +87,7 @@ export default function CheckoutForm() {
         window.location.href = data.paymentUrl;
       }
     } catch {
-      setError("Ошибка сети. Попробуйте ещё раз.");
+      setError(isRu ? "Ошибка сети. Попробуйте ещё раз." : "Network error. Please try again.");
       setLoading(false);
     }
   }
@@ -99,7 +101,7 @@ export default function CheckoutForm() {
       <div className="flex flex-col gap-2">
         <label htmlFor="ch-phone" className={labelClass}>{f.phone.label}</label>
         <input id="ch-phone" name="phone" type="tel" required placeholder={f.phone.placeholder} className={inputClass} />
-        {phoneError && <p className="sw-caption text-red-400 mt-1">Введите корректный номер телефона</p>}
+        {phoneError && <p className="sw-caption text-red-400 mt-1">{isRu ? "Введите корректный номер телефона" : "Enter a valid phone number"}</p>}
       </div>
       <div className="flex flex-col gap-2">
         <label htmlFor="ch-email" className={labelClass}>{f.email.label}</label>
@@ -131,7 +133,7 @@ export default function CheckoutForm() {
           disabled={loading || items.length === 0}
           className="sw-btn h-12 w-full border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent disabled:opacity-50 disabled:cursor-not-allowed sm:w-auto"
         >
-          {loading ? "Создаём заказ..." : checkoutContent.submit}
+          {loading ? (isRu ? "Создаём заказ..." : "Creating order...") : checkoutContent.submit}
         </button>
       </div>
     </form>

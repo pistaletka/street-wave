@@ -12,6 +12,7 @@
     { "label": "Telegram", "value": "@streetwaveart", "href": "https://t.me/streetwaveart" },
     { "label": "Email", "value": "order@street-wave.com", "href": "mailto:order@street-wave.com" }
   ],
+  "formTitle": "Send a Message",
   "address": {
     "label": "Studio",
     "value": "Moscow, Russia, Aviatsionnaya St. 67/1",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeader from "../../components/shared/SectionHeader";
+import GalleryWithLightbox from "../../components/shared/GalleryWithLightbox";
 import { getContent } from "../../lib/getContent";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -25,18 +26,36 @@ export default async function ArtPage() {
       {/* Hero Banner */}
       <section className="relative">
         <div className="relative mx-auto max-w-7xl overflow-hidden">
-          <picture>
-            <source media="(max-width: 639px)" srcSet="/art/mobile.png" />
-            <source media="(max-width: 1023px)" srcSet="/art/tablet.png" />
-            <Image
-              src="/art/desktop.png"
-              alt={content.hero.title}
-              width={1920}
-              height={540}
-              className="h-auto w-full object-cover"
-              priority
-            />
-          </picture>
+          {/* Mobile */}
+          <Image
+            src="/art/mobile.png"
+            alt={content.hero.title}
+            width={1560}
+            height={3376}
+            className="h-auto w-full object-cover sm:hidden"
+            sizes="100vw"
+            priority
+          />
+          {/* Tablet */}
+          <Image
+            src="/art/tablet.png"
+            alt={content.hero.title}
+            width={1920}
+            height={1440}
+            className="hidden h-auto w-full object-cover sm:block lg:hidden"
+            sizes="100vw"
+            priority
+          />
+          {/* Desktop */}
+          <Image
+            src="/art/desktop.png"
+            alt={content.hero.title}
+            width={1920}
+            height={400}
+            className="hidden h-auto w-full object-cover lg:block"
+            sizes="100vw"
+            priority
+          />
           <div className="absolute inset-0 bg-black/40" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
             <p className="sw-label mb-6 text-accent">{content.hero.badge}</p>
@@ -121,24 +140,12 @@ export default async function ArtPage() {
             badge={content.gallery.badge}
             title={content.gallery.interiorsTitle}
           />
-          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
-            {Array.from({ length: 10 }).map((_, i) => {
-              const ext = i === 2 ? "jpeg" : "jpg";
-              return (
-                <div key={i} className="group">
-                  <div className="relative aspect-[4/5] overflow-hidden bg-surface border border-border transition-colors group-hover:border-accent">
-                    <Image
-                      src={`/art/interiors/${i + 1}.${ext}`}
-                      alt={`Картина в интерьере ${i + 1}`}
-                      fill
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <GalleryWithLightbox
+            images={Array.from({ length: 10 }, (_, i) =>
+              `/art/interiors/${i + 1}.${i === 2 ? "jpeg" : "jpg"}`
+            )}
+            title="Картины в интерьере"
+          />
         </div>
       </section>
 

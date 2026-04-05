@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { getLocale } from "next-intl/server";
 import { getLocaleCasesIndex, getLocaleCase } from "../../../lib/getContent";
+import GalleryWithLightbox from "../../../components/shared/GalleryWithLightbox";
 import PlaceholderImage from "../../../components/shared/PlaceholderImage";
 import SectionHeader from "../../../components/shared/SectionHeader";
 import EventCaseCta from "./EventCaseCta";
@@ -46,6 +48,9 @@ export default async function EventCasePage({ params }: Props) {
     notFound();
   }
 
+  const locale = await getLocale();
+  const isRu = locale === "ru";
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
@@ -55,7 +60,7 @@ export default async function EventCasePage({ params }: Props) {
             href="/live-customization"
             className="sw-label mb-8 inline-flex items-center gap-2 text-text-secondary transition-colors hover:text-foreground"
           >
-            &larr; Все ивенты
+            &larr; {isRu ? "Все ивенты" : "All Events"}
           </Link>
           <p className="sw-label mb-2 text-accent">
             {caseData.client} - {caseData.year}
@@ -88,25 +93,13 @@ export default async function EventCasePage({ params }: Props) {
         </section>
       )}
 
-      {/* Gallery - 8 photos, 4 columns x 2 rows */}
+      {/* Gallery */}
       <section className="px-6 pb-6">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-4 grid-cols-3 lg:grid-cols-6">
-            {caseData.gallery.map((item: string | null, i: number) =>
-              item ? (
-                <div key={i} className="relative" style={{ aspectRatio: "4/5" }}>
-                  <Image
-                    src={item}
-                    alt={`${caseData.title} - фото ${i + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ) : (
-                <PlaceholderImage key={i} aspectRatio="4/5" />
-              )
-            )}
-          </div>
+          <GalleryWithLightbox
+            images={caseData.gallery}
+            title={caseData.title}
+          />
         </div>
       </section>
 
@@ -114,7 +107,7 @@ export default async function EventCasePage({ params }: Props) {
       {caseData.details && (
         <section className="px-6 pb-6">
           <div className="mx-auto max-w-3xl">
-            <SectionHeader badge="Детали" title="Об ивенте" />
+            <SectionHeader badge={isRu ? "Детали" : "Details"} title={isRu ? "Об ивенте" : "About the Event"} />
             <div className="space-y-8">
               <div>
                 <h3 className="sw-h3 mb-3 text-sm">Задача</h3>

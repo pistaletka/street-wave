@@ -90,9 +90,6 @@
 }
 
 /* ── Base ── */
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   background: var(--background);

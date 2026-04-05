@@ -45,7 +45,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
               onClick={() => { reachGoal(GOALS.OPEN_MODAL_PROJECT); setModalOpen(true); }}
               className="sw-btn mt-6 inline-flex h-10 items-center justify-center border border-accent bg-accent px-8 text-sm text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
             >
-              {projectsContent.hero?.ctaButton || "Обсудить проект"}
+              {projectsContent.hero?.ctaButton || "Discuss a Project"}
             </button>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
                     <PlaceholderImage aspectRatio="16/10" />
                   )}
                   <div className="flex flex-col justify-center p-8 md:p-12">
-                    <p className="sw-label mb-2 text-accent">{projectsContent.cases?.featuredLabel || "Флагманский проект"}</p>
+                    <p className="sw-label mb-2 text-accent">{projectsContent.cases?.featuredLabel || "Flagship Project"}</p>
                     <h3 className="sw-h2 mb-4 text-2xl sm:text-3xl">{c.title}</h3>
                     <p className="mb-2 text-xs text-muted">
                       {c.client} - {c.year}
@@ -105,7 +105,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
                       {c.shortDesc}
                     </p>
                     <span className="mt-6 inline-flex items-center gap-1 text-xs uppercase tracking-widest text-accent opacity-70 transition-opacity group-hover:opacity-100">
-                      {projectsContent.cases?.viewLabel || "Смотреть"} &rarr;
+                      {projectsContent.cases?.viewLabel || "View"} &rarr;
                     </span>
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
                     )}
                     <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors group-hover:bg-black/40">
                       <span className="text-xs uppercase tracking-widest text-white opacity-0 transition-opacity group-hover:opacity-100">
-                        {projectsContent.cases?.viewLabel || "Смотреть"} &rarr;
+                        {projectsContent.cases?.viewLabel || "View"} &rarr;
                       </span>
                     </div>
                   </div>
@@ -186,7 +186,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
             onClick={() => { reachGoal(GOALS.OPEN_MODAL_PROJECT); setModalOpen(true); }}
             className="sw-btn inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
           >
-            {projectsContent.hero?.ctaButton || "Обсудить проект"}
+            {projectsContent.hero?.ctaButton || "Discuss a Project"}
           </button>
         </div>
       </section>
@@ -195,7 +195,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         variant="brand-project"
-        title={projectsContent.hero?.ctaButton || "Обсудить проект"}
+        title={projectsContent.hero?.ctaButton || "Discuss a Project"}
       />
     </div>
   );

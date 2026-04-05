@@ -73,7 +73,7 @@ export default async function ContactsPage() {
           )}
 
           {/* Form */}
-          <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">Отправить сообщение</h2>
+          <h2 className="sw-h2 mb-8 text-2xl sm:text-3xl">{content.formTitle}</h2>
           <ContactForm variant="general" />
         </div>
       </section>

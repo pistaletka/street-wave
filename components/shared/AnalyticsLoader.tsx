@@ -57,12 +57,7 @@ export default function AnalyticsLoader() {
    * ANALYTICS
    * ═══════════════════════════════════════════════════════════ */
   useEffect(() => {
-    console.log("analytics preferences:", preferences);
-    console.log("YM_ID:", YM_ID);
-    console.log("isRuDomain:", isRuDomain());
-
     if (!preferences?.analytics) {
-      console.log("Metrika not loaded: analytics consent is false");
       return;
     }
 

@@ -113,13 +113,13 @@ export default async function Home() {
             {content.clients.logos.map((logo: { name: string; src: string }) => (
               <div
                 key={logo.name}
-                className="flex h-20 items-center justify-center border border-border bg-surface px-5"
+                className="flex h-20 items-center justify-center border border-border bg-surface px-3 overflow-hidden"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={logo.src}
                   alt={logo.name}
-                  className="h-6 w-auto max-w-[120px] object-contain opacity-60 transition-opacity hover:opacity-100"
+                  className="h-6 w-full max-w-[120px] object-contain opacity-60 transition-opacity hover:opacity-100"
                 />
               </div>
             ))}

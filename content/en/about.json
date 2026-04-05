@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "About Street Wave Art Customization Studio",
+    "description": "Street Wave art customization studio since 2014. Working at the intersection of art, design, and handcraft. Moscow, worldwide shipping.",
+    "ogTitle": "About Us - streetwave®",
+    "ogDescription": "Art customization studio since 2014. Art, design, handcraft."
+  },
+  "hero": {
+    "badge": "About the Studio",
+    "title": "STREET WAVE",
+    "subtitle": "Art customization studio.\nWorking at the intersection of art, design, and handcraft."
+  },
+  "intro": "Street Wave is the first art customization studio in Russia, bringing together talented artists. Since November 2014, the SW team has been creating unique art on apparel, footwear, and accessories.",
+  "about": {
+    "paragraphs": [
+      "We work with form, silhouette, and surface, transforming items into wearable art objects. From individual orders to limited series for brands - every project is handcrafted and exists as a unique visual piece.",
+      "Street Wave is a studio where street culture, design, and artistic thinking converge. We create concepts and transform mass-market into real art products.",
+      "We interpret, create, and shape our own visual language."
+    ]
+  },
+  "teamTitle": "Team",
+  "team": [
+    {
+      "name": "Galya Pistaletka",
+      "role": "Founder and art director of Street Wave. Responsible for project concepts, visual strategy, and studio development. Works with brands and shapes the artistic direction.",
+      "photo": "/team-galya.jpg"
+    },
+    {
+      "name": "Sergey StereoBoogie",
+      "role": "Artist and custom specialist. Works with hand-painting, textures, and experimental techniques. Participates in developing limited series.",
+      "photo": "/team-sergey.jpg"
+    },
+    {
+      "name": "Inna TechnoPunkQueen",
+      "role": "Designer and customization technology specialist. Works with 3D elements, prints, and constructive solutions.",
+      "photo": "/team-inna.jpg"
+    },
+    {
+      "name": "Nastya Bescry",
+      "role": "Designer and visual architect. Responsible for graphics, identity, and adapting concepts into products."
+    }
+  ],
+  "directionsTitle": "Our Directions",
+  "directions": [
+    {
+      "title": "Personal Customization",
+      "desc": "Individual orders for footwear, apparel, and accessory customization. Each project is crafted to a specific brief.",
+      "href": "/place-order",
+      "bg": "/dir-personal.png"
+    },
+    {
+      "title": "Limited Collections & Art Projects",
+      "desc": "Art-update collections, limited drops, and custom series for brands and concept stores.",
+      "href": "/projects"
+    },
+    {
+      "title": "Brand Art Activation / Live Customization",
+      "desc": "Live customization at events, pop-up spaces, and stores. Brand activations and event formats.",
+      "href": "/live-customization"
+    },
+    {
+      "title": "Art & Objects",
+      "desc": "Paintings, art objects, and collectible works.",
+      "href": "/art"
+    }
+  ],
+  "techTitle": "Technologies & Methods",
+  "technologies": [
+    "hand-painting",
+    "screen printing",
+    "heat transfers",
+    "3D modeling and printing",
+    "embroidery, patches, and textile inserts",
+    "custom elements and structural details"
+  ],
+  "processTitle": "Our Process",
+  "processSteps": [
+    { "step": "01", "title": "Idea" },
+    { "step": "02", "title": "Concept" },
+    { "step": "03", "title": "Customization" },
+    { "step": "04", "title": "Final Result" }
+  ],
+  "processText": "We start by discussing the brief and forming a project concept. Then we develop the visual direction and technical solution. After approval, Street Wave artists and craftsmen handcraft the project. Every object passes quality control and is created within the approved concept.",
+  "clientsTitle": "Trusted By",
+  "clientsDesc": "We've worked with brands in fashion, retail, and lifestyle segments, creating custom products and art projects.",
+  "clients": ["New Concept", "Yandex Market", "Dolce & Gabbana", "Pinko", "Superstep", "Reebok × artists"],
+  "formTitle": "Send a Message"
+}

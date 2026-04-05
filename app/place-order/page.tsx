@@ -33,18 +33,36 @@ export default async function PlaceOrderPage() {
       <section className="relative overflow-hidden">
         {/* Banner */}
         <div className="relative">
-          <picture>
-            <source media="(max-width: 639px)" srcSet="/custom-banner-mobile.png" />
-            <source media="(max-width: 1023px)" srcSet="/custom-banner-tablet.png" />
-            <Image
-              src="/custom-banner-desktop.png"
-              alt="Кастомизированные кроссовки - примеры работ streetwave"
-              width={1920}
-              height={360}
-              className="h-[210px] w-full object-cover sm:h-[265px] md:h-[320px]"
-              priority
-            />
-          </picture>
+          {/* Mobile */}
+          <Image
+            src="/custom-banner-mobile.png"
+            alt="Custom sneakers by streetwave"
+            width={1560}
+            height={3376}
+            className="h-[210px] w-full object-cover sm:hidden"
+            sizes="100vw"
+            priority
+          />
+          {/* Tablet */}
+          <Image
+            src="/custom-banner-tablet.png"
+            alt="Custom sneakers by streetwave"
+            width={1920}
+            height={1440}
+            className="hidden h-[265px] w-full object-cover sm:block md:hidden"
+            sizes="100vw"
+            priority
+          />
+          {/* Desktop */}
+          <Image
+            src="/custom-banner-desktop.png"
+            alt="Custom sneakers by streetwave"
+            width={1920}
+            height={1080}
+            className="hidden h-[320px] w-full object-cover md:block"
+            sizes="100vw"
+            priority
+          />
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
             <p className="sw-label mb-4 text-accent">{content.hero.badge}</p>

@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
+import { useLocale } from "next-intl";
 import { reachGoal } from "@/lib/analytics";
 import { GOALS } from "@/lib/goals";
 import CheckoutForm from "@/components/shop/CheckoutForm";
@@ -10,6 +11,8 @@ import OrderSummary from "@/components/shop/OrderSummary";
 
 export default function CheckoutPage() {
   const { count } = useCart();
+  const locale = useLocale();
+  const isRu = locale === "ru";
 
   useEffect(() => {
     if (count > 0) reachGoal(GOALS.CHECKOUT_START);
@@ -22,19 +25,19 @@ export default function CheckoutPage() {
           href="/cart"
           className="sw-label mb-8 inline-block text-muted transition-colors hover:text-foreground"
         >
-          &larr; Назад в корзину
+          &larr; {isRu ? "Назад в корзину" : "Back to cart"}
         </Link>
 
-        <h1 className="sw-h1 mb-12 text-3xl sm:text-4xl">Оформление заказа</h1>
+        <h1 className="sw-h1 mb-12 text-3xl sm:text-4xl">{isRu ? "Оформление заказа" : "Checkout"}</h1>
 
         {count === 0 ? (
           <div className="py-20 text-center">
-            <p className="sw-body text-muted mb-6">Корзина пуста - нечего оформлять</p>
+            <p className="sw-body text-muted mb-6">{isRu ? "Корзина пуста - нечего оформлять" : "Cart is empty"}</p>
             <Link
               href="/shop"
               className="sw-btn inline-block h-12 border border-accent bg-accent px-8 leading-[48px] text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
             >
-              В магазин
+              {isRu ? "В магазин" : "To Shop"}
             </Link>
           </div>
         ) : (
