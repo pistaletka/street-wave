@@ -188,20 +188,30 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* 8. Clients */}
+      {/* 8. Experience */}
       <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            title={content.clientsTitle}
-            description={content.clientsDesc}
+            title={content.experienceTitle}
+            description={content.experienceDesc}
           />
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
-            {content.clients.map((client: string) => (
-              <div
-                key={client}
-                className="flex h-24 items-center justify-center border border-border bg-surface sw-body-sm text-text-secondary text-center px-4"
-              >
-                {client}
+          <div className="space-y-12">
+            {content.experienceGroups.map((group: any) => (
+              <div key={group.title}>
+                <h3 className="sw-h3 text-lg mb-2">{group.title}</h3>
+                <p className="sw-body-sm text-text-secondary mb-6 max-w-3xl">
+                  {group.description}
+                </p>
+                <div className="grid grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-3">
+                  {group.items.map((item: string) => (
+                    <div
+                      key={item}
+                      className="flex min-h-[80px] items-center justify-center border border-border bg-surface sw-body-sm text-text-secondary text-center px-4 py-3"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
