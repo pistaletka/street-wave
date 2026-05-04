@@ -1,17 +1,29 @@
-export default function OrganizationJsonLd() {
+import { getLocale } from "next-intl/server";
+
+const ORG_BASE_URL = "https://street-wave.ru";
+
+export default async function OrganizationJsonLd() {
+  const locale = await getLocale();
+  const isRu = locale === "ru";
+
+  const siteUrl = isRu ? "https://street-wave.ru" : "https://street-wave.com";
+
+  const description = isRu
+    ? "Студия арт-кастомизации кроссовок, одежды и арт-объектов. Персональные проекты и лимитированные коллекции для брендов с 2014 года."
+    : "Art customization studio for sneakers, apparel and art objects. Personal projects and limited collections for brands. Est. 2014.";
+
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": ["Organization", "LocalBusiness"],
-        "@id": "https://streetwave-site.vercel.app/#organization",
+        "@id": `${ORG_BASE_URL}/#organization`,
         name: "streetwave®",
         alternateName: "STREET WAVE",
-        url: "https://streetwave-site.vercel.app",
-        logo: "https://streetwave-site.vercel.app/logo.svg",
-        image: "https://streetwave-site.vercel.app/og-image.png",
-        description:
-          "Студия арт-кастомизации кроссовок, одежды и арт-объектов. Персональные проекты и лимитированные коллекции для брендов с 2014 года.",
+        url: ORG_BASE_URL,
+        logo: `${ORG_BASE_URL}/logo.svg`,
+        image: `${ORG_BASE_URL}/og-image.jpg`,
+        description,
         foundingDate: "2014",
         address: {
           "@type": "PostalAddress",
@@ -24,13 +36,13 @@ export default function OrganizationJsonLd() {
         ],
         contactPoint: {
           "@type": "ContactPoint",
-          email: "hello@streetwave.studio",
+          email: "order@street-wave.com",
           contactType: "customer service",
           availableLanguage: ["Russian", "English"],
         },
         sameAs: [
-          "https://t.me/streetwave",
-          "https://www.instagram.com/street_wave",
+          "https://t.me/streetwavecustom",
+          "https://www.instagram.com/streetwave.studio",
         ],
         knowsAbout: [
           "кастомизация кроссовок",
@@ -92,13 +104,13 @@ export default function OrganizationJsonLd() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://streetwave-site.vercel.app/#website",
-        url: "https://streetwave-site.vercel.app",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
         name: "streetwave®",
         publisher: {
-          "@id": "https://streetwave-site.vercel.app/#organization",
+          "@id": `${ORG_BASE_URL}/#organization`,
         },
-        inLanguage: "ru",
+        inLanguage: isRu ? "ru" : "en",
       },
     ],
   };

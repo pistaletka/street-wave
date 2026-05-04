@@ -36,7 +36,6 @@ export function useFormSubmit(): UseFormSubmitReturn {
     try {
       const trackingPayload = await buildFormTrackingPayload(params.source);
       const payload = { ...params, tracking: trackingPayload };
-      console.log("FORM_SUBMIT_PAYLOAD", payload);
 
       const res = await fetch("/api/crm/lead", {
         method: "POST",
@@ -51,7 +50,6 @@ export function useFormSubmit(): UseFormSubmitReturn {
         return false;
       }
 
-      console.log("FORM_SUBMIT_SUCCESS", params.source);
       setSuccess(true);
       setLoading(false);
       return true;
