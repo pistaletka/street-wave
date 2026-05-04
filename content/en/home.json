@@ -14,7 +14,7 @@
   "about": {
     "badge": "About the Studio",
     "title": "We are Street Wave.",
-    "text": "An art customization studio working with apparel, footwear, accessories, and spaces.\n\nWe create original projects for brands, events, and private clients - from one-of-a-kind pieces to limited-edition runs.\n\nFor us, every object is a surface for an idea, an image, and a new visual meaning.\n\nWe blend contemporary art, street culture, and personalization, turning everyday items into artistic statements.",
+    "text": "An art customization studio working with apparel, footwear, accessories, and spaces.\n\nWe create original projects for brands, events, and private clients - from one-of-a-kind pieces to limited-edition runs.",
     "cta": { "label": "About Us", "href": "/about" }
   },
   "directions": {
@@ -25,25 +25,25 @@
         "title": "Personal Custom",
         "desc": "Sneakers, apparel, accessories, and art objects - unique work tailored to your vision.",
         "href": "/place-order",
-        "image": "/1-кастом.png"
+        "image": "/dir-custom.jpg"
       },
       {
         "title": "Brand Projects",
         "desc": "Limited-edition collections, collaborations, and branded custom work.",
         "href": "/projects",
-        "image": "/2-проект.png"
+        "image": "/dir-brand.jpg"
       },
       {
         "title": "Live Customization",
         "desc": "On-site customization at your event - a WOW factor for your audience.",
         "href": "/live-customization",
-        "image": "/3-ивент.png"
+        "image": "/dir-event.jpg"
       },
       {
         "title": "Art / Paintings",
         "desc": "Original paintings and art objects. Street aesthetics on canvas.",
         "href": "/art",
-        "image": "/4-картина.png"
+        "image": "/dir-art.jpg"
       }
     ]
   },
