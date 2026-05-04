@@ -46,12 +46,12 @@ export default async function PlaceOrderPage() {
             />
           </picture>
           <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <p className="sw-label mb-4 text-accent">{content.hero.badge}</p>
+          <div className="absolute inset-0 flex flex-col items-center justify-start sm:justify-center pt-6 sm:pt-0 px-6 text-center">
+            <p className="sw-label !text-[10px] sm:!text-xs mb-2 sm:mb-4 text-accent">{content.hero.badge}</p>
             <h1 className="sw-h1 max-w-3xl text-3xl text-white sm:text-4xl md:text-5xl">
               {content.hero.title}
             </h1>
-            <p className="mt-4 max-w-xl sw-body text-sm text-white/80">
+            <p className="mt-2 sm:mt-4 max-w-xl sw-body !text-xs sm:!text-sm text-white/80">
               {content.hero.subtitle}
             </p>
           </div>
