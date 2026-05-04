@@ -76,6 +76,7 @@
             { "value": "sneakers", "label": "Кроссовки", "enumId": 1027739 },
             { "value": "jacket", "label": "Куртку", "enumId": 1027743 },
             { "value": "bag", "label": "Сумку", "enumId": 1027741 },
+            { "value": "accessory", "label": "Аксессуар", "enumId": 0 },
             { "value": "other", "label": "Другое", "enumId": 1027745 }
           ]
         },

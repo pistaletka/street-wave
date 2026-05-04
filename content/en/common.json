@@ -68,6 +68,7 @@
             { "value": "sneakers", "label": "Sneakers", "enumId": 1027739 },
             { "value": "jacket", "label": "Jacket", "enumId": 1027743 },
             { "value": "bag", "label": "Bag", "enumId": 1027741 },
+            { "value": "accessory", "label": "Accessory", "enumId": 0 },
             { "value": "other", "label": "Other", "enumId": 1027745 }
           ]
         },
