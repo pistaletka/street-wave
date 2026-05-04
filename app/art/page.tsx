@@ -27,9 +27,9 @@ export default async function ArtPage() {
         <div className="relative mx-auto max-w-7xl overflow-hidden">
           <picture>
             <source media="(max-width: 639px)" srcSet="/art/mobile.jpg" />
-            <source media="(max-width: 1023px)" srcSet="/art/tablet.jpg" />
+            <source media="(max-width: 1023px)" srcSet="/art/tablet.png" />
             <Image
-              src="/art/desktop.jpg"
+              src="/art/desktop.png"
               alt={content.hero.title}
               width={1920}
               height={540}
