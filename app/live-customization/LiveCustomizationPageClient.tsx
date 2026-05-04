@@ -24,7 +24,7 @@ export default function LiveCustomizationPageClient({ liveContent, casesIndex }:
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="relative flex min-h-[50vh] flex-col items-center justify-start sm:justify-center pt-6 pb-6 sm:pt-0 sm:pb-0 px-6 text-center overflow-hidden">
+      <section className="relative flex min-h-[50vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
         <Image
           src="/live-hero-events.jpg"
           alt=""
@@ -34,18 +34,18 @@ export default function LiveCustomizationPageClient({ liveContent, casesIndex }:
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex flex-col items-center">
-          <p className="sw-label !text-[10px] sm:!text-xs mb-3 sm:mb-6 text-accent">{liveContent.hero.badge}</p>
+          <p className="sw-label mb-6 text-accent">{liveContent.hero.badge}</p>
           <h1 className="sw-h1 max-w-3xl text-4xl sm:text-5xl md:text-6xl text-white">
             {liveContent.hero.title}
           </h1>
-          <p className="mt-3 sm:mt-6 max-w-2xl sw-body !text-xs sm:!text-base text-white/80">
+          <p className="mt-6 max-w-2xl sw-body text-white/80">
             {liveContent.hero.subtitle.split(". ").map((s: string, i: number, arr: string[]) => (
               <span key={i} className="block">{s}{i < arr.length - 1 ? "." : ""}</span>
             ))}
           </p>
           <button
             onClick={() => { reachGoal(GOALS.OPEN_MODAL_EVENT); setModalOpen(true); }}
-            className="sw-btn mt-4 sm:mt-10 inline-flex h-9 sm:h-12 items-center justify-center border border-accent bg-accent px-5 sm:px-8 text-xs sm:text-base text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
+            className="sw-btn mt-10 inline-flex h-12 items-center justify-center border border-accent bg-accent px-8 text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
           >
             {liveContent.cta?.button || "Обсудить ивент"}
           </button>
