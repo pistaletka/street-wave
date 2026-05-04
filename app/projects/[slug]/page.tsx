@@ -81,7 +81,7 @@ export default async function CasePage({ params }: Props) {
 
       {/* Stats */}
       {caseData.stats && caseData.stats.length > 0 && (
-        <section className="px-6 pb-6">
+        <section className="px-6 py-6">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-6 sm:grid-cols-3">
               {caseData.stats.map((stat: any) => (
@@ -99,7 +99,7 @@ export default async function CasePage({ params }: Props) {
       )}
 
       {/* Gallery */}
-      <section className="px-6 pb-6">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <GalleryWithLightbox
             images={caseData.gallery}
@@ -138,7 +138,7 @@ export default async function CasePage({ params }: Props) {
       )}
 
       {/* CTA */}
-      <section className="px-6 pb-6">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/projects"
