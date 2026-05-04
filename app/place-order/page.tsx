@@ -51,7 +51,7 @@ export default async function PlaceOrderPage() {
             <h1 className="sw-h1 max-w-3xl text-3xl text-white sm:text-4xl md:text-5xl">
               {content.hero.title}
             </h1>
-            <p className="mt-2 sm:mt-4 max-w-xl sw-body !text-xs sm:!text-sm text-white/80">
+            <p className="mt-2 sm:mt-4 max-w-xl sw-body !text-xs sm:!text-sm text-white/80 whitespace-pre-line">
               {content.hero.subtitle}
             </p>
           </div>
