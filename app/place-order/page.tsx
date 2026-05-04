@@ -34,7 +34,7 @@ export default async function PlaceOrderPage() {
         {/* Banner */}
         <div className="relative">
           <picture>
-            <source media="(max-width: 639px)" srcSet="/custom-banner-mobile.png" />
+            <source media="(max-width: 639px)" srcSet="/custom-banner-mobile.jpg" />
             <source media="(max-width: 1023px)" srcSet="/custom-banner-tablet.png" />
             <Image
               src="/custom-banner-desktop.png"
