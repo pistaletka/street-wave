@@ -15,6 +15,8 @@
   ],
   "emptyState": "В этой категории пока нет товаров",
   "soldLabel": "Продано",
+  "backToShop": "← Назад в магазин",
+  "productNotFound": "Товар не найден",
   "comingSoon": {
     "badge": "coming soon",
     "title": "Раздел в разработке",

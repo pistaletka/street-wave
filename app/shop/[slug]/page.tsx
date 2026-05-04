@@ -5,7 +5,13 @@ import type { ProductDetail } from "@/types/product";
 import { formatPrice } from "@/lib/formatPrice";
 import ProductGallery from "@/components/shop/ProductGallery";
 import AddToCartButton from "@/components/shop/AddToCartButton";
-import { getLocaleProductsIndex, getLocaleProduct } from "@/lib/getContent";
+import { getContent, getLocaleProduct } from "@/lib/getContent";
+
+interface ShopContent {
+  categories: { value: string; label: string }[];
+  backToShop: string;
+  productNotFound: string;
+}
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -26,7 +32,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: product.description,
     };
   } catch {
-    return { title: "Товар не найден - streetwave®" };
+    const shopContent = await getContent<ShopContent>("shop");
+    return { title: `${shopContent.productNotFound} - streetwave®` };
   }
 }
 
@@ -39,6 +46,10 @@ export default async function ProductPage({ params }: PageProps) {
     notFound();
   }
 
+  const shopContent = await getContent<ShopContent>("shop");
+  const categoryLabel =
+    shopContent.categories.find((c) => c.value === product.category)?.label ?? product.category;
+
   return (
     <section className="px-6 py-6">
       <div className="mx-auto max-w-7xl">
@@ -46,7 +57,7 @@ export default async function ProductPage({ params }: PageProps) {
           href="/shop"
           className="sw-label mb-8 inline-block text-muted transition-colors hover:text-foreground"
         >
-          &larr; Назад в магазин
+          {shopContent.backToShop}
         </Link>
 
         <div className="grid gap-12 lg:grid-cols-2">
@@ -54,7 +65,7 @@ export default async function ProductPage({ params }: PageProps) {
 
           <div className="flex flex-col gap-6">
             <div>
-              <p className="sw-label mb-2 text-accent">{{"sneakers":"Кроссовки","clothing":"Одежда","accessories":"Аксессуары","art-objects":"Арт-объекты","art":"Арт","certificates":"Сертификаты"}[product.category]}</p>
+              <p className="sw-label mb-2 text-accent">{categoryLabel}</p>
               <h1 className="sw-h1 text-3xl sm:text-4xl">{product.title}</h1>
             </div>
 
