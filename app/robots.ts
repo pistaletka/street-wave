@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/cart", "/checkout", "/payment/"],
       },
     ],
-    sitemap: "https://streetwave-site.vercel.app/sitemap.xml",
+    sitemap: "https://street-wave.ru/sitemap.xml",
   };
 }

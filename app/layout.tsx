@@ -120,6 +120,9 @@ export async function generateMetadata(): Promise<Metadata> {
         "max-snippet": -1,
       },
     },
+    verification: {
+      yandex: "8a15f6c0bcdfb185",
+    },
   };
 }
 

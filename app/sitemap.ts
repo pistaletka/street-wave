@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import casesIndex from "../content/cases/index.json";
 import products from "../content/products/index.json";
 
-const BASE_URL = "https://streetwave-site.vercel.app";
+const BASE_URL = "https://street-wave.ru";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();
