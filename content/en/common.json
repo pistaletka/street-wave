@@ -66,9 +66,8 @@
           "label": "What to customize",
           "options": [
             { "value": "sneakers", "label": "Sneakers", "enumId": 1027739 },
-            { "value": "bag", "label": "Bag", "enumId": 1027741 },
             { "value": "jacket", "label": "Jacket", "enumId": 1027743 },
-            { "value": "painting", "label": "Painting", "enumId": 2146557 },
+            { "value": "bag", "label": "Bag", "enumId": 1027741 },
             { "value": "other", "label": "Other", "enumId": 1027745 }
           ]
         },
