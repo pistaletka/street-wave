@@ -26,10 +26,10 @@ export default async function ArtPage() {
       <section className="relative">
         <div className="relative mx-auto max-w-7xl overflow-hidden">
           <picture>
-            <source media="(max-width: 639px)" srcSet="/art/mobile.png" />
-            <source media="(max-width: 1023px)" srcSet="/art/tablet.png" />
+            <source media="(max-width: 639px)" srcSet="/art/mobile.jpg" />
+            <source media="(max-width: 1023px)" srcSet="/art/tablet.jpg" />
             <Image
-              src="/art/desktop.png"
+              src="/art/desktop.jpg"
               alt={content.hero.title}
               width={1920}
               height={540}
