@@ -5,13 +5,34 @@
     "description": "One-of-a-kind customized items - each piece is unique. Get yours now, no waiting."
   },
   "categories": [
-    { "value": "all", "label": "All" },
-    { "value": "sneakers", "label": "Sneakers" },
-    { "value": "clothing", "label": "Clothing" },
-    { "value": "accessories", "label": "Accessories" },
-    { "value": "art-objects", "label": "Art Objects" },
-    { "value": "art", "label": "Art" },
-    { "value": "certificates", "label": "Gift Cards" }
+    {
+      "value": "all",
+      "label": "All"
+    },
+    {
+      "value": "sneakers",
+      "label": "Sneakers"
+    },
+    {
+      "value": "clothing",
+      "label": "Clothing"
+    },
+    {
+      "value": "accessories",
+      "label": "Accessories"
+    },
+    {
+      "value": "art-objects",
+      "label": "Art Objects"
+    },
+    {
+      "value": "art",
+      "label": "Art"
+    },
+    {
+      "value": "certificates",
+      "label": "Gift Cards"
+    }
   ],
   "emptyState": "No items in this category yet",
   "soldLabel": "Sold",

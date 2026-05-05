@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function AgreementsPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <section className="px-6 py-12">
+      <section className="px-6 py-6">
         <article className="prose-legal mx-auto max-w-3xl">
 
           <h1>ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</h1>

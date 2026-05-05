@@ -1,15 +1,59 @@
 {
   "title": "Checkout",
   "fields": {
-    "name": { "label": "Name", "placeholder": "Your name" },
-    "phone": { "label": "Phone / Telegram", "placeholder": "+1 (___) ___-____ or @handle" },
-    "email": { "label": "Email", "placeholder": "your@email.com" },
-    "address": { "label": "Shipping address", "placeholder": "City, street, building, apartment" },
-    "comment": { "label": "Comment", "placeholder": "Order notes..." }
+    "name": {
+      "label": "Name",
+      "placeholder": "Your name"
+    },
+    "phone": {
+      "label": "Phone",
+      "placeholder": "+7 (___) ___-__-__"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "your@email.com"
+    },
+    "address": {
+      "label": "Delivery address",
+      "placeholder": "City, street, building, apartment"
+    },
+    "comment": {
+      "label": "Comment",
+      "placeholder": "Order notes..."
+    }
   },
   "submit": "Pay",
   "summary": {
     "title": "Your Order",
-    "total": "Total"
+    "total": "Total",
+    "subtotal": "Items",
+    "deliveryLabel": "Delivery"
+  },
+  "delivery": {
+    "label": "Delivery method",
+    "options": [
+      {
+        "value": "pickup",
+        "label": "Pickup",
+        "price": 0,
+        "priceLabel": "Free"
+      },
+      {
+        "value": "moscow",
+        "label": "Moscow",
+        "price": 1000,
+        "priceLabel": "+1 000 ₽"
+      },
+      {
+        "value": "russia",
+        "label": "Moscow region & Russia",
+        "price": 2000,
+        "priceLabel": "+2 000 ₽"
+      }
+    ]
+  },
+  "errors": {
+    "phoneInvalid": "Enter a valid Russian phone (+7 or 8 + 10 digits)",
+    "addressInvalid": "Enter the full delivery address"
   }
 }

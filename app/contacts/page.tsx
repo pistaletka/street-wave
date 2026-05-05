@@ -38,7 +38,7 @@ export default async function ContactsPage() {
       </section>
 
       {/* Channels */}
-      <section className="px-6 pb-6">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl">
           <div className="mb-16 grid gap-6 sm:grid-cols-2">
             {content.channels.map((ch: any) => (

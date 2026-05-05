@@ -34,24 +34,24 @@ export default async function PlaceOrderPage() {
         {/* Banner */}
         <div className="relative">
           <picture>
-            <source media="(max-width: 639px)" srcSet="/custom-banner-mobile.png" />
+            <source media="(max-width: 639px)" srcSet="/custom-banner-mobile.jpg" />
             <source media="(max-width: 1023px)" srcSet="/custom-banner-tablet.png" />
             <Image
               src="/custom-banner-desktop.png"
               alt="Кастомизированные кроссовки - примеры работ streetwave"
               width={1920}
               height={360}
-              className="h-[210px] w-full object-cover sm:h-[265px] md:h-[320px]"
+              className="h-[380px] w-full object-cover sm:h-[265px] md:h-[320px]"
               priority
             />
           </picture>
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <p className="sw-label mb-4 text-accent">{content.hero.badge}</p>
+            <p className="sw-label !text-[10px] sm:!text-xs mb-2 sm:mb-4 text-accent">{content.hero.badge}</p>
             <h1 className="sw-h1 max-w-3xl text-3xl text-white sm:text-4xl md:text-5xl">
               {content.hero.title}
             </h1>
-            <p className="mt-4 max-w-xl sw-body text-sm text-white/80">
+            <p className="mt-2 sm:mt-4 max-w-xl sw-body !text-xs sm:!text-sm text-white/80 whitespace-pre-line">
               {content.hero.subtitle}
             </p>
           </div>
@@ -114,7 +114,7 @@ export default async function PlaceOrderPage() {
       </section>
 
       {/* Process */}
-      <section className="px-6 pt-8 pb-8">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.process.badge} title={content.process.title} />
           <div className="grid gap-px md:grid-cols-5">
@@ -132,7 +132,7 @@ export default async function PlaceOrderPage() {
       </section>
 
       {/* FAQ */}
-      <section className="px-6 pt-8 pb-8">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl">
           <SectionHeader badge={content.faq.badge} title={content.faq.title} />
           <div className="divide-y divide-border">
@@ -147,7 +147,7 @@ export default async function PlaceOrderPage() {
       </section>
 
       {/* Emotional closer + Contact form */}
-      <section className="px-6 pt-8 pb-6">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl">
           <p className="mb-12 text-center text-lg italic text-text-secondary">
             {content.closer.text}

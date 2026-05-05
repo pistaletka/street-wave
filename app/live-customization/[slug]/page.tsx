@@ -71,7 +71,7 @@ export default async function EventCasePage({ params }: Props) {
 
       {/* Stats */}
       {caseData.stats && caseData.stats.length > 0 && (
-        <section className="px-6 pb-6">
+        <section className="px-6 py-6">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-6 sm:grid-cols-3">
               {caseData.stats.map((stat: any) => (
@@ -89,7 +89,7 @@ export default async function EventCasePage({ params }: Props) {
       )}
 
       {/* Gallery - 8 photos, 4 columns x 2 rows */}
-      <section className="px-6 pb-6">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-4 grid-cols-3 lg:grid-cols-6">
             {caseData.gallery.map((item: string | null, i: number) =>
@@ -112,7 +112,7 @@ export default async function EventCasePage({ params }: Props) {
 
       {/* Details */}
       {caseData.details && (
-        <section className="px-6 pb-6">
+        <section className="px-6 py-6">
           <div className="mx-auto max-w-3xl">
             <SectionHeader badge="Детали" title="Об ивенте" />
             <div className="space-y-8">
@@ -140,7 +140,7 @@ export default async function EventCasePage({ params }: Props) {
       )}
 
       {/* CTA */}
-      <section className="px-6 pb-6">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl text-center">
           <EventCaseCta />
         </div>

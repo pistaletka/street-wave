@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useMessages, useLocale } from "next-intl";
+import { useCart } from "@/context/CartContext";
 import CartBadge from "./CartBadge";
 
 function LanguageSwitcher() {
@@ -39,6 +40,7 @@ export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const messages = useMessages();
   const common = messages.common as any;
+  const { count: cartCount } = useCart();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
@@ -63,25 +65,33 @@ export default function Navbar() {
         <div className="flex items-center gap-3 md:hidden">
           <LanguageSwitcher />
           <button
-            className="flex flex-col gap-1.5"
-            aria-label="Menu"
+            className="relative flex h-6 w-6 items-center justify-center"
+            aria-label={mobileMenu ? "Close menu" : "Menu"}
             onClick={() => setMobileMenu(!mobileMenu)}
           >
-            <span
-              className={`block h-px w-6 bg-foreground transition-transform ${
-                mobileMenu ? "translate-y-[3.5px] rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`block h-px w-6 bg-foreground transition-opacity ${
-                mobileMenu ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`block h-px w-6 bg-foreground transition-transform ${
-                mobileMenu ? "-translate-y-[3.5px] -rotate-45" : ""
-              }`}
-            />
+            {mobileMenu ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path d="M4 4 L16 16 M16 4 L4 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+            ) : (
+              <span className="flex flex-col gap-1.5">
+                <span className="block h-px w-6 bg-foreground" />
+                <span className="block h-px w-6 bg-foreground" />
+                <span className="block h-px w-6 bg-foreground" />
+              </span>
+            )}
+            {cartCount > 0 && !mobileMenu && (
+              <span className="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[9px] font-bold text-accent-foreground">
+                {cartCount}
+              </span>
+            )}
           </button>
         </div>
       </div>

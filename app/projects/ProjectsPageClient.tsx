@@ -24,26 +24,30 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
       {/* Hero + Banner */}
       <section className="relative overflow-hidden">
         <div className="relative">
-          <Image
-            src="/banner_desktop.jpg"
-            alt="Кастомизированные кроссовки Puma - streetwave x бренд-проект"
-            width={1920}
-            height={540}
-            className="h-[180px] w-full object-cover object-[center_70%] sm:h-[220px] md:h-[260px]"
-            priority
-          />
+          <picture>
+            <source media="(max-width: 639px)" srcSet="/banner_mobile.jpg" />
+            <source media="(max-width: 1023px)" srcSet="/banner_tablet.jpg" />
+            <Image
+              src="/banner_desktop.jpg"
+              alt="Кастомизированные кроссовки Puma - streetwave x бренд-проект"
+              width={1920}
+              height={540}
+              className="h-[380px] w-full object-cover object-[center_70%] sm:h-[220px] md:h-[260px]"
+              priority
+            />
+          </picture>
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <p className="sw-label mb-3 text-accent">{projectsContent.hero.badge}</p>
+            <p className="sw-label !text-[10px] sm:!text-xs mb-2 sm:mb-3 text-accent">{projectsContent.hero.badge}</p>
             <h1 className="sw-h1 text-2xl text-white sm:text-3xl md:text-4xl whitespace-nowrap">
               {projectsContent.hero.title}
             </h1>
-            <p className="mt-3 sw-body text-sm text-white/80">
+            <p className="mt-2 sm:mt-3 sw-body !text-xs sm:!text-sm text-white/80">
               {projectsContent.hero.subtitle}
             </p>
             <button
               onClick={() => { reachGoal(GOALS.OPEN_MODAL_PROJECT); setModalOpen(true); }}
-              className="sw-btn mt-6 inline-flex h-10 items-center justify-center border border-accent bg-accent px-8 text-sm text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
+              className="sw-btn mt-3 sm:mt-6 inline-flex h-9 sm:h-10 items-center justify-center border border-accent bg-accent px-5 sm:px-8 text-xs sm:text-sm text-accent-foreground transition-colors hover:bg-transparent hover:text-accent"
             >
               {projectsContent.hero?.ctaButton || "Обсудить проект"}
             </button>
@@ -52,7 +56,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
       </section>
 
       {/* Manifesto */}
-      <section className="px-6 pt-12 pb-0">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={projectsContent.manifesto.badge}
@@ -65,7 +69,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
       </section>
 
       {/* Cases */}
-      <section className="px-6 py-12">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={projectsContent.cases.badge}
@@ -133,7 +137,17 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
                     ) : (
                       <PlaceholderImage aspectRatio="4/5" />
                     )}
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors group-hover:bg-black/40">
+                    {/* Mobile: always-visible gradient overlay with desc + "Смотреть" */}
+                    <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 sm:hidden">
+                      <p className="mb-2 text-xs leading-relaxed text-white/90">
+                        {c.shortDesc}
+                      </p>
+                      <span className="inline-flex items-center gap-1 text-xs uppercase tracking-widest text-accent">
+                        {projectsContent.cases?.viewLabel || "Смотреть"} &rarr;
+                      </span>
+                    </div>
+                    {/* Desktop: hover overlay */}
+                    <div className="absolute inset-0 hidden items-center justify-center bg-black/0 transition-colors group-hover:bg-black/40 sm:flex">
                       <span className="text-xs uppercase tracking-widest text-white opacity-0 transition-opacity group-hover:opacity-100">
                         {projectsContent.cases?.viewLabel || "Смотреть"} &rarr;
                       </span>
@@ -144,7 +158,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
                     <p className="mt-1 text-xs text-muted">
                       {c.client} - {c.year}
                     </p>
-                    <p className="mt-2 text-xs leading-relaxed text-text-secondary">
+                    <p className="mt-2 hidden text-xs leading-relaxed text-text-secondary sm:block">
                       {c.shortDesc}
                     </p>
                   </div>
@@ -155,7 +169,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
       </section>
 
       {/* Process */}
-      <section className="px-6 py-12">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             badge={projectsContent.process.badge}
@@ -176,7 +190,7 @@ export default function ProjectsPageClient({ projectsContent, casesIndex }: Proj
       </section>
 
       {/* CTA */}
-      <section className="px-6 py-12">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="sw-h2 mb-6 text-3xl sm:text-4xl">{projectsContent.cta.title}</h2>
           <p className="mb-10 sw-body text-text-secondary">{projectsContent.cta.subtitle}</p>

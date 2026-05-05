@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { reachGoal } from "@/lib/analytics";
@@ -8,8 +8,11 @@ import { GOALS } from "@/lib/goals";
 import CheckoutForm from "@/components/shop/CheckoutForm";
 import OrderSummary from "@/components/shop/OrderSummary";
 
+export type DeliveryZone = "pickup" | "moscow" | "russia";
+
 export default function CheckoutPage() {
   const { count } = useCart();
+  const [zone, setZone] = useState<DeliveryZone>("pickup");
 
   useEffect(() => {
     if (count > 0) reachGoal(GOALS.CHECKOUT_START);
@@ -39,8 +42,8 @@ export default function CheckoutPage() {
           </div>
         ) : (
           <div className="grid gap-12 lg:grid-cols-[1fr_380px]">
-            <CheckoutForm />
-            <OrderSummary />
+            <CheckoutForm zone={zone} onZoneChange={setZone} />
+            <OrderSummary zone={zone} />
           </div>
         )}
       </div>

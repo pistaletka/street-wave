@@ -37,6 +37,7 @@ const team: { name: string; role: string; photo?: string }[] = [
   {
     name: "Настя Bescry",
     role: "Дизайнер и визуальный архитектор проектов. Отвечает за графику, айдентику и адаптацию концепций в продукт.",
+    photo: "/team-nastya.jpg",
   },
 ];
 
@@ -94,14 +95,17 @@ export default function AboutPage() {
     <div className="min-h-screen bg-background text-foreground">
       <PageGoal goal={GOALS.VISIT_ABOUT} />
       {/* 1. Hero + Team image */}
-      <section className="relative flex min-h-[50vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
-        <Image
-          src="/about-hero.png"
-          alt="Street Wave Custom"
-          fill
-          className="object-cover"
-          priority
-        />
+      <section className="relative flex h-[380px] sm:h-auto sm:min-h-[50vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
+        <picture className="absolute inset-0">
+          <source media="(max-width: 639px)" srcSet="/about-hero-mobile.jpg" />
+          <Image
+            src="/about-hero.png"
+            alt="Street Wave Custom"
+            fill
+            className="object-cover"
+            priority
+          />
+        </picture>
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex flex-col items-center">
           <p className="text-xs uppercase tracking-[0.35em] text-accent mb-6">

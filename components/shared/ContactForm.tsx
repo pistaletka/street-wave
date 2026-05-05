@@ -88,7 +88,6 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
           const tariffPrices: Record<string, number> = { malevich: 10000, "van-gogh": 18000, picasso: 25000 };
           const tariffPrice = tariffPrices[fd.get("tariff") as string] || 0;
           const itemOption = f.item.options.find((o: any) => o.value === fd.get("item"));
-          const ownOption = f.ownItem.options.find((o: any) => o.value === fd.get("ownItem"));
           const consentInfo = getConsentNote(e.currentTarget, isRu);
           const na = isRu ? "не указано" : "not specified";
           const ok = await submit({
@@ -101,7 +100,6 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
             note: [
               `${isRu ? "Тариф" : "Tier"}: ${tariffLabel}`,
               `${isRu ? "Предмет" : "Item"}: ${itemOption?.label || na}`,
-              `${isRu ? "Изделие" : "Own item"}: ${ownOption?.label || na}`,
               `${isRu ? "Мессенджер" : "Messenger"}: ${fd.get("messenger") || (isRu ? "не выбран" : "not selected")}`,
               `${isRu ? "Идея" : "Idea"}: ${fd.get("idea")}`,
               `---`,
@@ -109,7 +107,6 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
             ].join("\n"),
             customFields: {
               itemType: String(itemOption?.enumId || ""),
-              ownItem: String(ownOption?.enumId || ""),
             },
           });
           if (ok) {
@@ -147,15 +144,6 @@ export default function ContactForm({ variant = "general", successUrl, sourceOve
           <select id="po-item" name="item" defaultValue="" className={selectClass}>
             <option value="" disabled className="bg-surface text-muted">{isRu ? "Выберите тип" : "Select type"}</option>
             {f.item.options.map((opt: any) => (
-              <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
-            ))}
-          </select>
-        </div>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="po-own" className={labelClass}>{f.ownItem.label}</label>
-          <select id="po-own" name="ownItem" defaultValue="" className={selectClass}>
-            <option value="" disabled className="bg-surface text-muted">{isRu ? "Своё или закупаем" : "Own or we source"}</option>
-            {f.ownItem.options.map((opt: any) => (
               <option key={opt.value} value={opt.value} className="bg-surface text-foreground">{opt.label}</option>
             ))}
           </select>

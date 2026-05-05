@@ -1,15 +1,59 @@
 {
   "title": "Оформление заказа",
   "fields": {
-    "name": { "label": "Имя", "placeholder": "Ваше имя" },
-    "phone": { "label": "Телефон / Telegram", "placeholder": "+7 (___) ___-__-__ или @ник" },
-    "email": { "label": "Email", "placeholder": "your@email.com" },
-    "address": { "label": "Адрес доставки", "placeholder": "Город, улица, дом, квартира" },
-    "comment": { "label": "Комментарий", "placeholder": "Примечания к заказу..." }
+    "name": {
+      "label": "Имя",
+      "placeholder": "Ваше имя"
+    },
+    "phone": {
+      "label": "Телефон",
+      "placeholder": "+7 (___) ___-__-__"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "your@email.com"
+    },
+    "address": {
+      "label": "Адрес доставки",
+      "placeholder": "Город, улица, дом, квартира"
+    },
+    "comment": {
+      "label": "Комментарий",
+      "placeholder": "Примечания к заказу..."
+    }
   },
   "submit": "Оплатить",
   "summary": {
     "title": "Ваш заказ",
-    "total": "Итого"
+    "total": "Итого",
+    "subtotal": "Товары",
+    "deliveryLabel": "Доставка"
+  },
+  "delivery": {
+    "label": "Способ доставки",
+    "options": [
+      {
+        "value": "pickup",
+        "label": "Самовывоз",
+        "price": 0,
+        "priceLabel": "0 ₽"
+      },
+      {
+        "value": "moscow",
+        "label": "Москва",
+        "price": 1000,
+        "priceLabel": "+1 000 ₽"
+      },
+      {
+        "value": "russia",
+        "label": "МО и Россия",
+        "price": 2000,
+        "priceLabel": "+2 000 ₽"
+      }
+    ]
+  },
+  "errors": {
+    "phoneInvalid": "Введите корректный российский номер (+7 или 8 + 10 цифр)",
+    "addressInvalid": "Укажите полный адрес доставки"
   }
 }

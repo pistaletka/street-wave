@@ -74,9 +74,9 @@
           "label": "Что кастомизировать",
           "options": [
             { "value": "sneakers", "label": "Кроссовки", "enumId": 1027739 },
-            { "value": "bag", "label": "Сумка", "enumId": 1027741 },
             { "value": "jacket", "label": "Куртка", "enumId": 1027743 },
-            { "value": "painting", "label": "Картина", "enumId": 2146557 },
+            { "value": "bag", "label": "Сумка", "enumId": 1027741 },
+            { "value": "accessory", "label": "Аксессуар", "enumId": 0 },
             { "value": "other", "label": "Другое", "enumId": 1027745 }
           ]
         },

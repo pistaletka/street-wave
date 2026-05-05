@@ -7,15 +7,24 @@
     "badge": "ART CUSTOMIZATION STUDIO",
     "badgeSub": "EST. 2014",
     "title": "Boutique Art Custom Studio",
-    "subtitle": "Personal projects and limited-edition collections for brands.",
-    "cta1": { "label": "Order Custom", "href": "/place-order" },
-    "cta2": { "label": "Brand Projects", "href": "/projects" }
+    "subtitle": "Personal projects\nand limited-edition collections for brands.",
+    "cta1": {
+      "label": "Order Custom",
+      "href": "/place-order"
+    },
+    "cta2": {
+      "label": "Brand Projects",
+      "href": "/projects"
+    }
   },
   "about": {
     "badge": "About the Studio",
     "title": "We are Street Wave.",
-    "text": "An art customization studio working with apparel, footwear, accessories, and spaces.\n\nWe create original projects for brands, events, and private clients - from one-of-a-kind pieces to limited-edition runs.\n\nFor us, every object is a surface for an idea, an image, and a new visual meaning.\n\nWe blend contemporary art, street culture, and personalization, turning everyday items into artistic statements.",
-    "cta": { "label": "About Us", "href": "/about" }
+    "text": "An art customization studio working with apparel, footwear, accessories, and spaces.\n\nWe create original projects for brands, events, and private clients - from one-of-a-kind pieces to limited-edition runs.",
+    "cta": {
+      "label": "About Us",
+      "href": "/about"
+    }
   },
   "directions": {
     "badge": "Services",
@@ -25,25 +34,25 @@
         "title": "Personal Custom",
         "desc": "Sneakers, apparel, accessories, and art objects - unique work tailored to your vision.",
         "href": "/place-order",
-        "image": "/1-кастом.png"
+        "image": "/dir-custom.jpg"
       },
       {
         "title": "Brand Projects",
         "desc": "Limited-edition collections, collaborations, and branded custom work.",
         "href": "/projects",
-        "image": "/2-проект.png"
+        "image": "/dir-brand.jpg"
       },
       {
         "title": "Live Customization",
         "desc": "On-site customization at your event - a WOW factor for your audience.",
         "href": "/live-customization",
-        "image": "/3-ивент.png"
+        "image": "/dir-event.jpg"
       },
       {
         "title": "Art / Paintings",
         "desc": "Original paintings and art objects. Street aesthetics on canvas.",
         "href": "/art",
-        "image": "/4-картина.png"
+        "image": "/dir-art.jpg"
       }
     ]
   },
@@ -51,42 +60,118 @@
     "badge": "How It Works",
     "title": "Process",
     "steps": [
-      { "step": "01", "title": "Idea", "desc": "You describe your vision and share references." },
-      { "step": "02", "title": "Concept", "desc": "We create a sketch and finalize the details." },
-      { "step": "03", "title": "Customization", "desc": "Handcrafted by our artists using premium materials." },
-      { "step": "04", "title": "Result", "desc": "Quality control, packaging, and delivery." }
+      {
+        "step": "01",
+        "title": "Idea",
+        "desc": "You describe your vision and share references."
+      },
+      {
+        "step": "02",
+        "title": "Concept",
+        "desc": "We create a sketch and finalize the details."
+      },
+      {
+        "step": "03",
+        "title": "Customization",
+        "desc": "Handcrafted by our artists using premium materials."
+      },
+      {
+        "step": "04",
+        "title": "Result",
+        "desc": "Quality control, packaging, and delivery."
+      }
     ]
   },
   "clients": {
     "badge": "Projects & Clients",
     "title": "Trusted By",
     "logos": [
-      { "name": "Yandex", "src": "/logos/yandex.svg" },
-      { "name": "VK", "src": "/logos/vk.svg" },
-      { "name": "Dolce & Gabbana", "src": "/logos/dolce-gabbana.svg" },
-      { "name": "Pinko", "src": "/logos/pinko.svg" },
-      { "name": "Furla", "src": "/logos/furla.svg" },
-      { "name": "TSUM", "src": "/logos/tsum.svg" },
-      { "name": "Tsvetnoy", "src": "/logos/tsvetnoy.svg" },
-      { "name": "Stockmann", "src": "/logos/stockmann.svg" },
-      { "name": "Timberland", "src": "/logos/timberland.svg" },
-      { "name": "Adidas", "src": "/logos/adidas.svg" },
-      { "name": "Reebok", "src": "/logos/reebok.svg" },
-      { "name": "SuperStep", "src": "/logos/superstep.svg" },
-      { "name": "Tommy Hilfiger", "src": "/logos/tommy-hilfiger.svg" },
-      { "name": "NoOne", "src": "/logos/noone.svg" }
+      {
+        "name": "Yandex",
+        "src": "/logos/yandex.svg"
+      },
+      {
+        "name": "VK",
+        "src": "/logos/vk.svg"
+      },
+      {
+        "name": "Dolce & Gabbana",
+        "src": "/logos/dolce-gabbana.svg"
+      },
+      {
+        "name": "Pinko",
+        "src": "/logos/pinko.svg"
+      },
+      {
+        "name": "Furla",
+        "src": "/logos/furla.svg"
+      },
+      {
+        "name": "TSUM",
+        "src": "/logos/tsum.svg"
+      },
+      {
+        "name": "Tsvetnoy",
+        "src": "/logos/tsvetnoy.svg"
+      },
+      {
+        "name": "Stockmann",
+        "src": "/logos/stockmann.svg"
+      },
+      {
+        "name": "Timberland",
+        "src": "/logos/timberland.svg"
+      },
+      {
+        "name": "Adidas",
+        "src": "/logos/adidas.svg"
+      },
+      {
+        "name": "Reebok",
+        "src": "/logos/reebok.svg"
+      },
+      {
+        "name": "SuperStep",
+        "src": "/logos/superstep.svg"
+      },
+      {
+        "name": "Tommy Hilfiger",
+        "src": "/logos/tommy-hilfiger.svg"
+      },
+      {
+        "name": "NoOne",
+        "src": "/logos/noone.svg"
+      }
     ]
   },
   "whyUs": {
     "badge": "Why Us",
     "title": "Why Choose STREET WAVE",
     "items": [
-      { "title": "Signature Style", "desc": "Every piece is unique and entirely handcrafted." },
-      { "title": "Brand Experience", "desc": "Projects for Reebok, D&G, Pinko, Yandex, and more." },
-      { "title": "Full-Cycle Service", "desc": "From concept to delivery - everything in one place." },
-      { "title": "Premium Materials", "desc": "Professional Angelus paints, airbrushing, and protective coatings." },
-      { "title": "Professional Team", "desc": "Artists, designers, tailors, and customization specialists." },
-      { "title": "Worldwide Shipping", "desc": "Secure packaging and tracked delivery anywhere in the world." }
+      {
+        "title": "Signature Style",
+        "desc": "Every piece is unique and entirely handcrafted."
+      },
+      {
+        "title": "Brand Experience",
+        "desc": "Projects for Reebok, D&G, Pinko, Yandex, and more."
+      },
+      {
+        "title": "Full-Cycle Service",
+        "desc": "From concept to delivery - everything in one place."
+      },
+      {
+        "title": "Premium Materials",
+        "desc": "Professional Angelus paints, airbrushing, and protective coatings."
+      },
+      {
+        "title": "Professional Team",
+        "desc": "Artists, designers, tailors, and customization specialists."
+      },
+      {
+        "title": "Worldwide Shipping",
+        "desc": "Secure packaging and tracked delivery anywhere in the world."
+      }
     ]
   },
   "shop": {
@@ -102,7 +187,13 @@
   "finalCta": {
     "title": "Ready to create something unique?",
     "subtitle": "Submit a request - let's discuss your idea.",
-    "cta1": { "label": "Order Custom", "href": "/place-order" },
-    "cta2": { "label": "Get in Touch", "href": "/contacts" }
+    "cta1": {
+      "label": "Order Custom",
+      "href": "/place-order"
+    },
+    "cta2": {
+      "label": "Get in Touch",
+      "href": "/contacts"
+    }
   }
 }

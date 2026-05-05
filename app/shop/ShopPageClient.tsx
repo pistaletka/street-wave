@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import type { Product } from "@/types/product";
 import { reachGoal } from "@/lib/analytics";
 import { GOALS } from "@/lib/goals";
@@ -24,14 +25,19 @@ export default function ShopPageClient({ products, shopContent }: ShopPageClient
 
   return (
     <>
-      <div className="relative w-full overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/shop-banner.jpg"
-          alt="streetwave® - магазин"
-          className="w-full h-auto object-cover"
-          style={{ marginTop: "-10%", marginBottom: "-10%" }}
-        />
+      <div className="relative w-full overflow-hidden h-[380px] sm:h-[55vh] md:h-[50vh]">
+        <picture>
+          <source media="(max-width: 639px)" srcSet="/shop-banner-mobile.jpg" />
+          <source media="(max-width: 1023px)" srcSet="/shop-banner-tablet.jpg" />
+          <Image
+            src="/shop-banner-desktop.jpg"
+            alt="streetwave® - магазин"
+            width={1600}
+            height={900}
+            className="h-full w-full object-cover"
+            priority
+          />
+        </picture>
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute top-0 left-0 right-0 px-6 pt-10">
           <div className="mx-auto max-w-7xl">
@@ -48,13 +54,19 @@ export default function ShopPageClient({ products, shopContent }: ShopPageClient
           </div>
         </div>
       </div>
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="sw-label mb-4 text-accent">{shopContent.comingSoon?.badge || "coming soon"}</p>
-          <h2 className="sw-h2 text-2xl sm:text-3xl mb-6">{shopContent.comingSoon?.title || "Раздел в разработке"}</h2>
-          <p className="sw-body text-text-secondary">
-            {shopContent.comingSoon?.text || ""}
-          </p>
+      <section className="px-6 py-6">
+        <div className="mx-auto max-w-7xl">
+          {filtered.length === 0 ? (
+            <p className="sw-body py-12 text-center text-text-secondary">
+              {shopContent.emptyState || "В этой категории пока нет товаров"}
+            </p>
+          ) : (
+            <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+              {filtered.map((product) => (
+                <ProductCard key={product.slug} product={product} />
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </>

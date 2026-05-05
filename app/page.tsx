@@ -32,7 +32,7 @@ export default async function Home() {
       <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.about.badge} title={content.about.title} />
-          <div className="grid gap-12 md:grid-cols-2">
+          <div className="grid gap-4 md:gap-12 md:grid-cols-2">
             <div className="relative aspect-[16/9] overflow-hidden">
               <Image
                 src="/team.png"
@@ -42,12 +42,12 @@ export default async function Home() {
               />
             </div>
             <div className="flex flex-col justify-center">
-              <p className="sw-body text-text-secondary whitespace-pre-line">
+              <p className="text-xs sm:text-base text-text-secondary whitespace-pre-line">
                 {content.about.text}
               </p>
               <Link
                 href={content.about.cta.href}
-                className="sw-btn mt-8 inline-flex h-12 w-fit items-center justify-center border border-border px-8 text-foreground transition-colors hover:border-accent hover:text-accent"
+                className="sw-btn mt-6 sm:mt-8 inline-flex h-10 sm:h-12 w-fit items-center justify-center border border-border px-6 sm:px-8 text-sm sm:text-base text-foreground transition-colors hover:border-accent hover:text-accent"
               >
                 {content.about.cta.label}
               </Link>
@@ -57,7 +57,7 @@ export default async function Home() {
       </section>
 
       {/* 3. Directions */}
-      <section className="px-6 pt-6 pb-8">
+      <section className="px-6 pt-2 pb-6 md:py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.directions.badge} title={content.directions.title} />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -86,7 +86,7 @@ export default async function Home() {
       </section>
 
       {/* 4. Process */}
-      <section className="px-6 pt-8 pb-8">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.process.badge} title={content.process.title} />
           <div className="grid gap-px md:grid-cols-4">
@@ -104,7 +104,7 @@ export default async function Home() {
       </section>
 
       {/* 5. Clients */}
-      <section className="px-6 pt-8 pb-6">
+      <section className="px-6 py-6">
         <div className="mx-auto max-w-7xl">
           <SectionHeader badge={content.clients.badge} title={content.clients.title} />
           <div className="grid grid-cols-3 gap-px sm:grid-cols-4 lg:grid-cols-7">
