@@ -1,51 +1,11 @@
 [
   {
-    "slug": "af1-neon-drip",
-    "title": "Nike AF1 «Neon Drip»",
-    "category": "sneakers",
-    "price": 28000,
-    "image": "/products/af1-neon-drip/main.jpg",
+    "slug": "certificate-5000",
+    "title": "Сертификат на 5 000 ₽",
+    "category": "certificates",
+    "price": 5000,
+    "image": "/products/certificates/5000.jpg",
     "status": "available"
-  },
-  {
-    "slug": "dunk-sakura",
-    "title": "Nike Dunk «Sakura»",
-    "category": "sneakers",
-    "price": 32000,
-    "image": "/products/dunk-sakura/main.jpg",
-    "status": "available"
-  },
-  {
-    "slug": "hoodie-urban-camo",
-    "title": "Худи «Urban Camo»",
-    "category": "clothing",
-    "price": 15000,
-    "image": "/products/hoodie-urban-camo/main.jpg",
-    "status": "available"
-  },
-  {
-    "slug": "tote-streetart",
-    "title": "Тоут-бэг «Street Art»",
-    "category": "accessories",
-    "price": 8000,
-    "image": "/products/tote-streetart/main.jpg",
-    "status": "sold"
-  },
-  {
-    "slug": "helmet-cyber",
-    "title": "Шлем «Cyberpunk»",
-    "category": "art-objects",
-    "price": 45000,
-    "image": "/products/helmet-cyber/main.jpg",
-    "status": "available"
-  },
-  {
-    "slug": "aj1-fire",
-    "title": "Air Jordan 1 «Fire»",
-    "category": "sneakers",
-    "price": 35000,
-    "image": "/products/aj1-fire/main.jpg",
-    "status": "sold"
   },
   {
     "slug": "certificate-10000",

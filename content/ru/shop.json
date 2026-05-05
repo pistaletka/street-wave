@@ -5,13 +5,34 @@
     "description": "Уникальные кастомизированные вещи - каждая в единственном экземпляре. Забирайте сразу, без ожидания."
   },
   "categories": [
-    { "value": "all", "label": "Все" },
-    { "value": "sneakers", "label": "Кроссовки" },
-    { "value": "clothing", "label": "Одежда" },
-    { "value": "accessories", "label": "Аксессуары" },
-    { "value": "art-objects", "label": "Арт-объекты" },
-    { "value": "art", "label": "Арт" },
-    { "value": "certificates", "label": "Сертификаты" }
+    {
+      "value": "all",
+      "label": "Все"
+    },
+    {
+      "value": "sneakers",
+      "label": "Кроссовки"
+    },
+    {
+      "value": "clothing",
+      "label": "Одежда"
+    },
+    {
+      "value": "accessories",
+      "label": "Аксессуары"
+    },
+    {
+      "value": "art-objects",
+      "label": "Арт-объекты"
+    },
+    {
+      "value": "art",
+      "label": "Арт"
+    },
+    {
+      "value": "certificates",
+      "label": "Сертификаты"
+    }
   ],
   "emptyState": "В этой категории пока нет товаров",
   "soldLabel": "Продано",

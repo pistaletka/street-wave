@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 32" fill="none">
+  <path d="M13.5 3.5h8.7c4.8 0 8.1 2.5 7.4 7.2-.9 6-5.8 9.3-11 9.3h-2.8c-.8 0-1.4.6-1.6 1.4L12.8 28c-.1.5-.5.8-1 .8H7.2c-.6 0-1-.5-.9-1.1L10.8 5c.1-.8.8-1.5 1.7-1.5h1z" fill="#003087"/>
+  <path d="M35.2 3.5h8.7c4.8 0 8.1 2.5 7.4 7.2-.9 6-5.8 9.3-11 9.3h-2.8c-.8 0-1.4.6-1.6 1.4L34.5 28c-.1.5-.5.8-1 .8H29c-.6 0-1-.5-.9-1.1L32.5 5c.2-.8.9-1.5 1.7-1.5h1z" fill="#0070E0"/>
+  <text x="58" y="22" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#003087">Pay</text>
+  <text x="77" y="22" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#0070E0">Pal</text>
+</svg>

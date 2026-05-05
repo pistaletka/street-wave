@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { createInvoice } from "@/lib/paykeeper";
 import { createLead } from "@/lib/amocrm";
-import { notifyOwner, confirmToClient } from "@/lib/whatcrm";
 import { confirmByEmail } from "@/lib/email";
 import { generateOrderId } from "@/lib/generateOrderId";
 import { formatPrice } from "@/lib/formatPrice";
@@ -87,16 +86,7 @@ export async function POST(request: Request) {
       console.error("CRM lead creation failed (non-blocking):", crmErr);
     }
 
-    // Fire-and-forget: WhatCRM notifications
-    notifyOwner({
-      source: "shop-order",
-      name: buyer.name,
-      phone: buyer.phone,
-      email: buyer.email,
-      leadName: `Магазин: заказ ${orderId}`,
-      note: `Товары:\n${itemsList}\n\nСумма: ${formatPrice(verifiedTotal)}`,
-    }).catch(() => {});
-    confirmToClient(buyer.phone).catch(() => {});
+    // Fire-and-forget: email confirmation only
     confirmByEmail({ to: buyer.email, name: buyer.name, source: "shop-order", locale }).catch(() => {});
 
     // Create PayKeeper invoice

@@ -8,10 +8,22 @@
   "images": [
     "/products/certificates/25000.jpg"
   ],
-  "description": "A streetwave® gift certificate worth $300. Use it to order a personal custom piece at the Picasso tier or shop ready-made items in our store. Valid for 6 months.",
+  "description": "A streetwave® gift certificate worth $300. Use it to order a personal custom piece at the Picasso tier or shop ready-made items in our store.",
   "specs": [
-    { "label": "Value", "value": "$300" },
-    { "label": "Validity", "value": "6 months" },
-    { "label": "Format", "value": "Digital + printed" }
-  ]
+    {
+      "label": "Value",
+      "value": "$300"
+    },
+    {
+      "label": "Format",
+      "value": "Digital / Printed"
+    }
+  ],
+  "seo": {
+    "title": "Gift Certificate for Sneaker & Apparel Customization — Street Wave ($250)",
+    "metaDescription": "Street Wave gift certificate for sneaker and apparel customization. A unique gift idea for friends, partners or family. Create a one-of-a-kind design."
+  },
+  "longDescription": "A Street Wave gift certificate is an original way to give the gift of custom sneakers or apparel.\n\nIt's a perfect present for a sneakerhead, a unique gift for a friend, or an original birthday surprise.\n\nThe certificate can be redeemed for: sneaker customization (Nike, Air Force, Jordan and others), apparel customization, art objects and paintings. Custom design development is included.",
+  "disclaimer": "The certificate can be used as full or partial payment for customization. Project cost is determined by studio rates and depends on design complexity. If the project exceeds the certificate value, additional payment is required. Shipping is paid separately.",
+  "imageAlt": "Street Wave gift certificate for sneaker customization"
 }

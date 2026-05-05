@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { createLead, type LeadSource } from "@/lib/amocrm";
-import { notifyOwner, confirmToClient } from "@/lib/whatcrm";
 import { confirmByEmail } from "@/lib/email";
 
 const VALID_SOURCES: LeadSource[] = [
@@ -48,9 +47,7 @@ export async function POST(request: Request) {
       tracking,
     });
 
-    // Fire-and-forget: send notifications (don't block response)
-    notifyOwner({ source, name, phone, email, leadName, note }).catch(() => {});
-    confirmToClient(phone).catch(() => {});
+    // Fire-and-forget: email confirmation only (no WhatsApp)
     if (email) confirmByEmail({ to: email, name, source, locale }).catch(() => {});
 
     return NextResponse.json({ success: true, leadId });

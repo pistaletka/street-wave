@@ -15,4 +15,11 @@ export interface ProductDetail extends Product {
   description: string;
   images: string[];
   specs?: { label: string; value: string }[];
+  longDescription?: string;
+  disclaimer?: string;
+  imageAlt?: string;
+  seo?: {
+    title?: string;
+    metaDescription?: string;
+  };
 }

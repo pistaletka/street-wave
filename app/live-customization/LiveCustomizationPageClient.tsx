@@ -24,14 +24,17 @@ export default function LiveCustomizationPageClient({ liveContent, casesIndex }:
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="relative flex min-h-[50vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
-        <Image
-          src="/live-hero-events.jpg"
-          alt=""
-          fill
-          className="object-cover"
-          priority
-        />
+      <section className="relative flex h-[380px] sm:h-auto sm:min-h-[50vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
+        <picture className="absolute inset-0">
+          <source media="(max-width: 639px)" srcSet="/live-hero-events-mobile.jpg" />
+          <Image
+            src="/live-hero-events.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </picture>
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex flex-col items-center">
           <p className="sw-label mb-6 text-accent">{liveContent.hero.badge}</p>

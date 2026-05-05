@@ -1,51 +1,11 @@
 [
   {
-    "slug": "af1-neon-drip",
-    "title": "Nike AF1 \"Neon Drip\"",
-    "category": "sneakers",
-    "price": 280,
-    "image": "/products/af1-neon-drip/main.jpg",
+    "slug": "certificate-5000",
+    "title": "Gift Certificate ($50)",
+    "category": "certificates",
+    "price": 50,
+    "image": "/products/certificates/5000.jpg",
     "status": "available"
-  },
-  {
-    "slug": "dunk-sakura",
-    "title": "Nike Dunk \"Sakura\"",
-    "category": "sneakers",
-    "price": 320,
-    "image": "/products/dunk-sakura/main.jpg",
-    "status": "available"
-  },
-  {
-    "slug": "hoodie-urban-camo",
-    "title": "Hoodie \"Urban Camo\"",
-    "category": "clothing",
-    "price": 150,
-    "image": "/products/hoodie-urban-camo/main.jpg",
-    "status": "available"
-  },
-  {
-    "slug": "tote-streetart",
-    "title": "Tote Bag \"Street Art\"",
-    "category": "accessories",
-    "price": 80,
-    "image": "/products/tote-streetart/main.jpg",
-    "status": "sold"
-  },
-  {
-    "slug": "helmet-cyber",
-    "title": "Helmet \"Cyberpunk\"",
-    "category": "art-objects",
-    "price": 450,
-    "image": "/products/helmet-cyber/main.jpg",
-    "status": "available"
-  },
-  {
-    "slug": "aj1-fire",
-    "title": "Air Jordan 1 \"Fire\"",
-    "category": "sneakers",
-    "price": 350,
-    "image": "/products/aj1-fire/main.jpg",
-    "status": "sold"
   },
   {
     "slug": "certificate-10000",
